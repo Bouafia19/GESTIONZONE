@@ -1,0 +1,131 @@
+<table class="table table-responsive">
+  <thead class="thead-inverse">
+  <tr>
+    <th>Num dossier</th>
+    <th>Date depot demande</th>
+    <th>Raison sociale arabe</th>
+    <th>Nom prenom gerant arabe</th>
+    <th>Raison sociale francais</th>
+    <th>Nom prenom gerant francais</th>
+    <th>Adresse</th>
+    <th>Num telephone</th>
+    <th>Fax</th>
+    <th>Email</th>
+    <th>Intitule projet arabe</th>
+    <th>Intitule projet francais</th>
+    <th>Secteur activite</th>
+    <th>Filieres industrielles</th>
+    <th>Superficie demandee</th>
+    <th>Montant investissement</th>
+    <th>Nmbr emplois</th>
+    <th>Date examen demande</th>
+    <th>Num decision</th>
+    <th>Num lot</th>
+    <th>Superficie octroyee</th>
+    <th>Localisation projet</th>
+    <th>Commune</th>
+    <th>Site</th>
+    <th>P droits etude vrd</th>
+    <th>Num arrete concession</th>
+    <th>Date arrete concession</th>
+    <th>Montant concession</th>
+    <th>Date paiment</th>
+    <th>Num acte concession</th>
+    <th>Date acte concession</th>
+    <th>Num acte cession</th>
+    <th>Date acte cession</th>
+    <th>Num depot dossier permis construire</th>
+    <th>Date depot dossier permis construire</th>
+    <th>Avis services</th>
+    <th>Num arrete permis construire</th>
+    <th>Date arrete permis construire</th>
+    <th>Date depot dossier</th>
+    <th>Date approbation eie</th>
+    <th>Date decision creation prealabre</th>
+    <th>Num arrete exploitation</th>
+    <th>Date arrete exploitation</th>
+    <th>Num depot dossier</th>
+    <th>Date depot dossier</th>
+    <th>Num decision andi</th>
+    <th>Taux avancement traveux</th>
+    <th>Taux avancement investissement</th>
+    <th>Mise en service</th>
+    <th>Emplois reel</th>
+    <th>Changement status</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% paginate.each do |investisseur| %>
+    <tr>
+      <td><%= investisseur.num_dossier %></td>
+      <td><%= investisseur.date_depot_demande %></td>
+      <td><%= investisseur.raison_sociale_arabe %></td>
+      <td><%= investisseur.nom_prenom_gerant_arabe %></td>
+      <td><%= investisseur.raison_sociale_francais %></td>
+      <td><%= investisseur.nom_prenom_gerant_francais %></td>
+      <td><%= investisseur.adresse %></td>
+      <td><%= investisseur.num_telephone %></td>
+      <td><%= investisseur.fax %></td>
+      <td><%= investisseur.email %></td>
+      <td><%= investisseur.intitule_projet_arabe %></td>
+      <td><%= investisseur.intitule_projet_francais %></td>
+      <td><%= investisseur.secteur_activite %></td>
+      <td><%= investisseur.filieres_industrielles %></td>
+      <td><%= investisseur.superficie_demandee %></td>
+      <td><%= investisseur.montant_investissement %></td>
+      <td><%= investisseur.nmbr_emplois %></td>
+      <td><%= investisseur.date_examen_demande %></td>
+      <td><%= investisseur.num_decision %></td>
+      <td><%= investisseur.num_lot %></td>
+      <td><%= investisseur.superficie_octroyee %></td>
+      <td><%= investisseur.localisation_projet %></td>
+      <td><%= investisseur.commune %></td>
+      <td><%= investisseur.site %></td>
+      <td><%= investisseur.p_droits_etude_vrd %></td>
+      <td><%= investisseur.num_arrete_concession %></td>
+      <td><%= investisseur.date_arrete_concession %></td>
+      <td><%= investisseur.montant_concession %></td>
+      <td><%= investisseur.date_paiment %></td>
+      <td><%= investisseur.num_acte_concession %></td>
+      <td><%= investisseur.date_acte_concession %></td>
+      <td><%= investisseur.num_acte_cession %></td>
+      <td><%= investisseur.date_acte_cession %></td>
+      <td><%= investisseur.num_depot_dossier_permis_construire %></td>
+      <td><%= investisseur.date_depot_dossier_permis_construire %></td>
+      <td><%= investisseur.avis_services %></td>
+      <td><%= investisseur.num_arrete_permis_construire %></td>
+      <td><%= investisseur.date_arrete_permis_construire %></td>
+      <td><%= investisseur.date_depot_dossier %></td>
+      <td><%= investisseur.date_approbation_eie %></td>
+      <td><%= investisseur.date_decision_creation_prealabre %></td>
+      <td><%= investisseur.num_arrete_exploitation %></td>
+      <td><%= investisseur.date_arrete_exploitation %></td>
+      <td><%= investisseur.num_depot_dossier %></td>
+      <td><%= investisseur.date_depot_dossier %></td>
+      <td><%= investisseur.num_decision_andi %></td>
+      <td><%= investisseur.taux_avancement_traveux %></td>
+      <td><%= investisseur.taux_avancement_investissement %></td>
+      <td><%= investisseur.mise_en_service %></td>
+      <td><%= investisseur.emplois_reel %></td>
+      <td><%= investisseur.changement_status %></td>
+      <td><%= link_to 'Show', investisseur ,class:"btn btn-success"%></td>
+      <td><%= link_to 'Edit', edit_investisseur_path(investisseur) ,class:"btn btn-primary"%></td>
+      <td><%= link_to 'Destroy', investisseur, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-danger"%></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<div class="row">
+  <div class="col-sm-6">
+    <div  id="dataTables-example_info" role="status" aria-live="polite">
+      <span>Affichage  <%=paginate.length%> de <%= @total%> entrées</span>
+    </div>
+  </div>
+  <div class="col-sm-6" >
+    <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate" style="position: absolute; right:13px; top: -20px">
+      <%= will_paginate paginate,renderer: BootstrapPagination::Rails , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
+    </div>
+  </div>
+</div>

@@ -14,3 +14,25 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+//= require jquery3
+//= require popper
+//= require bootstrap
+//= require jquery.min.js
+//= require bootstrap.min.js
+//= require bootstrap-datepicker
+
+
+
+function SelectSearch(id,controller,sort)
+{    $.ajax({
+    url: controller,
+    type: 'get',
+    data: {
+        type: id,
+        query: document.getElementById(id).value,
+        search_query: document.getElementById("search_champ").value,
+        sorts: sort
+    }
+});
+}

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_lot: 1
+  activite: MyString
+  investisseur: MyString
+  type_lot: MyString
+  situation_physique: MyString
+  situation_juridique: MyString
+  date_act: 2018-12-21
+  num_act: 1
+  date_attribution: 2018-12-21
+  date_resolution: 2018-12-21
+  etat_avancement: 1
+  zone: MyString
+  class_activite: MyString
+  observation: MyText
+
+two:
+  num_lot: 1
+  activite: MyString
+  investisseur: MyString
+  type_lot: MyString
+  situation_physique: MyString
+  situation_juridique: MyString
+  date_act: 2018-12-21
+  num_act: 1
+  date_attribution: 2018-12-21
+  date_resolution: 2018-12-21
+  etat_avancement: 1
+  zone: MyString
+  class_activite: MyString
+  observation: MyText

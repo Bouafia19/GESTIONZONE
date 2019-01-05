@@ -1,0 +1,100 @@
+<%= form_with(model: lot, local: true) do |form| %>
+  <% if lot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lot.errors.count, "error") %> prohibited this lot from being saved:</h2>
+
+      <ul>
+      <% lot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :num_lot %>
+    <%= form.number_field :num_lot,class:"form-control" %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :activite %>
+    <%= form.text_field :activite ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :investisseur %>
+    <%= form.text_field :investisseur ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :type_lot %>
+    <%= form.text_field :type_lot ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :situation_physique %>
+    <%= form.text_field :situation_physique,class:"form-control" %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :situation_juridique %>
+    <%= form.text_field :situation_juridique ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_act %>
+    <%= form.date_select :date_act ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :num_act %>
+    <%= form.number_field :num_act ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_attribution %>
+    <%= form.date_select :date_attribution , class: 'datepicker form-control','data-date-format'=>"dd/mm/yyyy" ,id:'date'%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_resolution %>
+    <%= form.date_select :date_resolution ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :etat_avancement %>
+    <%= form.number_field :etat_avancement ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :nom_zone %>
+    <%= form.select :nom_zone, options_from_collection_for_select(Zone.all,'id','nom_zone'),{},class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :class_activite %>
+    <%= form.text_field :class_activite ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :observation %>
+    <%= form.text_area :observation ,class:"form-control"%>
+  </div>
+<hr>
+  <div class="actions">
+    <%= form.submit class:"btn btn-md btn-success pull-right"%>
+  </div>
+<% end %>
+<br>
+<script>
+    $(function() {
+        $( "#date" ).datepicker({
+            dateFormat : 'mm/dd/yy',
+            changeMonth : true,
+            changeYear : true,
+            yearRange: '-100y:c+nn',
+            maxDate: '-1d'
+        });
+    });
+
+</script>

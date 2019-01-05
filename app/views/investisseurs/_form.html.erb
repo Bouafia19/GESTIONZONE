@@ -1,0 +1,283 @@
+<%= form_with(model: investisseur, local: true) do |form| %>
+  <% if investisseur.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(investisseur.errors.count, "error") %> prohibited this investisseur from being saved:</h2>
+
+      <ul>
+      <% investisseur.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<br>
+  <div class="field">
+    <%= form.label :num_dossier %>
+    <%= form.number_field :num_dossier ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_depot_demande %>
+    <%= form.date_select :date_depot_demande, class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date'  %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :raison_sociale_arabe %>
+    <%= form.text_field :raison_sociale_arabe ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :nom_prenom_gerant_arabe %>
+    <%= form.text_field :nom_prenom_gerant_arabe,class:"form-control" %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :raison_sociale_francais %>
+    <%= form.text_field :raison_sociale_francais ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :nom_prenom_gerant_francais %>
+    <%= form.text_field :nom_prenom_gerant_francais,class:"form-control" %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :adresse %>
+    <%= form.text_field :adresse ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :num_telephone %>
+    <%= form.number_field :num_telephone ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :fax %>
+    <%= form.number_field :fax ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email,class:"form-control" %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :intitule_projet_arabe %>
+    <%= form.text_field :intitule_projet_arabe ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :intitule_projet_francais %>
+    <%= form.text_field :intitule_projet_francais ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :secteur_activite %>
+    <%= form.text_field :secteur_activite,class:"form-control" %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :filieres_industrielles %>
+    <%= form.text_field :filieres_industrielles ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :superficie_demandee %>
+    <%= form.text_field :superficie_demandee ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :montant_investissement %>
+    <%= form.text_field :montant_investissement ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :nmbr_emplois %>
+    <%= form.number_field :nmbr_emplois,class:"form-control" %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_examen_demande %>
+    <%= form.date_select :date_examen_demande , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :num_decision %>
+    <%= form.number_field :num_decision ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :num_lot %>
+    <%= form.number_field :num_lot ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :superficie_octroyee %>
+    <%= form.text_field :superficie_octroyee,class:"form-control" %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :localisation_projet %>
+    <%= form.text_field :localisation_projet ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :commune %>
+    <%= form.text_field :commune ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :site %>
+    <%= form.text_field :site ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :p_droits_etude_vrd %>
+    <%= form.text_field :p_droits_etude_vrd ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :num_arrete_concession %>
+    <%= form.number_field :num_arrete_concession ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_arrete_concession %>
+    <%= form.date_select :date_arrete_concession , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :montant_concession %>
+    <%= form.text_field :montant_concession,class:"form-control" %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_paiment %>
+    <%= form.date_select :date_paiment , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :num_acte_concession %>
+    <%= form.number_field :num_acte_concession ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_acte_concession %>
+    <%= form.date_select :date_acte_concession , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :num_acte_cession %>
+    <%= form.number_field :num_acte_cession ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_acte_cession %>
+    <%= form.date_select :date_acte_cession , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :num_depot_dossier_permis_construire %>
+    <%= form.number_field :num_depot_dossier_permis_construire ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_depot_dossier_permis_construire %>
+    <%= form.date_select :date_depot_dossier_permis_construire , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :avis_services %>
+    <%= form.text_field :avis_services,class:"form-control" %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :num_arrete_permis_construire %>
+    <%= form.number_field :num_arrete_permis_construire ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_arrete_permis_construire %>
+    <%= form.date_select :date_arrete_permis_construire ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_depot_dossier %>
+    <%= form.date_select :date_depot_dossier , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_approbation_eie %>
+    <%= form.date_select :date_approbation_eie , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_decision_creation_prealabre %>
+    <%= form.date_select :date_decision_creation_prealabre , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :num_arrete_exploitation %>
+    <%= form.number_field :num_arrete_exploitation ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_arrete_exploitation %>
+    <%= form.date_select :date_arrete_exploitation , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :num_depot_dossier %>
+    <%= form.number_field :num_depot_dossier,class:"form-control" %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :date_depot_dossier %>
+    <%= form.date_select :date_depot_dossier , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true %>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :num_decision_andi %>
+    <%= form.number_field :num_decision_andi ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :taux_avancement_traveux %>
+    <%= form.number_field :taux_avancement_traveux ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :taux_avancement_investissement %>
+    <%= form.number_field :taux_avancement_investissement ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :mise_en_service %>
+    <%= form.text_field :mise_en_service ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :emplois_reel %>
+    <%= form.text_field :emplois_reel ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :changement_status %>
+    <%= form.text_field :changement_status ,class:"form-control"%>
+  </div>
+<br>
+  <div class="field">
+    <%= form.label :observation %>
+    <%= form.text_area :observation ,class:"form-control"%>
+  </div>
+<hr>
+  <div class="actions">
+    <%= form.submit class:"btn btn-md btn-success pull-right"%>
+  </div>
+<% end %>
+<br>
+
+
+<script>
+    $('.datepicker').datepicker()
+</script>

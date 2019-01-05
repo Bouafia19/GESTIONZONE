@@ -1,0 +1,136 @@
+
+
+
+
+<div class="container">
+
+
+    <div class="card">
+
+      <div class="card-body">
+        <%= link_to 'Edit', edit_lot_path(@lot) ,class:"btn btn-md btn-primary" %> |
+        <%= link_to 'Back', lots_path ,class:"btn btn-md btn-warning"%> |
+        <%= link_to 'New lot', new_lot_path ,class:"btn btn-md btn-success"%>
+
+        <br>
+        <hr>
+
+        <div class="card-deck">
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Num lot:</strong></div></div>
+            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.num_lot %> </font></p></div>
+          </div>
+
+        <br>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Activite:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.activite %> </font></p></div>
+        </div>
+
+        <br>
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Investisseur:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.investisseur %> </font></p></div>
+        </div>
+
+        <br>
+
+          <div class="col-sm-3">
+            <div class="card bg-success">
+              <div class="card-header"> <strong>Type lot:</strong></div></div>
+            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.type_lot %> </font></p></div>
+          </div>
+
+          <br>
+
+          <div class="col-sm-3">
+            <div class="card bg-success">
+              <div class="card-header"> <strong>Situation physique:</strong></div></div>
+            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.situation_physique %> </font></p></div>
+          </div>
+
+          <br>
+
+          <div class="col-sm-3">
+            <div class="card bg-success">
+              <div class="card-header"> <strong>Situation juridique:</strong></div></div>
+            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.situation_juridique %> </font></p></div>
+          </div>
+
+          <br>
+
+          <div class="col-sm-3">
+            <div class="card bg-success">
+              <div class="card-header"> <strong>Date act:</strong></div></div>
+            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.date_act %> </font></p></div>
+          </div>
+
+          <br>
+          <div class="col-sm-3">
+            <div class="card bg-success">
+              <div class="card-header"> <strong>Num act:</strong></div></div>
+            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.num_act %> </font></p></div>
+          </div>
+
+          <br>
+          <div class="col-sm-3">
+            <div class="card bg-success">
+              <div class="card-header"> <strong>Date attribution:</strong></div></div>
+            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.date_attribution %> </font></p></div>
+          </div>
+
+          <br>
+
+          <div class="col-sm-3">
+            <div class="card bg-success">
+              <div class="card-header"> <strong>Date resolution:</strong></div></div>
+            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.date_resolution %> </font></p></div>
+          </div>
+
+          <br>
+
+
+          <div class="col-sm-3">
+            <div class="card bg-success">
+              <div class="card-header"> <strong>Etat avancement:</strong></div></div>
+            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.etat_avancement %> </font></p></div>
+          </div>
+
+          <br>
+
+          <div class="col-sm-3">
+            <div class="card bg-success">
+              <div class="card-header"> <strong>Nom Zone:</strong></div></div>
+            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.nom_zone %> </font></p></div>
+          </div>
+
+          <br>
+
+          <div class="col-sm-3">
+            <div class="card bg-success">
+              <div class="card-header"> <strong>Class activite:</strong></div></div>
+            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.class_activite %> </font></p></div>
+          </div>
+
+          <br>
+
+
+          <div class="col-sm-3">
+            <div class="card bg-success">
+              <div class="card-header"> <strong>Observation:</strong></div></div>
+            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.observation %> </font></p></div>
+          </div>
+
+          <br>
+
+
+
+
+    </div>
+  </div>
+</div>
+</div>
