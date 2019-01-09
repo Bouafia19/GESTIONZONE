@@ -20,6 +20,7 @@
 //= require bootstrap
 //= require jquery.min.js
 //= require bootstrap.min.js
+//= require bootstrap-sortable
 //= require bootstrap-datepicker
 
 

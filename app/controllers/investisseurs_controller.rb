@@ -34,6 +34,9 @@ class InvestisseursController < ApplicationController
   def edit
   end
 
+  def alert_stock
+    @investisseur = Investisseur.all
+  end
   # POST /investisseurs
   # POST /investisseurs.json
   def create

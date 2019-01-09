@@ -123,4 +123,8 @@ class ApplicationController < ActionController::Base
     return resultat
   end
 
+  private
+  def alert_counts
+    @alerts = Investisseur.where('taux_avancement_traveux < 30').count
+  end
 end

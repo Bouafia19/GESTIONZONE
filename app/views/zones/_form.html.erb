@@ -41,9 +41,9 @@
     <%= form.number_field :num_arrete_creation ,class:"form-control"%>
   </div>
 <br>
-  <div class="field">
+  <div class="field ">
     <%= form.label :dat_arrete_creation %>
-    <%= form.date_select :dat_arrete_creation ,class:"form-control"%>
+    <%= form.date_select :dat_arrete_creation , class: "datepicker",'data-date-format'=>"dd/mm/yyyy" ,id:'date'%>
   </div>
 <br>
   <div class="field">
@@ -92,3 +92,6 @@
   </div>
 <% end %>
 <br>
+<script>
+$('.datepicker').datepicker();
+</script>

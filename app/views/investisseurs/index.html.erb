@@ -16,18 +16,21 @@
 
 
               <%= form_tag '/investisseurs', method: :get do %>
-                <div class="col-sm-3">
+        <div class="row">
+          <div class="col align-self-start"  >
                   <strong style="float: left">Debut </strong><%= text_field_tag :start_date, session[:start_pub] , class: 'datepicker form-control date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
                 </div>
-                <div class="col-sm-3">
+          <div class="col align-self-center">
 
                   <strong>Fin</strong><%= text_field_tag :end_date, session[:end_pub] , class: 'datepicker form-control date', 'data-date-format'=>"dd/mm/yyyy", required: true %>
                 </div>
                 <br>
-
-                <%= submit_tag 'Filter' ,class: 'btn btn-primary col-md-1 '%>
+          <div class="col align-self-end">
+                <%= submit_tag 'Filter' ,class: 'btn btn-primary '%>
+          </div>
                 <br>
               <%end%>
+      </div>
 <hr>
 
 
