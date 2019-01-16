@@ -1,0 +1,114 @@
+
+
+<div class="container">
+  <div class="card">
+
+    <div class="card-body">
+
+
+<%= link_to 'Edit', edit_hors_zone_path(@hors_zone) ,class:"btn btn-md btn-primary"%> |
+<%= link_to 'Back', hors_zones_path ,class:"btn btn-md btn-warning"%> |
+      <%= link_to 'New hors zone', new_hors_zone_path ,class:"btn btn-md btn-success"%>
+
+      <br>
+      <hr>
+
+      <div class="card-deck">
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Code zone:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green"><%= @hors_zone.code_zone %> </font></p></div>
+        </div>
+
+
+          <div class="col-sm-3">
+            <div class="card bg-success">
+              <div class="card-header"> <strong>Type:</strong></div></div>
+            <div class="card-body"><p class="text-center" ><font size="4" color="green"><%= @hors_zone.type_zone %> </font></p></div>
+          </div>
+
+
+            <div class="col-sm-3">
+              <div class="card bg-success">
+                <div class="card-header"> <strong>Nom zone:</strong></div></div>
+              <div class="card-body"><p class="text-center" ><font size="4" color="green"> <%= @hors_zone.nom_zone %> </font></p></div>
+            </div>
+
+
+              <div class="col-sm-3">
+                <div class="card bg-success">
+                  <div class="card-header"> <strong>Commune:</strong></div></div>
+                <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @hors_zone.commune %> </font></p></div>
+              </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Wilaya:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @hors_zone.wilaya %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Num arrete creation:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @hors_zone.num_arrete_creation %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Dat arrete creation:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @hors_zone.dat_arrete_creation %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Superf total:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @hors_zone.superf_total %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Superf cessible:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @hors_zone.superf_cessible %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Superf vrd:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @hors_zone.superf_vrd %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Nbr lots:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @hors_zone.nbr_lots %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Nbr lot attribues:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @hors_zone.nbr_lot_attribues %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Nbr lot cession:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @hors_zone.nbr_lot_cession %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Nbr lot concession:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @hors_zone.nbr_lot_concession %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Observation:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @hors_zone.observation %> </font></p></div>
+        </div>
+
+
+</div>
+    </div>
+  </div>
+</div>

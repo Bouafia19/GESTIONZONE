@@ -1,0 +1,2 @@
+module PromotionImmobilieresHelper
+end

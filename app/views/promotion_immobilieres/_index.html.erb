@@ -1,0 +1,53 @@
+
+
+
+
+<table class="table table-responsive table-striped table-hover table sortable">
+  <thead>
+  <tr>
+    <th>Code zone</th>
+    <th>Type zone</th>
+    <th>Nom zone</th>
+    <th>Commune</th>
+    <th>Wilaya</th>
+    <th>Num arrete creation</th>
+    <th>Dat arrete creation</th>
+    <th>Superf total</th>
+    <th>Superf cessible</th>
+    <th>Superf vrd</th>
+    <th>Nbr lots</th>
+    <th>Nbr lot attribues</th>
+    <th>Nbr lot cession</th>
+    <th>Nbr lot concession</th>
+    <th>Observation</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% paginate.each do |promotion_immobiliere| %>
+    <tr>
+      <td><%= promotion_immobiliere.code_zone %></td>
+      <td><%= promotion_immobiliere.type_zone %></td>
+      <td><%= promotion_immobiliere.nom_zone %></td>
+      <td><%= promotion_immobiliere.commune %></td>
+      <td><%= promotion_immobiliere.wilaya %></td>
+      <td><%= promotion_immobiliere.num_arrete_creation %></td>
+      <td><%= promotion_immobiliere.dat_arrete_creation %></td>
+      <td><%= promotion_immobiliere.superf_total %></td>
+      <td><%= promotion_immobiliere.superf_cessible %></td>
+      <td><%= promotion_immobiliere.superf_vrd %></td>
+      <td><%= promotion_immobiliere.nbr_lots %></td>
+      <td><%= promotion_immobiliere.nbr_lot_attribues %></td>
+      <td><%= promotion_immobiliere.nbr_lot_cession %></td>
+      <td><%= promotion_immobiliere.nbr_lot_concession %></td>
+      <td><%= promotion_immobiliere.observation %></td>
+      <td><%= link_to 'Show', promotion_immobiliere %></td>
+      <td><%= link_to 'Edit', edit_promotion_immobiliere_path(promotion_immobiliere) %></td>
+      <td><%= link_to 'Destroy', promotion_immobiliere, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>

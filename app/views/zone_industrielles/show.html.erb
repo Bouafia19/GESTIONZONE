@@ -1,0 +1,107 @@
+
+  <div class="card">
+
+    <div class="card-body">
+<%= link_to 'Edit', edit_zone_industrielle_path(@zone_industrielle) ,class:"btn btn-md btn-primary"%> |
+<%= link_to 'Back', zone_industrielles_path ,class:"btn btn-md btn-warning"%>
+      <%= link_to 'New zone', new_zone_industrielle_path ,class:"btn btn-md btn-success"%>
+      <br>
+      <hr>
+      <div class="card-deck">
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Code zone:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.code_zone %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Type:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.type_zone %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Nom zone:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.nom_zone %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Commune:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.commune %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Wilaya:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.wilaya %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Num arrete creation:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.num_arrete_creation %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Dat arrete creation:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.dat_arrete_creation %> </font></p></div>
+        </div>
+
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Superf total:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.superf_total %> </font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Superf cessible:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.superf_cessible %></font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Superf vrd:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.superf_vrd %></font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Nbr lots:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.nbr_lots %></font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Nbr lot attribues:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.nbr_lot_attribues %></font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Nbr lot cession:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.nbr_lot_cession %></font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Nbr lot concession:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.nbr_lot_concession %></font></p></div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="card bg-success">
+            <div class="card-header"> <strong>Observation:</strong></div></div>
+          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @zone_industrielle.observation %></font></p></div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+

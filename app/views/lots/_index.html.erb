@@ -1,6 +1,7 @@
-<table class="table table-responsive table sortable">
+<table class="table table-responsive table-striped table sortable">
   <thead>
   <tr>
+    <th colspan="3"></th>
     <th>Num lot</th>
     <th>Activite</th>
     <th>Investisseur</th>
@@ -15,14 +16,16 @@
     <th>Nom Zone</th>
     <th>Class activite</th>
 
-    <th>Actions</th>
-    <th colspan="3"></th>
+
   </tr>
   </thead>
 
   <tbody>
   <% paginate.each do |lot| %>
     <tr>
+      <td><%= link_to 'Show', lot ,class:"btn btn-md btn-success"%></td>
+      <td><%= link_to 'Edit', edit_lot_path(lot) ,class:"btn btn-md btn-primary"%></td>
+      <td><%= link_to 'Destroy', lot, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-md btn-danger"%></td>
       <td><%= lot.num_lot %></td>
       <td><%= lot.activite %></td>
       <td><%= lot.investisseur %></td>
@@ -36,9 +39,7 @@
       <td><%= lot.etat_avancement %></td>
       <td><%= lot.nom_zone %></td>
       <td><%= lot.class_activite %></td>
-      <td><%= link_to 'Show', lot ,class:"btn btn-md btn-success"%></td>
-      <td><%= link_to 'Edit', edit_lot_path(lot) ,class:"btn btn-md btn-primary"%></td>
-      <td><%= link_to 'Destroy', lot, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-md btn-danger"%></td>
+
     </tr>
   <% end %>
   </tbody>

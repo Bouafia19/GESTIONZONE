@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+
+        <div class="panel-body">
+<h1>Editing Hors Zone</h1>
+<hr>
+
+
+<%= link_to 'Show', @hors_zone ,class:"btn btn-success"%> |
+<%= link_to 'Back', hors_zones_path,class:"btn btn-warning" %>
+          <hr>
+          <br>
+
+          <div class="panel panel-default">
+            <div class="panel-body">
+
+
+<%= render 'form', hors_zone: @hors_zone %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

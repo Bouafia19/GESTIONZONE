@@ -1,0 +1,66 @@
+
+
+
+
+<table height="900" class="table table-responsive table-striped table-hover table sortable">
+  <thead>
+  <tr>
+    <th colspan="3"></th>
+    <th>Code zone</th>
+    <th>Type zone</th>
+    <th>Nom zone</th>
+    <th>Commune</th>
+    <th>Wilaya</th>
+    <th>Num arrete creation</th>
+    <th>Dat arrete creation</th>
+    <th>Superf total</th>
+    <th>Superf cessible</th>
+    <th>Superf vrd</th>
+    <th>Nbr lots</th>
+    <th>Nbr lot attribues</th>
+    <th>Nbr lot cession</th>
+    <th>Nbr lot concession</th>
+    <th>Observation</th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+  <% paginate.each do |hors_zone| %>
+    <tr>
+      <td><%= link_to 'Show', hors_zone ,class:"btn btn-success"%></td>
+      <td><%= link_to 'Edit', edit_hors_zone_path(hors_zone) ,class:"btn btn-primary"%></td>
+      <td><%= link_to 'Destroy', hors_zone, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
+      <td><%= hors_zone.code_zone %></td>
+      <td><%= hors_zone.type_zone %></td>
+      <td><%= hors_zone.nom_zone %></td>
+      <td><%= hors_zone.commune %></td>
+      <td><%= hors_zone.wilaya %></td>
+      <td><%= hors_zone.num_arrete_creation %></td>
+      <td><%= hors_zone.dat_arrete_creation %></td>
+      <td><%= hors_zone.superf_total %></td>
+      <td><%= hors_zone.superf_cessible %></td>
+      <td><%= hors_zone.superf_vrd %></td>
+      <td><%= hors_zone.nbr_lots %></td>
+      <td><%= hors_zone.nbr_lot_attribues %></td>
+      <td><%= hors_zone.nbr_lot_cession %></td>
+      <td><%= hors_zone.nbr_lot_concession %></td>
+      <td><%= hors_zone.observation %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div  id="dataTables-example_info" role="status" aria-live="polite">
+      <span>Affichage  <%=paginate.length%> de <%= @total%> entrées</span>
+    </div>
+  </div>
+  <div class="col-sm-6" >
+    <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate" style="position: absolute; right:13px; top: -20px">
+      <%= will_paginate paginate,renderer: BootstrapPagination::Rails , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+module HorsZonesHelper
+end

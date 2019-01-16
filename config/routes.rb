@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :promotion_immobilieres
+  resources :hors_zones
+  resources :zone_activites
+  resources :zone_industrielles
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 

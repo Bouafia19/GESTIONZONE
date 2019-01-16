@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code zone:</strong>
+  <%= @zone_activite.code_zone %>
+</p>
+
+<p>
+  <strong>Type zone:</strong>
+  <%= @zone_activite.type_zone %>
+</p>
+
+<p>
+  <strong>Nom zone:</strong>
+  <%= @zone_activite.nom_zone %>
+</p>
+
+<p>
+  <strong>Commune:</strong>
+  <%= @zone_activite.commune %>
+</p>
+
+<p>
+  <strong>Wilaya:</strong>
+  <%= @zone_activite.wilaya %>
+</p>
+
+<p>
+  <strong>Num arrete creation:</strong>
+  <%= @zone_activite.num_arrete_creation %>
+</p>
+
+<p>
+  <strong>Dat arrete creation:</strong>
+  <%= @zone_activite.dat_arrete_creation %>
+</p>
+
+<p>
+  <strong>Superf total:</strong>
+  <%= @zone_activite.superf_total %>
+</p>
+
+<p>
+  <strong>Superf cessible:</strong>
+  <%= @zone_activite.superf_cessible %>
+</p>
+
+<p>
+  <strong>Superf vrd:</strong>
+  <%= @zone_activite.superf_vrd %>
+</p>
+
+<p>
+  <strong>Nbr lots:</strong>
+  <%= @zone_activite.nbr_lots %>
+</p>
+
+<p>
+  <strong>Nbr lot attribues:</strong>
+  <%= @zone_activite.nbr_lot_attribues %>
+</p>
+
+<p>
+  <strong>Nbr lot cession:</strong>
+  <%= @zone_activite.nbr_lot_cession %>
+</p>
+
+<p>
+  <strong>Nbr lot concession:</strong>
+  <%= @zone_activite.nbr_lot_concession %>
+</p>
+
+<p>
+  <strong>Observation:</strong>
+  <%= @zone_activite.observation %>
+</p>
+
+<%= link_to 'Edit', edit_zone_activite_path(@zone_activite) %> |
+<%= link_to 'Back', zone_activites_path %>

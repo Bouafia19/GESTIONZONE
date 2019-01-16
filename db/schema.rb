@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_09_143655) do
+ActiveRecord::Schema.define(version: 2019_01_12_131750) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,26 @@ ActiveRecord::Schema.define(version: 2019_01_09_143655) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "hors_zones", force: :cascade do |t|
+    t.string "code_zone"
+    t.string "type_zone"
+    t.string "nom_zone"
+    t.string "commune"
+    t.string "wilaya"
+    t.integer "num_arrete_creation"
+    t.date "dat_arrete_creation"
+    t.float "superf_total"
+    t.float "superf_cessible"
+    t.float "superf_vrd"
+    t.integer "nbr_lots"
+    t.integer "nbr_lot_attribues"
+    t.integer "nbr_lot_cession"
+    t.integer "nbr_lot_concession"
+    t.text "observation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "investisseurs", force: :cascade do |t|
@@ -116,6 +136,26 @@ ActiveRecord::Schema.define(version: 2019_01_09_143655) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "promotion_immobilieres", force: :cascade do |t|
+    t.string "code_zone"
+    t.string "type_zone"
+    t.string "nom_zone"
+    t.string "commune"
+    t.string "wilaya"
+    t.integer "num_arrete_creation"
+    t.date "dat_arrete_creation"
+    t.float "superf_total"
+    t.float "superf_cessible"
+    t.float "superf_vrd"
+    t.integer "nbr_lots"
+    t.integer "nbr_lot_attribues"
+    t.integer "nbr_lot_cession"
+    t.integer "nbr_lot_concession"
+    t.text "observation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -126,6 +166,46 @@ ActiveRecord::Schema.define(version: 2019_01_09_143655) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "zone_activites", force: :cascade do |t|
+    t.string "code_zone"
+    t.string "type_zone"
+    t.string "nom_zone"
+    t.string "commune"
+    t.string "wilaya"
+    t.integer "num_arrete_creation"
+    t.date "dat_arrete_creation"
+    t.float "superf_total"
+    t.float "superf_cessible"
+    t.float "superf_vrd"
+    t.integer "nbr_lots"
+    t.integer "nbr_lot_attribues"
+    t.integer "nbr_lot_cession"
+    t.integer "nbr_lot_concession"
+    t.text "observation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "zone_industrielles", force: :cascade do |t|
+    t.string "code_zone"
+    t.string "type_zone"
+    t.string "nom_zone"
+    t.string "commune"
+    t.string "wilaya"
+    t.integer "num_arrete_creation"
+    t.date "dat_arrete_creation"
+    t.float "superf_total"
+    t.float "superf_cessible"
+    t.float "superf_vrd"
+    t.integer "nbr_lots"
+    t.integer "nbr_lot_attribues"
+    t.integer "nbr_lot_cession"
+    t.integer "nbr_lot_concession"
+    t.text "observation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "zones", force: :cascade do |t|

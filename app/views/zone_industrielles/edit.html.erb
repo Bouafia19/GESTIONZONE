@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+
+        <div class="panel-body">
+<h1>Editing Zone Industrielle</h1>
+          <hr>
+
+
+<%= link_to 'Show', @zone_industrielle ,class:"btn btn-success"%> |
+<%= link_to 'Back', zone_industrielles_path ,class:"btn btn-warning"%>
+          <hr>
+          <br>
+
+          <div class="panel panel-default">
+            <div class="panel-body">
+
+
+<%= render 'form', zone_industrielle: @zone_industrielle %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,3 @@
 class Lot < ApplicationRecord
-  belongs_to :zone
+  belongs_to :zone ,required: false
 end

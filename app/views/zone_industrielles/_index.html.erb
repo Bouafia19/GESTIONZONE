@@ -1,0 +1,62 @@
+<table class="table table-responsive table-striped table-hover table sortable">
+  <thead>
+  <tr>
+    <th colspan="3"></th>
+    <th>Code zone</th>
+    <th>Type zone</th>
+    <th>Nom zone</th>
+    <th>Commune</th>
+    <th>Wilaya</th>
+    <th>Num arrete creation</th>
+    <th>Dat arrete creation</th>
+    <th>Superf total</th>
+    <th>Superf cessible</th>
+    <th>Superf vrd</th>
+    <th>Nbr lots</th>
+    <th>Nbr lot attribues</th>
+    <th>Nbr lot cession</th>
+    <th>Nbr lot concession</th>
+    <th>Observation</th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+  <% paginate.each do |zone_industrielle| %>
+    <tr>
+      <td><%= link_to 'Show', zone_industrielle ,class:"btn btn-success"%></td>
+      <td><%= link_to 'Edit', edit_zone_industrielle_path(zone_industrielle),class:"btn btn-primary" %></td>
+      <td><%= link_to 'Destroy', zone_industrielle, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-danger"%></td>
+      <td><%= zone_industrielle.code_zone %></td>
+      <td><%= zone_industrielle.type_zone %></td>
+      <td><%= zone_industrielle.nom_zone %></td>
+      <td><%= zone_industrielle.commune %></td>
+      <td><%= zone_industrielle.wilaya %></td>
+      <td><%= zone_industrielle.num_arrete_creation %></td>
+      <td><%= zone_industrielle.dat_arrete_creation %></td>
+      <td><%= zone_industrielle.superf_total %></td>
+      <td><%= zone_industrielle.superf_cessible %></td>
+      <td><%= zone_industrielle.superf_vrd %></td>
+      <td><%= zone_industrielle.nbr_lots %></td>
+      <td><%= zone_industrielle.nbr_lot_attribues %></td>
+      <td><%= zone_industrielle.nbr_lot_cession %></td>
+      <td><%= zone_industrielle.nbr_lot_concession %></td>
+      <td><%= zone_industrielle.observation %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div  id="dataTables-example_info" role="status" aria-live="polite">
+      <span>Affichage  <%=paginate.length%> de <%= @total%> entrées</span>
+    </div>
+  </div>
+  <div class="col-sm-6" >
+    <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate" style="position: absolute; right:13px; top: -20px">
+      <%= will_paginate paginate,renderer: BootstrapPagination::Rails , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
+    </div>
+  </div>
+</div>

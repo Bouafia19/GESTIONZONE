@@ -1,0 +1,2 @@
+module ZoneIndustriellesHelper
+end

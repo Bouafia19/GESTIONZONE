@@ -1,7 +1,6 @@
-<table class="table table-responsive table sortable">
+<table class="table table-responsive table-striped table sortable">
   <thead>
   <tr>
-    <th>Name </th>
     <th>Email </th>
     <th>Action</th>
 
@@ -12,7 +11,7 @@
   <tbody>
   <% paginate.each do |user| %>
     <tr>
-      <td><% %></td>
+
       <td><%= user.email %></td>
       <td><%= link_to 'Show', user ,class:"btn btn-md btn-success"%>
         <%= link_to 'Edit', edit_user_path(user),class:"btn btn-md btn-primary" %>
