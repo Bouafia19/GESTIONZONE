@@ -80,6 +80,16 @@
     <%= form.label :observation %>
     <%= form.text_area :observation ,class:"form-control"%>
   </div>
+  <br>
+  <div class="field">
+    <%= form.label :photo %>
+    <%= form.file_field :photo,class:"form-control" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.label :document %>
+    <%= form.file_field :document,class:"form-control" %>
+  </div>
 <hr>
   <div class="actions">
     <%= form.submit class:"btn btn-md btn-success pull-right"%>

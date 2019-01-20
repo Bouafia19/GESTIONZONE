@@ -2,7 +2,6 @@
 
 
 
-<div class="container">
 
 
     <div class="card">
@@ -10,6 +9,7 @@
       <div class="card-body">
         <%= link_to 'Edit', edit_lot_path(@lot) ,class:"btn btn-md btn-primary" %> |
         <%= link_to 'Back', lots_path ,class:"btn btn-md btn-warning"%> |
+        <%= link_to 'Pdf', lot_path(format: :pdf) ,class:"btn btn-md btn-success "%> |
         <%= link_to 'New lot', new_lot_path ,class:"btn btn-md btn-success"%>
 
         <br>
@@ -126,11 +126,29 @@
           </div>
 
           <br>
+        </div>
+          <div class="col-sm-3">
+            <div class="card bg-success">
+              <div class="card-header"> <strong>Image:</strong></div></div>
+              <%= image_tag @lot.photo.url(:medium) %>
+          </div>
+
+<br>
+          <div class="col-sm-12">
+            <div class="panel panel-success">
+              <div class="panel-heading"> <span class="glyphicon glyphicon-file"> </span> | <strong>Document</strong></div>
+              <div class="panel-body">
+                <%if @lot.document_file_name != nil %>
+                  <iframe src="<%= @lot.document %>" width="1700" height="700"></iframe>
+                <%else%>
+                  <p class="text-center"><font size="4" >There is no file attached to this purchase</font></p>
+                <%end%>
+
+              </div>
+            </div>
+          </div>
+<br>
 
 
-
-
-    </div>
   </div>
-</div>
 </div>

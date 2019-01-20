@@ -37,7 +37,7 @@
               </a>
 
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <%= link_to 'ZONES', zones_path ,class:"dropdown-item"%>
+                <%= link_to 'ALL ZONES', zones_path ,class:"dropdown-item"%>
                 <%= link_to 'ZONES INDUSTRIELLES', zone_industrielles_path ,class:"dropdown-item"%>
                 <%= link_to 'HORS ZONES', hors_zones_path ,class:"dropdown-item"%>
                 <%= link_to 'PROMOTIONS IMOBILIERES', promotion_immobilieres_path ,class:"dropdown-item"%>
@@ -50,20 +50,21 @@
               <%= link_to 'LOTS', lots_path ,class:"nav-link"%>
             </li>
             <li class="nav-item">
-              <%= link_to 'UTILISATEURS', users_path ,class:"nav-link"%>
+              <%= link_to 'UTILISATEURS', users_path ,class:"nav-link fas fa-users"%>
+            </li>
+          </ul>
+            <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+               <%= link_to "Logout", destroy_user_session_path, method: :delete ,class:"btn btn-danger btn-mn nav-link far fa-user" %>
             </li>
 
-            <li class="nav-item ml-auto">
-              <%= link_to "Logout", destroy_user_session_path, method: :delete ,class:"btn btn-danger btn-mn nav-link" %>
-            </li>
-
-
+          </ul>
 
 
         <% else %>
 
-
-          <li class="nav-item pull-right">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item">
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
                <i class="far fa-user"></i>
             </button>
@@ -71,7 +72,6 @@
 
         <% end %>
       </ul>
-
     </div>
   </nav>
 <br>

@@ -25,6 +25,15 @@ class LotsController < ApplicationController
   # GET /lots/1
   # GET /lots/1.json
   def show
+    @sot = Lot.all
+    respond_to do |format|
+      format.html
+      format.pdf {render pdf: "lot",
+                         template: "lots/show.pdf.erb",
+                         locals: {:lot => @lot}}
+
+
+    end
   end
 
   # GET /lots/new
@@ -84,6 +93,6 @@ class LotsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lot_params
-      params.require(:lot).permit(:num_lot, :activite, :investisseur, :type_lot, :situation_physique, :situation_juridique, :date_act, :num_act, :date_attribution, :date_resolution, :etat_avancement, :nom_zone, :class_activite, :observation)
+      params.require(:lot).permit(:num_lot, :activite, :investisseur, :type_lot, :situation_physique, :situation_juridique, :date_act, :num_act, :date_attribution, :date_resolution, :etat_avancement, :nom_zone, :class_activite, :observation,:photo,:document)
     end
 end
