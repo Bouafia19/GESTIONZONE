@@ -27,6 +27,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 gem "paperclip"
 
+gem 'georuby'
+
+gem 'rgeo'
+gem 'rgeo-shapefile'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 

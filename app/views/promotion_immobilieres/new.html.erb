@@ -1,5 +1,23 @@
-<h1>New Promotion Immobiliere</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
 
+        <div class="panel-body">
+          <h1>New Promotion Immobiliere</h1>
+<hr>
+          <%= link_to 'Back', promotion_immobilieres_path ,class:"btn btn-md btn-warning"%>
+          <hr>
+          <br>
+          <div class="panel panel-default">
+            <div class="panel-body">
 <%= render 'form', promotion_immobiliere: @promotion_immobiliere %>
 
-<%= link_to 'Back', promotion_immobilieres_path %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

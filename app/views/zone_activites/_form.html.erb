@@ -13,80 +13,82 @@
 
   <div class="field">
     <%= form.label :code_zone %>
-    <%= form.text_field :code_zone %>
+    <%= form.text_field :code_zone ,class:"form-control"%>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :type_zone %>
-    <%= form.text_field :type_zone %>
+    <%= form.text_field :type_zone,class:"form-control" %>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :nom_zone %>
-    <%= form.text_field :nom_zone %>
+    <%= form.text_field :nom_zone ,class:"form-control"%>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :commune %>
-    <%= form.text_field :commune %>
+    <%= form.text_field :commune,class:"form-control" %>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :wilaya %>
-    <%= form.text_field :wilaya %>
+    <%= form.text_field :wilaya ,class:"form-control"%>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :num_arrete_creation %>
-    <%= form.number_field :num_arrete_creation %>
+    <%= form.number_field :num_arrete_creation,class:"form-control" %>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :dat_arrete_creation %>
-    <%= form.date_select :dat_arrete_creation %>
+    <%= form.date_select :dat_arrete_creation ,class:"form-control"%>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :superf_total %>
-    <%= form.text_field :superf_total %>
+    <%= form.text_field :superf_total,class:"form-control" %>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :superf_cessible %>
-    <%= form.text_field :superf_cessible %>
+    <%= form.text_field :superf_cessible ,class:"form-control"%>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :superf_vrd %>
-    <%= form.text_field :superf_vrd %>
+    <%= form.text_field :superf_vrd ,class:"form-control"%>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :nbr_lots %>
-    <%= form.number_field :nbr_lots %>
+    <%= form.number_field :nbr_lots ,class:"form-control"%>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :nbr_lot_attribues %>
-    <%= form.number_field :nbr_lot_attribues %>
+    <%= form.number_field :nbr_lot_attribues ,class:"form-control"%>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :nbr_lot_cession %>
-    <%= form.number_field :nbr_lot_cession %>
+    <%= form.number_field :nbr_lot_cession ,class:"form-control"%>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :nbr_lot_concession %>
-    <%= form.number_field :nbr_lot_concession %>
+    <%= form.number_field :nbr_lot_concession ,class:"form-control"%>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :observation %>
-    <%= form.text_area :observation %>
+    <%= form.text_area :observation,class:"form-control" %>
   </div>
-
+<br>
+  <hr>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-success"%>
   </div>
 <% end %>
+<br>

@@ -1,6 +1,7 @@
 <table class="table table-responsive table-striped table-hover table sortable">
   <thead>
   <tr>
+    <th colspan="3"></th>
     <th>Code zone</th>
     <th>Type zone</th>
     <th>Nom zone</th>
@@ -16,13 +17,16 @@
     <th>Nbr lot cession</th>
     <th>Nbr lot concession</th>
     <th>Observation</th>
-    <th colspan="3"></th>
+
   </tr>
   </thead>
 
   <tbody>
   <% paginate.each do |zone_activite| %>
     <tr>
+      <td><%= link_to 'Show', zone_activite ,class:"btn btn-success"%></td>
+      <td><%= link_to 'Edit', edit_zone_activite_path(zone_activite) ,class:"btn btn-primary"%></td>
+      <td><%= link_to 'Destroy', zone_activite, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
       <td><%= zone_activite.code_zone %></td>
       <td><%= zone_activite.type_zone %></td>
       <td><%= zone_activite.nom_zone %></td>
@@ -38,9 +42,7 @@
       <td><%= zone_activite.nbr_lot_cession %></td>
       <td><%= zone_activite.nbr_lot_concession %></td>
       <td><%= zone_activite.observation %></td>
-      <td><%= link_to 'Show', zone_activite %></td>
-      <td><%= link_to 'Edit', edit_zone_activite_path(zone_activite) %></td>
-      <td><%= link_to 'Destroy', zone_activite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
     </tr>
   <% end %>
   </tbody>

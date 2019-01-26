@@ -1,6 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+
+        <div class="panel-body">
+
 <h1>Editing Zone Activite</h1>
+<hr>
 
+          <%= link_to 'Show', @zone_activite ,class:"btn btn-success"%> |
+          <%= link_to 'Back', zone_activites_path ,class:"btn btn-warning"%>
+          <hr>
+          <br>
+
+          <div class="panel panel-default">
+            <div class="panel-body">
 <%= render 'form', zone_activite: @zone_activite %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Show', @zone_activite %> |
-<%= link_to 'Back', zone_activites_path %>

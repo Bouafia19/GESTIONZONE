@@ -1,5 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+
+        <div class="panel-body">
 <h1>New Zone Activite</h1>
+<hr>
+
+
+<%= link_to 'Back', zone_activites_path ,class:"btn btn-md btn-warning"%>
+
+          <hr>
+          <br>
+          <div class="panel panel-default">
+            <div class="panel-body">
 
 <%= render 'form', zone_activite: @zone_activite %>
-
-<%= link_to 'Back', zone_activites_path %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

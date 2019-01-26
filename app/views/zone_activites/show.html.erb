@@ -1,79 +1,116 @@
-<p id="notice"><%= notice %></p>
+<div class="card">
 
-<p>
-  <strong>Code zone:</strong>
-  <%= @zone_activite.code_zone %>
-</p>
+  <div class="card-body">
 
-<p>
-  <strong>Type zone:</strong>
-  <%= @zone_activite.type_zone %>
-</p>
 
-<p>
-  <strong>Nom zone:</strong>
-  <%= @zone_activite.nom_zone %>
-</p>
 
-<p>
-  <strong>Commune:</strong>
-  <%= @zone_activite.commune %>
-</p>
+  <%= link_to 'Edit', edit_zone_activite_path(@zone_activite) ,class:"btn btn-primary"%> |
+<%= link_to 'Back', zone_activites_path ,class:"btn btn-warning"%> |
+    <%= link_to 'New Promotion immobiliere', new_zone_activite_path ,class:"btn btn-md btn-success"%> |
+    <%= link_to 'INVESTISSEURS', investisseurs_path ,class:"btn btn-md btn-danger"%> |
+    <%= link_to 'LOTS', lots_path ,class:"btn btn-md btn-primary"%>
 
-<p>
-  <strong>Wilaya:</strong>
-  <%= @zone_activite.wilaya %>
-</p>
 
-<p>
-  <strong>Num arrete creation:</strong>
-  <%= @zone_activite.num_arrete_creation %>
-</p>
 
-<p>
-  <strong>Dat arrete creation:</strong>
-  <%= @zone_activite.dat_arrete_creation %>
-</p>
+    <br>
+    <hr>
 
-<p>
-  <strong>Superf total:</strong>
-  <%= @zone_activite.superf_total %>
-</p>
+    <div class="card-deck">
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Code zone:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green"><%= @zone_activite.code_zone %> </font></p></div>
+      </div>
 
-<p>
-  <strong>Superf cessible:</strong>
-  <%= @zone_activite.superf_cessible %>
-</p>
 
-<p>
-  <strong>Superf vrd:</strong>
-  <%= @zone_activite.superf_vrd %>
-</p>
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Type:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green"><%= @zone_activite.type_zone %> </font></p></div>
+      </div>
 
-<p>
-  <strong>Nbr lots:</strong>
-  <%= @zone_activite.nbr_lots %>
-</p>
 
-<p>
-  <strong>Nbr lot attribues:</strong>
-  <%= @zone_activite.nbr_lot_attribues %>
-</p>
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Nom zone:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green"> <%= @zone_activite.nom_zone %> </font></p></div>
+      </div>
 
-<p>
-  <strong>Nbr lot cession:</strong>
-  <%= @zone_activite.nbr_lot_cession %>
-</p>
 
-<p>
-  <strong>Nbr lot concession:</strong>
-  <%= @zone_activite.nbr_lot_concession %>
-</p>
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Commune:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @zone_activite.commune %> </font></p></div>
+      </div>
 
-<p>
-  <strong>Observation:</strong>
-  <%= @zone_activite.observation %>
-</p>
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Wilaya:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @zone_activite.wilaya %> </font></p></div>
+      </div>
 
-<%= link_to 'Edit', edit_zone_activite_path(@zone_activite) %> |
-<%= link_to 'Back', zone_activites_path %>
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Num arrete creation:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @zone_activite.num_arrete_creation %> </font></p></div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Dat arrete creation:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @zone_activite.dat_arrete_creation %> </font></p></div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Superf total:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @zone_activite.superf_total %> </font></p></div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Superf cessible:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @zone_activite.superf_cessible %> </font></p></div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Superf vrd:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @zone_activite.superf_vrd %> </font></p></div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Nbr lots:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @zone_activite.nbr_lots %> </font></p></div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Nbr lot attribues:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @zone_activite.nbr_lot_attribues %> </font></p></div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Nbr lot cession:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @zone_activite.nbr_lot_cession %> </font></p></div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Nbr lot concession:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @zone_activite.nbr_lot_concession %> </font></p></div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card bg-success">
+          <div class="card-header"> <strong>Observation:</strong></div></div>
+        <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @zone_activite.observation %> </font></p></div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
