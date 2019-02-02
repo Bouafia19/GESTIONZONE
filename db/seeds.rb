@@ -5,4 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+#AdminUser.create!(email: 'khaled@example.com', password: 'root#rails', password_confirmation: 'root#rails') if Rails.env.development?
+
+Dir.glob("#{Rails.root}/db/seeds/*.rb").each { |f| require f }

@@ -5,7 +5,8 @@
 
     <div class="card-body">
 
-
+      <h1>Hors Zones: <%= @hors_zone.nom_zone %></h1>
+<hr>
       <%= link_to 'Edit', edit_hors_zone_path(@hors_zone) ,class:"btn btn-md btn-primary"%> |
       <%= link_to 'Back', hors_zones_path ,class:"btn btn-md btn-warning"%> |
       <%= link_to 'New hors zone', new_hors_zone_path ,class:"btn btn-md btn-success"%> |

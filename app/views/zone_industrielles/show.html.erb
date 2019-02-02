@@ -2,6 +2,8 @@
   <div class="card">
 
     <div class="card-body">
+      <h1>Zone industrielle: <%= @zone_industrielle.nom_zone %></h1>
+      <hr>
 <%= link_to 'Edit', edit_zone_industrielle_path(@zone_industrielle) ,class:"btn btn-md btn-primary"%> |
 <%= link_to 'Back', zone_industrielles_path ,class:"btn btn-md btn-warning"%> |
       <%= link_to 'New zone', new_zone_industrielle_path ,class:"btn btn-md btn-success"%> |

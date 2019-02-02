@@ -28,12 +28,11 @@ gem 'jbuilder', '~> 2.5'
 gem "paperclip"
 
 gem 'georuby'
-
 gem 'rgeo'
 gem 'rgeo-shapefile'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
-
+gem 'activerecord-postgis-adapter'
 gem 'activeadmin'
 # gem 'redis', '~> 4.0'
 gem 'devise'

@@ -10,10 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_17_141254) do
+ActiveRecord::Schema.define(version: 2019_01_28_101557) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "postgis"
+  enable_extension "postgis_topology"
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -39,6 +41,24 @@ ActiveRecord::Schema.define(version: 2019_01_17_141254) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.string "iso_code"
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["geom"], name: "index_countries_on_geom", using: :gist
+    t.index ["iso_code"], name: "index_countries_on_iso_code", unique: true
+    t.index ["name"], name: "index_countries_on_name", unique: true
+  end
+
+  create_table "gadm36_dza_0", primary_key: "gid", id: :serial, force: :cascade do |t|
+    t.string "gid_0", limit: 80
+    t.string "name_0", limit: 80
+    t.geometry "geom", limit: {:srid=>0, :type=>"multi_polygon"}
+    t.index ["geom"], name: "gadm36_dza_0_geom_idx", using: :gist
   end
 
   create_table "hors_zones", force: :cascade do |t|
@@ -117,6 +137,28 @@ ActiveRecord::Schema.define(version: 2019_01_17_141254) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "les_parceles_", primary_key: "gid", id: :serial, force: :cascade do |t|
+    t.string "n°_lot", limit: 50
+    t.string "type_lot", limit: 50
+    t.string "situation_", limit: 50
+    t.string "situation1", limit: 50
+    t.date "date_d_act"
+    t.date "date_de_r"
+    t.integer "n°d_act", limit: 2
+    t.date "date_d_att"
+    t.integer "prix_de_ve", limit: 2
+    t.string "activite_i", limit: 100
+    t.string "investisse", limit: 50
+    t.string "observatio", limit: 50
+    t.string "zone_", limit: 50
+    t.float "surfacelot"
+    t.integer "n°_permis", limit: 2
+    t.date "date_permi"
+    t.string "secteur__a", limit: 50
+    t.geometry "geom", limit: {:srid=>0, :type=>"multi_polygon"}
+    t.index ["geom"], name: "les_parceles__geom_idx", using: :gist
+  end
+
   create_table "lots", force: :cascade do |t|
     t.integer "num_lot"
     t.string "activite"
@@ -162,6 +204,30 @@ ActiveRecord::Schema.define(version: 2019_01_17_141254) do
     t.text "observation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.string "name"
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.bigint "country_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_regions_on_country_id"
+    t.index ["geom"], name: "index_regions_on_geom", using: :gist
+  end
+
+  create_table "states", force: :cascade do |t|
+    t.bigint "country_id"
+    t.string "name"
+    t.string "hasc_code"
+    t.string "state_type"
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "region_id"
+    t.index ["country_id"], name: "index_states_on_country_id"
+    t.index ["geom"], name: "index_states_on_geom", using: :gist
+    t.index ["region_id"], name: "index_states_on_region_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -236,4 +302,7 @@ ActiveRecord::Schema.define(version: 2019_01_17_141254) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "regions", "countries"
+  add_foreign_key "states", "countries"
+  add_foreign_key "states", "regions"
 end
