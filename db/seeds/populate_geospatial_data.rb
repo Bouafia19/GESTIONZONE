@@ -1,4 +1,5 @@
-connection = ActiveRecord::Base.connection()
+#!connection = ActiveRecord::Base.connection()
+=begin
 from_country_shp_sql = `shp2pgsql -c -g geom -W LATIN1 -s 4326 #{Rails.root.join('db', 'shapefiles', 'gadm36_DZA_0.shp')} countries_ref`
 connection.execute "drop table if exists countries_ref"
 connection.execute from_country_shp_sql
@@ -67,3 +68,4 @@ if State.all.count == 0
 
   puts
 end
+=end

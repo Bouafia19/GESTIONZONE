@@ -51,58 +51,58 @@
 <br>
   <div class="form-group col-4 field">
     <%= form.label :num_act,class:"col-sm-3 col-form-label" %>
-    <%= form.number_field :num_act ,class:"form-control-lg"%>
+    <%= form.number_field :num_act ,class:"form-control-lg col-8"%>
   </div>
 <br>
   <div class="form-group col-4 field">
     <%= form.label :date_attribution,class:"col-sm-3 col-form-label" %>
     <%#= form.date_select :date_attribution , class: 'datepicker form-control','data-date-format'=>"dd/mm/yyyy" ,id:'date'%>
-    <%= form.text_field :date_attribution, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
+    <%= form.text_field :date_attribution, class: 'datepicker form-control-lg col-8 date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
 
   </div>
 <br>
   <div class="form-group col-4 field">
     <%= form.label :date_resolution,class:"col-sm-3 col-form-label" %>
     <%#= form.date_select :date_resolution ,class:"form-control"%>
-    <%= form.text_field :date_resolution, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
+    <%= form.text_field :date_resolution, class: 'datepicker form-control-lg col-8 date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
 
   </div>
 <br>
   <div class="form-group col-4 field">
     <%= form.label :etat_avancement,class:"col-sm-3 col-form-label" %>
-    <%= form.number_field :etat_avancement ,class:"form-control-lg"%>
+    <%= form.number_field :etat_avancement ,class:"form-control-lg col-8"%>
   </div>
 <br>
   <div class="form-group col-4 field">
     <%= form.label :nom_zone ,class:"col-sm-3 col-form-label"%>
-    <%= form.select :nom_zone, options_from_collection_for_select(Zone.all,'id','nom_zone'),{},class:"custom-select custom-select-lg mb-3"%>
+    <%= form.select :nom_zone, options_from_collection_for_select(Zone.all,'id','nom_zone'),{},class:"custom-select custom-select-md mb-10"%>
   </div>
 <br>
 
   <div class="form-group col-4 field">
     <%= form.label :class_activite ,class:"col-sm-3 col-form-label"%>
-    <%= form.text_field :class_activite ,class:"form-control-lg "%>
+    <%= form.text_field :class_activite ,class:"form-control-lg col-8 "%>
   </div>
 <br>
 
   <div class="form-group col-4 field">
     <%= form.label :photo ,class:"col-sm-3"%>
-    <%= form.file_field :photo, class:"custom-file-label"%>
+    <%= form.file_field :photo, class:"custom-file-label col-8"%>
   </div>
   <br>
   <div class="custom-file col-4 field">
     <%= form.label :document ,class:"col-sm-3"%>
-    <%= form.file_field :document,class:"custom-file-label" %>
+    <%= form.file_field :document,class:"custom-file-label col-8" %>
   </div>
   <br>
   <div class="form-group col-4 field">
     <%= form.label :type_zone,class:"col-sm-3 col-form-label" %>
-    <%= form.text_field :type_zone ,class:"form-control-lg"%>
+    <%= form.text_field :type_zone ,class:"form-control-lg col-8"%>
   </div>
     <br>
     <div class="form-group col-4 field">
       <%= form.label :observation ,class:"col-sm-3 col-form-label"%>
-      <%= form.text_area :observation ,class:"form-control-lg"%>
+      <%= form.text_area :observation ,class:"form-control-lg col-8"%>
     </div>
     <br>
   </div>

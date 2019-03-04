@@ -2,76 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43f71642-1426-4718-9a42-6501b751986f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GESTIONZONE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GESTIONZONE.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/investisseurs_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/investisseurs_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/lots_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/lots_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/welcome_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/welcome_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/zone_activites_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/zone_activites_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/zones_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/zones_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mailers/application_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/application_mailer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/lot.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/lot.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/hors_zones/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/hors_zones/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/hors_zones/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/hors_zones/_index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/hors_zones/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/hors_zones/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/hors_zones/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/hors_zones/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/hors_zones/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/hors_zones/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/investisseurs/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/investisseurs/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/investisseurs/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/investisseurs/_index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/investisseurs/alert_stock.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/investisseurs/alert_stock.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/investisseurs/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/investisseurs/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/investisseurs/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/investisseurs/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/investisseurs/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/investisseurs/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/lots/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/lots/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/lots/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/lots/_index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/lots/_lot.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/lots/_lot.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/lots/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/lots/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/lots/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/lots/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/lots/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/lots/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/promotion_immobilieres/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/promotion_immobilieres/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/promotion_immobilieres/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/promotion_immobilieres/_index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/promotion_immobilieres/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/promotion_immobilieres/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/promotion_immobilieres/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/promotion_immobilieres/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/promotion_immobilieres/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/promotion_immobilieres/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/change_passd.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/change_passd.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/welcome/index.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/welcome/index.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zone_activites/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zone_activites/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zone_activites/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zone_activites/_index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zone_activites/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zone_activites/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zone_activites/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zone_activites/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zone_activites/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zone_activites/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zone_industrielles/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zone_industrielles/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zone_industrielles/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zone_industrielles/_index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zone_industrielles/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zone_industrielles/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zone_industrielles/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zone_industrielles/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zone_industrielles/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zone_industrielles/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zones/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zones/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zones/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zones/_index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zones/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zones/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190109143655_add_nom_to_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190109143655_add_nom_to_users.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -152,9 +83,9 @@
           <entry key="js" value="25" />
           <entry key="json" value="6" />
           <entry key="log" value="1" />
-          <entry key="rails" value="4" />
-          <entry key="rake" value="4" />
-          <entry key="rb" value="275" />
+          <entry key="rails" value="5" />
+          <entry key="rake" value="5" />
+          <entry key="rb" value="278" />
           <entry key="rnc" value="1" />
           <entry key="scss" value="43" />
           <entry key="setup" value="1" />
@@ -174,7 +105,7 @@
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="RHTML" value="562" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="314" />
+          <entry key="Ruby" value="319" />
           <entry key="SCSS" value="43" />
           <entry key="YAML" value="4" />
         </counts>
@@ -184,11 +115,11 @@
           <entry key="Gemfile" value="75" />
           <entry key="coffee" value="68" />
           <entry key="css" value="4" />
-          <entry key="erb" value="7360" />
+          <entry key="erb" value="7388" />
           <entry key="html" value="1" />
           <entry key="jbuilder" value="4" />
           <entry key="js" value="79" />
-          <entry key="rake" value="49" />
+          <entry key="rake" value="53" />
           <entry key="rb" value="1371" />
           <entry key="scss" value="201" />
           <entry key="yml" value="47" />
@@ -200,8 +131,8 @@
           <entry key="CoffeeScript" value="68" />
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="79" />
-          <entry key="RHTML" value="7360" />
-          <entry key="Ruby" value="1499" />
+          <entry key="RHTML" value="7388" />
+          <entry key="Ruby" value="1503" />
           <entry key="SCSS" value="201" />
           <entry key="YAML" value="47" />
         </counts>
@@ -228,11 +159,39 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/lots/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="286">
+              <caret line="77" column="138" selection-start-line="77" selection-start-column="138" selection-end-line="77" selection-end-column="138" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/schema.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="839">
+              <caret line="225" lean-forward="true" selection-start-line="225" selection-end-line="225" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/gis_test_task.rake">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/seeds/populate_geospatial_data.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -268,7 +227,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/zone_industrielles/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/investisseurs/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html" />
         <option value="$PROJECT_DIR$/db/migrate/20190221101815_addname_tousers.rb" />
@@ -319,6 +277,7 @@
         <option value="$PROJECT_DIR$/app/views/investisseurs/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/lots/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/lots/_form.html.erb" />
+        <option value="$PROJECT_DIR$/lib/tasks/gis_test_task.rake" />
       </list>
     </option>
   </component>
@@ -369,6 +328,27 @@
               <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
               <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
               <item name="Application" type="1a20d5f2:ApplicationFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Models" type="4bd37eb5:ModelsFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Lib" type="5b329ca0:LibFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="db" type="9f8ba9b5:UnclassifiedDBFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="db" type="9f8ba9b5:UnclassifiedDBFolderNode" />
+              <item name="seeds" type="3dfa953c:FolderSubFolderNode" />
             </path>
           </expand>
           <select />
@@ -616,12 +596,12 @@
       <workItem from="1551517039928" duration="16756000" />
       <workItem from="1551597236815" duration="8166000" />
       <workItem from="1551622522196" duration="3623000" />
-      <workItem from="1551683321683" duration="2232000" />
+      <workItem from="1551683321683" duration="3908000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="610386000" />
+    <option name="totallyTimeSpent" value="612062000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -636,7 +616,7 @@
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19370331" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19370331" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -690,41 +670,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/users/change_passd.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/zone_activites/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="10" selection-start-line="1" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/zone_industrielles/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/promotion_immobilieres/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/hors_zones/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/promotion_immobilieres/index.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1026,8 +971,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/lots/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="286">
+          <caret line="77" column="138" selection-start-line="77" selection-start-column="138" selection-end-line="77" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="839">
+          <caret line="225" lean-forward="true" selection-start-line="225" selection-end-line="225" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/rails">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/gis_test_task.rake">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds/populate_geospatial_data.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>

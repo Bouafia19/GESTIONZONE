@@ -1,5 +1,5 @@
-namespace :gis_test_task do
-
+#!namespace :gis_test_task do
+=begin
   desc "creates json for Algeria"
   task create_json: :environment do
 
@@ -37,3 +37,4 @@ namespace :gis_test_task do
   end
 
 end
+=end
