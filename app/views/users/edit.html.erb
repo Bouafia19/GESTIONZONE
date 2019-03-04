@@ -1,11 +1,11 @@
 
+  <div class="card">
+    <div class="card-body">
+      <div class="card-header ">
 
-<div class="row">
-  <div class="col-sm-12">
-    <div class="panel panel-default">
-
+        <h1> Editing User :<%= @user.name%> </h1>
+      </div>
       <div class="panel-body">
-        <h1> Editing User : </h1>
         <hr>
         <%= link_to 'Show', @user,class:"btn btn-md btn-success" %> |
         <%= link_to 'Back', users_path ,class:"btn btn-md btn-warning"%>
@@ -23,14 +23,25 @@
             </div>
           <% end %>
           <br>
-
+          <div class="col-4 field">
+            <%= f.label :name %>
+            <%= f.text_field :name, id: :user_name ,class:"form-control"%>
+          </div>
           <br>
-          <div class="field">
+          <div class="col-4 field">
             <%= f.label :email %>
             <%= f.text_field :email, id: :user_email ,class:"form-control"%>
           </div>
           <br>
-
+          <div class="col-4 field">
+            <%= f.label :role %><br />
+            <%= f.select :role, options_for_select([["Admin","admin"],["Utilisateur","utilisateur"],["Public","public"]]),{},class:"form-control"%>
+          </div>
+          <br>
+          <div class="col-4 field">
+            <%= f.label :photo %>
+            <%= f.file_field :photo,class:"form-control" %>
+          </div>
           <hr>
           <div class="actions">
             <%= f.submit class:"btn btn-md btn-success pull-right" %>
@@ -41,4 +52,3 @@
       </div>
     </div>
   </div>
-</div>

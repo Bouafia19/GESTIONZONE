@@ -1,9 +1,11 @@
-<table class="table table-responsive table-striped table sortable">
+
+<table class="table table-responsive table-bordered table sortable">
   <thead>
   <tr>
+    <th>Name </th>
     <th>Email </th>
-    <th>Action</th>
-
+    <th>Role </th>
+    <th>Created at </th>
     <th colspan="3"></th>
   </tr>
   </thead>
@@ -11,11 +13,13 @@
   <tbody>
   <% paginate.each do |user| %>
     <tr>
-
+      <td><%= user.name %></td>
       <td><%= user.email %></td>
-      <td><%= link_to 'Show', user ,class:"btn btn-md btn-success"%>
-        <%= link_to 'Edit', edit_user_path(user),class:"btn btn-md btn-primary" %>
-        <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-md btn-danger"%></td>
+      <td><%= user.role %></td>
+      <td><%= user.created_at %></td>
+      <td><%= link_to 'Show', user ,class:"btn btn-md btn-success"%></td>
+      <td><%= link_to 'Edit', edit_user_path(user),class:"btn btn-md btn-primary" %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-md btn-danger"%></td>
     </tr>
 
   <% end %>
@@ -28,9 +32,10 @@
       <span>Affichage  <%=paginate.length%> de <%= @total%> entrées</span>
     </div>
   </div>
-  <div class="col-sm-6" >
-    <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate" style="position: absolute; right:13px; top: -20px">
-      <%= will_paginate paginate,renderer: BootstrapPagination::Rails , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
-    </div>
-  </div>
+
+      <%= will_paginate paginate, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
+
 </div>
+
+
+

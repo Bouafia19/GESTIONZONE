@@ -10,85 +10,102 @@
       </ul>
     </div>
   <% end %>
+  <div class="card-deck">
+  <div class="form-row">
+  <div class="form-group col-4 field">
+    <%= form.label :num_lot ,class:"col-sm-3 col-form-label"%>
+    <%= form.number_field :num_lot,class:"form-control-lg col-8 " %>
+  </div>
+<br>
+  <div class="form-group col-4 field">
+    <%= form.label :activite,class:"col-sm-3 col-form-label" %>
+    <%= form.text_field :activite ,class:"form-control-lg col-8"%>
+  </div>
+<br>
+  <div class="form-group col-4 field">
+    <%= form.label :investisseur,class:"col-sm-3 col-form-label" %>
+    <%= form.text_field :investisseur ,class:"form-control-lg col-8"%>
+  </div>
+<br>
+  <div class="form-group col-4 field">
+    <%= form.label :type_lot ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :type_lot ,class:"form-control-lg col-8"%>
+  </div>
+<br>
+  <div class="form-group col-4 field">
+    <%= form.label :situation_physique,class:"col-sm-3 col-form-label" %>
+    <%= form.text_field :situation_physique,class:"form-control-lg col-8" %>
+  </div>
+<br>
+  <div class="form-group col-4 field">
+    <%= form.label :situation_juridique ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :situation_juridique ,class:"form-control-lg col-8"%>
+  </div>
+<br>
+  <div class="form-group col-4 field">
+    <%= form.label :date_act ,class:"col-sm-3 col-form-label"%>
+    <%#= form.date_select :date_act ,class:"form-control"%>
+    <%= form.text_field :date_act, class: 'datepicker form-control-lg col-3 date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
 
-  <div class="field">
-    <%= form.label :num_lot %>
-    <%= form.number_field :num_lot,class:"form-control" %>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :activite %>
-    <%= form.text_field :activite ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :num_act,class:"col-sm-3 col-form-label" %>
+    <%= form.number_field :num_act ,class:"form-control-lg"%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :investisseur %>
-    <%= form.text_field :investisseur ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :date_attribution,class:"col-sm-3 col-form-label" %>
+    <%#= form.date_select :date_attribution , class: 'datepicker form-control','data-date-format'=>"dd/mm/yyyy" ,id:'date'%>
+    <%= form.text_field :date_attribution, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
+
   </div>
 <br>
-  <div class="field">
-    <%= form.label :type_lot %>
-    <%= form.text_field :type_lot ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :date_resolution,class:"col-sm-3 col-form-label" %>
+    <%#= form.date_select :date_resolution ,class:"form-control"%>
+    <%= form.text_field :date_resolution, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
+
   </div>
 <br>
-  <div class="field">
-    <%= form.label :situation_physique %>
-    <%= form.text_field :situation_physique,class:"form-control" %>
+  <div class="form-group col-4 field">
+    <%= form.label :etat_avancement,class:"col-sm-3 col-form-label" %>
+    <%= form.number_field :etat_avancement ,class:"form-control-lg"%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :situation_juridique %>
-    <%= form.text_field :situation_juridique ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :nom_zone ,class:"col-sm-3 col-form-label"%>
+    <%= form.select :nom_zone, options_from_collection_for_select(Zone.all,'id','nom_zone'),{},class:"custom-select custom-select-lg mb-3"%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :date_act %>
-    <%= form.date_select :date_act ,class:"form-control"%>
+
+  <div class="form-group col-4 field">
+    <%= form.label :class_activite ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :class_activite ,class:"form-control-lg "%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :num_act %>
-    <%= form.number_field :num_act ,class:"form-control"%>
-  </div>
-<br>
-  <div class="field">
-    <%= form.label :date_attribution %>
-    <%= form.date_select :date_attribution , class: 'datepicker form-control','data-date-format'=>"dd/mm/yyyy" ,id:'date'%>
-  </div>
-<br>
-  <div class="field">
-    <%= form.label :date_resolution %>
-    <%= form.date_select :date_resolution ,class:"form-control"%>
-  </div>
-<br>
-  <div class="field">
-    <%= form.label :etat_avancement %>
-    <%= form.number_field :etat_avancement ,class:"form-control"%>
-  </div>
-<br>
-  <div class="field">
-    <%= form.label :nom_zone %>
-    <%= form.select :nom_zone, options_from_collection_for_select(Zone.all,'id','nom_zone'),{},class:"form-control"%>
-  </div>
-<br>
-  <div class="field">
-    <%= form.label :class_activite %>
-    <%= form.text_field :class_activite ,class:"form-control"%>
-  </div>
-<br>
-  <div class="field">
-    <%= form.label :observation %>
-    <%= form.text_area :observation ,class:"form-control"%>
+
+  <div class="form-group col-4 field">
+    <%= form.label :photo ,class:"col-sm-3"%>
+    <%= form.file_field :photo, class:"custom-file-label"%>
   </div>
   <br>
-  <div class="field">
-    <%= form.label :photo %>
-    <%= form.file_field :photo,class:"form-control" %>
+  <div class="custom-file col-4 field">
+    <%= form.label :document ,class:"col-sm-3"%>
+    <%= form.file_field :document,class:"custom-file-label" %>
   </div>
   <br>
-  <div class="field">
-    <%= form.label :document %>
-    <%= form.file_field :document,class:"form-control" %>
+  <div class="form-group col-4 field">
+    <%= form.label :type_zone,class:"col-sm-3 col-form-label" %>
+    <%= form.text_field :type_zone ,class:"form-control-lg"%>
+  </div>
+    <br>
+    <div class="form-group col-4 field">
+      <%= form.label :observation ,class:"col-sm-3 col-form-label"%>
+      <%= form.text_area :observation ,class:"form-control-lg"%>
+    </div>
+    <br>
+  </div>
   </div>
 <hr>
   <div class="actions">
@@ -98,7 +115,7 @@
 <br>
 <script>
     $(function() {
-        $( "#date" ).datepicker({
+        $( ".date" ).datepicker({
             dateFormat : 'mm/dd/yy',
             changeMonth : true,
             changeYear : true,
@@ -107,4 +124,13 @@
         });
     });
 
+</script>
+
+<script>
+    var e3 = document.getElementById('date');
+    if(e3) {
+        e3.addEventListener('input', function (e) {
+            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,2})(\d{0,4})/);
+            e.target.value = (x[1] ? x[1] : '') + (x[2] ? '/' + x[2] : '') + (x[3] ? '/' + x[3] : '');
+        });}
 </script>

@@ -9,110 +9,91 @@
 
 <%= link_to 'Edit', edit_promotion_immobiliere_path(@promotion_immobiliere) ,class:"btn btn-primary"%> |
 <%= link_to 'Back', promotion_immobilieres_path,class:"btn btn-warning" %> |
-<%= link_to 'New Promotion immobiliere', new_promotion_immobiliere_path ,class:"btn btn-md btn-success"%> |
+<% link_to 'New Promotion immobiliere', new_promotion_immobiliere_path ,class:"btn btn-md btn-success"%>
 <%= link_to 'INVESTISSEURS', investisseurs_path ,class:"btn btn-md btn-danger"%> |
 <%= link_to 'LOTS', lots_path ,class:"btn btn-md btn-primary"%>
 
       <br>
       <hr>
+      <table class="table table-responsive table-striped table-hover table sortable">
+        <thead>
 
-      <div class="card-deck">
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Code zone:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green"><%= @promotion_immobiliere.code_zone %> </font></p></div>
-        </div>
+        </thead>
+        <tbody>
+        <tr>
+          <th>Code zone</th>
+          <td><%= @promotion_immobiliere.code_zone %></td>
+        </tr>
+
+        <tr>
+          <th>Type zone</th>
+          <td><%= @promotion_immobiliere.type_zone %></td>
+        </tr>
+
+        <tr>
+          <th>Nom zone</th>
+          <td><%= @promotion_immobiliere.nom_zone %></td>
+        </tr>
+
+        <tr>
+          <th>Commune</th>
+          <td><%= @promotion_immobiliere.commune %></td>
+        </tr>
+
+        <tr>
+          <th>Wilaya</th>
+          <td><%= @promotion_immobiliere.wilaya %></td>
+        </tr>
+        <tr>
+          <th>Num arrete creation</th>
+          <td><%= @promotion_immobiliere.num_arrete_creation %></td>
+        </tr>
+
+        <tr>
+          <th>Dat arrete creation</th>
+          <td><%= @promotion_immobiliere.dat_arrete_creation %></td>
+        </tr>
+        <tr>
+          <th>Superf total</th>
+          <td><%= @promotion_immobiliere.superf_total %></td>
+        </tr>
+        <tr>
+          <th>Superf cessible</th>
+
+          <td><%= @promotion_immobiliere.superf_cessible %></td>
+        </tr>
+        <tr>
+          <th>Superf vrd</th>
+          <td><%= @promotion_immobiliere.superf_vrd %></td>
+        </tr>
+
+        <tr>
+          <th>Nbr lots</th>
+          <td><%= @promotion_immobiliere.nbr_lots %></td>
+        </tr>
+        <tr>
+          <th>Nbr lot attribues</th>
+          <td><%= @promotion_immobiliere.nbr_lot_attribues %></td>
+        </tr>
+        <tr>
+          <th>Nbr lot cession</th>
+          <td><%= @promotion_immobiliere.nbr_lot_cession %></td>
+        </tr>
+        <tr>
+          <th>Nbr lot concession</th>
+          <td><%=  @promotion_immobiliere.nbr_lot_concession %></td>
+        </tr>
+        <tr>
+          <th>Observation</th>
+          <td><%= @promotion_immobiliere.observation %></td>
+        </tr>
 
 
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Type:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green"><%= @promotion_immobiliere.type_zone %> </font></p></div>
-        </div>
-
-
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Nom zone:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green"> <%= @promotion_immobiliere.nom_zone %> </font></p></div>
-        </div>
-
-
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Commune:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @promotion_immobiliere.commune %> </font></p></div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Wilaya:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @promotion_immobiliere.wilaya %> </font></p></div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Num arrete creation:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @promotion_immobiliere.num_arrete_creation %> </font></p></div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Dat arrete creation:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @promotion_immobiliere.dat_arrete_creation %> </font></p></div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Superf total:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @promotion_immobiliere.superf_total %> </font></p></div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Superf cessible:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @promotion_immobiliere.superf_cessible %> </font></p></div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Superf vrd:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @promotion_immobiliere.superf_vrd %> </font></p></div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Nbr lots:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @promotion_immobiliere.nbr_lots %> </font></p></div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Nbr lot attribues:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @promotion_immobiliere.nbr_lot_attribues %> </font></p></div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Nbr lot cession:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @promotion_immobiliere.nbr_lot_cession %> </font></p></div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Nbr lot concession:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @promotion_immobiliere.nbr_lot_concession %> </font></p></div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Observation:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @promotion_immobiliere.observation %> </font></p></div>
-        </div>
-
+        </tbody>
+      </table>
 
       </div>
     </div>
-  </div>
+
 
 

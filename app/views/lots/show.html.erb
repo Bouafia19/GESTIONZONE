@@ -1,9 +1,4 @@
-
-
-
-
-
-
+<%= stylesheet_link_tag "vendor/datatables/dataTables.bootstrap4.min.css" %>
     <div class="card">
 
       <div class="card-body">
@@ -14,116 +9,73 @@
 
         <br>
         <hr>
+        <table class="table table-responsive table-striped table-hover table sortable">
+          <thead>
 
-        <div class="card-deck">
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Num lot:</strong></div></div>
-            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.num_lot %> </font></p></div>
-          </div>
+          </thead>
+          <tbody>
+          <tr>
+            <th>Num lot</th>
+            <td><%= @lot.num_lot %></td>
+          </tr>
 
-        <br>
+          <tr>
+            <th>Activite</th>
+            <td><%= @lot.activite %></td>
+          </tr>
 
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Activite:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.activite %> </font></p></div>
-        </div>
+          <tr>
+            <th>Investisseur</th>
+            <td><%= @lot.investisseur %></td>
+          </tr>
 
-        <br>
-        <div class="col-sm-3">
-          <div class="card bg-success">
-            <div class="card-header"> <strong>Investisseur:</strong></div></div>
-          <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.investisseur %> </font></p></div>
-        </div>
+          <tr>
+            <th>Type lot</th>
+            <td><%= @lot.type_lot %></td>
+          </tr>
 
-        <br>
+          <tr>
+            <th>Situation physique</th>
+            <td><%= @lot.situation_physique %></td>
+          </tr>
 
-          <div class="col-sm-3">
-            <div class="card bg-success">
-              <div class="card-header"> <strong>Type lot:</strong></div></div>
-            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.type_lot %> </font></p></div>
-          </div>
+          <tr>
+            <th>Situation juridique</th>
+            <td><%= @lot.situation_juridique %></td>
+          </tr>
 
-          <br>
+          <tr>
+            <th>Date act</th>
+            <td><%= @lot.date_act %></td>
+          </tr>
+          <tr>
+            <th>Num act</th>
+            <td><%= @lot.num_act %></td>
+          </tr>
+          <tr>
+            <th>Date attribution</th>
+            <td><%= @lot.date_attribution %></td>
+          </tr>
+          <tr>
+            <th>Date resolution</th>
+            <td><%= @lot.date_resolution %></td>
+          </tr>
 
-          <div class="col-sm-3">
-            <div class="card bg-success">
-              <div class="card-header"> <strong>Situation physique:</strong></div></div>
-            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.situation_physique %> </font></p></div>
-          </div>
+          <tr>
+            <th>Etat avancement</th>
+            <td><%= @lot.etat_avancement %></td>
+          </tr>
+          <tr>
+            <th>Class activite</th>
+            <td><%= @lot.class_activite %></td>
+          </tr>
+          <tr>
+            <th>Observation</th>
+            <td><%= @lot.observation %></td>
+          </tr>
 
-          <br>
-
-          <div class="col-sm-3">
-            <div class="card bg-success">
-              <div class="card-header"> <strong>Situation juridique:</strong></div></div>
-            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.situation_juridique %> </font></p></div>
-          </div>
-
-          <br>
-
-          <div class="col-sm-3">
-            <div class="card bg-success">
-              <div class="card-header"> <strong>Date act:</strong></div></div>
-            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.date_act %> </font></p></div>
-          </div>
-
-          <br>
-          <div class="col-sm-3">
-            <div class="card bg-success">
-              <div class="card-header"> <strong>Num act:</strong></div></div>
-            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.num_act %> </font></p></div>
-          </div>
-
-          <br>
-          <div class="col-sm-3">
-            <div class="card bg-success">
-              <div class="card-header"> <strong>Date attribution:</strong></div></div>
-            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.date_attribution %> </font></p></div>
-          </div>
-
-          <br>
-
-          <div class="col-sm-3">
-            <div class="card bg-success">
-              <div class="card-header"> <strong>Date resolution:</strong></div></div>
-            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.date_resolution %> </font></p></div>
-          </div>
-
-          <br>
-
-
-          <div class="col-sm-3">
-            <div class="card bg-success">
-              <div class="card-header"> <strong>Etat avancement:</strong></div></div>
-            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.etat_avancement %> </font></p></div>
-          </div>
-
-          <br>
-
-          <div class="col-sm-3">
-            <div class="card bg-success">
-              <div class="card-header"> <strong>Nom Zone:</strong></div></div>
-            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.nom_zone %> </font></p></div>
-          </div>
-
-          <br>
-
-          <div class="col-sm-3">
-            <div class="card bg-success">
-              <div class="card-header"> <strong>Class activite:</strong></div></div>
-            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.class_activite %> </font></p></div>
-          </div>
-
-          <br>
-
-
-          <div class="col-sm-3">
-            <div class="card bg-success">
-              <div class="card-header"> <strong>Observation:</strong></div></div>
-            <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @lot.observation %> </font></p></div>
-          </div>
+          </tbody>
+        </table>
 
           <br>
         </div>
@@ -139,9 +91,9 @@
               <div class="panel-heading"> <span class="glyphicon glyphicon-file"> </span> | <strong>Document</strong></div>
               <div class="panel-body">
                 <%if @lot.document_file_name != nil %>
-                  <iframe src="<%= @lot.document %>" width="1700" height="700"></iframe>
+                  <iframe src="<% @lot.document %>" width="1700" height="700"></iframe>
                 <%else%>
-                  <p class="text-center"><font size="4" >There is no file attached to this purchase</font></p>
+                  <p class="text-center"><font size="4" >There is no file attached to this lot</font></p>
                 <%end%>
 
               </div>
@@ -151,4 +103,76 @@
 
 
   </div>
-</div>
+
+
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+            <tr>
+              <th colspan="3"></th>
+              <th>Num lot</th>
+              <th>Activite</th>
+              <th>Investisseur</th>
+              <th>Type lot</th>
+              <th>Situation physique</th>
+              <th>Situation juridique</th>
+              <th>Date act</th>
+              <th>Num act</th>
+              <th>Date attribution</th>
+              <th>Date resolution</th>
+              <th>Etat avancement</th>
+              <th>Class activite</th>
+              <th>Observation</th>
+              <th>type zone</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <% @vot.each do |lot| %>
+              <%# paginate.min_by(type_zone: 'ZI') do |lot| %>
+              <tr>
+                <td><%= link_to 'Show', lot ,class:"btn btn-md btn-success"%></td>
+                <td><%= link_to 'Edit', edit_lot_path(lot) ,class:"btn btn-md btn-primary"%></td>
+                <td><%= link_to 'Destroy', lot, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-md btn-danger"%></td>
+
+                <td><%= lot.num_lot %></td>
+                <td><%= lot.activite %></td>
+                <td><%= lot.investisseur %></td>
+                <td><%= lot.type_lot %></td>
+                <td><%= lot.situation_physique %></td>
+                <td><%= lot.situation_juridique %></td>
+                <td><%= lot.date_act %></td>
+                <td><%= lot.num_act %></td>
+                <td><%= lot.date_attribution %></td>
+                <td><%= lot.date_resolution %></td>
+                <td><%= lot.etat_avancement %></td>
+                <td><%= lot.class_activite %></td>
+                <td><%= lot.observation %></td>
+                <td><%= lot.type_zone %></td>
+
+              </tr>
+            <% end %>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+<%= javascript_include_tag('vendor/datatables/jquery.dataTables.min.js') %>
+
+<script>
+$(document).ready( function () {
+$('#dataTable').DataTable();
+} );
+</script>
+
+<!-- Page level custom scripts -->

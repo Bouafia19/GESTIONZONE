@@ -1,15 +1,9 @@
-<table class="table table-responsive table-striped table sortable">
+<table class="table table-responsive table-bordered table-striped table sortable">
   <thead class="thead-inverse">
   <tr>
     <th colspan="3"></th>
-    <th >Num dossier </th>
-    <th>Date depot demande</th>
-    <th>Raison sociale arabe</th>
-    <th>Nom prenom gerant arabe</th>
-    <th>Raison sociale francais</th>
-    <th>Nom prenom gerant francais</th>
-    <th>Adresse</th>
-    <th>Num telephone</th>
+
+
     <th>Fax</th>
     <th>Email</th>
     <th>Intitule projet arabe</th>
@@ -63,13 +57,11 @@
       <td><%= link_to 'Show', investisseur ,class:"btn btn-success"%></td>
       <td><%= link_to 'Edit', edit_investisseur_path(investisseur) ,class:"btn btn-primary"%></td>
       <td><%= link_to 'Destroy', investisseur, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-danger"%></td>
-      <td><%= investisseur.num_dossier %></td>
-      <td><%= investisseur.date_depot_demande %></td>
-      <td><%= investisseur.raison_sociale_arabe %></td>
-      <td><%= investisseur.nom_prenom_gerant_arabe %></td>
-      <td><%= investisseur.raison_sociale_francais %></td>
-      <td><%= investisseur.nom_prenom_gerant_francais %></td>
-      <td><%= investisseur.adresse %></td>
+
+
+
+
+
       <td><%= investisseur.num_telephone %></td>
       <td><%= investisseur.fax %></td>
       <td><%= investisseur.email %></td>
@@ -125,9 +117,7 @@
       <span>Affichage  <%=paginate.length%> de <%= @total%> entrées</span>
     </div>
   </div>
-  <div class="col-sm-6" >
-    <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate" style="position: absolute; right:13px; top: -20px">
-      <%= will_paginate paginate,renderer: BootstrapPagination::Rails , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
-    </div>
-  </div>
+
+      <%= will_paginate paginate, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
+
 </div>

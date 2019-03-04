@@ -1,30 +1,81 @@
-
-
-<div class="row">
-  <div class="col-sm-12">
-    <div class="panel panel-default">
-
-      <div class="panel-body">
-        <h1> User name: </h1>
+<div class="card">
+  <div class="card-body">
+    <div class="card-header ">
+        <h1> User name: <%= @user.name%> </h1>
+    </div>
+    <div class="panel-body">
         <hr>
         <%= link_to 'Edit', edit_user_path(@user),class:"btn btn-md btn-primary" %> |
         <%= link_to 'Back', users_path ,class:"btn btn-md btn-warning"%> |
         <%= link_to 'Change passd', "change_passd/#{@user.id}" ,class:"btn btn-md btn-success"%>
 
         <hr>
-
-
-
-        <div class="col-sm-4">
-          <div class="panel panel-success">
-            <div class="panel-heading"><strong>Email </strong></div>
-            <div class="panel-body"><p class="text-center" ><font size="4" color="green">    <%= @user.email %></font></p></div>
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Nom</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800"><%= @user.name %></div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-comments fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Email</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800"><%= @user.email %></div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-comments fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Role</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800"><%= @user.role %></div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-comments fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Image</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800"><%= image_tag @user.photo.url(:medium) ,class:"rounded"%></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
 
 
       </div>
     </div>
   </div>
-</div>

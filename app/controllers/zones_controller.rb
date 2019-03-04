@@ -18,6 +18,7 @@ class ZonesController < ApplicationController
     session[:start_pub] ||= date1
     session[:end_pub] ||= date2
     datatable_paginate([:zone],['code_zone;nom_zone;commune;wilaya',['zones',"zones.dat_arrete_creation >='#{Date.parse(session[:start_pub])}' and zones.dat_arrete_creation <='#{Date.parse(session[:end_pub])}'"]])
+
   end
 
   # GET /zones/1
@@ -32,6 +33,7 @@ class ZonesController < ApplicationController
 
   # GET /zones/1/edit
   def edit
+
   end
 
   # POST /zones

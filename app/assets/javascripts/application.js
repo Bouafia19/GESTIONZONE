@@ -18,10 +18,21 @@
 
 
 //= require jquery3
-//= require bootstrap
-
-//= require bootstrap-sortable
 //= require bootstrap-datepicker
+
+//= require bootstrap
+//= require Chart.bundle
+//= require chartkick
+//= require bootstrap-sortable
+
+
+
+
+
+
+
+
+
 
 
 

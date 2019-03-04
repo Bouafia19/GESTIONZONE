@@ -29,6 +29,11 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        # using SendGrid's Ruby Library
+        # https://github.com/sendgrid/sendgrid-ruby
+        # Deliver the signup email
+
+
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -70,6 +75,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:nom,:email,:password)
+      params.require(:user).permit(:nom,:email,:password,:role,:photo,:name)
     end
 end

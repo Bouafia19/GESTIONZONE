@@ -4,20 +4,11 @@ class InvestisseursController < ApplicationController
   # GET /investisseurs
   # GET /investisseurs.json
   def index
-    date1 = ("01/01/2019")
-    date2 = Date.today.strftime("%d/%m/%Y")
-    if params[:start_date]
-      if Date.parse(params[:end_date]) < Date.parse(params[:start_date])
-        flash[:alert] = 'Invalid dates'
-      else
-        session[:start_pub] = params[:start_date]
-        session[:end_pub] = params[:end_date]
-      end
-    end
-    session[:start_pub] ||= date1
-    session[:end_pub] ||= date2
 
-    datatable_paginate([:investisseur],['raison_sociale_francais;nom_prenom_gerant_francais;intitule_projet_francais',['investisseurs',"investisseurs.date_depot_demande >='#{Date.parse(session[:start_pub])}' and investisseurs.date_depot_demande <='#{Date.parse(session[:end_pub])}'"]])
+
+    #datatable_paginate([:investisseur],['raison_sociale_francais;nom_prenom_gerant_francais;intitule_projet_francais',['investisseurs',"investisseurs.date_depot_demande >='#{Date.parse(session[:start_pub])}' and investisseurs.date_depot_demande <='#{Date.parse(session[:end_pub])}'"]])
+
+    datatable_paginate([:investisseur],['raison_sociale_francais;nom_prenom_gerant_francais;intitule_projet_francais'])
   end
 
   # GET /investisseurs/1

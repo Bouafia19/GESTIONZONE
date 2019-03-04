@@ -1,4 +1,3 @@
-<div class="container">
 
   <div class="card">
 
@@ -9,329 +8,253 @@
       <br>
       <hr>
 
-      <div class="card-deck">
-
-
-      <p> <div class="col-sm-3">
-        <div class="card bg-success">
-          <div class="card-header"> <strong>Num dossier:</strong></div></div>
-        <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.num_dossier %> </font></p></div>
-    </div>
 
     <br>
+        <table class="table table-responsive table-striped table-hover table sortable">
+          <thead>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Date depot demande:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.date_depot_demande %> </font></p></div>
-    </div>
+          </thead>
+          <tbody>
+          <tr>
+            <th >Num dossier </th>
+            <td><%= @investisseur.num_dossier %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Raison sociale arabe:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.raison_sociale_arabe %> </font></p></div>
-    </div>
+          <tr>
+            <th>Date depot demande</th>
+            <td><%= @investisseur.date_depot_demande %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Nom prenom gerant arabe:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.nom_prenom_gerant_arabe %> </font></p></div>
-    </div>
+          <tr>
+            <th>Raison sociale arabe</th>
+            <td><%= @investisseur.raison_sociale_arabe %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Raison sociale francais:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.raison_sociale_francais %> </font></p></div>
-    </div>
+          <tr>
+            <th>Nom prenom gerant arabe</th>
+            <td><%= @investisseur.nom_prenom_gerant_arabe %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Nom prenom gerant francais:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.nom_prenom_gerant_francais %> </font></p></div>
-    </div>
+          <tr>
+            <th>Raison sociale francais</th>
+            <td><%= @investisseur.raison_sociale_francais %></td>
+          </tr>
+          <tr>
+            <th>Nom prenom gerant francais</th>
+            <td><%= @investisseur.nom_prenom_gerant_francais %></td>
+          </tr>
 
+          <tr>
+            <th>Adresse</th>
+            <td><%= @investisseur.adresse %></td>
+          </tr>
+          <tr>
+            <th>Num telephone</th>
+            <td><%= @investisseur.num_telephone %></td>
+          </tr>
+          <tr>
+            <th>Fax</th>
+            <td><%= @investisseur.fax %></td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td><%= @investisseur.email %></td>
+          </tr>
+          <tr>
+            <th>Intitule projet arabe</th>
+            <td><%= @investisseur.intitule_projet_arabe %></td>
+          </tr>
+          <tr>
+            <th>Intitule projet francais</th>
+            <td><%= @investisseur.intitule_projet_francais %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Adresse:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.adresse %> </font></p></div>
-    </div>
+          <tr>
+            <th>Secteur activite</th>
+            <td><%= @investisseur.secteur_activite %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Num telephone:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.num_telephone %> </font></p></div>
-    </div>
+          <tr>
+            <th>Filieres industrielles</th>
+            <td><%= @investisseur.filieres_industrielles %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Fax:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.fax %> </font></p></div>
-    </div>
+          <tr>
+            <th>Superficie demandee</th>
+            <td><%= @investisseur.superficie_demandee %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Email:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.email %> </font></p></div>
-    </div>
+          <tr>
+            <th>Montant investissement</th>
+            <td><%= @investisseur.montant_investissement %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Intitule projet arabe:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.intitule_projet_arabe %> </font></p></div>
-    </div>
+          <tr>
+            <th>Nmbr emplois</th>
+            <td><%= @investisseur.nmbr_emplois %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Intitule projet francais:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.intitule_projet_francais %> </font></p></div>
-    </div>
+          <tr>
+            <th>Date examen demande</th>
+            <td><%= @investisseur.date_examen_demande %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Secteur activite:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.secteur_activite %> </font></p></div>
-    </div>
+          <tr>
+            <th>Num decision</th>
+            <td><%= @investisseur.num_decision %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Filieres industrielles:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.filieres_industrielles %> </font></p></div>
-    </div>
+          <tr>
+            <th>Num lot</th>
+            <td><%= @investisseur.num_lot %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Superficie demandee:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.superficie_demandee %> </font></p></div>
-    </div>
+          <tr>
+            <th>Superficie octroyee</th>
+            <td><%= @investisseur.superficie_octroyee %></td>
+          </tr>
+          <tr>
+            <th>Commune</th>
+            <td><%= @investisseur.commune %></td>
+          </tr>
+          <tr>
+            <th>Site</th>
+            <td><%= @investisseur.site %></td>
+          </tr>
+          <tr>
+            <th>P droits etude vrd</th>
+            <td><%= @investisseur.p_droits_etude_vrd %></td>
+          </tr>
+          <tr>
+            <th>Num arrete concession</th>
+            <td><%= @investisseur.num_arrete_concession %></td>
+          </tr>
 
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Montant investissement:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.montant_investissement %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Nmbr emplois:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.nmbr_emplois %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Date examen demande:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.date_examen_demande %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Num decision:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.num_decision %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Num lot:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.num_lot %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Superficie octroyee:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.superficie_octroyee %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Localisation projet:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">   <%= @investisseur.localisation_projet %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Commune:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.commune %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Site:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.site %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>P droits etude vrd:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.p_droits_etude_vrd %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Num arrete concession:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.num_arrete_concession %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Date arrete concession:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.date_arrete_concession %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Montant concession:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.montant_concession %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Date paiment:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.date_paiment %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Num acte concession:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.num_acte_concession %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Date acte concession:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.date_acte_concession %> </font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Num acte cession:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.num_acte_cession %></font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Date acte cession:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.date_acte_cession %></font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Num depot dossier permis construire:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.num_depot_dossier_permis_construire %></font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Date depot dossier permis construire:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.date_depot_dossier_permis_construire %></font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Avis services:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.avis_services %></font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Num arrete permis construire:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.num_arrete_permis_construire %></font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Date arrete permis construire:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.date_arrete_permis_construire %></font></p></div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Date depot dossier:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.date_depot_dossier %></font></p></div>
-    </div>
+          <tr>
+            <th>Montant concession</th>
+            <td><%= @investisseur.montant_concession %></td>
+          </tr>
 
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Date approbation eie:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.date_approbation_eie %></font></p></div>
-    </div>
+          <tr>
+            <th>Date paiment</th>
+            <td><%= @investisseur.date_paiment %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Date decision creation prealabre:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.date_decision_creation_prealabre %></font></p></div>
-    </div>
+          <tr>
+            <th>Num acte concession</th>
+            <td><%= @investisseur.num_acte_concession %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Num arrete exploitation:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.num_arrete_exploitation %></font></p></div>
-    </div>
+          <tr>
+            <th>Date acte concession</th>
+            <td><%= @investisseur.date_acte_concession %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Date arrete exploitation:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.date_arrete_exploitation %></font></p></div>
-    </div>
+          <tr>
+            <th>Num acte cession</th>
+            <td><%= @investisseur.num_acte_cession %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Num depot dossier:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.num_depot_dossier %></font></p></div>
-    </div>
+          <tr>
+            <th>Num depot dossier permis construire</th>
+            <td><%= @investisseur.num_depot_dossier_permis_construire %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Date depot dossier:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.date_depot_dossier %></font></p></div>
-    </div>
+          <tr>
+            <th>Date depot dossier permis construire</th>
+            <td><%= @investisseur.date_depot_dossier_permis_construire %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Num decision andi:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.num_decision_andi %></font></p></div>
-    </div>
+          <tr>
+            <th>Avis services</th>
+            <td><%= @investisseur.avis_services %></td>
+          </tr>
+          <tr>
+            <th>Num arrete permis construire</th>
+            <td><%= @investisseur.num_arrete_permis_construire %></td>
+          </tr>
+          <tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Taux avancement traveux:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.taux_avancement_traveux %></font></p></div>
-    </div>
+            <th>Date arrete permis construire</th>
+            <td><%= @investisseur.date_arrete_permis_construire %></td>
+          </tr>
+          <tr>
+            <th>Num depot dossier permis construire</th>
+            <td><%= @investisseur.num_depot_dossier_permis_construire %></td>
+          </tr>
+          <tr>
+            <th>Date depot dossier</th>
+            <td><%= @investisseur.date_depot_dossier %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Taux avancement investissement:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.taux_avancement_investissement %></font></p></div>
-    </div>
+          <tr>
+            <th>Date approbation eie</th>
+            <td><%= @investisseur.date_approbation_eie %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Mise en service:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.mise_en_service %></font></p></div>
-    </div>
+          <tr>
+            <th>Date decision creation prealabre</th>
+            <td><%= @investisseur.date_decision_creation_prealabre %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Emplois reel:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.emplois_reel %></font></p></div>
-    </div>
+          <tr>
+            <th>Num arrete exploitation</th>
+            <td><%= @investisseur.num_arrete_exploitation %></td>
+          </tr>
 
+          <tr>
+            <th>Date arrete exploitation</th>
+            <td><%= @investisseur.date_arrete_exploitation %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Changement status:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.changement_status %></font></p></div>
-    </div>
+          <tr>
+            <th>Num depot dossier</th>
+            <td><%= @investisseur.num_depot_dossier %></td>
+          </tr>
 
-    <div class="col-sm-3">
-      <div class="card bg-success">
-        <div class="card-header"> <strong>Observation:</strong></div></div>
-      <div class="card-body"><p class="text-center" ><font size="4" color="green">  <%= @investisseur.observation %></font></p></div>
-    </div>
+          <tr>
+            <th>Date depot dossier</th>
+            <td><%= @investisseur.date_depot_dossier %></td>
+          </tr>
+
+          <tr>
+            <th>Num decision andi</th>
+            <td><%= @investisseur.num_decision_andi %></td>
+          </tr>
+
+          <tr>
+            <th>Taux avancement traveux</th>
+            <td><%= @investisseur.taux_avancement_traveux %></td>
+          </tr>
+
+          <tr>
+            <th>Taux avancement investissement</th>
+            <td><%= @investisseur.taux_avancement_investissement %></td>
+          </tr>
+
+          <tr>
+            <th>Mise en service</th>
+            <td><%= @investisseur.mise_en_service %></td>
+          </tr>
+
+          <tr>
+            <th>Emplois reel</th>
+            <td><%= @investisseur.emplois_reel %></td>
+          </tr>
+          <tr>
+            <th>Changement status</th>
+            <td><%= @investisseur.changement_status %></td>
+          </tr>
+
+          <tr>
+            <th>Observation</th>
+            <td><%= @investisseur.observation %></td>
+          </tr>
+          </tbody>
+        </table>
+
 
 
       </div>
-</div>
-  </div>
 </div>

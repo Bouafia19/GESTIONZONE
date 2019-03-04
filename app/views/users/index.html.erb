@@ -2,13 +2,13 @@
 
 
 
-<div class="container">
+
   <div class="card">
     <div class="card-body">
       <div class="card-header">
 
 
-    <h1> Users <i class="fas fa-users"></i></h1>
+    <h1 class="fas fa-users"> Users </h1>
       </div>
     <hr>
 
@@ -24,7 +24,7 @@
           <div class="col-sm-2">
             <span>Voir</span>
           </div>
-          <div class="col-sm-6" style="margin-left: 10px">
+          <div class="col-sm-2" style="margin-left: 10px">
             <%= select_tag(:count,options_for_select([10,25,50], selected: session[:per_pages]),class:"form-control input-sm", onchange:"SelectSearch(id,'users','')", id:"select" )%>
           </div>
           <span>entrées</span>
@@ -42,6 +42,6 @@
     </div>
     </div>
     </div>
-  </div>
+
 
 

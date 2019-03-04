@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_28_101557) do
+ActiveRecord::Schema.define(version: 2019_02_23_140742) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,12 @@ ActiveRecord::Schema.define(version: 2019_01_28_101557) do
     t.index ["geom"], name: "index_countries_on_geom", using: :gist
     t.index ["iso_code"], name: "index_countries_on_iso_code", unique: true
     t.index ["name"], name: "index_countries_on_name", unique: true
+  end
+
+  create_table "countries_ref", primary_key: "gid", id: :serial, force: :cascade do |t|
+    t.string "gid_0", limit: 80
+    t.string "name_0", limit: 80
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
   end
 
   create_table "gadm36_dza_0", primary_key: "gid", id: :serial, force: :cascade do |t|
@@ -184,6 +190,7 @@ ActiveRecord::Schema.define(version: 2019_01_28_101557) do
     t.string "document_content_type"
     t.bigint "document_file_size"
     t.datetime "document_updated_at"
+    t.string "type_zone"
   end
 
   create_table "promotion_immobilieres", force: :cascade do |t|
@@ -238,6 +245,12 @@ ActiveRecord::Schema.define(version: 2019_01_28_101557) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "role"
+    t.string "photo_file_name"
+    t.string "photo_content_type"
+    t.bigint "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

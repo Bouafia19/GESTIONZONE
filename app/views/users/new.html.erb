@@ -1,3 +1,4 @@
+<div class="container">
 <div class="row">
   <div class="col-sm-12">
     <div class="panel panel-default">
@@ -24,7 +25,10 @@
             </div>
           <% end %>
           <br>
-
+          <div class="field">
+            <%= f.label :name %>
+            <%= f.text_field :name, id: :user_name ,class:"form-control",tabindex:"2"%>
+          </div>
           <br>
           <div class="field">
             <%= f.label :email %>
@@ -36,7 +40,15 @@
             <%= f.password_field :password, autocomplete: "current-password",class:"form-control" %>
           </div>
           <hr>
-
+          <div class="field">
+            <%= f.label :role %><br />
+            <%= f.select :role, options_for_select([["Admin","admin"],["Utilisateur","utilisateur"],["Public","public"]]),{},class:"form-control"%>
+          </div>
+          <br>
+          <div class="field">
+            <%= f.label :photo %>
+            <%= f.file_field :photo,class:"form-control" %>
+          </div>
           <hr>
           <div class="form-group">
             <%= f.submit class:"btn btn-md btn-success pull-right" ,tabindex:"5"%>
@@ -48,4 +60,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

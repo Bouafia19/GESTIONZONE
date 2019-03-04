@@ -10,265 +10,294 @@
       </ul>
     </div>
   <% end %>
-<br>
-  <div class="field">
-    <%= form.label :num_dossier %>
-    <%= form.number_field :num_dossier ,class:"form-control"%>
+  <div class="card-deck">
+    <div class="form-row">
+    <div class="form-group col-4 field">
+    <%= form.label :num_dossier,class:"col-sm-3 col-form-label" %>
+    <%= form.number_field :num_dossier ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :date_depot_demande %>
-    <%= form.date_select :date_depot_demande, class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date'  %>
+  <div class="form-group col-4 field">
+    <%= form.label :date_depot_demande ,class:"col-sm-3 col-form-label"%>
+    <%#= form.date_select :date_depot_demande, class: 'datepicker form-control form-control-lg', 'data-date-format'=>"dd/mm/yyyy",:disabled => current_user.name != 'DIM'  %>
+    <%= form.text_field :date_depot_demande, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'DIM'  %>
+  </div>
+
+<br>
+  <div class="form-group col-4 ield">
+    <%= form.label :raison_sociale_arabe ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :raison_sociale_arabe ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :raison_sociale_arabe %>
-    <%= form.text_field :raison_sociale_arabe ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :nom_prenom_gerant_arabe ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :nom_prenom_gerant_arabe,class:"form-control-lg" ,:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :nom_prenom_gerant_arabe %>
-    <%= form.text_field :nom_prenom_gerant_arabe,class:"form-control" %>
+  <div class="form-group col-4 field">
+    <%= form.label :raison_sociale_francais ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :raison_sociale_francais ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :raison_sociale_francais %>
-    <%= form.text_field :raison_sociale_francais ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :nom_prenom_gerant_francais ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :nom_prenom_gerant_francais,class:"form-control-lg" ,:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :nom_prenom_gerant_francais %>
-    <%= form.text_field :nom_prenom_gerant_francais,class:"form-control" %>
+  <div class="form-group col-4 field">
+    <%= form.label :adresse ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :adresse ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :adresse %>
-    <%= form.text_field :adresse ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :num_telephone ,class:"col-sm-3 col-form-label"%>
+    <%= form.number_field :num_telephone ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :num_telephone %>
-    <%= form.number_field :num_telephone ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :fax ,class:"col-sm-3 col-form-label"%>
+    <%= form.number_field :fax ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :fax %>
-    <%= form.number_field :fax ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :email ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :email,class:"form-control-lg",:disabled => current_user.name != 'DIM' %>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email,class:"form-control" %>
+  <div class="form-group col-4 field">
+    <%= form.label :intitule_projet_arabe ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :intitule_projet_arabe ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :intitule_projet_arabe %>
-    <%= form.text_field :intitule_projet_arabe ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :intitule_projet_francais ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :intitule_projet_francais ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :intitule_projet_francais %>
-    <%= form.text_field :intitule_projet_francais ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :secteur_activite,class:"col-sm-3 col-form-label" %>
+    <%= form.text_field :secteur_activite,class:"form-control-lg" ,:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :secteur_activite %>
-    <%= form.text_field :secteur_activite,class:"form-control" %>
+  <div class="form-group col-4 field">
+    <%= form.label :filieres_industrielles ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :filieres_industrielles ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :filieres_industrielles %>
-    <%= form.text_field :filieres_industrielles ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :superficie_demandee,class:"col-sm-3 col-form-label" %>
+    <%= form.text_field :superficie_demandee ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :superficie_demandee %>
-    <%= form.text_field :superficie_demandee ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :montant_investissement,class:"col-sm-3 col-form-label" %>
+    <%= form.text_field :montant_investissement ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :montant_investissement %>
-    <%= form.text_field :montant_investissement ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :nmbr_emplois,class:"col-sm-3 col-form-label" %>
+    <%= form.number_field :nmbr_emplois,class:"form-control-lg",:disabled => current_user.name != 'DIM' %>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :nmbr_emplois %>
-    <%= form.number_field :nmbr_emplois,class:"form-control" %>
+  <div class="form-group col-4 field">
+    <%= form.label :date_examen_demande ,class:"col-sm-3 col-form-label"%>
+    <%#= form.date_select :date_examen_demande , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'DIM' %>
+    <%= form.text_field :date_examen_demande, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'DIM'  %>
+
   </div>
 <br>
-  <div class="field">
-    <%= form.label :date_examen_demande %>
-    <%= form.date_select :date_examen_demande , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  <div class="form-group col-4 field">
+    <%= form.label :num_decision ,class:"col-sm-3 col-form-label"%>
+    <%= form.number_field :num_decision ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :num_decision %>
-    <%= form.number_field :num_decision ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :num_lot ,class:"col-sm-3 col-form-label"%>
+    <%= form.number_field :num_lot ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :num_lot %>
-    <%= form.number_field :num_lot ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :superficie_octroyee ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :superficie_octroyee,class:"form-control-lg" ,:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :superficie_octroyee %>
-    <%= form.text_field :superficie_octroyee,class:"form-control" %>
+  <div class="form-group col-4 field">
+    <%= form.label :localisation_projet ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :localisation_projet ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :localisation_projet %>
-    <%= form.text_field :localisation_projet ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :commune ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :commune ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :commune %>
-    <%= form.text_field :commune ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :site ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :site ,class:"form-control-lg",:disabled => current_user.name != 'DIM'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :site %>
-    <%= form.text_field :site ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :p_droits_etude_vrd ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :p_droits_etude_vrd ,class:"form-control-lg",:disabled => current_user.name != 'AGENCEFONCIERE'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :p_droits_etude_vrd %>
-    <%= form.text_field :p_droits_etude_vrd ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :num_arrete_concession ,class:"col-sm-3 col-form-label"%>
+    <%= form.number_field :num_arrete_concession ,class:"form-control-lg",:disabled => current_user.name != 'DOMAINES'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :num_arrete_concession %>
-    <%= form.number_field :num_arrete_concession ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :date_arrete_concession ,class:"col-sm-3 col-form-label"%>
+    <%#= form.date_select :date_arrete_concession , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' ,:disabled => current_user.name == 'KHALED'%>
+    <%= form.text_field :date_arrete_concession, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'KHALED'  %>
+
   </div>
 <br>
-  <div class="field">
-    <%= form.label :date_arrete_concession %>
-    <%= form.date_select :date_arrete_concession , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  <div class="form-group col-4 field">
+    <%= form.label :montant_concession ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :montant_concession,class:"form-control-lg" ,:disabled => current_user.name != 'DOMAINES'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :montant_concession %>
-    <%= form.text_field :montant_concession,class:"form-control" %>
+  <div class="form-group col-4 field">
+    <%= form.label :date_paiment ,class:"col-sm-3 col-form-label"%>
+    <%#= form.date_select :date_paiment , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' ,:disabled => current_user.name != 'DOMAINES'%>
+    <%= form.text_field :date_paiment, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'DOMAINES'  %>
+
   </div>
 <br>
-  <div class="field">
-    <%= form.label :date_paiment %>
-    <%= form.date_select :date_paiment , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  <div class="form-group col-4 field">
+    <%= form.label :num_acte_concession ,class:"col-sm-3 col-form-label"%>
+    <%= form.number_field :num_acte_concession ,class:"form-control-lg",:disabled => current_user.name != 'DOMAINES'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :num_acte_concession %>
-    <%= form.number_field :num_acte_concession ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :date_acte_concession,class:"col-sm-3 col-form-label" %>
+    <%#= form.date_select :date_acte_concession , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' ,:disabled => current_user.name == 'DOMAINES'%>
+    <%= form.text_field :date_acte_concession, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'DOMAINES'  %>
+
   </div>
 <br>
-  <div class="field">
-    <%= form.label :date_acte_concession %>
-    <%= form.date_select :date_acte_concession , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  <div class="form-group col-4 field">
+    <%= form.label :num_acte_cession ,class:"col-sm-3 col-form-label"%>
+    <%= form.number_field :num_acte_cession ,class:"form-control-lg",:disabled => current_user.name == 'KHALED'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :num_acte_cession %>
-    <%= form.number_field :num_acte_cession ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :date_acte_cession ,class:"col-sm-3 col-form-label"%>
+    <%#= form.date_select :date_acte_cession , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' ,:disabled => current_user.name == 'KHALED'%>
+    <%= form.text_field :date_acte_cession, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'KHALED'  %>
+
   </div>
 <br>
-  <div class="field">
-    <%= form.label :date_acte_cession %>
-    <%= form.date_select :date_acte_cession , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  <div class="form-group col-4 field">
+    <%= form.label :num_depot_dossier_permis_construire ,class:"col-sm-3 col-form-label"%>
+    <%= form.number_field :num_depot_dossier_permis_construire ,class:"form-control-lg",:disabled => current_user.name != 'DUAC'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :num_depot_dossier_permis_construire %>
-    <%= form.number_field :num_depot_dossier_permis_construire ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :date_depot_dossier_permis_construire,class:"col-sm-3 col-form-label" %>
+    <%#= form.date_select :date_depot_dossier_permis_construire , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' ,:disabled => current_user.name != 'DUAC'%>
+    <%= form.text_field :date_depot_dossier_permis_construire, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'DUAC'  %>
+
   </div>
 <br>
-  <div class="field">
-    <%= form.label :date_depot_dossier_permis_construire %>
-    <%= form.date_select :date_depot_dossier_permis_construire , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  <div class="form-group col-4 field">
+    <%= form.label :avis_services ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :avis_services,class:"form-control-lg" ,:disabled => current_user.name != 'DUAC'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :avis_services %>
-    <%= form.text_field :avis_services,class:"form-control" %>
+  <div class="form-group col-4 field">
+    <%= form.label :num_arrete_permis_construire ,class:"col-sm-3 col-form-label"%>
+    <%= form.number_field :num_arrete_permis_construire ,class:"form-control-lg",:disabled => current_user.name != 'DUAC'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :num_arrete_permis_construire %>
-    <%= form.number_field :num_arrete_permis_construire ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :date_arrete_permis_construire,class:"col-sm-3 col-form-label" %>
+    <%#= form.date_select :date_arrete_permis_construire ,class:"form-control-lg",:disabled => current_user.name != 'DUAC'%>
+    <%= form.text_field :date_arrete_permis_construire, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'DUAC'  %>
+
   </div>
 <br>
-  <div class="field">
-    <%= form.label :date_arrete_permis_construire %>
-    <%= form.date_select :date_arrete_permis_construire ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :date_depot_dossier ,class:"col-sm-3 col-form-label"%>
+    <%#= form.date_select :date_depot_dossier , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT' %>
+    <%= form.text_field :date_depot_dossier, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT'  %>
+
   </div>
 <br>
-  <div class="field">
-    <%= form.label :date_depot_dossier %>
-    <%= form.date_select :date_depot_dossier , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  <div class="form-group col-4 field">
+    <%= form.label :date_approbation_eie,class:"col-sm-3 col-form-label" %>
+    <%#= form.date_select :date_approbation_eie , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT' %>
+    <%= form.text_field :date_approbation_eie, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT'  %>
+
   </div>
 <br>
-  <div class="field">
-    <%= form.label :date_approbation_eie %>
-    <%= form.date_select :date_approbation_eie , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  <div class="form-group col-4 field">
+    <%= form.label :date_decision_creation_prealabre,class:"col-sm-3 col-form-label" %>
+    <%#= form.date_select :date_decision_creation_prealabre , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT' %>
+    <%= form.text_field :date_decision_creation_prealabre, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT'  %>
+
   </div>
 <br>
-  <div class="field">
-    <%= form.label :date_decision_creation_prealabre %>
-    <%= form.date_select :date_decision_creation_prealabre , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  <div class="form-group col-4 field">
+    <%= form.label :num_arrete_exploitation,class:"col-sm-3 col-form-label" %>
+    <%= form.number_field :num_arrete_exploitation ,class:"form-control-lg",:disabled => current_user.name != 'ENVIRONNEMENT'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :num_arrete_exploitation %>
-    <%= form.number_field :num_arrete_exploitation ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :date_arrete_exploitation ,class:"col-sm-3 col-form-label"%>
+    <%#= form.date_select :date_arrete_exploitation , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT' %>
+    <%= form.text_field :date_arrete_exploitation, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT'  %>
+
   </div>
 <br>
-  <div class="field">
-    <%= form.label :date_arrete_exploitation %>
-    <%= form.date_select :date_arrete_exploitation , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' %>
+  <div class="form-group col-4 field">
+    <%= form.label :num_depot_dossier ,class:"col-sm-3 col-form-label"%>
+    <%= form.number_field :num_depot_dossier,class:"form-control-lg",:disabled => current_user.name != 'ANDI' %>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :num_depot_dossier %>
-    <%= form.number_field :num_depot_dossier,class:"form-control" %>
+  <div class="form-group col-4 field">
+    <%= form.label :date_depot_dossier ,class:"col-sm-3 col-form-label"%>
+    <%#= form.date_select :date_depot_dossier , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true ,:disabled => current_user.name != 'ANDI'%>
+    <%= form.text_field :date_depot_dossier, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ANDI'  %>
+
   </div>
 <br>
-  <div class="field">
-    <%= form.label :date_depot_dossier %>
-    <%= form.date_select :date_depot_dossier , class: 'datepicker form-control', 'data-date-format'=>"dd/mm/yyyy", required: true %>
+  <div class="form-group col-4 field">
+    <%= form.label :num_decision_andi ,class:"col-sm-3 col-form-label"%>
+    <%= form.number_field :num_decision_andi ,class:"form-control-lg",:disabled => current_user.name != 'ANDI'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :num_decision_andi %>
-    <%= form.number_field :num_decision_andi ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :taux_avancement_traveux ,class:"col-sm-3 col-form-label"%>
+    <%= form.number_field :taux_avancement_traveux ,class:"form-control-lg",:disabled => current_user.name != 'KHALED'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :taux_avancement_traveux %>
-    <%= form.number_field :taux_avancement_traveux ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :taux_avancement_investissement ,class:"col-sm-3 col-form-label"%>
+    <%= form.number_field :taux_avancement_investissement ,class:"form-control-lg",:disabled => current_user.name != 'KHALED'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :taux_avancement_investissement %>
-    <%= form.number_field :taux_avancement_investissement ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :mise_en_service ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :mise_en_service ,class:"form-control-lg",:disabled => current_user.name != 'KHALED'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :mise_en_service %>
-    <%= form.text_field :mise_en_service ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :emplois_reel ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :emplois_reel ,class:"form-control-lg",:disabled => current_user.name != 'KHALED'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :emplois_reel %>
-    <%= form.text_field :emplois_reel ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :changement_status ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_field :changement_status ,class:"form-control-lg",:disabled => current_user.name != 'KHALED'%>
   </div>
 <br>
-  <div class="field">
-    <%= form.label :changement_status %>
-    <%= form.text_field :changement_status ,class:"form-control"%>
+  <div class="form-group col-4 field">
+    <%= form.label :observation ,class:"col-sm-3 col-form-label"%>
+    <%= form.text_area :observation ,class:"form-control-lg",:disabled => current_user.name != 'KHALED'%>
   </div>
-<br>
-  <div class="field">
-    <%= form.label :observation %>
-    <%= form.text_area :observation ,class:"form-control"%>
+  </div>
   </div>
 <hr>
   <div class="actions">
@@ -277,7 +306,24 @@
 <% end %>
 <br>
 
+<script>
+    $(function() {
+        $( "#date" ).datepicker({
+            dateFormat : 'mm/dd/yy',
+            changeMonth : true,
+            changeYear : true,
+            yearRange: '-100y:c+nn',
+            maxDate: '-1d'
+        });
+    });
+
+</script>
 
 <script>
-    $('.datepicker').datepicker()
+    var e3 = document.getElementById('date');
+    if(e3) {
+        e3.addEventListener('input', function (e) {
+            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,2})(\d{0,4})/);
+            e.target.value = (x[1] ? x[1] : '') + (x[2] ? '/' + x[2] : '') + (x[3] ? '/' + x[3] : '');
+        });}
 </script>

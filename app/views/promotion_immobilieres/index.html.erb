@@ -1,68 +1,62 @@
 <div class="card">
   <div class="card-body">
-    <div class="card-header ">
-      <h1>Promotion Immobilieres</h1>
+    <div class="card-header">
+      <h1 align="center">PROMOTIONS IMMOBILIERES</h1>
 
     </div>
 
 
 <hr>
-    <%= link_to 'New Promotion Immobiliere', new_promotion_immobiliere_path ,class:"btn btn-success"%>
+    <% link_to 'New Promotion Immobiliere', new_promotion_immobiliere_path ,class:"btn btn-success"%>
 <br>
-    <hr>
+    <div class="col-xl-12 col-md-6 mb-4">
+      <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
 <%= form_tag '/promotion_immobilieres', method: :get do %>
   <div class="row">
-    <div class="col align-self-start"  >
-
+    <div class="col-sm-2 align-self-start"  >
       <strong >Debut </strong><%= text_field_tag :start_date, session[:start_pub] , class: 'datepicker form-control date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
-
     </div>
 
-    <div class="col align-self-center">
-
+    <div class="col-sm-2 align-self-center"  >
       <strong>Fin</strong><%= text_field_tag :end_date, session[:end_pub] , class: 'datepicker form-control date', 'data-date-format'=>"dd/mm/yyyy", required: true %>
-
     </div>
 
-    <br>
-    <div class="col align-self-end">
-      <%= submit_tag 'Filter' ,class: 'btn btn-primary '%>
+
+    <div class="col-sm-2 align-self-end">
+      <%= submit_tag 'Filter Date Arrete Creation' ,class: 'btn btn-primary '%>
     </div>
-    <br>
+
 <%end%>
+
+    <div class="col-sm-1 align-self-end">
+        <%= select_tag(:count,options_for_select([10,25,50], selected: session[:per_pages]),class:"form-control input-sm", onchange:"SelectSearch(id,'promotion_immobilieres','')", id:"select" )%>
+    </div>
+
+    <div class="col-sm-3 align-self-end">
+        <%= search_field_tag "search_champ",session[:data] ,{class:"form-control input-sm",placeholder:"Chercher",onKeyUp:"SelectSearch(id,'promotion_immobilieres','')" }%>
+    </div>
 </div>
-<hr>
 
-
-<div class="row">
-  <div class="col-sm-12">
-
-
-    <div class="row" >
-      <div class="col-sm-9">
-
-        <div class="dataTables_length input-group" id="example_length">
-          <div class="col-sm-2">
-            <span>Voir</span>
+            </div>
           </div>
-
-          <div class="col-sm-3" style="margin-left: 10px">
-            <%= select_tag(:count,options_for_select([10,25,50], selected: session[:per_pages]),class:"form-control input-sm", onchange:"SelectSearch(id,'promotion_immobilieres','')", id:"select" )%>
-          </div>
-          <span>entrées</span>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div id="example_filter" class="dataTables_filter">
-          <%= search_field_tag "search_champ",session[:data] ,{class:"form-control input-sm",placeholder:"Chercher",onKeyUp:"SelectSearch(id,'promotion_immobilieres','')" }%>
         </div>
       </div>
     </div>
-    <hr>
+<br>
+
+
     <div class="row" id="table_search" style="padding: 10px">
       <%= render(:partial => 'index', locals: {paginate: @paginate})%>
     </div>
+
+
   </div>
 </div>
-</div>
-</div>
+
+
+<script>
+    $('.datepicker').datepicker()
+</script>

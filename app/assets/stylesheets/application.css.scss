@@ -13,6 +13,48 @@
  *= require bootstrap-sortable
 *= require bootstrap-datepicker
 
+
+
+
  */
 
-@import "bootstrap";
+//@import "bootstrap";
+
+// Import Custom SB Admin 2 Variables (Overrides Default Bootstrap Variables)
+@import "variables.scss";
+
+// Import Bootstrap
+@import "./vendor/bootstrap/scss/bootstrap.scss";
+
+// Import Custom SB Admin 2 Mixins and Components
+@import "mixins.scss";
+@import "global.scss";
+@import "utilities.scss";
+
+// Custom Components
+@import "dropdowns.scss";
+@import "navs.scss";
+@import "buttons.scss";
+@import "cards.scss";
+@import "charts.scss";
+@import "login.scss";
+@import "error.scss";
+@import "footer.scss";
+
+
+
+// Core variables and mixins
+@import "variablesa.scss";
+@import "mixinsa.scss";
+// Global CSS
+@import "globala.scss";
+// Components
+@import "navbara.scss";
+@import "mastheada.scss";
+@import "servicesa.scss";
+@import "portfolioa.scss";
+@import "timelinea.scss";
+@import "teama.scss";
+@import "contacta.scss";
+@import "footera.scss";
+

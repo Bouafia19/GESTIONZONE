@@ -24,7 +24,7 @@
   </thead>
 
   <tbody>
-  <% paginate.each do |zone| %>
+  <%= paginate.each do |zone| %>
     <tr>
       <td><%= link_to 'Show', zone ,class:"btn btn-success"%></td>
       <td><%= link_to 'Edit', edit_zone_path(zone) ,class:"btn btn-primary"%></td>
@@ -58,7 +58,7 @@
   </div>
   <div class="col-sm-6" >
     <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate" style="position: absolute; right:13px; top: -20px">
-      <%= will_paginate paginate,renderer: BootstrapPagination::Rails , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
+      <%= will_paginate paginate, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
     </div>
   </div>
 </div>

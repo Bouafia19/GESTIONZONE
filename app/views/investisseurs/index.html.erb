@@ -2,36 +2,11 @@
   <div class="card">
     <div class="card-body">
       <div class="card-header">
-
-
-          <h1>INVESTISSEURS </h1>
+          <h1 align="center">INVESTISSEURS </h1>
       </div>
             <hr>
 
 
-
-
-<%= link_to 'New Investisseur', new_investisseur_path ,class:"btn btn-success"%>
-<hr>
-
-
-              <%= form_tag '/investisseurs', method: :get do %>
-        <div class="row">
-          <div class="col align-self-start"  >
-                  <strong style="float: left">Debut </strong><%= text_field_tag :start_date, session[:start_pub] , class: 'datepicker form-control date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
-                </div>
-          <div class="col align-self-center">
-
-                  <strong>Fin</strong><%= text_field_tag :end_date, session[:end_pub] , class: 'datepicker form-control date', 'data-date-format'=>"dd/mm/yyyy", required: true %>
-                </div>
-                <br>
-          <div class="col align-self-end">
-                <%= submit_tag 'Filter' ,class: 'btn btn-primary '%>
-          </div>
-                <br>
-              <%end%>
-      </div>
-<hr>
 
 
 
@@ -44,7 +19,7 @@
                               <span>Voir</span>
                             </div>
 
-                            <div class="col-sm-6" style="margin-left: 10px">
+                            <div class="col-sm-2" style="margin-left: 10px">
                               <%= select_tag(:count,options_for_select([10,25,50], selected: session[:per_pages]),class:"form-control input-sm", onchange:"SelectSearch(id,'investisseurs','')", id:"select" )%>
                             </div>
                             <span>entrées</span>
@@ -62,6 +37,7 @@
                       </div>
                     </div>
                   </div>
+
 
 
 

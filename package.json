@@ -1,5 +1,7 @@
 {
   "name": "GESTIONZONE",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "startbootstrap-agency": "^5.0.5"
+  }
 }
