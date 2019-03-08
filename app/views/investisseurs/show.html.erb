@@ -3,13 +3,22 @@
 
     <div class="card-body">
       <%= link_to 'Edit', edit_investisseur_path(@investisseur) ,class:"btn btn-md btn-primary"%> |
-      <%= link_to 'Back', investisseurs_path ,class:"btn btn-md btn-warning" %> |
-      <%= link_to 'New investisseur', new_investisseur_path ,class:"btn btn-md btn-success"%>
+      <%= link_to 'Back', investisseurs_path ,class:"btn btn-md btn-warning" %>
+      <% link_to 'New investisseur', new_investisseur_path ,class:"btn btn-md btn-success"%>
       <br>
       <hr>
 
 
     <br>
+      <div class="row">
+
+        <!-- Area Chart -->
+        <div class="col-xl-9 col-lg-10">
+          <div class="card shadow mb-10">
+            <!-- Card Header - Dropdown -->
+
+            <!-- Card Body -->
+            <div class="card-body">
         <table class="table table-responsive table-striped table-hover table sortable">
           <thead>
 
@@ -258,3 +267,7 @@
 
       </div>
 </div>
+        </div>
+      </div>
+    </div>
+  </div>

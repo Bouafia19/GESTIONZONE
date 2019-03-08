@@ -1,0 +1,16 @@
+<div class="card">
+
+  <div class="card-body">
+
+    <hr>
+
+    <%= link_to 'Back', hors_zone_path ,class:"btn btn-warning"%>
+
+
+    <br>
+    <hr>
+    <%= line_chart HorsZone.group(:nbr_lots).count %>
+    <hr>
+    <%= pie_chart HorsZone.group(:nbr_lots).count %>
+  </div>
+</div>

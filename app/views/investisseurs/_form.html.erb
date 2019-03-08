@@ -20,7 +20,7 @@
   <div class="form-group col-4 field">
     <%= form.label :date_depot_demande ,class:"col-sm-3 col-form-label"%>
     <%#= form.date_select :date_depot_demande, class: 'datepicker form-control form-control-lg', 'data-date-format'=>"dd/mm/yyyy",:disabled => current_user.name != 'DIM'  %>
-    <%= form.text_field :date_depot_demande, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'DIM'  %>
+    <%= form.text_field :date_depot_demande, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true,:disabled => current_user.name != 'DIM'  %>
   </div>
 
 <br>
@@ -102,7 +102,7 @@
   <div class="form-group col-4 field">
     <%= form.label :date_examen_demande ,class:"col-sm-3 col-form-label"%>
     <%#= form.date_select :date_examen_demande , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'DIM' %>
-    <%= form.text_field :date_examen_demande, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'DIM'  %>
+    <%= form.text_field :date_examen_demande, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true,:disabled => current_user.name != 'DIM'  %>
 
   </div>
 <br>
@@ -149,7 +149,7 @@
   <div class="form-group col-4 field">
     <%= form.label :date_arrete_concession ,class:"col-sm-3 col-form-label"%>
     <%#= form.date_select :date_arrete_concession , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' ,:disabled => current_user.name == 'KHALED'%>
-    <%= form.text_field :date_arrete_concession, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'KHALED'  %>
+    <%= form.text_field :date_arrete_concession, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true,:disabled => current_user.name != 'KHALED'  %>
 
   </div>
 <br>
@@ -161,7 +161,7 @@
   <div class="form-group col-4 field">
     <%= form.label :date_paiment ,class:"col-sm-3 col-form-label"%>
     <%#= form.date_select :date_paiment , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' ,:disabled => current_user.name != 'DOMAINES'%>
-    <%= form.text_field :date_paiment, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'DOMAINES'  %>
+    <%= form.text_field :date_paiment, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true,:disabled => current_user.name != 'DOMAINES'  %>
 
   </div>
 <br>
@@ -173,7 +173,7 @@
   <div class="form-group col-4 field">
     <%= form.label :date_acte_concession,class:"col-sm-3 col-form-label" %>
     <%#= form.date_select :date_acte_concession , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' ,:disabled => current_user.name == 'DOMAINES'%>
-    <%= form.text_field :date_acte_concession, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'DOMAINES'  %>
+    <%= form.text_field :date_acte_concession, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true,:disabled => current_user.name != 'DOMAINES'  %>
 
   </div>
 <br>
@@ -185,7 +185,7 @@
   <div class="form-group col-4 field">
     <%= form.label :date_acte_cession ,class:"col-sm-3 col-form-label"%>
     <%#= form.date_select :date_acte_cession , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' ,:disabled => current_user.name == 'KHALED'%>
-    <%= form.text_field :date_acte_cession, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'KHALED'  %>
+    <%= form.text_field :date_acte_cession, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true,:disabled => current_user.name != 'KHALED'  %>
 
   </div>
 <br>
@@ -197,7 +197,7 @@
   <div class="form-group col-4 field">
     <%= form.label :date_depot_dossier_permis_construire,class:"col-sm-3 col-form-label" %>
     <%#= form.date_select :date_depot_dossier_permis_construire , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date' ,:disabled => current_user.name != 'DUAC'%>
-    <%= form.text_field :date_depot_dossier_permis_construire, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'DUAC'  %>
+    <%= form.text_field :date_depot_dossier_permis_construire, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true,:disabled => current_user.name != 'DUAC'  %>
 
   </div>
 <br>
@@ -214,28 +214,28 @@
   <div class="form-group col-4 field">
     <%= form.label :date_arrete_permis_construire,class:"col-sm-3 col-form-label" %>
     <%#= form.date_select :date_arrete_permis_construire ,class:"form-control-lg",:disabled => current_user.name != 'DUAC'%>
-    <%= form.text_field :date_arrete_permis_construire, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'DUAC'  %>
+    <%= form.text_field :date_arrete_permis_construire, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true,:disabled => current_user.name != 'DUAC'  %>
 
   </div>
 <br>
   <div class="form-group col-4 field">
     <%= form.label :date_depot_dossier ,class:"col-sm-3 col-form-label"%>
     <%#= form.date_select :date_depot_dossier , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT' %>
-    <%= form.text_field :date_depot_dossier, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT'  %>
+    <%= form.text_field :date_depot_dossier, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true,:disabled => current_user.name != 'ENVIRONNEMENT'  %>
 
   </div>
 <br>
   <div class="form-group col-4 field">
     <%= form.label :date_approbation_eie,class:"col-sm-3 col-form-label" %>
     <%#= form.date_select :date_approbation_eie , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT' %>
-    <%= form.text_field :date_approbation_eie, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT'  %>
+    <%= form.text_field :date_approbation_eie, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true,:disabled => current_user.name != 'ENVIRONNEMENT'  %>
 
   </div>
 <br>
   <div class="form-group col-4 field">
     <%= form.label :date_decision_creation_prealabre,class:"col-sm-3 col-form-label" %>
     <%#= form.date_select :date_decision_creation_prealabre , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT' %>
-    <%= form.text_field :date_decision_creation_prealabre, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT'  %>
+    <%= form.text_field :date_decision_creation_prealabre, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true,:disabled => current_user.name != 'ENVIRONNEMENT'  %>
 
   </div>
 <br>
@@ -247,7 +247,7 @@
   <div class="form-group col-4 field">
     <%= form.label :date_arrete_exploitation ,class:"col-sm-3 col-form-label"%>
     <%#= form.date_select :date_arrete_exploitation , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT' %>
-    <%= form.text_field :date_arrete_exploitation, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ENVIRONNEMENT'  %>
+    <%= form.text_field :date_arrete_exploitation, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true,:disabled => current_user.name != 'ENVIRONNEMENT'  %>
 
   </div>
 <br>
@@ -259,7 +259,7 @@
   <div class="form-group col-4 field">
     <%= form.label :date_depot_dossier ,class:"col-sm-3 col-form-label"%>
     <%#= form.date_select :date_depot_dossier , class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true ,:disabled => current_user.name != 'ANDI'%>
-    <%= form.text_field :date_depot_dossier, class: 'datepicker form-control-lg', 'data-date-format'=>"dd/mm/yyyy", required: true, id:'date',:disabled => current_user.name != 'ANDI'  %>
+    <%= form.text_field :date_depot_dossier, class: 'datepicker form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true,:disabled => current_user.name != 'ANDI'  %>
 
   </div>
 <br>
@@ -308,7 +308,7 @@
 
 <script>
     $(function() {
-        $( "#date" ).datepicker({
+        $( ".date" ).datepicker({
             dateFormat : 'mm/dd/yy',
             changeMonth : true,
             changeYear : true,

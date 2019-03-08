@@ -1,0 +1,16 @@
+<div class="card">
+
+  <div class="card-body">
+
+    <hr>
+
+    <%= link_to 'Back', zone_industrielle_path ,class:"btn btn-warning"%>
+
+
+    <br>
+    <hr>
+    <%= line_chart ZoneIndustrielle.group(:nbr_lots).count %>
+    <hr>
+    <%= pie_chart ZoneIndustrielle.group(:nbr_lots).count %>
+  </div>
+</div>

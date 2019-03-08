@@ -8,28 +8,28 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-        <h2>Log in</h2>
+        <h2>S'identifier</h2>
         <hr>
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="field">
             <%= f.label :email %><br />
             <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control" %>
           </div>
-
+<br>
           <div class="field">
             <%= f.label :password %><br />
             <%= f.password_field :password, autocomplete: "current-password",class:"form-control" %>
           </div>
-
+<br>
           <% if devise_mapping.rememberable? -%>
             <div class="field">
               <%= f.check_box :remember_me %>
               <%= f.label :remember_me %>
             </div>
           <% end -%>
-
+<br>
           <div class="actions">
-            <%= f.submit "Log in",class:"btn btn-md btn-success" %>
+            <%= f.submit "Connexion",class:"btn btn-md btn-primary" %>
           </div>
         <% end %>
         <hr>
@@ -76,7 +76,7 @@
           <a class="nav-link js-scroll-trigger" href="#portfolio">Projets</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">A propos</a>
+          <a class="nav-link js-scroll-trigger" href="#about">Historique</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#team">Directions</a>
@@ -85,8 +85,8 @@
           <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-            <i>Sign in</i>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            <i>Se connecter</i>
           </button>
         </li>
       </ul>
@@ -99,7 +99,7 @@
   <div class="container">
     <div class="intro-text">
       <div class="intro-lead-in">Bienvenue à Setif!</div>
-      <div class="intro-heading text-uppercase">Ensemble pour un climat d'investissement mellieur </div>
+      <div class="intro-heading text-uppercase">Pour un climat d'investissement mellieur </div>
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Savoir plus</a>
     </div>
   </div>
@@ -163,7 +163,7 @@
             <%= image_tag ("ziSetif.jpg"), class: "img-fluid"%>
         </a>
         <div class="portfolio-caption">
-          <h4>Zone Industrielles</h4>
+          <h4>Zones Industrielles</h4>
           <p class="text-muted">Illustration</p>
         </div>
       </div>
@@ -189,10 +189,10 @@
               <i class="fas fa-plus fa-3x"></i>
             </div>
           </div>
-          <%= image_tag ("ziSetif.jpg"), class: "img-fluid"%>
+          <%= image_tag ("hors_zone.jpg"), class: "img-fluid"%>
         </a>
         <div class="portfolio-caption">
-          <h4>Projets d'investissment hors zones</h4>
+          <h4>Projets D'investissement Hors Zones</h4>
           <p class="text-muted">Identity</p>
         </div>
       </div>
@@ -203,10 +203,10 @@
               <i class="fas fa-plus fa-3x"></i>
             </div>
           </div>
-          <%= image_tag ("ziSetif.jpg"), class: "img-fluid"%>
+          <%= image_tag ("stade_de_setif_.jpg"), class: "img-fluid"%>
         </a>
         <div class="portfolio-caption">
-          <h4>Zone d'expansion Touristique</h4>
+          <h4>Zone D'expansion Touristique</h4>
           <p class="text-muted">Branding</p>
         </div>
       </div>
@@ -217,10 +217,10 @@
               <i class="fas fa-plus fa-3x"></i>
             </div>
           </div>
-          <%= image_tag ("ziSetif.jpg"), class: "img-fluid"%>
+          <%= image_tag ("pimob.jpg"), class: "img-fluid"%>
         </a>
         <div class="portfolio-caption">
-          <h4>Prommotion immobiliere</h4>
+          <h4>Promotions Immobilières</h4>
           <p class="text-muted">Website Design</p>
         </div>
       </div>
@@ -231,7 +231,7 @@
               <i class="fas fa-plus fa-3x"></i>
             </div>
           </div>
-          <%= image_tag ("ziSetif.jpg"), class: "img-fluid"%>
+          <%= image_tag ("Image3.jpg"), class: "img-fluid"%>
         </a>
         <div class="portfolio-caption">
           <h4>Autres</h4>
@@ -247,7 +247,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">A propos</h2>
+        <h2 class="section-heading text-uppercase">Historique</h2>
         <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
       </div>
     </div>
@@ -417,24 +417,24 @@
     <div class="row">
       <div class="col-md-3 col-sm-6">
         <a href="#">
-          <%= image_tag ("envato.jpg"), class: "img-fluid d-block mx-auto"%>
+          <%= image_tag ("Setif2.png"), class: "img-fluid d-block mx-auto"%>
         </a>
       </div>
       <div class="col-md-3 col-sm-6">
         <a href="#">
 
-          <%= image_tag ("designmodo.jpg"), class: "img-fluid d-block mx-auto"%>
+          <% image_tag ("download.jpeg"), class: "img-fluid d-block mx-auto"%>
         </a>
       </div>
       <div class="col-md-3 col-sm-6">
         <a href="#">
-          <%= image_tag ("themeforest.jpg"), class: "img-fluid d-block mx-auto"%>
+          <% image_tag ("themeforest.jpg"), class: "img-fluid d-block mx-auto"%>
         </a>
       </div>
       <div class="col-md-3 col-sm-6">
         <a href="#">
 
-          <%= image_tag ("creative-market.jpg"), class: "img-fluid d-block mx-auto"%>
+          <%= image_tag ("download.jpeg"), class: "img-fluid d-block mx-auto"%>
         </a>
       </div>
     </div>
@@ -542,9 +542,9 @@
           <div class="col-lg-8 mx-auto">
             <div class="modal-body">
               <!-- Project Details Go Here -->
-              <h2 class="text-uppercase">Project Name</h2>
+              <h2 class="text-uppercase">Zones Industrielles</h2>
               <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-              <img class="img-fluid d-block mx-auto" src="ziSetif.jpg" alt="">
+              <%= image_tag ("ziSetif.jpg"), class: "img-fluid"%>
               <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
               <ul class="list-inline">
                 <li>Date: January 2017</li>
@@ -576,9 +576,9 @@
           <div class="col-lg-8 mx-auto">
             <div class="modal-body">
               <!-- Project Details Go Here -->
-              <h2 class="text-uppercase">Project Name</h2>
+              <h2 class="text-uppercase">Zones D'activités</h2>
               <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-              <img class="img-fluid d-block mx-auto" src="ziSetif.jpg" alt="">
+              <%= image_tag ("fonciersetif.jpg"), class: "img-fluid"%>
               <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
               <ul class="list-inline">
                 <li>Date: January 2017</li>
@@ -610,9 +610,9 @@
           <div class="col-lg-8 mx-auto">
             <div class="modal-body">
               <!-- Project Details Go Here -->
-              <h2 class="text-uppercase">Project Name</h2>
+              <h2 class="text-uppercase">Projets D'investissement Hors Zones</h2>
               <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-              <img class="img-fluid d-block mx-auto" src="ziSetif.jpg" alt="">
+              <%= image_tag ("hors_zone.jpg"), class: "img-fluid"%>
               <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
               <ul class="list-inline">
                 <li>Date: January 2017</li>
@@ -644,9 +644,9 @@
           <div class="col-lg-8 mx-auto">
             <div class="modal-body">
               <!-- Project Details Go Here -->
-              <h2 class="text-uppercase">Project Name</h2>
+              <h2 class="text-uppercase">Zone D'expansion Touristique</h2>
               <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-              <img class="img-fluid d-block mx-auto" src="ziSetif.jpg" alt="">
+              <%= image_tag ("stade_de_setif_.jpg"), class: "img-fluid"%>
               <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
               <ul class="list-inline">
                 <li>Date: January 2017</li>
@@ -678,9 +678,9 @@
           <div class="col-lg-8 mx-auto">
             <div class="modal-body">
               <!-- Project Details Go Here -->
-              <h2 class="text-uppercase">Project Name</h2>
+              <h2 class="text-uppercase">Promotions Immobilières</h2>
               <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-              <img class="img-fluid d-block mx-auto" src="ziSetif.jpg" alt="">
+              <%= image_tag ("pimob.jpg"), class: "img-fluid"%>
               <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
               <ul class="list-inline">
                 <li>Date: January 2017</li>
@@ -712,9 +712,9 @@
           <div class="col-lg-8 mx-auto">
             <div class="modal-body">
               <!-- Project Details Go Here -->
-              <h2 class="text-uppercase">Project Name</h2>
+              <h2 class="text-uppercase">Autres</h2>
               <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-              <img class="img-fluid d-block mx-auto" src="./ziSetif.jpg" alt="">
+              <%= image_tag ("Image3.jpg"), class: "img-fluid"%>
               <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
               <ul class="list-inline">
                 <li>Date: January 2017</li>
@@ -736,8 +736,6 @@
 
 <%= javascript_include_tag('vendor/jquery/jquery.min.js') %>
 <%= javascript_include_tag('vendor/bootstrap/js/bootstrap.bundle.min.js') %>
-
-
 
 
 <!-- Plugin JavaScript -->

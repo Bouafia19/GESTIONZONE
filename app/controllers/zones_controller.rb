@@ -57,6 +57,7 @@ class ZonesController < ApplicationController
   def update
     respond_to do |format|
       if @zone.update(zone_params)
+
         format.html { redirect_to @zone, notice: 'Zone was successfully updated.' }
         format.json { render :show, status: :ok, location: @zone }
       else

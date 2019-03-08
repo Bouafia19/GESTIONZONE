@@ -1,3 +1,17 @@
+
+<div class="card">
+
+  <div class="card-body">
+
+    <hr>
+
+    <%= link_to 'Back', zone_activite_path ,class:"btn btn-warning"%>
+
+
+    <br>
+    <hr>
 <%= line_chart ZoneActivite.group(:nbr_lots).count %>
 <hr>
 <%= pie_chart ZoneActivite.group(:nbr_lots).count %>
+  </div>
+</div>

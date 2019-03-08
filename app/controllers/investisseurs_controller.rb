@@ -9,6 +9,14 @@ class InvestisseursController < ApplicationController
     #datatable_paginate([:investisseur],['raison_sociale_francais;nom_prenom_gerant_francais;intitule_projet_francais',['investisseurs',"investisseurs.date_depot_demande >='#{Date.parse(session[:start_pub])}' and investisseurs.date_depot_demande <='#{Date.parse(session[:end_pub])}'"]])
 
     datatable_paginate([:investisseur],['raison_sociale_francais;nom_prenom_gerant_francais;intitule_projet_francais'])
+
+    @zoneact = ZoneActivite.all.count
+    @zoneind = ZoneIndustrielle.all.count
+    @horszone = HorsZone.all.count
+    @promotionimob = PromotionImmobiliere.all.count
+    @invest = Investisseur.all.count
+    @user = User.all.count
+    @zone = Zone.all.count
   end
 
   # GET /investisseurs/1

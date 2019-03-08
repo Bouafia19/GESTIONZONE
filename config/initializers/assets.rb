@@ -36,6 +36,41 @@ Rails.application.config.assets.precompile += %w( chart.js/Chart.min.js )
 
 Rails.application.config.assets.precompile += %w( vendor/datatables/jquery.dataTables.min.js )
 Rails.application.config.assets.precompile += %w( vendor/datatables/dataTables.bootstrap4.min.js )
+
+
+
+
+Rails.application.config.assets.precompile += %w( resources/ol.css )
+Rails.application.config.assets.precompile += %w( resources/horsey.min.css )
+Rails.application.config.assets.precompile += %w( resources/ol3-search-layer.min.css )
+Rails.application.config.assets.precompile += %w( resources/ol3-layerswitcher.css )
+Rails.application.config.assets.precompile += %w( resources/qgis2web.css )
+
+
+
+Rails.application.config.assets.precompile += %w( resources/qgis2web_expressions.js )
+Rails.application.config.assets.precompile += %w( resources/polyfills.js )
+Rails.application.config.assets.precompile += %w( resources/functions.js )
+Rails.application.config.assets.precompile += %w( resources/ol-debug.js )
+
+Rails.application.config.assets.precompile += %w( resources/horsey.min.js )
+Rails.application.config.assets.precompile += %w( resources/ol3-search-layer.min.js )
+Rails.application.config.assets.precompile += %w( resources/ol3-layerswitcher.js )
+
+Rails.application.config.assets.precompile += %w( layers/Parcellaire_ZI_SETIF__0.js )
+Rails.application.config.assets.precompile += %w( layers/investisseurs_1.js )
+Rails.application.config.assets.precompile += %w( styles/Parcellaire_ZI_SETIF__0_style.js )
+Rails.application.config.assets.precompile += %w( styles/investisseurs_1_style.js )
+
+Rails.application.config.assets.precompile += %w( layers/layers.js )
+Rails.application.config.assets.precompile += %w( resources/qgis2web.js )
+Rails.application.config.assets.precompile += %w( resources/Autolinker.min.js )
+
+
+
+
+
+
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

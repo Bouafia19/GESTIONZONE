@@ -15,7 +15,10 @@ class HorsZonesController < InheritedResources::Base
     session[:end_pub] ||= date2
     datatable_paginate([:hors_zone],['code_zone;nom_zone;commune;wilaya',['hors_zones',"hors_zones.dat_arrete_creation >='#{Date.parse(session[:start_pub])}' and hors_zones.dat_arrete_creation <='#{Date.parse(session[:end_pub])}'"]])
   end
+  def static
+    @hors_zone = HorsZone.all
 
+  end
   private
 
     def hors_zone_params

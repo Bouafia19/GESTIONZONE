@@ -2,7 +2,7 @@
 
 
 
-<table class="table table-responsive table-bordered table-striped table-hover table sortable">
+<table class="table table-responsive table-bordered table-hover table sortable">
   <thead>
   <tr>
     <th>Show</th>
@@ -13,9 +13,10 @@
     <th>Code zone</th>
     <th>Type zone</th>
     <th>Nom zone</th>
-
-
-
+    <th>Commune</th>
+    <th>Wilaya</th>
+    <th>Superf total</th>
+    <th>Nbr lots</th>
   </tr>
   </thead>
 
@@ -28,8 +29,10 @@
       <td><%= hors_zone.code_zone %></td>
       <td><%= hors_zone.type_zone %></td>
       <td><%= hors_zone.nom_zone %></td>
-
-
+      <td><%= hors_zone.commune %></td>
+      <td><%= hors_zone.wilaya %></td>
+      <td><%= hors_zone.superf_total %></td>
+      <td><%= hors_zone.nbr_lots %></td>
     </tr>
   <% end %>
   </tbody>

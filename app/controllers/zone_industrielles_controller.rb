@@ -16,7 +16,10 @@ def index
   datatable_paginate([:zone_industrielle],['code_zone;nom_zone;commune;wilaya',['zone_industrielles',"zone_industrielles.dat_arrete_creation >='#{Date.parse(session[:start_pub])}' and zone_industrielles.dat_arrete_creation <='#{Date.parse(session[:end_pub])}'"]])
 
   end
+def static
+  @zone_industrielle = ZoneIndustrielle.all
 
+end
   private
 
     def zone_industrielle_params

@@ -1,5 +1,5 @@
-<div class="row">
-<table class="table table-responsive table-bordered table-striped table-hover table sortable">
+
+<table class="table table-responsive table-bordered table-hover table sortable">
   <thead>
   <tr>
     <th>Show</th>
@@ -10,7 +10,10 @@
     <th>Code zone</th>
     <th>Type zone</th>
     <th>Nom zone</th>
-
+    <th>Commune</th>
+    <th>Wilaya</th>
+    <th>Superf total</th>
+    <th>Nbr lots</th>
 
   </tr>
   </thead>
@@ -24,21 +27,22 @@
       <td><%= zone_industrielle.code_zone %></td>
       <td><%= zone_industrielle.type_zone %></td>
       <td><%= zone_industrielle.nom_zone %></td>
-
+      <td><%= zone_industrielle.commune %></td>
+      <td><%= zone_industrielle.wilaya %></td>
+      <td><%= zone_industrielle.superf_total %></td>
+      <td><%= zone_industrielle.nbr_lots %></td>
 
     </tr>
   <% end %>
   </tbody>
 </table>
 
-<div class="row">
-  <div class="col-sm-6">
-    <div  id="dataTables-example_info" role="status" aria-live="polite">
-      <span>Affichage  <%=paginate.length%> de <%= @total%> entrées</span>
+  <div class="row">
+    <div class="col-sm-6">
+      <div  id="dataTables-example_info" role="status" aria-live="polite">
+        <span>Affichage  <%=paginate.length%> de <%= @total%> entrées</span>
+      </div>
     </div>
+    <%= will_paginate paginate, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
+
   </div>
-
-      <%= will_paginate paginate, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
-
-</div>
-</div>

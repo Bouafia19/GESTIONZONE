@@ -1,6 +1,5 @@
 
 
-
   <div class="card">
 
     <div class="card-body">
@@ -11,85 +10,140 @@
       <%= link_to 'Back', hors_zones_path ,class:"btn btn-md btn-warning"%> |
       <% link_to 'New hors zone', new_hors_zone_path ,class:"btn btn-md btn-success"%>
       <%= link_to 'INVESTISSEURS', investisseurs_path ,class:"btn btn-md btn-danger"%> |
-      <%= link_to 'LOTS', lots_path ,class:"btn btn-md btn-primary"%>
+      <%= link_to 'LOTS', lots_path ,class:"btn btn-md btn-primary"%> |
+      <%= link_to 'STATISTIQUES', "static/#{@hors_zone.id}" ,class:"btn btn-md btn-success"%>
 
       <br>
       <hr>
-      <table class="table table-responsive table-striped table-hover table sortable">
-        <thead>
+      <div class="row">
 
-        </thead>
-        <tbody>
-        <tr>
-          <th>Code zone</th>
-          <td><%= @hors_zone.code_zone %></td>
-        </tr>
+        <!-- Area Chart -->
+        <div class="col-xl-3 col-lg-4">
+          <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
 
-        <tr>
-          <th>Type zone</th>
-          <td><%= @hors_zone.type_zone %></td>
-        </tr>
+            <!-- Card Body -->
+            <div class="card-body">
+              <table class="table table-responsive table-striped table-hover table sortable">
+                <thead>
 
-        <tr>
-          <th>Nom zone</th>
-          <td><%= @hors_zone.nom_zone %></td>
-        </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th>Code zone</th>
+                  <td><%= @hors_zone.code_zone %></td>
+                </tr>
 
-        <tr>
-          <th>Commune</th>
-          <td><%= @hors_zone.commune %></td>
-        </tr>
+                <tr>
+                  <th>Type zone</th>
+                  <td><%= @hors_zone.type_zone %></td>
+                </tr>
 
-        <tr>
-          <th>Wilaya</th>
-          <td><%= @hors_zone.wilaya %></td>
-        </tr>
-        <tr>
-          <th>Num arrete creation</th>
-          <td><%= @hors_zone.num_arrete_creation %></td>
-        </tr>
+                <tr>
+                  <th>Nom zone</th>
+                  <td><%= @hors_zone.nom_zone %></td>
+                </tr>
 
-        <tr>
-          <th>Dat arrete creation</th>
-          <td><%= @hors_zone.dat_arrete_creation %></td>
-        </tr>
-        <tr>
-          <th>Superf total</th>
-          <td><%= @hors_zone.superf_total %></td>
-        </tr>
-        <tr>
-          <th>Superf cessible</th>
-          <td><%= @hors_zone.superf_cessible %></td>
-        </tr>
-        <tr>
-          <th>Superf vrd</th>
-          <td><%= @hors_zone.superf_vrd %></td>
-        </tr>
+                <tr>
+                  <th>Commune</th>
+                  <td><%= @hors_zone.commune %></td>
+                </tr>
 
-        <tr>
-          <th>Nbr lots</th>
-          <td><%= @hors_zone.nbr_lots %></td>
-        </tr>
-        <tr>
-          <th>Nbr lot attribues</th>
-          <td><%= @hors_zone.nbr_lot_attribues %></td>
-        </tr>
-        <tr>
-          <th>Nbr lot cession</th>
-          <td><%= @hors_zone.nbr_lot_cession %></td>
-        </tr>
-        <tr>
-          <th>Nbr lot concession</th>
-          <td><%=  @hors_zone.nbr_lot_concession %></td>
-        </tr>
-        <tr>
-          <th>Observation</th>
-          <td><%= @hors_zone.observation %></td>
-        </tr>
+                <tr>
+                  <th>Wilaya</th>
+                  <td><%= @hors_zone.wilaya %></td>
+                </tr>
+                <tr>
+                  <th>Num arrete creation</th>
+                  <td><%= @hors_zone.num_arrete_creation %></td>
+                </tr>
+
+                <tr>
+                  <th>Dat arrete creation</th>
+                  <td><%= @hors_zone.dat_arrete_creation %></td>
+                </tr>
+                <tr>
+                  <th>Superf total</th>
+                  <td><%= @hors_zone.superf_total %></td>
+                </tr>
+                <tr>
+                  <th>Superf cessible</th>
+                  <td><%= @hors_zone.superf_cessible %></td>
+                </tr>
+                <tr>
+                  <th>Superf vrd</th>
+                  <td><%= @hors_zone.superf_vrd %></td>
+                </tr>
+
+                <tr>
+                  <th>Nbr lots</th>
+                  <td><%= @hors_zone.nbr_lots %></td>
+                </tr>
+                <tr>
+                  <th>Nbr lot attribues</th>
+                  <td><%= @hors_zone.nbr_lot_attribues %></td>
+                </tr>
+                <tr>
+                  <th>Nbr lot cession</th>
+                  <td><%= @hors_zone.nbr_lot_cession %></td>
+                </tr>
+                <tr>
+                  <th>Nbr lot concession</th>
+                  <td><%=  @hors_zone.nbr_lot_concession %></td>
+                </tr>
+                <tr>
+                  <th>Observation</th>
+                  <td><%= @hors_zone.observation %></td>
+                </tr>
 
 
-        </tbody>
-      </table>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pie Chart -->
+        <div class="col-xl-9 col-lg-10">
+          <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+              <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+              <div class="dropdown no-arrow">
+                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                  <div class="dropdown-header">Dropdown Header:</div>
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+              <div class="chart-area">
+                <div id="map">
+                  <div id="popup" class="ol-popup">
+                    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                    <div id="popup-content"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
+
+
+
+
+
+
 

@@ -1,7 +1,13 @@
-
+<% @investisseur.each do |investisseur| %>
+  <% if investisseur.taux_avancement_traveux <= 50 %>
     <div class="alert alert-danger alert-dismissible">
       <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      L'investisseur suivant  <br><br>
-      <strong>*</strong>  Vous avez <strong>  </strong>  : <strong>  </strong>
+      Le produit suivant presque fini dans le stock<br><br>
+      <strong>*</strong>  Vous avez <strong>  <%= investisseur.taux_avancement_traveux %> </strong>  du produit : <strong>  <%= investisseur.taux_avancement_traveux %></strong>
       <br>
     </div>
+  <%end%>
+<% end %>
+
+
+

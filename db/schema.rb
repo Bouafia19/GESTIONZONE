@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_23_140742) do
+ActiveRecord::Schema.define(version: 2019_03_06_160709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,16 @@ ActiveRecord::Schema.define(version: 2019_02_23_140742) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "badges_sashes", force: :cascade do |t|
+    t.integer "badge_id"
+    t.integer "sash_id"
+    t.boolean "notified_user", default: false
+    t.datetime "created_at"
+    t.index ["badge_id", "sash_id"], name: "index_badges_sashes_on_badge_id_and_sash_id"
+    t.index ["badge_id"], name: "index_badges_sashes_on_badge_id"
+    t.index ["sash_id"], name: "index_badges_sashes_on_sash_id"
   end
 
   create_table "countries", force: :cascade do |t|
@@ -88,7 +98,7 @@ ActiveRecord::Schema.define(version: 2019_02_23_140742) do
   end
 
   create_table "investisseurs", force: :cascade do |t|
-    t.integer "num_dossier"
+    t.string "num_dossier"
     t.date "date_depot_demande"
     t.string "raison_sociale_arabe"
     t.string "nom_prenom_gerant_arabe"
@@ -106,8 +116,8 @@ ActiveRecord::Schema.define(version: 2019_02_23_140742) do
     t.float "montant_investissement"
     t.integer "nmbr_emplois"
     t.date "date_examen_demande"
-    t.integer "num_decision"
-    t.integer "num_lot"
+    t.string "num_decision"
+    t.string "num_lot"
     t.float "superficie_octroyee"
     t.string "localisation_projet"
     t.string "commune"
@@ -141,6 +151,8 @@ ActiveRecord::Schema.define(version: 2019_02_23_140742) do
     t.text "observation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "sash_id"
+    t.integer "level", default: 0
   end
 
   create_table "les_parceles_", primary_key: "gid", id: :serial, force: :cascade do |t|
@@ -193,6 +205,41 @@ ActiveRecord::Schema.define(version: 2019_02_23_140742) do
     t.string "type_zone"
   end
 
+  create_table "merit_actions", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "action_method"
+    t.integer "action_value"
+    t.boolean "had_errors", default: false
+    t.string "target_model"
+    t.integer "target_id"
+    t.text "target_data"
+    t.boolean "processed", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "merit_activity_logs", force: :cascade do |t|
+    t.integer "action_id"
+    t.string "related_change_type"
+    t.integer "related_change_id"
+    t.string "description"
+    t.datetime "created_at"
+  end
+
+  create_table "merit_score_points", force: :cascade do |t|
+    t.bigint "score_id"
+    t.integer "num_points", default: 0
+    t.string "log"
+    t.datetime "created_at"
+    t.index ["score_id"], name: "index_merit_score_points_on_score_id"
+  end
+
+  create_table "merit_scores", force: :cascade do |t|
+    t.bigint "sash_id"
+    t.string "category", default: "default"
+    t.index ["sash_id"], name: "index_merit_scores_on_sash_id"
+  end
+
   create_table "promotion_immobilieres", force: :cascade do |t|
     t.string "code_zone"
     t.string "type_zone"
@@ -221,6 +268,11 @@ ActiveRecord::Schema.define(version: 2019_02_23_140742) do
     t.datetime "updated_at", null: false
     t.index ["country_id"], name: "index_regions_on_country_id"
     t.index ["geom"], name: "index_regions_on_geom", using: :gist
+  end
+
+  create_table "sashes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "states", force: :cascade do |t|

@@ -6,6 +6,6 @@ class WelcomeController < ApplicationController
     @promotionimob = PromotionImmobiliere.all.count
     @user = User.all.count
     @zone = Zone.all.count
-    @investisseurs = Investisseur.all.count
+    @investisseurs = Investisseur.all
   end
 end

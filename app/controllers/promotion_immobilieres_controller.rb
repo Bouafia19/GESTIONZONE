@@ -15,7 +15,10 @@ def index
   session[:end_pub] ||= date2
   datatable_paginate([:promotion_immobiliere],['code_zone;nom_zone;commune;wilaya',['promotion_immobilieres',"promotion_immobilieres.dat_arrete_creation >='#{Date.parse(session[:start_pub])}' and promotion_immobilieres.dat_arrete_creation <='#{Date.parse(session[:end_pub])}'"]])
 end
+def static
+  @promotion_immobiliere = PromotionImmobiliere.all
 
+end
   private
 
     def promotion_immobiliere_params

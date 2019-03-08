@@ -1,6 +1,7 @@
 class ZoneActivitesController < InheritedResources::Base
 def index
   date1 = ("01/01/2019")
+
   date2 = Date.today.strftime("%d/%m/%Y")
 
   if params[:start_date]

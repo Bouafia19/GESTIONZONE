@@ -1,123 +1,38 @@
-<table class="table table-responsive table-bordered table-striped table sortable">
-  <thead class="thead-inverse">
-  <tr>
-    <th colspan="3"></th>
 
-
-    <th>Fax</th>
-    <th>Email</th>
-    <th>Intitule projet arabe</th>
-    <th>Intitule projet francais</th>
-    <th>Secteur activite</th>
-    <th>Filieres industrielles</th>
-    <th>Superficie demandee</th>
-    <th>Montant investissement</th>
-    <th>Nmbr emplois</th>
-    <th>Date examen demande</th>
-    <th>Num decision</th>
-    <th>Num lot</th>
-    <th>Superficie octroyee</th>
-    <th>Localisation projet</th>
-    <th>Commune</th>
-    <th>Site</th>
-    <th>P droits etude vrd</th>
-    <th>Num arrete concession</th>
-    <th>Date arrete concession</th>
-    <th>Montant concession</th>
-    <th>Date paiment</th>
-    <th>Num acte concession</th>
-    <th>Date acte concession</th>
-    <th>Num acte cession</th>
-    <th>Date acte cession</th>
-    <th>Num depot dossier permis construire</th>
-    <th>Date depot dossier permis construire</th>
-    <th>Avis services</th>
-    <th>Num arrete permis construire</th>
-    <th>Date arrete permis construire</th>
-    <th>Date depot dossier</th>
-    <th>Date approbation eie</th>
-    <th>Date decision creation prealabre</th>
-    <th>Num arrete exploitation</th>
-    <th>Date arrete exploitation</th>
-    <th>Num depot dossier</th>
-    <th>Date depot dossier</th>
-    <th>Num decision andi</th>
-    <th>Taux avancement traveux</th>
-    <th>Taux avancement investissement</th>
-    <th>Mise en service</th>
-    <th>Emplois reel</th>
-    <th>Changement status</th>
-
-  </tr>
-  </thead>
-
-  <tbody>
-  <% paginate.each do |investisseur| %>
-    <tr>
-      <td><%= link_to 'Show', investisseur ,class:"btn btn-success"%></td>
-      <td><%= link_to 'Edit', edit_investisseur_path(investisseur) ,class:"btn btn-primary"%></td>
-      <td><%= link_to 'Destroy', investisseur, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-danger"%></td>
-
-
-
-
-
-      <td><%= investisseur.num_telephone %></td>
-      <td><%= investisseur.fax %></td>
-      <td><%= investisseur.email %></td>
-      <td><%= investisseur.intitule_projet_arabe %></td>
-      <td><%= investisseur.intitule_projet_francais %></td>
-      <td><%= investisseur.secteur_activite %></td>
-      <td><%= investisseur.filieres_industrielles %></td>
-      <td><%= investisseur.superficie_demandee %></td>
-      <td><%= investisseur.montant_investissement %></td>
-      <td><%= investisseur.nmbr_emplois %></td>
-      <td><%= investisseur.date_examen_demande %></td>
-      <td><%= investisseur.num_decision %></td>
-      <td><%= investisseur.num_lot %></td>
-      <td><%= investisseur.superficie_octroyee %></td>
-      <td><%= investisseur.localisation_projet %></td>
-      <td><%= investisseur.commune %></td>
-      <td><%= investisseur.site %></td>
-      <td><%= investisseur.p_droits_etude_vrd %></td>
-      <td><%= investisseur.num_arrete_concession %></td>
-      <td><%= investisseur.date_arrete_concession %></td>
-      <td><%= investisseur.montant_concession %></td>
-      <td><%= investisseur.date_paiment %></td>
-      <td><%= investisseur.num_acte_concession %></td>
-      <td><%= investisseur.date_acte_concession %></td>
-      <td><%= investisseur.num_acte_cession %></td>
-      <td><%= investisseur.date_acte_cession %></td>
-      <td><%= investisseur.num_depot_dossier_permis_construire %></td>
-      <td><%= investisseur.date_depot_dossier_permis_construire %></td>
-      <td><%= investisseur.avis_services %></td>
-      <td><%= investisseur.num_arrete_permis_construire %></td>
-      <td><%= investisseur.date_arrete_permis_construire %></td>
-      <td><%= investisseur.date_depot_dossier %></td>
-      <td><%= investisseur.date_approbation_eie %></td>
-      <td><%= investisseur.date_decision_creation_prealabre %></td>
-      <td><%= investisseur.num_arrete_exploitation %></td>
-      <td><%= investisseur.date_arrete_exploitation %></td>
-      <td><%= investisseur.num_depot_dossier %></td>
-      <td><%= investisseur.date_depot_dossier %></td>
-      <td><%= investisseur.num_decision_andi %></td>
-      <td><%= investisseur.taux_avancement_traveux %></td>
-      <td><%= investisseur.taux_avancement_investissement %></td>
-      <td><%= investisseur.mise_en_service %></td>
-      <td><%= investisseur.emplois_reel %></td>
-      <td><%= investisseur.changement_status %></td>
-
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-<div class="row">
-  <div class="col-sm-6">
-    <div  id="dataTables-example_info" role="status" aria-live="polite">
-      <span>Affichage  <%=paginate.length%> de <%= @total%> entrées</span>
-    </div>
+<% paginate.each do |investisseur| %>
+<div class="card text-center col-6">
+  <div class="card-header">
+    <strong>Investisseurs: <%= investisseur.raison_sociale_francais %></strong>
   </div>
+  <div class="card-body">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Num dossier: <%= investisseur.num_dossier %></li>
+      <li class="list-group-item">Date depot demande: <%= investisseur.date_depot_demande %></li>
+      <li class="list-group-item">Raison sociale arabe: <%= investisseur.raison_sociale_arabe %></li>
+      <li class="list-group-item">Nom prenom gerant arabe: <%= investisseur.nom_prenom_gerant_arabe %></li>
+      <li class="list-group-item">Raison sociale francais: <%= investisseur.raison_sociale_francais %></li>
+      <li class="list-group-item">Nom prenom gerant francais: <%= investisseur.nom_prenom_gerant_francais %></li>
+      <li class="list-group-item">Adresse: <%= investisseur.adresse %></li>
+      <li class="list-group-item">Num telephone: <%= investisseur.num_telephone %></li>
+      <li class="list-group-item">Fax: <%= investisseur.fax %></li>
+      <li class="list-group-item">Email: <%= investisseur.email %></li>
+      <li class="list-group-item">Intitule projet arabe: <%= investisseur.intitule_projet_arabe %></li>
+      <li class="list-group-item">Intitule projet francais: <%= investisseur.intitule_projet_francais %></li>
+      <li class="list-group-item">Secteur activite: <%= investisseur.secteur_activite %></li>
+
+    </ul>
+    <br>
+    <%= link_to 'Detail', investisseur ,class:"btn btn-success col-4"%>
+  </div>
+  <div class="card-footer text-muted">
+   <strong> Investisseurs: <%= investisseur.raison_sociale_arabe %></strong>
+  </div>
+</div>
+  <br>
+<% end %>
+
+<br>
+<div class="row">
 
       <%= will_paginate paginate, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
-
 </div>
