@@ -17,6 +17,10 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
+  get 'zones/search'
+
+  get 'zones/static'
+
   devise_for :users ,only: :session , path: 'session',path_name: {sign_in:'login',sign_out: 'logout'}
   resources :investisseurs
   resources :lots

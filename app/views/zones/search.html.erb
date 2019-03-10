@@ -1,0 +1,32 @@
+
+
+<div class="col-xl-12 col-md-6 mb-4 res">
+  <div class="card border-left-primary shadow h-100 py-2">
+    <div class="card-body">
+      <div class="row no-gutters align-items-center">
+        <div class="col mr-2">
+
+        <%= form_tag zones_search_path, method: :get do %>
+  <div class="row">
+    <div class="col-sm-2 align-self-start"  >
+    <%#= text_field_tag :site, params[:site],placeholder:"Zone",class:"form-control" %>
+     <%#= select_tag :site, options_from_collection_for_select(Investisseur, "id", "site")%>
+      <%= select_tag :site, options_for_select([["Zone Industrielles","ZI"],["Hors Zones","HZ"],["Zone Activite","ZAC"],["Promotion Immobiliere","PI"],["ZEA","ZEA"]] ),{prompt: "select type zones",class:"form-control", required: true}%>
+    </div>
+    <div class="col-sm-2 align-self-center">
+  <%= text_field_tag :raison_sociale_francais, params[:raison_sociale_francais],placeholder:"Nom Investisseur",class:"form-control" %>
+    </div>
+    <div class="col-sm-2 align-self-end">
+  <%= submit_tag "Search", name: nil,class:"btn btn-md btn-success" %>
+    </div>
+<% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" id="table_search" style="padding: 10px">
+  <%= render(:partial => 'index', locals: {paginate: @paginate})%>
+</div>

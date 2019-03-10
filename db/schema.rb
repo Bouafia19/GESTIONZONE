@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_06_160709) do
+ActiveRecord::Schema.define(version: 2019_03_10_202358) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -138,6 +138,10 @@ ActiveRecord::Schema.define(version: 2019_03_06_160709) do
     t.datetime "updated_at", null: false
     t.integer "sash_id"
     t.integer "level", default: 0
+    t.string "document_file_name"
+    t.string "document_content_type"
+    t.bigint "document_file_size"
+    t.datetime "document_updated_at"
   end
 
   create_table "layer", primary_key: ["topology_id", "layer_id"], force: :cascade do |t|

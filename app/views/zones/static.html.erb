@@ -1,0 +1,3 @@
+<%= column_chart Investisseur.group(:filieres_industrielles).sum(:montant_investissement) %>
+<hr>
+<%= bar_chart Investisseur.group(:filieres_industrielles).sum(:montant_investissement  ) %>

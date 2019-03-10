@@ -25,7 +25,22 @@ class ZonesController < ApplicationController
   # GET /zones/1.json
   def show
   end
+  def static
 
+  end
+  def search
+    #store all the projects that match the name searched
+    #@lots = Lot.where("num_lot LIKE ? ", "%#{params[:num_lot]}%")
+    #store all the clients that match the name searched
+    #@investisseurs = Investisseur.where("raison_sociale_francais LIKE ? ", "%#{params[:raison_sociale_francais]}%")
+    @investisseurs = Investisseur.where(['site LIKE ? AND raison_sociale_francais LIKE ?', "%#{params[:site]}%", "%#{params[:raison_sociale_francais]}%"])
+
+    def self.search(search_project, search_client)
+      return scoped unless search_project.present? || search_client.present?
+      where(['project_name LIKE ? AND client LIKE ?', "%#{search_project}%", "%#{search_client}%"])
+    end
+
+  end
   # GET /zones/new
   def new
     @zone = Zone.new
