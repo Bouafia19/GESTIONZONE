@@ -33,6 +33,7 @@ class UsersController < ApplicationController
         # https://github.com/sendgrid/sendgrid-ruby
         # Deliver the signup email
 
+        UserMailer.welcome_email(@user).deliver_now
 
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }

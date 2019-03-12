@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_10_202358) do
+ActiveRecord::Schema.define(version: 2019_03_12_170701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,15 +52,6 @@ ActiveRecord::Schema.define(version: 2019_03_10_202358) do
     t.index ["badge_id"], name: "index_badges_sashes_on_badge_id"
     t.index ["sash_id"], name: "index_badges_sashes_on_sash_id"
   end
-
-# Could not dump table "countries" because of following StandardError
-#   Unknown type 'geometry(MultiPolygon,4326)' for column 'geom'
-
-# Could not dump table "countries_ref" because of following StandardError
-#   Unknown type 'geometry(MultiPolygon,4326)' for column 'geom'
-
-# Could not dump table "gadm36_dza_0" because of following StandardError
-#   Unknown type 'geometry(MultiPolygon)' for column 'geom'
 
   create_table "hors_zones", force: :cascade do |t|
     t.string "code_zone"
@@ -143,21 +134,6 @@ ActiveRecord::Schema.define(version: 2019_03_10_202358) do
     t.bigint "document_file_size"
     t.datetime "document_updated_at"
   end
-
-  create_table "layer", primary_key: ["topology_id", "layer_id"], force: :cascade do |t|
-    t.integer "topology_id", null: false
-    t.integer "layer_id", null: false
-    t.string "schema_name", null: false
-    t.string "table_name", null: false
-    t.string "feature_column", null: false
-    t.integer "feature_type", null: false
-    t.integer "level", default: 0, null: false
-    t.integer "child_id"
-    t.index ["schema_name", "table_name", "feature_column"], name: "layer_schema_name_table_name_feature_column_key", unique: true
-  end
-
-# Could not dump table "les_parceles_" because of following StandardError
-#   Unknown type 'geometry(MultiPolygon)' for column 'geom'
 
   create_table "lots", force: :cascade do |t|
     t.integer "num_lot"
@@ -242,30 +218,9 @@ ActiveRecord::Schema.define(version: 2019_03_10_202358) do
     t.datetime "updated_at", null: false
   end
 
-# Could not dump table "regions" because of following StandardError
-#   Unknown type 'geometry(MultiPolygon,4326)' for column 'geom'
-
   create_table "sashes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "spatial_ref_sys", primary_key: "srid", id: :integer, default: nil, force: :cascade do |t|
-    t.string "auth_name", limit: 256
-    t.integer "auth_srid"
-    t.string "srtext", limit: 2048
-    t.string "proj4text", limit: 2048
-  end
-
-# Could not dump table "states" because of following StandardError
-#   Unknown type 'geometry(MultiPolygon,4326)' for column 'geom'
-
-  create_table "topology", id: :serial, force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "srid", null: false
-    t.float "precision", null: false
-    t.boolean "hasz", default: false, null: false
-    t.index ["name"], name: "topology_name_key", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -346,8 +301,4 @@ ActiveRecord::Schema.define(version: 2019_03_10_202358) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "layer", "topology", name: "layer_topology_id_fkey"
-  add_foreign_key "regions", "countries"
-  add_foreign_key "states", "countries"
-  add_foreign_key "states", "regions"
 end

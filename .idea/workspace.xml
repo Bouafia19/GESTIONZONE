@@ -4,17 +4,41 @@
     <list default="true" id="43f71642-1426-4718-9a42-6501b751986f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/GESTIONZONE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GESTIONZONE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/investisseurs_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/investisseurs_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/zones_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/zones_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/investisseur.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/investisseur.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/zone.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/zone.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/investisseurs/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/investisseurs/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/investisseurs/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/investisseurs/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/investisseurs/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/investisseurs/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zones/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zones/_index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/states_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/states_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mailers/application_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/application_mailer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mailers/send_signup_email.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mailers/user_notifier_mailer.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/country.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/region.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/state.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/states/_form.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/states/_state.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/states/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/states/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/states/index.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/states/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/states/show.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/states/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190128095900_create_countries.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190128100351_create_states.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190128100441_create_regions.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190128101557_add_region_to_state.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190215205724_addrole_to_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190215205724_addrole_to_users.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/states_controller_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/countries.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/regions.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/states.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mailers/previews/user_notifier_mailer_preview.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mailers/user_notifier_mailer_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/country_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/region_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/state_test.rb" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -30,7 +54,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/GESTIONZONE@Production__GESTIONZONE.rcov" NAME="Production: GESTIONZONE Coverage Results" MODIFIED="1546759523549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
-    <SUITE FILE_PATH="coverage/GESTIONZONE@Development__GESTIONZONE.rcov" NAME="Development: GESTIONZONE Coverage Results" MODIFIED="1552209643429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
+    <SUITE FILE_PATH="coverage/GESTIONZONE@Development__GESTIONZONE.rcov" NAME="Development: GESTIONZONE Coverage Results" MODIFIED="1552410801361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -50,14 +74,14 @@
     <session id="-1745049095">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="77" />
+          <entry key="project.closed" value="80" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.16" value="6" />
-          <entry key="project.open.time.17" value="3" />
+          <entry key="project.open.time.16" value="7" />
+          <entry key="project.open.time.17" value="5" />
           <entry key="project.open.time.18" value="9" />
           <entry key="project.open.time.19" value="3" />
           <entry key="project.open.time.2" value="2" />
@@ -71,7 +95,7 @@
           <entry key="project.open.time.3" value="8" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.31" value="1" />
-          <entry key="project.open.time.32" value="2" />
+          <entry key="project.open.time.32" value="3" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.4" value="7" />
           <entry key="project.open.time.5" value="6" />
@@ -80,31 +104,32 @@
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.80" value="1" />
           <entry key="project.open.time.99" value="1" />
-          <entry key="project.opened" value="83" />
+          <entry key="project.opened" value="87" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Gemfile" value="22" />
+          <entry key="Gemfile" value="23" />
           <entry key="bundle" value="2" />
           <entry key="coffee" value="27" />
           <entry key="css" value="4" />
-          <entry key="erb" value="672" />
+          <entry key="erb" value="680" />
           <entry key="html" value="2" />
           <entry key="jbuilder" value="10" />
           <entry key="jpg" value="3" />
           <entry key="js" value="25" />
           <entry key="json" value="6" />
           <entry key="log" value="1" />
+          <entry key="php" value="1" />
           <entry key="rails" value="6" />
           <entry key="rake" value="9" />
-          <entry key="rb" value="324" />
+          <entry key="rb" value="349" />
           <entry key="rnc" value="1" />
           <entry key="scss" value="46" />
           <entry key="setup" value="1" />
           <entry key="spring" value="1" />
           <entry key="update" value="1" />
-          <entry key="yml" value="5" />
+          <entry key="yml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -115,12 +140,12 @@
           <entry key="Image" value="3" />
           <entry key="JSON" value="6" />
           <entry key="JavaScript" value="25" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="RHTML" value="672" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="RHTML" value="680" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="376" />
+          <entry key="Ruby" value="402" />
           <entry key="SCSS" value="46" />
-          <entry key="YAML" value="5" />
+          <entry key="YAML" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -128,12 +153,12 @@
           <entry key="Gemfile" value="82" />
           <entry key="coffee" value="68" />
           <entry key="css" value="4" />
-          <entry key="erb" value="8970" />
+          <entry key="erb" value="9020" />
           <entry key="html" value="1" />
           <entry key="jbuilder" value="4" />
           <entry key="js" value="79" />
           <entry key="rake" value="54" />
-          <entry key="rb" value="1851" />
+          <entry key="rb" value="1957" />
           <entry key="scss" value="215" />
           <entry key="yml" value="47" />
         </counts>
@@ -144,8 +169,8 @@
           <entry key="CoffeeScript" value="68" />
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="79" />
-          <entry key="RHTML" value="8970" />
-          <entry key="Ruby" value="1991" />
+          <entry key="RHTML" value="9020" />
+          <entry key="Ruby" value="2097" />
           <entry key="SCSS" value="215" />
           <entry key="YAML" value="47" />
         </counts>
@@ -154,11 +179,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1189">
-              <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+            <state relative-caret-position="105">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/schema.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="322" lean-forward="true" selection-start-line="322" selection-end-line="322" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/storage.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/spring.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/puma.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environment.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20190312170701_regions.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -168,6 +274,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>class=&quot;nav-item&quot;</find>
+      <find>multipolygon</find>
+      <find>geom</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,19 +284,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/investisseurs/alert_stock.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/zone_industrielles/static.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/zone_industrielles_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/zone_activites/static.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/hors_zones_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/hors_zones/static.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/promotion_immobilieres_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/promotion_immobilieres/static.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/hors_zones/show.html.erb" />
-        <option value="$PROJECT_DIR$/config/initializers/merit.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/investisseurs/_index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/zone_activites/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/promotion_immobilieres/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/promotion_immobilieres/_index.html.erb" />
@@ -201,7 +296,6 @@
         <option value="$PROJECT_DIR$/app/views/investisseurs/new.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
         <option value="$PROJECT_DIR$/app/views/welcome/index.erb" />
-        <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/zone_industrielles/_index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/promotion_immobilieres/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/hors_zones/index.html.erb" />
@@ -209,8 +303,6 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/_mastheada.scss" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/db/seeds/populate_geospatial_data.rb" />
-        <option value="$PROJECT_DIR$/db/schema.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/views/zone_activites/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/zones/index.html.erb" />
@@ -227,6 +319,22 @@
         <option value="$PROJECT_DIR$/app/views/investisseurs/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/investisseurs/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/mailers/user_notifier_mailer.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/mailers/welcome_email.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/devise/mailer/welcome_email.html.erb" />
+        <option value="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/config/environments/development.rb" />
+        <option value="$PROJECT_DIR$/app/mailers/application_mailer.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20190128095900_create_countries.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20190128100351_create_states.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20190128100441_create_regions.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20190128101557_add_region_to_state.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20190215205724_addrole_to_users.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20190312170701_regions.rb" />
+        <option value="$PROJECT_DIR$/db/schema.rb" />
       </list>
     </option>
   </component>
@@ -268,6 +376,61 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="RailsProjectView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Application" type="1a20d5f2:ApplicationFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Application" type="1a20d5f2:ApplicationFolderNode" />
+              <item name="ApplicationController" type="2b770dde:ControllerClassNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Models" type="4bd37eb5:ModelsFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Models" type="4bd37eb5:ModelsFolderNode" />
+              <item name="Migrations" type="5e88d8ef:MigrationsFolder" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Mailers" type="d052a7e1:MailersFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Config" type="9a8f28a7:ConfigFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Config" type="9a8f28a7:ConfigFolderNode" />
+              <item name="environments" type="3dfa953c:FolderSubFolderNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -301,130 +464,21 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="RailsProjectView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Application" type="1a20d5f2:ApplicationFolderNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Application" type="1a20d5f2:ApplicationFolderNode" />
-              <item name="ApplicationController" type="2b770dde:ControllerClassNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-              <item name="InvestisseursController" type="2b770dde:ControllerClassNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-              <item name="InvestisseursController" type="2b770dde:ControllerClassNode" />
-              <item name="Partials" type="b4d82f74:ControllerPartialsFolder" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-              <item name="InvestisseursController" type="2b770dde:ControllerClassNode" />
-              <item name="index" type="ddea66bf:ControllerActionNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-              <item name="InvestisseursController" type="2b770dde:ControllerClassNode" />
-              <item name="show" type="ddea66bf:ControllerActionNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-              <item name="LotsController" type="2b770dde:ControllerClassNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-              <item name="LotsController" type="2b770dde:ControllerClassNode" />
-              <item name="Partials" type="b4d82f74:ControllerPartialsFolder" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-              <item name="LotsController" type="2b770dde:ControllerClassNode" />
-              <item name="show" type="ddea66bf:ControllerActionNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-              <item name="ZonesController" type="2b770dde:ControllerClassNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-              <item name="ZonesController" type="2b770dde:ControllerClassNode" />
-              <item name="Partials" type="b4d82f74:ControllerPartialsFolder" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-              <item name="ZonesController" type="2b770dde:ControllerClassNode" />
-              <item name="static" type="ddea66bf:ControllerActionNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Config" type="9a8f28a7:ConfigFolderNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Layouts" type="8e5d065:LayoutsFolder" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Views" type="5c6743c1:UnclassifiedViewsFolderNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Views" type="5c6743c1:UnclassifiedViewsFolderNode" />
-              <item name="devise" type="d5499faf:UnclassifiedViewsSubFolderNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/user_mailer" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/user_mailer" />
+      <recent name="$PROJECT_DIR$/app/views" />
+      <recent name="$PROJECT_DIR$/app/views/devise/user_mailer" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -634,12 +688,16 @@
       <workItem from="1551961705301" duration="662000" />
       <workItem from="1552035171334" duration="14173000" />
       <workItem from="1552132107296" duration="6298000" />
-      <workItem from="1552202837165" duration="8026000" />
+      <workItem from="1552202837165" duration="9889000" />
+      <workItem from="1552288099157" duration="516000" />
+      <workItem from="1552288825562" duration="7016000" />
+      <workItem from="1552398294277" duration="630000" />
+      <workItem from="1552406646728" duration="3179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="722756000" />
+    <option name="totallyTimeSpent" value="735960000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -654,12 +712,12 @@
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21291356" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2945571" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38311687" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38311687" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -708,182 +766,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/welcome/index.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/hors_zones/_hors_zone.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/hors_zones/_index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="59" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/hors_zones/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/promotion_immobilieres/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="63" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/investisseurs/_investisseur.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/zone_activites/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="33" selection-start-line="18" selection-start-column="4" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/_mastheada.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="436" column="40" selection-start-line="436" selection-end-line="437" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/bundle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/rails">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190128095900_create_countries.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds/populate_geospatial_data.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/gis_test_task.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/zones/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/zones/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/investisseurs/_index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="30" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/zone_industrielles/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="7" column="22" selection-start-line="7" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/zone_activites/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -960,13 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/lots_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -1030,10 +905,207 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/channels/application_cable/connection.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1189">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="900">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mailers/user_notifier_mailer.rb" />
+    <entry file="file://$PROJECT_DIR$/app/mailers/welcome_email.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/user_mailer/welcome_email.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/mail/contact_me.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mailers/application_mailer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="61" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190128101557_add_region_to_state.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190215205724_addrole_to_users.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190128100351_create_states.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mailers/user_mailer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190128095900_create_countries.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190128100441_create_regions.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190305092400_add_merit_fields_to_investisseurs.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/state.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/storage.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/spring.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/puma.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/states_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190312170701_regions.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="322" lean-forward="true" selection-start-line="322" selection-end-line="322" />
         </state>
       </provider>
     </entry>
