@@ -8,4 +8,8 @@ class WelcomeController < ApplicationController
     @zone = Zone.all.count
     @investisseurs = Investisseur.all
   end
+
+  def carte
+
+  end
 end

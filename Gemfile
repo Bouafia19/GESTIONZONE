@@ -55,6 +55,7 @@ gem 'jquery-rails'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap4'
 # Use Capistrano for deployment
+gem 'mailboxer'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb

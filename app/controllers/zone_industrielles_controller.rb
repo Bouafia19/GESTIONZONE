@@ -1,5 +1,6 @@
 class ZoneIndustriellesController < InheritedResources::Base
 def index
+=begin
   date1 = ("01/01/2019")
   date2 = Date.today.strftime("%d/%m/%Y")
 
@@ -13,7 +14,8 @@ def index
   end
   session[:start_pub] ||= date1
   session[:end_pub] ||= date2
-  datatable_paginate([:zone_industrielle],['code_zone;nom_zone;commune;wilaya',['zone_industrielles',"zone_industrielles.dat_arrete_creation >='#{Date.parse(session[:start_pub])}' and zone_industrielles.dat_arrete_creation <='#{Date.parse(session[:end_pub])}'"]])
+=end
+  datatable_paginate([:zone_industrielle],['code_zone;nom_zone;commune;wilaya'])
 
   end
 def static

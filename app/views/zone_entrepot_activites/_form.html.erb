@@ -1,0 +1,117 @@
+<%= form_with(model: zone_entrepot_activite, local: true) do |form| %>
+  <% if zone_entrepot_activite.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(zone_entrepot_activite.errors.count, "error") %> prohibited this zone_entrepot_activite from being saved:</h2>
+
+      <ul>
+      <% zone_entrepot_activite.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="card-deck">
+    <div class="form-group col-4 field">
+    <%= form.label :code_zone %>
+    <%= form.text_field :code_zone ,class:"form-control form-control-lg"%>
+  </div>
+<br>
+    <div class="form-group col-4 field">
+    <%= form.label :type_zone %>
+    <%= form.text_field :type_zone ,class:"form-control form-control-lg"%>
+  </div>
+<br>
+    <div class="form-group col-4 field">
+    <%= form.label :nom_zone %>
+    <%= form.text_field :nom_zone ,class:"form-control form-control-lg"%>
+  </div>
+<br>
+    <div class="form-group col-4 field">
+    <%= form.label :commune %>
+    <%= form.text_field :commune ,class:"form-control form-control-lg"%>
+  </div>
+<br>
+    <div class="form-group col-4 field">
+    <%= form.label :wilaya %>
+    <%= form.text_field :wilaya ,class:"form-control form-control-lg"%>
+  </div>
+<br>
+    <div class="form-group col-4 field">
+    <%= form.label :num_arrete_creation %>
+    <%= form.number_field :num_arrete_creation ,class:"form-control form-control-lg"%>
+  </div>
+<br>
+    <div class="form-group col-4 field">
+    <%= form.label :dat_arrete_creation %>
+    <%#= form.date_select :dat_arrete_creation ,class:"form-control form-control-lg"%>
+      <%= form.text_field :dat_arrete_creation, class: 'datepicker form-control form-control-lg date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
+
+    </div>
+<br>
+    <div class="form-group col-4 field">
+    <%= form.label :superf_total %>
+    <%= form.text_field :superf_total ,class:"form-control form-control-lg"%>
+  </div>
+<br>
+    <div class="form-group col-4 field">
+    <%= form.label :superf_cessible %>
+    <%= form.text_field :superf_cessible ,class:"form-control form-control-lg"%>
+  </div>
+<br>
+    <div class="form-group col-4 field">
+    <%= form.label :superf_vrd %>
+    <%= form.text_field :superf_vrd ,class:"form-control form-control-lg"%>
+  </div>
+<br>
+    <div class="form-group col-4 field">
+    <%= form.label :nbr_lots %>
+    <%= form.number_field :nbr_lots,class:"form-control form-control-lg" %>
+  </div>
+<br>
+    <div class="form-group col-4 field">
+    <%= form.label :nbr_lot_attribues %>
+    <%= form.number_field :nbr_lot_attribues,class:"form-control form-control-lg" %>
+  </div>
+<br>
+    <div class="form-group col-4 field">
+    <%= form.label :nbr_lot_cession %>
+    <%= form.number_field :nbr_lot_cession ,class:"form-control form-control-lg"%>
+  </div>
+<br>
+    <div class="form-group col-4 field">
+    <%= form.label :nbr_lot_concession %>
+    <%= form.number_field :nbr_lot_concession ,class:"form-control form-control-lg"%>
+  </div>
+<br>
+    <div class="form-group col-4 field">
+    <%= form.label :observation %>
+    <%= form.text_area :observation ,class:"form-control form-control-lg"%>
+  </div>
+  </div>
+  <hr>
+  <div class="actions">
+    <%= form.submit class:"btn btn-md btn-success pull-right"%>
+  </div>
+<% end %>
+
+<script>
+    $(function() {
+        $( "#date" ).datepicker({
+            dateFormat : 'mm/dd/yy',
+            changeMonth : true,
+            changeYear : true,
+            yearRange: '-100y:c+nn',
+            maxDate: '-1d'
+        });
+    });
+
+</script>
+
+<script>
+    var e3 = document.getElementById('date');
+    if(e3) {
+        e3.addEventListener('input', function (e) {
+            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,2})(\d{0,4})/);
+            e.target.value = (x[1] ? x[1] : '') + (x[2] ? '/' + x[2] : '') + (x[3] ? '/' + x[3] : '');
+        });}
+</script>

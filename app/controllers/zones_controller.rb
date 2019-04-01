@@ -25,15 +25,31 @@ class ZonesController < ApplicationController
   # GET /zones/1.json
   def show
   end
-  def static
 
+  def ouled_saber
   end
+
+  def el_eulma
+  end
+
+  def extension
+  end
+
+  def ancienne
+  end
+
+  def static
+  end
+
   def search
     #store all the projects that match the name searched
     #@lots = Lot.where("num_lot LIKE ? ", "%#{params[:num_lot]}%")
     #store all the clients that match the name searched
     #@investisseurs = Investisseur.where("raison_sociale_francais LIKE ? ", "%#{params[:raison_sociale_francais]}%")
-    @investisseurs = Investisseur.where(['site LIKE ? AND raison_sociale_francais LIKE ?', "%#{params[:site]}%", "%#{params[:raison_sociale_francais]}%"])
+    #params[:site] = nil
+    #params[:raison_sociale_francais] = nil
+
+    @investisseurs = Investisseur.where(['site LIKE ? AND raison_sociale_francais LIKE ? AND commune LIKE ?', "%#{params[:site]}%", "%#{params[:raison_sociale_francais]}%","%#{params[:commune]}%"])
 
     def self.search(search_project, search_client)
       return scoped unless search_project.present? || search_client.present?
@@ -71,7 +87,10 @@ class ZonesController < ApplicationController
   # PATCH/PUT /zones/1.json
   def update
     respond_to do |format|
+
       if @zone.update(zone_params)
+
+        UserMailer.welcome_email(current_user).deliver_now
 
         format.html { redirect_to @zone, notice: 'Zone was successfully updated.' }
         format.json { render :show, status: :ok, location: @zone }

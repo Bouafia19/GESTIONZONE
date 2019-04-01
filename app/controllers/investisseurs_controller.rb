@@ -10,6 +10,7 @@ class InvestisseursController < ApplicationController
 
     datatable_paginate([:investisseur],['raison_sociale_francais;nom_prenom_gerant_francais;intitule_projet_francais'])
 
+
     @zoneact = ZoneActivite.all.count
     @zoneind = ZoneIndustrielle.all.count
     @horszone = HorsZone.all.count
@@ -17,6 +18,19 @@ class InvestisseursController < ApplicationController
     @invest = Investisseur.all.count
     @user = User.all.count
     @zone = Zone.all.count
+    @zea = ZoneEntrepotActivite.all.count
+
+    @investisseurs = Investisseur.all
+    respond_to do |format|
+      format.html
+      format.pdf {render pdf: "investisseur",
+                         template: "investisseurs/index.pdf.erb",
+                         locals: {:investisseur => @investisseurs}}
+      format.xlsx {render xlsx: "investisseur",
+                          template: "investisseurs/index.xlsx.axlsx",
+                          locals: {:investisseur => @investisseurs}}
+
+    end
   end
 
   # GET /investisseurs/1
@@ -24,6 +38,31 @@ class InvestisseursController < ApplicationController
   def show
   end
 
+  def search
+    #store all the projects that match the name searched
+    #@lots = Lot.where("num_lot LIKE ? ", "%#{params[:num_lot]}%")
+    #store all the clients that match the name searched
+    #@investisseurs = Investisseur.where("raison_sociale_francais LIKE ? ", "%#{params[:raison_sociale_francais]}%")
+    #params[:site] = nil
+    #params[:raison_sociale_francais] = nil
+    @lots = Lot.where(['nom_zone LIKE ? AND class_activite LIKE ? AND type_lot LIKE ? AND superficie > ?', "%#{params[:nom_zone]}%", "%#{params[:class_activite]}%","%#{params[:type_lot]}%",params[:superficie]])
+
+    @investisseurs = Investisseur.where(['site LIKE ? AND secteur_activite LIKE ? AND commune LIKE ? AND montant_investissement > ?', "%#{params[:site]}%", "%#{params[:secteur_activite]}%","%#{params[:commune]}%",params[:montant_investissement]])
+
+    respond_to do |format|
+      format.html
+      format.pdf {render pdf: "investisseur",
+                         template: "investisseurs/search.pdf.erb",
+                         locals: {:investisseur => @investisseurs}}
+
+    end
+
+    def self.search(search_project, search_client)
+      return scoped unless search_project.present? || search_client.present?
+      where(['project_name LIKE ? AND client LIKE ?', "%#{search_project}%", "%#{search_client}%"])
+    end
+
+  end
   # GET /investisseurs/new
   def new
     @investisseur = Investisseur.new
@@ -57,6 +96,8 @@ class InvestisseursController < ApplicationController
   def update
     respond_to do |format|
       if @investisseur.update(investisseur_params)
+
+        UserMailer.alert_email(current_user,@investisseur.raison_sociale_francais).deliver_now
         format.html { redirect_to @investisseur, notice: 'Investisseur was successfully updated.' }
         format.json { render :show, status: :ok, location: @investisseur }
       else

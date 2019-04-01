@@ -1,5 +1,7 @@
 
+
 <% @investisseurs.each do |investisseur| %>
+
   <div class="card text-center col-6">
     <div class="card-header">
       <strong>Investisseurs: <%= investisseur.raison_sociale_francais %></strong>
@@ -19,7 +21,6 @@
         <li class="list-group-item">Intitule projet arabe: <%= investisseur.intitule_projet_arabe %></li>
         <li class="list-group-item">Intitule projet francais: <%= investisseur.intitule_projet_francais %></li>
         <li class="list-group-item">Secteur activite: <%= investisseur.secteur_activite %></li>
-
       </ul>
       <br>
       <%= link_to 'Detail', investisseur ,class:"btn btn-success col-4"%>
@@ -27,11 +28,9 @@
     <div class="card-footer text-muted">
       <strong> Investisseurs: <%= investisseur.raison_sociale_arabe %></strong>
     </div>
+
   </div>
-  <br>
+<br>
 <% end %>
 
-<br>
-<div class="row">
 
-</div>

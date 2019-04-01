@@ -22,17 +22,14 @@
 
     </ul>
     <br>
-    <%= link_to 'Detail', investisseur ,class:"btn btn-success col-4"%>
+    <%= link_to 'Fiche Technique', investisseur ,class:"btn btn-success col-4"%>
   </div>
-  <div class="card-footer text-muted">
-   <strong> Investisseurs: <%= investisseur.raison_sociale_arabe %></strong>
-  </div>
+
 </div>
-  <br>
+
 <% end %>
 
 <br>
 <div class="row">
-
-      <%= will_paginate paginate, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
+      <%#= will_paginate paginate, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
 </div>

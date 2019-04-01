@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code_zone: MyString
+  type_zone: MyString
+  nom_zone: MyString
+  commune: MyString
+  wilaya: MyString
+  num_arrete_creation: 1
+  dat_arrete_creation: 2019-03-21
+  superf_total: 1.5
+  superf_cessible: 1.5
+  superf_vrd: 1.5
+  nbr_lots: 1
+  nbr_lot_attribues: 1
+  nbr_lot_cession: 1
+  nbr_lot_concession: 1
+  observation: MyText
+
+two:
+  code_zone: MyString
+  type_zone: MyString
+  nom_zone: MyString
+  commune: MyString
+  wilaya: MyString
+  num_arrete_creation: 1
+  dat_arrete_creation: 2019-03-21
+  superf_total: 1.5
+  superf_cessible: 1.5
+  superf_vrd: 1.5
+  nbr_lots: 1
+  nbr_lot_attribues: 1
+  nbr_lot_cession: 1
+  nbr_lot_concession: 1
+  observation: MyText

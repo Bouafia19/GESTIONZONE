@@ -5,13 +5,13 @@
 <table class="table table-responsive table-bordered table-hover table sortable">
   <thead>
   <tr>
-    <th>Show</th>
+    <th>Detail</th>
     <% if can? :update, @user %>
-      <th>Edit</th>
-      <th>Destroy</th>
+      <th>Modifier</th>
+
     <%end %>
     <th>Code zone</th>
-    <th>Type zone</th>
+    <th>Zone</th>
     <th>Nom zone</th>
     <th>Commune</th>
     <th>Wilaya</th>
@@ -23,9 +23,11 @@
   <tbody>
   <% paginate.each do |hors_zone| %>
     <tr>
-      <td><%= link_to 'Show', hors_zone ,class:"btn btn-success"%></td>
-      <td><%= link_to 'Edit', edit_hors_zone_path(hors_zone) ,class:"btn btn-primary"%></td>
-      <td><%= link_to 'Destroy', hors_zone, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
+      <td><%= link_to 'Fiche Technique', hors_zone ,class:"btn btn-success"%></td>
+      <% if can? :update, @user %>
+    <td><%= link_to 'Mise A Jour', edit_hors_zone_path(hors_zone) ,class:"btn btn-primary"%></td>
+      <%#= link_to 'Supprimer', hors_zone, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %>
+      <%end %>
       <td><%= hors_zone.code_zone %></td>
       <td><%= hors_zone.type_zone %></td>
       <td><%= hors_zone.nom_zone %></td>

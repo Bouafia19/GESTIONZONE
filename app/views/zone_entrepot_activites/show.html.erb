@@ -1,0 +1,151 @@
+
+
+<div class="card">
+
+  <div class="card-body">
+
+    <h1>Zone Entrepot Activite: <%= @zone_entrepot_activite.nom_zone %></h1>
+    <hr>
+    <% if can? :update, @user %>
+      <%= link_to 'Mise A Jour', edit_zone_entrepot_activite_path(@zone_entrepot_activite),class:"btn btn-md btn-primary" %> |
+
+  <%end %>
+    <%= link_to 'Retour', zone_entrepot_activites_path ,class:"btn btn-md btn-warning"%>
+
+    <%# link_to 'STATISTIQUES', "static/#{@hors_zone.id}" ,class:"btn btn-md btn-success"%>
+
+    <br>
+    <hr>
+    <div class="row">
+
+      <!-- Area Chart -->
+      <div class="col-xl-3 col-lg-4">
+        <div class="card shadow mb-4">
+          <!-- Card Header - Dropdown -->
+
+          <!-- Card Body -->
+          <div class="card-body">
+            <table class="table table-responsive table-striped table-hover table sortable">
+              <thead>
+
+              </thead>
+              <tbody>
+              <tr>
+                <th>Code zone</th>
+                <td><%= @zone_entrepot_activite.code_zone %></td>
+              </tr>
+
+              <tr>
+                <th>Type zone</th>
+                <td><%= @zone_entrepot_activite.type_zone %></td>
+              </tr>
+
+              <tr>
+                <th>Nom zone</th>
+                <td><%= @zone_entrepot_activite.nom_zone %></td>
+              </tr>
+
+              <tr>
+                <th>Commune</th>
+                <td><%= @zone_entrepot_activite.commune %></td>
+              </tr>
+
+              <tr>
+                <th>Wilaya</th>
+                <td><%= @zone_entrepot_activite.wilaya %></td>
+              </tr>
+              <tr>
+                <th>Num arrete creation</th>
+                <td><%= @zone_entrepot_activite.num_arrete_creation %></td>
+              </tr>
+
+              <tr>
+                <th>Dat arrete creation</th>
+                <td><%= @zone_entrepot_activite.dat_arrete_creation %></td>
+              </tr>
+              <tr>
+                <th>Superf total</th>
+                <td><%= @zone_entrepot_activite.superf_total %></td>
+              </tr>
+              <tr>
+                <th>Superf cessible</th>
+                <td><%= @zone_entrepot_activite.superf_cessible %></td>
+              </tr>
+              <tr>
+                <th>Superf vrd</th>
+                <td><%= @zone_entrepot_activite.superf_vrd %></td>
+              </tr>
+
+              <tr>
+                <th>Nbr lots</th>
+                <td><%= @zone_entrepot_activite.nbr_lots %></td>
+              </tr>
+              <tr>
+                <th>Nbr lot attribues</th>
+                <td><%= @zone_entrepot_activite.nbr_lot_attribues %></td>
+              </tr>
+              <tr>
+                <th>Nbr lot cession</th>
+                <td><%= @zone_entrepot_activite.nbr_lot_cession %></td>
+              </tr>
+              <tr>
+                <th>Nbr lot concession</th>
+                <td><%=  @zone_entrepot_activite.nbr_lot_concession %></td>
+              </tr>
+              <tr>
+                <th>Observation</th>
+                <td><%= @zone_entrepot_activite.observation %></td>
+              </tr>
+
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pie Chart -->
+      <div class="col-xl-9 col-lg-10">
+        <div class="card shadow mb-4">
+          <!-- Card Header - Dropdown -->
+          <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+            <div class="dropdown no-arrow">
+              <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                <div class="dropdown-header">Dropdown Header:</div>
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card Body -->
+          <div class="card-body">
+            <div class="chart-area">
+              <div id="map">
+                <div id="popup" class="ol-popup">
+                  <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                  <div id="popup-content"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+

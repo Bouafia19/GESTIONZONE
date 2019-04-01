@@ -4,8 +4,10 @@
     <div class="card-body">
       <h1>Zone Industrielle: <%= @zone_industrielle.nom_zone %></h1>
       <hr>
-<%= link_to 'Edit', edit_zone_industrielle_path(@zone_industrielle) ,class:"btn btn-md btn-primary"%> |
-<%= link_to 'Back', zone_industrielles_path ,class:"btn btn-md btn-warning"%> |
+      <% if can? :update, @user %>
+    <%= link_to 'Mise A Jour', edit_zone_industrielle_path(@zone_industrielle) ,class:"btn btn-md btn-primary"%> |
+        <%end %>
+<%= link_to 'Retour', zone_industrielles_path ,class:"btn btn-md btn-warning"%> |
       <% link_to 'New zone', new_zone_industrielle_path ,class:"btn btn-md btn-success"%>
       <%= link_to 'INVESTISSEURS', investisseurs_path ,class:"btn btn-md btn-danger"%> |
       <%= link_to 'LOTS', lots_path ,class:"btn btn-md btn-primary"%> |

@@ -5,9 +5,10 @@
 
     <h1>Zone Activite: <%= @zone_activite.nom_zone %></h1>
     <hr>
-
-  <%= link_to 'Edit', edit_zone_activite_path(@zone_activite) ,class:"btn btn-primary"%> |
-<%= link_to 'Back', zone_activites_path ,class:"btn btn-warning"%> |
+    <% if can? :update, @user %>
+  <%= link_to 'Mise A Jour', edit_zone_activite_path(@zone_activite) ,class:"btn btn-primary"%> |
+      <%end %>
+<%= link_to 'Retour', zone_activites_path ,class:"btn btn-warning"%> |
     <% link_to 'New Promotion immobiliere', new_zone_activite_path ,class:"btn btn-md btn-success"%>
     <%= link_to 'INVESTISSEURS', investisseurs_path ,class:"btn btn-md btn-danger"%> |
     <%= link_to 'LOTS', lots_path ,class:"btn btn-md btn-primary"%> |

@@ -2,39 +2,18 @@
  <div class="card">
         <div class="card-body">
           <div class="card-header">
-           <h1>LOTS</h1>
+           <h1 align="center">LOTS</h1>
           </div>
           <hr>
 
 
-<%= link_to 'New Lot', new_lot_path ,class:"btn btn-success"%>
+<% link_to 'New Lot', new_lot_path ,class:"btn btn-success"%>
+          <% link_to 'Pdf', lots_path(format: :pdf) ,class:"btn btn-md btn-success "%>
+          <% link_to 'Excel', lots_path(format: :xlsx) ,class:"btn btn-md btn-success "%>
 
-<hr>
-
-
-
-            <%= form_tag '/lots', method: :get do %>
-            <div class="row">
-              <div class="col align-self-start"  >
+          <%#= link_to 'Pdf', '#' ,class:"btn btn-md btn-success "%>
 
 
-                <strong style="float: left">Debut </strong><%= text_field_tag :start_date, session[:start_pub] , class: 'datepicker form-control date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
-
-              </div>
-              <div class="col align-self-center">
-
-                <strong>Fin</strong><%= text_field_tag :end_date, session[:end_pub] , class: 'datepicker form-control date', 'data-date-format'=>"dd/mm/yyyy", required: true %>
-
-              </div>
-              <br>
-              <div class="col align-self-end">
-              <%= submit_tag 'Filter' ,class: 'btn btn-primary '%>
-              </div>
-              <br>
-            <%end%>
-          </div>
-
-            <hr>
 
           <div class="panel-body">
               <div class="row">

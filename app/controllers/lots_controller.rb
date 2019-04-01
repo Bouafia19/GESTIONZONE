@@ -7,7 +7,7 @@ class LotsController < ApplicationController
 
 
 
-
+=begin
     date1 = ("01/01/2019")
     date2 = Date.today.strftime("%d/%m/%Y")
 
@@ -21,8 +21,10 @@ class LotsController < ApplicationController
     end
     session[:start_pub] ||= date1
     session[:end_pub] ||= date2
+=end
+    datatable_paginate([:lot],['investisseur;type_lot'])
+    @sot = Lot.where(nom_zone: "ZI ANCIENNE")
 
-    datatable_paginate([:lot],['activite;investisseur;type_lot',['lots',"lots.date_attribution >='#{Date.parse(session[:start_pub])}' and lots.date_attribution <='#{Date.parse(session[:end_pub])}'"]])
 
 
   end

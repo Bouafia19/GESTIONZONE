@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<meta charset="utf-8"  />
+<html>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+  }
+  th, td {
+    border: 1px solid black;
+    font-size: 13px;
+    height: 50px;
+  }
+  h4 {
+    line-height: 0.3;
+    font-family: "Times New Roman", Times, serif;
+    display: inline-block;
+    height:100%;
+    width:35%;
+
+  }
+  p {
+    line-height: 0.3;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10px;
+    display: inline-table;
+    height:50%;
+    width:50%;
+  }
+</style>
+
+<h3 align="center">BON DE LIVRAISON N </h3>
+<h4 aria-live="left">SARL FLAMBO SOFT</h4>
+<br>
+<P style="float: left">SOLUTION INFORMATIQUES & CONSULTING</P>
+<p style="float: right">RIB:00697 300694 30059</p>
+<p style="float: right">RC N° 19/00 0092212B16</p>
+<p style="float: left">11 Rue Mouloud Faraoune Telijane-setif-Algeria</p>
+<p style="float: right">NIF:001619009221266 </p>
+<p style="float: right">TEL/FAX:+213 36 82 51 74 - MOB:0557 03 79 06 </p>
+<p style="float: left">E-mail: contact@flambosoft.com </p>
+<p style="float: right">Art.Imp:19013066002 </p>
+
+<table class="table">
+  <thead>
+  <tr>
+
+
+    <th>Num lot</th>
+    <th>Activite</th>
+    <th>Investisseur</th>
+    <th>Type lot</th>
+    <th>Situation physique</th>
+    <th>Situation juridique</th>
+    <th>Date act</th>
+    <th>Num act</th>
+    <th>Date attribution</th>
+    <th>Date resolution</th>
+    <th>Etat avancement</th>
+    <th>Class activite</th>
+    <th>Observation</th>
+
+    <th>type zone</th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @sot.each do |lot| %>
+    <tr>
+
+      <td><%= lot.num_lot %></td>
+      <td><%= lot.activite %></td>
+      <td><%= lot.investisseur %></td>
+      <td><%= lot.type_lot %></td>
+      <td><%= lot.situation_physique %></td>
+      <td><%= lot.situation_juridique %></td>
+      <td><%= lot.date_act %></td>
+      <td><%= lot.num_act %></td>
+      <td><%= lot.date_attribution %></td>
+      <td><%= lot.date_resolution %></td>
+      <td><%= lot.etat_avancement %></td>
+      <td><%= lot.class_activite %></td>
+      <td><%= lot.observation %></td>
+
+      <td><%= lot.type_zone %></td>
+
+
+
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<br>
+<br>
+
+
+</html>

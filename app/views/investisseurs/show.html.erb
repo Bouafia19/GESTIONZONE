@@ -2,8 +2,10 @@
   <div class="card">
 
     <div class="card-body">
-      <%= link_to 'Edit', edit_investisseur_path(@investisseur) ,class:"btn btn-md btn-primary"%> |
-      <%= link_to 'Back', investisseurs_path ,class:"btn btn-md btn-warning" %>
+     <h1> <%= @investisseur.raison_sociale_francais%> - <%= @investisseur.raison_sociale_arabe%></h1>
+      <hr>
+      <%= link_to 'Mise A Jour', edit_investisseur_path(@investisseur) ,class:"btn btn-md btn-primary"%> |
+      <%= link_to 'Retour', investisseurs_search_path ,class:"btn btn-md btn-warning" %>
       <% link_to 'New investisseur', new_investisseur_path ,class:"btn btn-md btn-success"%>
       <br>
       <hr>
@@ -13,11 +15,24 @@
       <div class="row">
 
         <!-- Area Chart -->
-        <div class="col-xl-9 col-lg-10">
-          <div class="card shadow mb-10">
+        <div class="col-xl-3 col-lg-4">
+          <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
-
-            <!-- Card Body -->
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+              <h6 class="m-0 font-weight-bold text-primary">FICHE TECHNIQUE</h6>
+              <div class="dropdown no-arrow">
+                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                  <div class="dropdown-header">Dropdown Header:</div>
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
             <div class="card-body">
         <table class="table table-responsive table-striped table-hover table sortable">
           <thead>
@@ -262,18 +277,44 @@
           </tr>
           </tbody>
         </table>
+            </div>
+          </div>
+        </div>
 
 
+
+              <div class="col-xl-9 col-lg-10">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">dossier administratif investissement</h6>
+                    <div class="dropdown no-arrow">
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-header">Dropdown Header:</div>
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
               <div class="col-sm-12">
                 <div class="panel panel-success">
-                  <div class="panel-heading"> <span class="glyphicon glyphicon-file"> </span> | <strong>Document</strong></div>
                   <div class="panel-body">
                     <%if @investisseur.document_file_name != nil %>
-                      <iframe src="<% @investisseur.document %>" width="700" height="400"></iframe>
+                      <iframe src="<%= @investisseur.document %>" width="1150" height="2000"></iframe>
                     <%else%>
-                      <p class="text-center"><font size="4" >There is no file attached to this lot</font></p>
+                      <p class="text-center"><font size="4" >There is no file attached to this investisseur</font></p>
                     <%end%>
 
+                  </div>
+                </div>
+              </div>
                   </div>
                 </div>
               </div>

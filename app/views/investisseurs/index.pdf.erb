@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<meta charset="utf-8"  />
+<html>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+  }
+  th, td {
+    border: 1px solid black;
+    font-size: 13px;
+    height: 50px;
+  }
+  h4 {
+    line-height: 0.3;
+    font-family: "Times New Roman", Times, serif;
+    display: inline-block;
+    height:100%;
+    width:35%;
+
+  }
+  p {
+    line-height: 0.3;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10px;
+    display: inline-table;
+    height:50%;
+    width:50%;
+  }
+</style>
+
+
+
+<% @investisseurs.each do |investisseur| %>
+  <div class="card text-center col-6">
+    <div class="card-header">
+      <strong>Investisseurs: <%= investisseur.raison_sociale_francais %></strong>
+    </div>
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Num dossier: <%= investisseur.num_dossier %></li>
+        <li class="list-group-item">Date depot demande: <%= investisseur.date_depot_demande %></li>
+        <li class="list-group-item">Raison sociale arabe: <%= investisseur.raison_sociale_arabe %></li>
+        <li class="list-group-item">Nom prenom gerant arabe: <%= investisseur.nom_prenom_gerant_arabe %></li>
+        <li class="list-group-item">Raison sociale francais: <%= investisseur.raison_sociale_francais %></li>
+        <li class="list-group-item">Nom prenom gerant francais: <%= investisseur.nom_prenom_gerant_francais %></li>
+        <li class="list-group-item">Adresse: <%= investisseur.adresse %></li>
+        <li class="list-group-item">Num telephone: <%= investisseur.num_telephone %></li>
+        <li class="list-group-item">Fax: <%= investisseur.fax %></li>
+        <li class="list-group-item">Email: <%= investisseur.email %></li>
+        <li class="list-group-item">Intitule projet arabe: <%= investisseur.intitule_projet_arabe %></li>
+        <li class="list-group-item">Intitule projet francais: <%= investisseur.intitule_projet_francais %></li>
+        <li class="list-group-item">Secteur activite: <%= investisseur.secteur_activite %></li>
+
+      </ul>
+      <br>
+    </div>
+
+  </div>
+
+<% end %>
+
+<br>
+
+<br>
+<br>
+
+
+</html>

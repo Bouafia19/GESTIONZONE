@@ -1,0 +1,2 @@
+class ZoneEntrepotActivite < ApplicationRecord
+end

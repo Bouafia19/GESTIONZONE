@@ -1,0 +1,63 @@
+
+
+<table class="table table-responsive table-bordered table-hover table sortable">
+  <thead>
+  <tr>
+    <th>Detail</th>
+    <% if can? :update, @user %>
+      <th>Modifier</th>
+    <%end %>
+    <th>Code zone</th>
+    <th>Type zone</th>
+    <th>Nom zone</th>
+    <th>Commune</th>
+    <th>Wilaya</th>
+    <th>Num arrete creation</th>
+    <th>Dat arrete creation</th>
+    <th>Superf total</th>
+    <th>Superf cessible</th>
+    <th>Superf vrd</th>
+    <th>Nbr lots</th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+  <% paginate.each do |zone_entrepot_activite| %>
+    <tr>
+      <td><%= link_to 'Fiche Technique', zone_entrepot_activite ,class:"btn btn-success"%></td>
+      <% if can? :update, @user %>
+
+    <td><%= link_to 'Mise A Jour', edit_zone_entrepot_activite_path(zone_entrepot_activite),class:"btn btn-primary" %></td>
+      <%#= link_to 'Destroy', zone_entrepot_activite, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%end %>
+
+      <td><%= zone_entrepot_activite.code_zone %></td>
+      <td><%= zone_entrepot_activite.type_zone %></td>
+      <td><%= zone_entrepot_activite.nom_zone %></td>
+      <td><%= zone_entrepot_activite.commune %></td>
+      <td><%= zone_entrepot_activite.wilaya %></td>
+      <td><%= zone_entrepot_activite.num_arrete_creation %></td>
+      <td><%= zone_entrepot_activite.dat_arrete_creation %></td>
+      <td><%= zone_entrepot_activite.superf_total %></td>
+      <td><%= zone_entrepot_activite.superf_cessible %></td>
+      <td><%= zone_entrepot_activite.superf_vrd %></td>
+      <td><%= zone_entrepot_activite.nbr_lots %></td>
+
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div  id="dataTables-example_info" role="status" aria-live="polite">
+      <span>Affichage  <%=paginate.length%> de <%= @total%> entrées</span>
+    </div>
+  </div>
+  <%= will_paginate paginate, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , inner_window: 1 , previous_label: "Précédent", next_label: "Suivant"%>
+
+</div>
+
+

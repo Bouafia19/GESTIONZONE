@@ -3,6 +3,7 @@ require 'will_paginate/array'
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!
+
   def datatable_paginate (db,paramse)
     if (session[:per_pages] == nil) || (params["query"] == "")
       session.delete(:data)
@@ -38,7 +39,8 @@ class ApplicationController < ActionController::Base
     respond_to do |format|
       format.js
       format.html
-
+      format.pdf
+      format.xlsx
     end
     #return page
   end
@@ -123,7 +125,18 @@ class ApplicationController < ActionController::Base
     return resultat
   end
 
+  helper_method :mailbox, :conversation
+
   private
+
+  def mailbox
+    @mailbox ||= current_user.mailbox
+  end
+
+  def conversation
+    @conversation ||= mailbox.conversations.find(params[:id])
+  end
+
   def alert_counts
     @alerts = Investisseur.where('taux_avancement_traveux < 30').count
   end

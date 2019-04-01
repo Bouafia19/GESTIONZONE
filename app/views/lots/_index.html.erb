@@ -9,14 +9,9 @@
     <th>Type lot</th>
     <th>Situation physique</th>
     <th>Situation juridique</th>
-    <th>Date act</th>
     <th>Num act</th>
     <th>Date attribution</th>
-    <th>Date resolution</th>
-    <th>Etat avancement</th>
     <th>Class activite</th>
-    <th>Observation</th>
-
     <th>type zone</th>
 
   </tr>
@@ -26,9 +21,9 @@
  <% paginate.each do |lot| %>
     <%# paginate.min_by(type_zone: 'ZI') do |lot| %>
     <tr>
-      <td><%= link_to 'Show', lot ,class:"btn btn-md btn-success"%></td>
-      <td><%= link_to 'Edit', edit_lot_path(lot) ,class:"btn btn-md btn-primary"%></td>
-      <td><%= link_to 'Destroy', lot, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-md btn-danger"%></td>
+      <td><%= link_to 'Fiche Technique', lot ,class:"btn btn-md btn-success"%></td>
+      <td><%= link_to 'Mise A Jour', edit_lot_path(lot) ,class:"btn btn-md btn-primary"%></td>
+      <td><% link_to 'Destroy', lot, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-md btn-danger"%></td>
 
       <td><%= lot.num_lot %></td>
       <td><%= lot.activite %></td>
@@ -36,14 +31,9 @@
       <td><%= lot.type_lot %></td>
       <td><%= lot.situation_physique %></td>
       <td><%= lot.situation_juridique %></td>
-      <td><%= lot.date_act %></td>
       <td><%= lot.num_act %></td>
       <td><%= lot.date_attribution %></td>
-      <td><%= lot.date_resolution %></td>
-      <td><%= lot.etat_avancement %></td>
       <td><%= lot.class_activite %></td>
-      <td><%= lot.observation %></td>
-
       <td><%= lot.type_zone %></td>
 
 

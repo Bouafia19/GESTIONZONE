@@ -1,12 +1,15 @@
-<div class="row">
-  <div class="col-sm-12">
-    <div class="panel panel-default">
+<div class="card">
+  <div class="card-body">
+    <div class="card-header ">
+      <h1 align="center">Editing Lot: <%= @lot.num_lot%></h1>
+    </div>
 
-      <div class="panel-body">
-        <h1>Editing Lot</h1>
-<hr>
-        <%= link_to 'Show', @lot ,class:"btn btn-md btn-success" %> |
-        <%= link_to 'Back', lots_path ,class:"btn btn-md btn-warning" %>
+    <div class="panel-body">
+
+    <hr>
+
+        <%= link_to 'Fiche Technique', @lot ,class:"btn btn-md btn-success" %> |
+        <%= link_to 'Retour', lots_path ,class:"btn btn-md btn-warning" %>
 
 
         <hr>

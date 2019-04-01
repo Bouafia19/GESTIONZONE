@@ -5,7 +5,7 @@ class Lot < ApplicationRecord
   belongs_to :PromotionImmobiliere ,required: false
   belongs_to :HorsZone ,required: false
 
-  has_attached_file :photo, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :photo, styles: { medium: "1100x800>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :photo, content_type: /\Aimage\/.*\z/
 
   has_attached_file :document
@@ -13,10 +13,7 @@ class Lot < ApplicationRecord
 
 
 
-  scope :Lot,   ->{ where(type_zone: 'ZI') }
-  scope :lotpi,   ->{ where(type_zone: 'PI') }
-  scope :lotzac,   ->{ where(type_zone: 'ZAC') }
-  scope :lothrs,   ->{ where(type_zone: 'HZ') }
+
 
 
 end
