@@ -170,6 +170,36 @@ Rails.application.config.assets.precompile += %w( ZI_ANCIENNE/styles/ZI_ANCIENNE
 Rails.application.config.assets.precompile += %w( ZI_ANCIENNE/layers/layers.js )
 Rails.application.config.assets.precompile += %w( ZI_ANCIENNE/resources/qgis2web.js )
 Rails.application.config.assets.precompile += %w( ZI_ANCIENNE/resources/Autolinker.min.js )
+
+
+#web map
+#Rails.application.config.assets.precompile += %w( SETIF_INVEST/resources/css/ol.css )
+#Rails.application.config.assets.precompile += %w( SETIF_INVEST/resources/css/components.min.css )
+#Rails.application.config.assets.precompile += %w( SETIF_INVEST/app.css )
+
+#Rails.application.config.assets.precompile += %w( SETIF_INVEST/full-debug.js )
+#Rails.application.config.assets.precompile += %w( SETIF_INVEST/app_prebuilt.js )
+#Rails.application.config.assets.precompile += %w( SETIF_INVEST/data/lyr_zi_setif_extension.js )
+#Rails.application.config.assets.precompile += %w( SETIF_INVEST/data/lyr_zi_el_eulma.js )
+
+#Rails.application.config.assets.precompile += %w( SETIF_INVEST/data/lyr_zi_ouled_saber.js )
+#Rails.application.config.assets.precompile += %w( SETIF_INVEST/data/lyr_zi_setif_ancienne.js )
+
+#leaflet
+Rails.application.config.assets.precompile += %w( lib/leaflet/leaflet.css )
+Rails.application.config.assets.precompile += %w( lib/leaflet/leaflet.js )
+
+Rails.application.config.assets.precompile += %w( lib/leaflet.ajax.min.js )
+#Rails.application.config.assets.precompile += %w( lib/map.js )
+
+#openlayers
+Rails.application.config.assets.precompile += %w( openlayers/style.css )
+
+Rails.application.config.assets.precompile += %w( openlayers/OpenLayers/theme/default/style.css )
+Rails.application.config.assets.precompile += %w( openlayers/OpenLayers.js )
+Rails.application.config.assets.precompile += %w( openlayers/web-map.js )
+
+Rails.application.config.assets.precompile += %w( vendor/public/zone_ind_7.json )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

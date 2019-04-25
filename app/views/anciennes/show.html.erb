@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>N de lot:</strong>
+  <%= @ancienne.n_de_lot %>
+</p>
+
+<p>
+  <strong>N dossier:</strong>
+  <%= @ancienne.n_dossier %>
+</p>
+
+<p>
+  <strong>R socia ar:</strong>
+  <%= @ancienne.r_socia_ar %>
+</p>
+
+<p>
+  <strong>R socia fr:</strong>
+  <%= @ancienne.r_socia_fr %>
+</p>
+
+<p>
+  <strong>Geom:</strong>
+  <%= @ancienne.geom %>
+</p>
+
+<%= link_to 'Edit', edit_ancienne_path(@ancienne) %> |
+<%= link_to 'Back', anciennes_path %>

@@ -23,9 +23,9 @@
         </div>
       </div>
     </form>
-     <%= link_to 'Pdf', investisseurs_path(format: :pdf) ,class:"fa fa-download fa-lg"%> <p style="padding-left: 20px"></p>
+     <% link_to 'Pdf', investisseurs_path(format: :pdf) ,class:"fa fa-download fa-lg"%> <p style="padding-left: 20px"></p>
     <!-- Content Wrapper -->
-    <%= link_to 'Excel', investisseurs_path(format: :xlsx) ,class:"fa fa-download fa-lg"%>
+    <% link_to 'Excel', investisseurs_path(format: :xlsx) ,class:"fa fa-download fa-lg"%>
 <br>
 
   </div>
@@ -180,7 +180,7 @@
       <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">Secteur D'activite Représenter Par Moyenne Investissement </h6>
+          <h6 class="m-0 font-weight-bold text-primary">Secteur D'activite Représenter Par la Somme Investissement </h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -197,7 +197,7 @@
         <!-- Card Body -->
         <div class="card-body">
           <div class="chart-area">
-            <%= column_chart Investisseur.group(:secteur_activite).average(:montant_investissement) %>
+            <%= column_chart Investisseur.group(:secteur_activite).sum(:montant_investissement) , percent: true, download: true, thousands: ",", legend: "top", xtitle: "secteur activite", ytitle: "Montant investissement", label: "Somme investissement"%>
 
           </div>
         </div>

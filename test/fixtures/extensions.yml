@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  n°_de_lot: MyString
+  n_dossier: MyString
+  r_socia_ar: MyString
+  r_socia_fr: MyString
+  geom: 
+
+two:
+  n°_de_lot: MyString
+  n_dossier: MyString
+  r_socia_ar: MyString
+  r_socia_fr: MyString
+  geom: 

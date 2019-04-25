@@ -25,7 +25,7 @@
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<%= root_path %>">
         <div class="sidebar-brand-icon rotate-n-15">
         </div>
-        <div class="sidebar-brand-text mx-3">SALUT<br><%= current_user.name %></div>
+        <div class="sidebar-brand-text mx-3">Salut<br><%= current_user.name %></div>
       </a>
 
       <!-- Divider -->
@@ -46,7 +46,7 @@
         Interface
       </div>
 
-      <!-- Nav Item - Pages Collapse Menu -->
+      <!-- Nav Item - Pages Collapse Menu
       <li class="nav-item">
         <a class="nav-link collapsed" href="investisseurs_search_path" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
@@ -55,13 +55,18 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"></h6>
-            <%= link_to 'Recherche Avances', investisseurs_search_path ,class:"collapse-item"%>
+            <% link_to 'Recherche Avances', investisseurs_search_path ,class:"collapse-item"%>
             <% link_to 'Cartes', welcome_index_path ,class:"collapse-item"%>
 
           </div>
         </div>
       </li>
-
+-->
+      <li class="nav-item">
+        <a class="nav-link" href="<%= investisseurs_search_path %>">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Recherche Avances</span></a>
+      </li>
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
@@ -75,6 +80,8 @@
             <%= link_to "ZI Extension", zones_extension_path  ,class:"collapse-item"%>
             <%= link_to "El Eulma", zones_el_eulma_path ,class:"collapse-item"%>
             <%= link_to "Ouled Saber", zones_ouled_saber_path ,class:"collapse-item"%>
+            <%= link_to "Setif invest", zones_setif_inve_path ,class:"collapse-item"%>
+            <%= link_to "Leaflet", zones_leaflet_path ,class:"collapse-item"%>
 
           </div>
         </div>
@@ -92,7 +99,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
+          <span>Zones</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -102,26 +109,27 @@
             <%= link_to 'ZONES ACTIVITES', zone_activites_path ,class:"collapse-item"%>
             <%= link_to 'PROM IMOBILIERES', promotion_immobilieres_path ,class:"collapse-item"%>
             <%= link_to 'Z ENTREPOT ACTIVITE', zone_entrepot_activites_path ,class:"collapse-item"%>
-            <% if can? :update, @user %>
-            <%= link_to 'UTILISATEURS', users_path ,class:"collapse-item"%>
-<%end %>
+            <%= link_to 'State', states_path ,class:"collapse-item"%>
+            <% link_to 'UTILISATEURS', users_path ,class:"collapse-item"%>
+
 
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Charts -->
+      <% if can? :update, @user %>
       <li class="nav-item">
-        <a class="nav-link" href="<%= zones_static_path %>">
+        <a class="nav-link" href="<%= users_path %>">
           <i class="fas fa-fw fa-chart-area"></i>
-          <span>Statistiques</span></a>
+          <span>Utilisateurs</span></a>
       </li>
-
+      <%end %>
       <!-- Nav Item - Tables -->
       <li class="nav-item">
         <a class="nav-link" href="<%= mailbox_inbox_path %>">
           <i class="fas fa-fw fa-table"></i>
-          <span>Mailbox</span></a>
+          <span>Boites aux lettres</span></a>
       </li>
 
       <!-- Divider -->
@@ -181,7 +189,7 @@
                 <i class="fas fa-bell fa-fw"></i>
                 <!-- Counter - Alerts -->
 
-                <span class="badge badge-danger badge-counter"> +3<%= @alerts%></span>
+                <span class="badge badge-danger badge-counter"> <%=unread_messages_count%></span>
               </a>
               <!-- Dropdown - Alerts -->
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
@@ -230,7 +238,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-envelope fa-fw"></i>
                 <!-- Counter - Messages -->
-                <span class="badge badge-danger badge-counter">7</span>
+                <span class="badge badge-danger badge-counter"><%=unread_messages_count%></span>
               </a>
               <!-- Dropdown - Messages -->
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
@@ -277,7 +285,7 @@
                     <div class="small text-gray-500">Chicken the Dog · 2w</div>
                   </div>
                 </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                <a class="dropdown-item text-center small text-gray-500" href="<%= mailbox_inbox_path %>">Read More Messages</a>
               </div>
             </li>
 
@@ -403,8 +411,7 @@
         <!-- Page level plugins -->
 
         <!-- Page level custom scripts -->
-        <script src="/js/demo/chart-area-demo.js"></script>
-        <script src="/js/demo/chart-pie-demo.js"></script>
+
 
 
           </div>

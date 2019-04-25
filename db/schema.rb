@@ -10,12 +10,74 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_25_224531) do
+ActiveRecord::Schema.define(version: 2019_04_19_170111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "postgis"
   enable_extension "postgis_topology"
+
+  create_table "88_el_eulma", primary_key: "gid", id: :serial, force: :cascade do |t|
+    t.integer "objectid"
+    t.string "n°_de_lot", limit: 50
+    t.decimal "shape_leng"
+    t.decimal "shape_area"
+    t.string "numéro_de", limit: 254
+    t.string "date_de_d", limit: 254
+    t.string "raison_soc", limit: 254
+    t.string "nom_et__pr", limit: 254
+    t.string "raison_s_1", limit: 254
+    t.string "nom_et___1", limit: 254
+    t.string "adresse_", limit: 254
+    t.string "numéro_d_", limit: 254
+    t.string "____fax", limit: 254
+    t.string "email", limit: 254
+    t.string "intitulé_", limit: 254
+    t.string "intitulé___15", limit: 254
+    t.string "secteur_d_", limit: 254
+    t.string "filières_", limit: 254
+    t.string "superficie", limit: 254
+    t.string "montant_de", limit: 254
+    t.string "nombre_d", limit: 254
+    t.string "date_d’e", limit: 254
+    t.string "numéro_d___22", limit: 254
+    t.string "n°_de_lo_", limit: 254
+    t.string "n°_de_lo___24", limit: 254
+    t.float "superfic_1"
+    t.string "localisati", limit: 254
+    t.string "commune", limit: 254
+    t.string "site____zi", limit: 254
+    t.string "p_droits_e", limit: 254
+    t.string "n°arrét", limit: 254
+    t.string "date_arré", limit: 254
+    t.string "montant__1", limit: 254
+    t.string "date_de_pa", limit: 254
+    t.string "n°_d_acte", limit: 254
+    t.string "date_d_act", limit: 254
+    t.string "n°_d_act_", limit: 254
+    t.string "date_d_a_1", limit: 254
+    t.string "___n°_de_d", limit: 254
+    t.string "___date_dép", limit: 254
+    t.string "avis_des_s", limit: 254
+    t.string "n°_de_l_a", limit: 254
+    t.string "date_de_l_", limit: 254
+    t.string "date_dép", limit: 254
+    t.string "date_appro", limit: 254
+    t.string "date_déci", limit: 254
+    t.string "n°_arrêt", limit: 254
+    t.string "date_arrê", limit: 254
+    t.string "n°_depot_", limit: 254
+    t.string "date_depot", limit: 254
+    t.string "n°_décis", limit: 254
+    t.string "taux_d_ava", limit: 254
+    t.string "taux_d_a_1", limit: 254
+    t.string "mise_en_se", limit: 254
+    t.string "emplois_r", limit: 254
+    t.string "changement", limit: 254
+    t.string "observatio", limit: 254
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.index ["geom"], name: "88_el_eulma_geom_idx", using: :gist
+  end
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -43,6 +105,17 @@ ActiveRecord::Schema.define(version: 2019_03_25_224531) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "anciennes", force: :cascade do |t|
+    t.string "n_de_lot"
+    t.string "n_dossier"
+    t.string "r_socia_ar"
+    t.string "r_socia_fr"
+    t.geometry "geom", limit: {:srid=>3857, :type=>"multi_polygon"}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["geom"], name: "index_anciennes_on_geom", using: :gist
+  end
+
   create_table "badges_sashes", force: :cascade do |t|
     t.integer "badge_id"
     t.integer "sash_id"
@@ -51,6 +124,93 @@ ActiveRecord::Schema.define(version: 2019_03_25_224531) do
     t.index ["badge_id", "sash_id"], name: "index_badges_sashes_on_badge_id_and_sash_id"
     t.index ["badge_id"], name: "index_badges_sashes_on_badge_id"
     t.index ["sash_id"], name: "index_badges_sashes_on_sash_id"
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.string "iso_code"
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["geom"], name: "index_countries_on_geom", using: :gist
+    t.index ["iso_code"], name: "index_countries_on_iso_code", unique: true
+    t.index ["name"], name: "index_countries_on_name", unique: true
+  end
+
+  create_table "countries_ref", primary_key: "gid", id: :serial, force: :cascade do |t|
+    t.string "gid_0", limit: 80
+    t.string "name_0", limit: 80
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+  end
+
+  create_table "extensions", force: :cascade do |t|
+    t.string "n_de_lot"
+    t.string "n_dossier"
+    t.string "r_socia_ar"
+    t.string "r_socia_fr"
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["geom"], name: "index_extensions_on_geom", using: :gist
+  end
+
+  create_table "extensions_ref", primary_key: "gid", id: :serial, force: :cascade do |t|
+    t.integer "objectid"
+    t.decimal "shape_leng"
+    t.decimal "shape_area"
+    t.integer "n°_de_lot", limit: 2
+    t.string "n_dossier", limit: 254
+    t.string "d_dep_dema", limit: 254
+    t.string "r_socia_ar", limit: 254
+    t.string "n_p_gerant", limit: 254
+    t.string "r_socia_fr", limit: 254
+    t.string "n_p_gera_1", limit: 254
+    t.string "adresse", limit: 254
+    t.string "n_tele", limit: 254
+    t.string "fax", limit: 254
+    t.string "email", limit: 254
+    t.string "int_projet", limit: 254
+    t.string "int_proj_1", limit: 254
+    t.string "sect_activ", limit: 254
+    t.string "fil_indust", limit: 254
+    t.float "su_demand_"
+    t.string "mont_inves", limit: 254
+    t.float "nomb_emplo"
+    t.date "d_examen_d"
+    t.float "n_decision"
+    t.float "su_octroye"
+    t.string "locali_pro", limit: 254
+    t.string "commune", limit: 254
+    t.string "site", limit: 254
+    t.string "p_droi_etu", limit: 254
+    t.string "n_arr_conc", limit: 254
+    t.date "d_arret_co"
+    t.string "mont_conce", limit: 254
+    t.date "dat_paiem"
+    t.string "n_act_conc", limit: 254
+    t.date "da_acte_co"
+    t.string "n_act_cess", limit: 254
+    t.date "dat_acte_c"
+    t.float "n_depot_pe"
+    t.date "d_depot_do"
+    t.string "avis_servi", limit: 254
+    t.string "n_arrt_per", limit: 254
+    t.string "da_arrt_pe", limit: 254
+    t.date "dat_depot_"
+    t.date "dat_approb"
+    t.date "dat_deci_c"
+    t.string "n_arrt_exp", limit: 254
+    t.date "dat_arrt_e"
+    t.string "n_depot_do", limit: 254
+    t.date "date_depot"
+    t.string "n_deci_and", limit: 254
+    t.float "taux_avanc"
+    t.float "taux_ava_1"
+    t.string "mise_en_se", limit: 254
+    t.float "emplois_re"
+    t.string "changem_st", limit: 254
+    t.string "observatio", limit: 254
+    t.geometry "geom", limit: {:srid=>3857, :type=>"multi_polygon"}
   end
 
   create_table "hors_zones", force: :cascade do |t|
@@ -133,6 +293,68 @@ ActiveRecord::Schema.define(version: 2019_03_25_224531) do
     t.string "document_content_type"
     t.bigint "document_file_size"
     t.datetime "document_updated_at"
+  end
+
+  create_table "lors", primary_key: "gid", id: :serial, force: :cascade do |t|
+    t.integer "objectid"
+    t.string "n°_de_lot", limit: 50
+    t.decimal "shape_leng"
+    t.decimal "shape_area"
+    t.string "n_de_lot", limit: 254
+    t.string "n_dossier", limit: 254
+    t.string "d_dep_dema", limit: 254
+    t.string "r_socia_ar", limit: 254
+    t.string "n_p_gerant", limit: 254
+    t.string "r_socia_fr", limit: 254
+    t.string "n_p_gera_1", limit: 254
+    t.string "adresse", limit: 254
+    t.string "n_tele", limit: 254
+    t.string "fax", limit: 254
+    t.string "email", limit: 254
+    t.string "int_projet", limit: 254
+    t.string "int_proj_1", limit: 254
+    t.string "sect_activ", limit: 254
+    t.string "fil_indust", limit: 254
+    t.string "su_demand_", limit: 254
+    t.string "mont_inves", limit: 254
+    t.string "nomb_emplo", limit: 254
+    t.string "d_examen_d", limit: 254
+    t.string "n_decision", limit: 254
+    t.string "n_de_lot1", limit: 254
+    t.float "su_octroye"
+    t.string "locali_pro", limit: 254
+    t.string "commune", limit: 254
+    t.string "site", limit: 254
+    t.string "p_droi_etu", limit: 254
+    t.string "n_arr_conc", limit: 254
+    t.date "d_arret_co"
+    t.string "mont_conce", limit: 254
+    t.date "dat_paiem"
+    t.string "n_act_conc", limit: 254
+    t.date "da_acte_co"
+    t.string "n_act_cess", limit: 254
+    t.string "dat_acte_c", limit: 254
+    t.string "n_depot_pe", limit: 254
+    t.date "d_depot_do"
+    t.string "avis_servi", limit: 254
+    t.string "n_arrt_per", limit: 254
+    t.date "da_arrt_pe"
+    t.date "dat_depot_"
+    t.date "dat_approb"
+    t.date "dat_deci_c"
+    t.string "n_arrt_exp", limit: 254
+    t.date "dat_arrt_e"
+    t.string "n_depot_do", limit: 254
+    t.string "date_depot", limit: 254
+    t.string "n_deci_and", limit: 254
+    t.string "taux_avanc", limit: 254
+    t.string "taux_ava_1", limit: 254
+    t.string "mise_en_se", limit: 254
+    t.float "emplois_re"
+    t.string "changem_st", limit: 254
+    t.string "observatio", limit: 254
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.index ["geom"], name: "lors_geom_idx", using: :gist
   end
 
   create_table "lots", force: :cascade do |t|
@@ -273,9 +495,33 @@ ActiveRecord::Schema.define(version: 2019_03_25_224531) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "regions", force: :cascade do |t|
+    t.string "name"
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.bigint "country_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_regions_on_country_id"
+    t.index ["geom"], name: "index_regions_on_geom", using: :gist
+  end
+
   create_table "sashes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "states", force: :cascade do |t|
+    t.bigint "country_id"
+    t.string "name"
+    t.string "hasc_code"
+    t.string "state_type"
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "region_id"
+    t.index ["country_id"], name: "index_states_on_country_id"
+    t.index ["geom"], name: "index_states_on_geom", using: :gist
+    t.index ["region_id"], name: "index_states_on_region_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -294,6 +540,189 @@ ActiveRecord::Schema.define(version: 2019_03_25_224531) do
     t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "zi_el_eulma", primary_key: "gid", id: :serial, force: :cascade do |t|
+    t.integer "objectid"
+    t.string "n°_de_lot", limit: 50
+    t.decimal "shape_leng"
+    t.decimal "shape_area"
+    t.string "n_de_lot", limit: 254
+    t.string "n_dossier", limit: 254
+    t.string "d_dep_dema", limit: 254
+    t.string "r_socia_ar", limit: 254
+    t.string "n_p_gerant", limit: 254
+    t.string "r_socia_fr", limit: 254
+    t.string "n_p_gera_1", limit: 254
+    t.string "adresse", limit: 254
+    t.string "n_tele", limit: 254
+    t.string "fax", limit: 254
+    t.string "email", limit: 254
+    t.string "int_projet", limit: 254
+    t.string "int_proj_1", limit: 254
+    t.string "sect_activ", limit: 254
+    t.string "fil_indust", limit: 254
+    t.string "su_demand_", limit: 254
+    t.string "mont_inves", limit: 254
+    t.string "nomb_emplo", limit: 254
+    t.string "d_examen_d", limit: 254
+    t.string "n_decision", limit: 254
+    t.string "n_de_lot1", limit: 254
+    t.float "su_octroye"
+    t.string "locali_pro", limit: 254
+    t.string "commune", limit: 254
+    t.string "site", limit: 254
+    t.string "p_droi_etu", limit: 254
+    t.string "n_arr_conc", limit: 254
+    t.date "d_arret_co"
+    t.string "mont_conce", limit: 254
+    t.date "dat_paiem"
+    t.string "n_act_conc", limit: 254
+    t.date "da_acte_co"
+    t.string "n_act_cess", limit: 254
+    t.string "dat_acte_c", limit: 254
+    t.string "n_depot_pe", limit: 254
+    t.date "d_depot_do"
+    t.string "avis_servi", limit: 254
+    t.string "n_arrt_per", limit: 254
+    t.date "da_arrt_pe"
+    t.date "dat_depot_"
+    t.date "dat_approb"
+    t.date "dat_deci_c"
+    t.string "n_arrt_exp", limit: 254
+    t.date "dat_arrt_e"
+    t.string "n_depot_do", limit: 254
+    t.string "date_depot", limit: 254
+    t.string "n_deci_and", limit: 254
+    t.string "taux_avanc", limit: 254
+    t.string "taux_ava_1", limit: 254
+    t.string "mise_en_se", limit: 254
+    t.float "emplois_re"
+    t.string "changem_st", limit: 254
+    t.string "observatio", limit: 254
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.index ["geom"], name: "zi_el_eulma_geom_idx", using: :gist
+  end
+
+  create_table "zi_setif_ancienne", primary_key: "gid", id: :serial, force: :cascade do |t|
+    t.integer "objectid"
+    t.string "n°_de_lot", limit: 50
+    t.decimal "shape_leng"
+    t.decimal "shape_area"
+    t.string "n_dossier", limit: 254
+    t.string "d_dep_dema", limit: 254
+    t.string "r_socia_ar", limit: 254
+    t.string "n_p_gerant", limit: 254
+    t.string "r_socia_fr", limit: 254
+    t.string "n_p_gera_1", limit: 254
+    t.string "adresse", limit: 254
+    t.string "n_tele", limit: 254
+    t.string "fax", limit: 254
+    t.string "email", limit: 254
+    t.string "int_projet", limit: 254
+    t.string "int_proj_1", limit: 254
+    t.string "sect_activ", limit: 254
+    t.string "fil_indust", limit: 254
+    t.string "su_demand_", limit: 254
+    t.string "mont_inves", limit: 254
+    t.string "nomb_emplo", limit: 254
+    t.string "d_examen_d", limit: 254
+    t.date "n_decision"
+    t.string "n_de_lot", limit: 254
+    t.float "su_octroye"
+    t.string "locali_pro", limit: 254
+    t.string "commune", limit: 254
+    t.string "site", limit: 254
+    t.string "p_droi_etu", limit: 254
+    t.string "n_arr_conc", limit: 254
+    t.date "d_arret_co"
+    t.string "mont_conce", limit: 254
+    t.date "dat_paiem"
+    t.string "n_act_conc", limit: 254
+    t.date "da_acte_co"
+    t.string "n_act_cess", limit: 254
+    t.string "dat_acte_c", limit: 254
+    t.string "n_depot_pe", limit: 254
+    t.date "d_depot_do"
+    t.string "avis_servi", limit: 254
+    t.string "n_arrt_per", limit: 254
+    t.date "da_arrt_pe"
+    t.date "dat_depot_"
+    t.date "dat_approb"
+    t.date "dat_deci_c"
+    t.string "n_arrt_exp", limit: 254
+    t.date "dat_arrt_e"
+    t.string "n_depot_do", limit: 254
+    t.date "date_depot"
+    t.string "n_deci_and", limit: 254
+    t.float "taux_avanc"
+    t.float "taux_ava_1"
+    t.string "mise_en_se", limit: 254
+    t.float "emplois_re"
+    t.string "changem_st", limit: 254
+    t.string "observatio", limit: 254
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.index ["geom"], name: "zi_setif_ancienne_geom_idx", using: :gist
+  end
+
+  create_table "zi_setif_extension", primary_key: "gid", id: :serial, force: :cascade do |t|
+    t.integer "objectid"
+    t.decimal "shape_leng"
+    t.decimal "shape_area"
+    t.integer "n°_de_lot", limit: 2
+    t.string "n_dossier", limit: 254
+    t.string "d_dep_dema", limit: 254
+    t.string "r_socia_ar", limit: 254
+    t.string "n_p_gerant", limit: 254
+    t.string "r_socia_fr", limit: 254
+    t.string "n_p_gera_1", limit: 254
+    t.string "adresse", limit: 254
+    t.string "n_tele", limit: 254
+    t.string "fax", limit: 254
+    t.string "email", limit: 254
+    t.string "int_projet", limit: 254
+    t.string "int_proj_1", limit: 254
+    t.string "sect_activ", limit: 254
+    t.string "fil_indust", limit: 254
+    t.float "su_demand_"
+    t.string "mont_inves", limit: 254
+    t.float "nomb_emplo"
+    t.date "d_examen_d"
+    t.float "n_decision"
+    t.float "su_octroye"
+    t.string "locali_pro", limit: 254
+    t.string "commune", limit: 254
+    t.string "site", limit: 254
+    t.string "p_droi_etu", limit: 254
+    t.string "n_arr_conc", limit: 254
+    t.date "d_arret_co"
+    t.string "mont_conce", limit: 254
+    t.date "dat_paiem"
+    t.string "n_act_conc", limit: 254
+    t.date "da_acte_co"
+    t.string "n_act_cess", limit: 254
+    t.date "dat_acte_c"
+    t.float "n_depot_pe"
+    t.date "d_depot_do"
+    t.string "avis_servi", limit: 254
+    t.string "n_arrt_per", limit: 254
+    t.string "da_arrt_pe", limit: 254
+    t.date "dat_depot_"
+    t.date "dat_approb"
+    t.date "dat_deci_c"
+    t.string "n_arrt_exp", limit: 254
+    t.date "dat_arrt_e"
+    t.string "n_depot_do", limit: 254
+    t.date "date_depot"
+    t.string "n_deci_and", limit: 254
+    t.float "taux_avanc"
+    t.float "taux_ava_1"
+    t.string "mise_en_se", limit: 254
+    t.float "emplois_re"
+    t.string "changem_st", limit: 254
+    t.string "observatio", limit: 254
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.index ["geom"], name: "zi_setif_extension_geom_idx", using: :gist
   end
 
   create_table "zone_activites", force: :cascade do |t|
@@ -379,4 +808,7 @@ ActiveRecord::Schema.define(version: 2019_03_25_224531) do
   add_foreign_key "mailboxer_conversation_opt_outs", "mailboxer_conversations", column: "conversation_id", name: "mb_opt_outs_on_conversations_id"
   add_foreign_key "mailboxer_notifications", "mailboxer_conversations", column: "conversation_id", name: "notifications_on_conversation_id"
   add_foreign_key "mailboxer_receipts", "mailboxer_notifications", column: "notification_id", name: "receipts_on_notification_id"
+  add_foreign_key "regions", "countries"
+  add_foreign_key "states", "countries"
+  add_foreign_key "states", "regions"
 end

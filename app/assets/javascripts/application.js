@@ -24,8 +24,8 @@
 //= require Chart.bundle
 //= require chartkick
 //= require bootstrap-sortable
-
-
+//= require leaflet
+//= require openlayers-rails
 
 
 

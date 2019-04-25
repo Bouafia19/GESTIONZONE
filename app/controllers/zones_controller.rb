@@ -38,6 +38,13 @@ class ZonesController < ApplicationController
   def ancienne
   end
 
+  def setif_inve
+  end
+
+  def leaflet
+    @states = State.all
+  end
+
   def static
   end
 

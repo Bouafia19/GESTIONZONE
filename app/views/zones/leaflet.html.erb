@@ -1,0 +1,375 @@
+<!--<html>
+<head>
+  <title>My First Leaflet Map</title>
+
+
+<style>
+  #map { height: 800px; }
+</style>
+  <%= javascript_include_tag('lib/leaflet.ajax.min.js') %>
+
+</head>
+
+<body>
+<div id="map"></div>
+
+</body>
+
+
+
+<script>
+    var map = L.map('map').setView([28.16324, 2.632388], 5);
+
+    L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; OpenStreetMap contributors',
+        maxZoom: 5,
+    }).addTo(map);
+
+function popUp(features,layer) {
+    //layer.bindPopup(features => "id");
+    layer.bindPopup(features.id);
+}
+
+                // Success!
+    var i;
+    for (i = 1; i < 49; i++) {
+
+        var geojsondata = new L.GeoJSON.AJAX('http://localhost:4000/algeria_state_' + i + '.json',{onEachFeature: popUp});
+
+
+        geojsondata.addTo(map);
+        //geojsondata.refresh('http://localhost:4000/algeria_state_' + i + '.json',{onEachFeature: popUp});
+    }
+
+
+</script>
+</html>-->
+<html>
+<head>
+  <title>My First Leaflet Map</title>
+
+  <meta charset=utf-8 />
+  <title>Searching feature layers</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <!-- Load Leaflet from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+          integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+          crossorigin=""></script>
+
+
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@2.2.4/dist/esri-leaflet.js"
+          integrity="sha512-tyPum7h2h36X52O2gz+Pe8z/3l+Y9S1yEUscbVs5r5aEY5dFmP1WWRY/WLLElnFHa+k1JBQZSCDGwEAnm2IxAQ=="
+          crossorigin=""></script>
+
+
+  <!-- Load Esri Leaflet Geocoder from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.2.14/dist/esri-leaflet-geocoder.css"
+        integrity="sha512-v5YmWLm8KqAAmg5808pETiccEohtt8rPVMGQ1jA6jqkWVydV5Cuz3nJ9fQ7ittSxvuqsvI9RSGfVoKPaAJZ/AQ=="
+        crossorigin="">
+  <script src="https://unpkg.com/esri-leaflet-geocoder@2.2.14/dist/esri-leaflet-geocoder.js"
+          integrity="sha512-uK5jVwR81KVTGe8KpJa1QIN4n60TsSV8+DPbL5wWlYQvb0/nYNgSOg9dZG6ViQhwx/gaMszuWllTemL+K+IXjg=="
+          crossorigin=""></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+  <style>
+    .chart-container {
+      height: 245px;
+      width: 245px;
+    }
+
+    #info-pane {
+      position: absolute;
+      top: 70px;
+      right: 10px;
+      z-index: 400;
+      padding: 1em;
+      background: white;
+    }
+  </style>
+
+  <style>
+    body { margin:0; padding:0; }
+    #map { position: absolute; top:0; bottom:0; right:0; left:0; }
+  </style>
+
+
+  <style>
+    #map { height: 800px; }
+  </style>
+  <%= javascript_include_tag('lib/leaflet.ajax.min.js') %>
+
+</head>
+
+<body>
+
+<style>
+  #basemaps-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 400;
+    background: white;
+    padding: 10px;
+  }
+  #basemaps {
+    margin-bottom: 5px;
+  }
+</style>
+
+<div id="map"></div>
+<div id="info-pane" class="leaflet-bar chart-container">
+  <canvas id="chartCanvas"></canvas>
+</div>
+
+<div id="basemaps-wrapper" class="leaflet-bar">
+  <select name="basemaps" id="basemaps" onChange="changeBasemap(basemaps)">
+    <option value="Topographic">Topographic</option>
+    <option value="Streets">Streets</option>
+    <option value="NationalGeographic">National Geographic</option>
+    <option value="Oceans">Oceans</option>
+    <option value="Gray">Gray</option>
+    <option value="DarkGray">Dark Gray</option>
+    <option value="Imagery">Imagery</option>
+    <option value="ImageryClarity">Imagery (Clarity)</option>
+    <option value="ImageryFirefly">Imagery (Firefly)</option>
+    <option value="ShadedRelief">Shaded Relief</option>
+    <option value="Physical">Physical</option>
+  </select>
+</div>
+
+</body>
+
+
+
+<script>
+    var map = L.map('map').setView([36.19112 ,5.41373], 12);
+
+   // L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //    attribution: 'Map data &copy; OpenStreetMap contributors',
+    //    maxZoom: 16,
+    //}).addTo(map);
+
+    function popUp(features,layer) {
+        //layer.bindPopup(features => "id");
+        layer.bindPopup(features.properties._R_socia_français +'<br>'+ features.properties._R_socia_arabe +'<br>'+ features.properties._Mont_Investis_Millions_DA
+            +'<br>'+ features.properties._Mont_Investis_Millions_DA
+        );
+
+    }
+
+    var v;
+    for (v = 1; v < 141; v++) {
+
+        var geojsonda = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_' + v + '.json', {onEachFeature: popUp});
+
+        geojsonda.addTo(map);
+    }
+
+    var j;
+    for (j = 1; j < 165; j++) {
+
+        var geojsondat = new L.GeoJSON.AJAX('http://localhost:4000/extension_' + j + '.json', {onEachFeature: popUp});
+
+        geojsondat.addTo(map);
+    }
+    // Success!
+    var i;
+    for (i = 1; i < 94; i++) {
+
+        var geojsondata = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_' + i + '.json',{onEachFeature: popUp});
+
+        geojsondata.addTo(map);
+
+        //geojsondata.refresh('http://localhost:4000/algeria_state_' + i + '.json',{onEachFeature: popUp});
+    }
+    var arcgisOnline = L.esri.Geocoding.arcgisOnlineProvider();
+
+    var searchControl = L.esri.Geocoding.geosearch({
+        providers: [
+            arcgisOnline,
+            L.esri.Geocoding.featureLayerProvider({
+                url: 'https://services.arcgis.com/uCXeTVveQzP4IIcx/arcgis/rest/services/gisday/FeatureServer/0/',
+                searchFields: ['Name', 'Organization'],
+                label: 'GIS Day Events',
+                bufferRadius: 5000,
+                formatSuggestion: function(feature){
+                    return feature.properties.Name + ' - ' + feature.properties.Organization;
+                }
+            })
+        ]
+    }).addTo(map);
+
+
+
+    var treesFeatureLayer = L.esri.featureLayer({
+        url: 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Heritage_Trees_Portland/FeatureServer/0',
+    });
+
+    treesFeatureLayer.addTo(map);
+
+    // STEP 2: DEFINE A CHART
+    // this is a static scatterplot chart definition for now, but it will
+    // soon become dynamic by responding to map and feature layer events
+    var initialChartData = {
+        datasets: [{
+            label: 'Portland Heritage Trees',
+            // the data values are empty at this moment
+            // and will be updated dynamically below
+            data: []
+        }]
+    };
+
+    var chartOptions = {
+        scales: {
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'tree diameter'
+                },
+                ticks: {
+                    beginAtZero: true,
+                    max: 250,
+                    stepSize: 50
+                }
+            }],
+            yAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'tree height'
+                },
+                ticks: {
+                    beginAtZero: true,
+                    max: 250,
+                    stepSize: 50
+                }
+            }]
+        },
+        maintainAspectRatio: false,
+        // turn off animations during chart data updates
+        animation: {
+            duration: 0,
+        },
+        // see STEP 4 below
+        onHover: handleChartHover
+    };
+
+    var chart = new Chart('chartCanvas', {
+        type: 'scatter',
+        data: initialChartData,
+        options: chartOptions
+    });
+
+    // STEP 3: MAKE THE CHART DYNAMIC BY ESTABLISHING MAP-TO-CHART COMMUNICATION
+    // show in the scatterplot only the features in the map's current extent
+    // by handling several events from both the map and feature layer
+    map.on('zoom move', updateChart);
+    treesFeatureLayer.on('load', updateChart);
+
+    function updateChart() {
+        // reformat the features' attributes of interest into
+        // the data array format required by the Chart.js scatterplot
+        var scatterPlotDataArray = [];
+
+        treesFeatureLayer.eachActiveFeature(function(e) {
+            // loop over each active feature in the map extent and
+            // push an object into the scatterPlotDataArray in this format:
+
+            // {
+            //   x: diameter attribute value,
+            //   y: height attribute value,
+            //   featureId: unique ID for chart-to-map communication in STEP 4
+            // }
+
+            scatterPlotDataArray.push({
+                x: e.feature.properties.DIAMETER,
+                y: e.feature.properties.HEIGHT,
+                featureId: e.feature.id
+            });
+        });
+
+        // assign the new scatterPlotDataArray to the chart's data property
+        chart.data.datasets[0].data = scatterPlotDataArray;
+
+        // finally, instruct the chart to re-draw itself with the new data
+        chart.update();
+    }
+
+    // STEP 4 (OPTIONAL): ESTABLISH CHART-TO-MAP COMMUNICATION
+    // up until now the map and feature layer inform the chart what to render,
+    // but interactions with the chart can also influence the map contents
+    function handleChartHover(e) {
+        var chartHoverData = chart.getElementsAtEvent(e);
+
+        if (!chartHoverData.length) {
+            // if there were no data elements found when hovering over the chart,
+            // reset any previous styling overrides and return
+            treesFeatureLayer.eachFeature(function(e) {
+                e.setOpacity(1);
+                e.setZIndexOffset(0);
+            });
+
+            return;
+        }
+
+        // otherwise, bring attention to the features on the map
+        // that are currently being hovered over in the chart
+        var hoverFeatureIds = chartHoverData.map(function(datum) {
+            return chart.data.datasets[0].data[datum._index].featureId;
+        });
+
+        treesFeatureLayer.eachFeature(function(e, idx) {
+            if (
+                hoverFeatureIds.indexOf(e.feature.id) > -1
+            ) {
+                e.setOpacity(1);
+                e.setZIndexOffset(10000);
+            } else {
+                e.setOpacity(0.1);
+            }
+        });
+    }
+    var layer = L.esri.basemapLayer('Imagery').addTo(map);
+    var layerLabels;
+
+    function setBasemap(basemap) {
+        if (layer) {
+            map.removeLayer(layer);
+        }
+
+        layer = L.esri.basemapLayer(basemap);
+
+        map.addLayer(layer);
+
+        if (layerLabels) {
+            map.removeLayer(layerLabels);
+        }
+
+        if (basemap === 'ShadedRelief'
+            || basemap === 'Oceans'
+            || basemap === 'Gray'
+            || basemap === 'DarkGray'
+            || basemap === 'Terrain'
+        ) {
+            layerLabels = L.esri.basemapLayer(basemap + 'Labels');
+            map.addLayer(layerLabels);
+        } else if (basemap.includes('Imagery')) {
+            layerLabels = L.esri.basemapLayer('ImageryLabels');
+            map.addLayer(layerLabels);
+        }
+    }
+
+    function changeBasemap(basemaps){
+        var basemap = basemaps.value;
+        setBasemap(basemap);
+    }
+
+</script>
+</html>
+
+

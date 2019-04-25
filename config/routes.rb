@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :anciennes
+  resources :extensions
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :lots
@@ -17,6 +19,11 @@ Rails.application.routes.draw do
 
   get 'zones/ancienne'
 
+  get 'zones/setif_inve'
+
+  get 'zones/leaflet'
+
+
   get 'users/new'
 
   get 'users/show'
@@ -24,6 +31,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   get 'zones/search'
+
 
   get 'investisseurs/search'
 
@@ -60,6 +68,7 @@ Rails.application.routes.draw do
   get   'zone_industrielles/static/:id', to: 'zone_industrielles#static'
   get   'hors_zones/static/:id', to: 'hors_zones#static'
   get   'promotion_immobilieres/static/:id', to: 'promotion_immobilieres#static'
+
 
   # mailbox folder routes
 

@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #AdminUser.create!(email: 'khaled@example.com', password: 'root#rails', password_confirmation: 'root#rails') if Rails.env.development?
 
-#Dir.glob("#{Rails.root}/db/seeds/*.rb").each { |f| require f }
+Dir.glob("#{Rails.root}/db/seeds/*.rb").each { |f| require f }

@@ -6,13 +6,13 @@
 
     <div class="card-body">
 
-      <h1 align="center">Recherche Avancée</h1>
+      <h1 style="color: #17a2b8" align="center">Recherche Avancée</h1>
       <hr>
 
 <br>
 
 <div class="col-xl-12 col-md-6 mb-4 res">
-  <div class="card border-left-primary shadow h-100 py-2">
+  <div class="card border-success shadow h-100 py-2">
     <div class="card-body">
       <div class="row no-gutters align-items-center">
         <div class="col mr-2">
@@ -55,11 +55,11 @@
 </div>
 <hr>
 
-  <strong>Resultat trouve <%=  @investisseurs.count   %> , Pour Site : <%=  params[:site]%> , Secteur D'activite : <%=  params[:secteur_activite]%> , Commune : <%=  params[:commune]%> , Montant D'investissement Superieur a : <%=  params[:montant_investissement]%></strong>
+  <strong style="color: #5C9917">Resultat trouve <%=  @investisseurs.count   %> , Pour Site : <%=  params[:site]%> , Secteur D'activite : <%=  params[:secteur_activite]%> , Commune : <%=  params[:commune]%> , Montant D'investissement Superieur a : <%=  params[:montant_investissement]%></strong>
 
  <hr>
       <div class="col-xl-12 col-md-6 mb-4 res">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card border-info shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2">
@@ -91,7 +91,7 @@
 
                     </div>
                     <div class="col-sm-2 align-self-end">
-                      <%= submit_tag "Chercher Lots",class:"btn btn-md btn-success" %>
+                      <%= submit_tag "Chercher Lots",class:"btn btn-md btn-info" %>
                     </div>
                 <% end %>
                 </div>
@@ -101,18 +101,21 @@
         </div>
       </div>
       <hr>
-      <strong>Resultat trouve <%=  @lots.count   %> , Pour Nom Zone : <%=  params[:nom_zone]%> , Class D'activite : <%=  params[:class_activite]%> , Type Lot : <%=  params[:type_lot]%>, Superficie superieur a : <%=  params[:superficie]%> </strong>
+      <strong style="color: #17a2b8">Resultat trouve <%=  @lots.count   %> , Pour Nom Zone : <%=  params[:nom_zone]%> , Class D'activite : <%=  params[:class_activite]%> , Type Lot : <%=  params[:type_lot]%>, Superficie superieur a : <%=  params[:superficie]%> </strong>
 
       <hr>
 <div class="row" id="table_search" style="padding: 10px">
 
   <% @investisseurs.each do |investisseur| %>
 
-    <div class="card text-center col-6">
-      <div class="card-header">
+    <div class="card text-center border-info shadow h-100 py-2 col-6">
+      <div class="card border-info shadow h-100 py-2">
+      <div class="card-header bg-info">
         <strong>Investisseurs: <%= investisseur.raison_sociale_francais %></strong>
       </div>
-      <div class="card-body">
+
+          <div class="card-body">
+
         <ul class="list-group list-group-flush">
           <li class="list-group-item">Num dossier: <%= investisseur.num_dossier %></li>
           <li class="list-group-item">Date depot demande: <%= investisseur.date_depot_demande %></li>
@@ -132,9 +135,9 @@
         <br>
         <%= link_to 'Fiche Technique', investisseur ,class:"btn btn-success col-4"%>
       </div>
+            </div>
 
     </div>
-
   <% end %>
 
   <br></div>
@@ -142,8 +145,9 @@
 
       <div class="row" id="table_search" style="padding: 10px">
         <% @lots.each do |lot| %>
-          <div class="card text-center col-6">
-            <div class="card-header">
+          <div class="card text-center border-info shadow h-100 py-2 col-6">
+            <div class="card border-info shadow h-100 py-2">
+            <div class="card-header bg-info">
               <strong>Lots: <%= lot.num_lot %></strong>
             </div>
             <div class="card-body">
@@ -157,6 +161,7 @@
               <br>
               <%= link_to 'Fiche Technique', lot ,class:"btn btn-success col-4"%>
             </div>
+          </div>
           </div>
         <% end %>
         <br></div>

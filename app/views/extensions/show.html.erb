@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>N° de lot:</strong>
+  <%= @extension.n°_de_lot %>
+</p>
+
+<p>
+  <strong>N dossier:</strong>
+  <%= @extension.n_dossier %>
+</p>
+
+<p>
+  <strong>R socia ar:</strong>
+  <%= @extension.r_socia_ar %>
+</p>
+
+<p>
+  <strong>R socia fr:</strong>
+  <%= @extension.r_socia_fr %>
+</p>
+
+<p>
+  <strong>Geom:</strong>
+  <%= @extension.geom %>
+</p>
+
+<%= link_to 'Edit', edit_extension_path(@extension) %> |
+<%= link_to 'Back', extensions_path %>

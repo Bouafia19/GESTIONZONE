@@ -21,16 +21,7 @@ class InvestisseursController < ApplicationController
     @zea = ZoneEntrepotActivite.all.count
 
     @investisseurs = Investisseur.all
-    respond_to do |format|
-      format.html
-      format.pdf {render pdf: "investisseur",
-                         template: "investisseurs/index.pdf.erb",
-                         locals: {:investisseur => @investisseurs}}
-      format.xlsx {render xlsx: "investisseur",
-                          template: "investisseurs/index.xlsx.axlsx",
-                          locals: {:investisseur => @investisseurs}}
 
-    end
   end
 
   # GET /investisseurs/1

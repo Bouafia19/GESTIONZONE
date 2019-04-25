@@ -1,0 +1,42 @@
+<%= form_with(model: extension, local: true) do |form| %>
+  <% if extension.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(extension.errors.count, "error") %> prohibited this extension from being saved:</h2>
+
+      <ul>
+      <% extension.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :n°_de_lot %>
+    <%= form.text_field :n°_de_lot %>
+  </div>
+
+  <div class="field">
+    <%= form.label :n_dossier %>
+    <%= form.text_field :n_dossier %>
+  </div>
+
+  <div class="field">
+    <%= form.label :r_socia_ar %>
+    <%= form.text_field :r_socia_ar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :r_socia_fr %>
+    <%= form.text_field :r_socia_fr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :geom %>
+    <%= form.text_field :geom %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
