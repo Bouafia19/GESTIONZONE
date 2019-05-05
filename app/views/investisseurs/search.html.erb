@@ -81,7 +81,7 @@
                     <div class="col-sm-2 align-self-center">
                       <%#= text_field_tag :commune, params[:commune] ,{placeholder:"Commune",class:"form-control"} %>
                       <%#= select_tag :commune,options_for_select([["AIN LAHDJAR","AIN LAHDJAR"],["GUELLEL","GUELLEL"],["GUEDJEL","GUEDJEL"],["TACHOUDA","TACHOUDA"],["EL HAMMA","EL HAMMA"],["AIN LAHDJAR","AIN LAHDJAR"],["AIN ABASSA","AIN ABASSA"],["AIN ARNET","AIN ARNET"]]),{prompt: "Commune",class:"form-control", required: true} %>
-                      <%= select_tag :type_lot, options_for_select(Lot.all.map{|u| [u.type_lot ] }.uniq),{prompt: "Type Lot",include_blank: 'None Specified',class:"form-control"} %>
+                      <%= select_tag :type_lot, options_for_select(Lot.all.map{|u| [u.type_lot ] }.uniq),{prompt: "Type Lot",class:"form-control"} %>
 
                     </div>
                     <div class="col-sm-2 align-self-start"  >

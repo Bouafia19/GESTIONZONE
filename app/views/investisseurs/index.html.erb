@@ -11,11 +11,11 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
-  <!-- Page Heading -->
+  <!-- Page Heading
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-6 my-2 my-md-0 mw-100 navbar-search">
       <div class="input-group">
-        <%= search_field_tag "search_champ",session[:data] ,{class:"form-control input-sm",placeholder:"Chercher investisseur",onKeyUp:"SelectSearch(id,'investisseurs','no result found')" }%>
+        <% search_field_tag "search_champ",session[:data] ,{class:"form-control input-sm",placeholder:"Chercher investisseur",onKeyUp:"SelectSearch(id,'investisseurs','no result found')" }%>
         <div class="input-group-append">
           <button class="btn btn-primary" type="button">
             <i class="fas fa-search fa-sm"></i>
@@ -24,11 +24,11 @@
       </div>
     </form>
      <% link_to 'Pdf', investisseurs_path(format: :pdf) ,class:"fa fa-download fa-lg"%> <p style="padding-left: 20px"></p>
-    <!-- Content Wrapper -->
+
     <% link_to 'Excel', investisseurs_path(format: :xlsx) ,class:"fa fa-download fa-lg"%>
 <br>
 
-  </div>
+  </div>-->
 
   <!-- Content Row -->
   <div class="row">

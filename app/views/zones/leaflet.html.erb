@@ -6,7 +6,7 @@
 <style>
   #map { height: 800px; }
 </style>
-  <%= javascript_include_tag('lib/leaflet.ajax.min.js') %>
+  <%#= javascript_include_tag('lib/leaflet.ajax.min.js') %>
 
 </head>
 
@@ -44,6 +44,8 @@ function popUp(features,layer) {
 
 </script>
 </html>-->
+
+
 <html>
 <head>
   <title>My First Leaflet Map</title>
@@ -102,6 +104,7 @@ function popUp(features,layer) {
   <style>
     #map { height: 800px; }
   </style>
+
   <%= javascript_include_tag('lib/leaflet.ajax.min.js') %>
 
 </head>
@@ -111,7 +114,7 @@ function popUp(features,layer) {
 <style>
   #basemaps-wrapper {
     position: absolute;
-    top: 10px;
+    top: 70px;
     right: 10px;
     z-index: 400;
     background: white;
@@ -148,7 +151,16 @@ function popUp(features,layer) {
 
 
 <script>
-    var map = L.map('map').setView([36.19112 ,5.41373], 12);
+
+
+    var map = L.map('map',{
+        center: [36.19112, 5.41373],
+        zoom: 12,
+        measureControl: true
+
+    });
+
+
 
    // L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     //    attribution: 'Map data &copy; OpenStreetMap contributors',
@@ -157,7 +169,7 @@ function popUp(features,layer) {
 
     function popUp(features,layer) {
         //layer.bindPopup(features => "id");
-        layer.bindPopup(features.properties._R_socia_français +'<br>'+ features.properties._R_socia_arabe +'<br>'+ features.properties._Mont_Investis_Millions_DA
+        layer.bindPopup('Raison sociale francaie:' + features.properties._R_socia_français +'<br>'+ features.properties._R_socia_arabe +'<br>'+ features.properties._Mont_Investis_Millions_DA
             +'<br>'+ features.properties._Mont_Investis_Millions_DA
         );
 
@@ -168,7 +180,7 @@ function popUp(features,layer) {
 
         var geojsonda = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_' + v + '.json', {onEachFeature: popUp});
 
-        geojsonda.addTo(map);
+        //geojsonda.addTo(map);
     }
 
     var j;
@@ -176,18 +188,486 @@ function popUp(features,layer) {
 
         var geojsondat = new L.GeoJSON.AJAX('http://localhost:4000/extension_' + j + '.json', {onEachFeature: popUp});
 
-        geojsondat.addTo(map);
+       // geojsondat.addTo(map);
     }
     // Success!
-    var i;
-    for (i = 1; i < 94; i++) {
 
-        var geojsondata = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_' + i + '.json',{onEachFeature: popUp});
+  //  var i;
+   // for (i = 1; i < 94; i++) {
 
-        geojsondata.addTo(map);
+    var geojsondata1 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_1.json',{onEachFeature: popUp});
+    var geojsondata2 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_2.json',{onEachFeature: popUp});
+    var geojsondata3 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_3.json',{onEachFeature: popUp});
+    var geojsondata4 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_4.json',{onEachFeature: popUp});
+    var geojsondata5 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_5.json',{onEachFeature: popUp});
+    var geojsondata6 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_6.json',{onEachFeature: popUp});
+    var geojsondata7 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_7.json',{onEachFeature: popUp});
+    var geojsondata8 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_8.json',{onEachFeature: popUp});
+    var geojsondata9 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_9.json',{onEachFeature: popUp});
+    var geojsondata10 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_10.json',{onEachFeature: popUp});
+    var geojsondata11 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_11.json',{onEachFeature: popUp});
+    var geojsondata12 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_12.json',{onEachFeature: popUp});
+    var geojsondata13 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_13.json',{onEachFeature: popUp});
+    var geojsondata14 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_14.json',{onEachFeature: popUp});
+    var geojsondata15 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_15.json',{onEachFeature: popUp});
+    var geojsondata16 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_16.json',{onEachFeature: popUp});
+    var geojsondata17 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_17.json',{onEachFeature: popUp});
+    var geojsondata18 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_18.json',{onEachFeature: popUp});
+    var geojsondata19 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_19.json',{onEachFeature: popUp});
+    var geojsondata20 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_20.json',{onEachFeature: popUp});
+    var geojsondata21 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_21.json',{onEachFeature: popUp});
+    var geojsondata22 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_22.json',{onEachFeature: popUp});
+    var geojsondata23 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_23.json',{onEachFeature: popUp});
+    var geojsondata24 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_24.json',{onEachFeature: popUp});
+    var geojsondata25 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_25.json',{onEachFeature: popUp});
+    var geojsondata26 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_26.json',{onEachFeature: popUp});
+    var geojsondata27 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_27.json',{onEachFeature: popUp});
+    var geojsondata28 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_28.json',{onEachFeature: popUp});
+    var geojsondata29 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_29.json',{onEachFeature: popUp});
+    var geojsondata30 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_30.json',{onEachFeature: popUp});
+    var geojsondata31 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_31.json',{onEachFeature: popUp});
+    var geojsondata32 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_32.json',{onEachFeature: popUp});
+    var geojsondata33 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_33.json',{onEachFeature: popUp});
+    var geojsondata34 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_34.json',{onEachFeature: popUp});
+    var geojsondata35 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_35.json',{onEachFeature: popUp});
+    var geojsondata36 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_36.json',{onEachFeature: popUp});
+    var geojsondata37 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_37.json',{onEachFeature: popUp});
+    var geojsondata38 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_38.json',{onEachFeature: popUp});
+    var geojsondata39 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_39.json',{onEachFeature: popUp});
+    var geojsondata40 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_40.json',{onEachFeature: popUp});
+    var geojsondata41 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_41.json',{onEachFeature: popUp});
+    var geojsondata42 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_42.json',{onEachFeature: popUp});
+    var geojsondata43 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_43.json',{onEachFeature: popUp});
+    var geojsondata44 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_44.json',{onEachFeature: popUp});
+    var geojsondata45 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_45.json',{onEachFeature: popUp});
+    var geojsondata46 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_46.json',{onEachFeature: popUp});
+    var geojsondata47 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_47.json',{onEachFeature: popUp});
+    var geojsondata48 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_48.json',{onEachFeature: popUp});
+    var geojsondata49 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_49.json',{onEachFeature: popUp});
+    var geojsondata50 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_50.json',{onEachFeature: popUp});
+    var geojsondata51 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_51.json',{onEachFeature: popUp});
+    var geojsondata52 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_52.json',{onEachFeature: popUp});
+    var geojsondata53 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_53.json',{onEachFeature: popUp});
+    var geojsondata54 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_54.json',{onEachFeature: popUp});
+    var geojsondata55 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_55.json',{onEachFeature: popUp});
+    var geojsondata56 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_56.json',{onEachFeature: popUp});
+    var geojsondata57 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_57.json',{onEachFeature: popUp});
+    var geojsondata58 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_58.json',{onEachFeature: popUp});
+    var geojsondata59 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_59.json',{onEachFeature: popUp});
+    var geojsondata60 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_60.json',{onEachFeature: popUp});
+    var geojsondata61 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_61.json',{onEachFeature: popUp});
+    var geojsondata62 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_62.json',{onEachFeature: popUp});
+    var geojsondata63 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_63.json',{onEachFeature: popUp});
+    var geojsondata64 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_64.json',{onEachFeature: popUp});
+    var geojsondata65 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_65.json',{onEachFeature: popUp});
+    var geojsondata66 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_66.json',{onEachFeature: popUp});
+    var geojsondata67 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_67.json',{onEachFeature: popUp});
+    var geojsondata68 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_68.json',{onEachFeature: popUp});
+    var geojsondata69 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_69.json',{onEachFeature: popUp});
+    var geojsondata70 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_70.json',{onEachFeature: popUp});
+    var geojsondata71 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_71.json',{onEachFeature: popUp});
+    var geojsondata72 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_72.json',{onEachFeature: popUp});
+    var geojsondata73 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_73.json',{onEachFeature: popUp});
+    var geojsondata74 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_74.json',{onEachFeature: popUp});
+    var geojsondata75 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_75.json',{onEachFeature: popUp});
+    var geojsondata76 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_76.json',{onEachFeature: popUp});
+    var geojsondata77 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_77.json',{onEachFeature: popUp});
+    var geojsondata78 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_78.json',{onEachFeature: popUp});
+    var geojsondata79 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_79.json',{onEachFeature: popUp});
+    var geojsondata80 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_80.json',{onEachFeature: popUp});
+    var geojsondata81 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_81.json',{onEachFeature: popUp});
+    var geojsondata82 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_82.json',{onEachFeature: popUp});
+    var geojsondata83 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_83.json',{onEachFeature: popUp});
+    var geojsondata84 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_84.json',{onEachFeature: popUp});
+    var geojsondata85 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_85.json',{onEachFeature: popUp});
+    var geojsondata86 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_86.json',{onEachFeature: popUp});
+    var geojsondata87 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_87.json',{onEachFeature: popUp});
+    var geojsondata88 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_88.json',{onEachFeature: popUp});
+    var geojsondata89 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_89.json',{onEachFeature: popUp});
+    var geojsondata90 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_90.json',{onEachFeature: popUp});
+    var geojsondata91 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_91.json',{onEachFeature: popUp});
+    var geojsondata92 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_92.json',{onEachFeature: popUp});
+    var geojsondata93 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_93.json',{onEachFeature: popUp});
+    var geojsondata94 = new L.GeoJSON.AJAX('http://localhost:4000/eulma_lors_94.json',{onEachFeature: popUp});
+
+
+    var geojsonda1 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_1.json',{onEachFeature: popUp});
+    var geojsonda2 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_2.json',{onEachFeature: popUp});
+    var geojsonda3 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_3.json',{onEachFeature: popUp});
+    var geojsonda4 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_4.json',{onEachFeature: popUp});
+    var geojsonda5 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_5.json',{onEachFeature: popUp});
+    var geojsonda6 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_6.json',{onEachFeature: popUp});
+    var geojsonda7 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_7.json',{onEachFeature: popUp});
+    var geojsonda8 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_8.json',{onEachFeature: popUp});
+    var geojsonda9 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_9.json',{onEachFeature: popUp});
+    var geojsonda10 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_10.json',{onEachFeature: popUp});
+    var geojsonda11 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_11.json',{onEachFeature: popUp});
+    var geojsonda12 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_12.json',{onEachFeature: popUp});
+    var geojsonda13 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_13.json',{onEachFeature: popUp});
+    var geojsonda14 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_14.json',{onEachFeature: popUp});
+    var geojsonda15 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_15.json',{onEachFeature: popUp});
+    var geojsonda16 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_16.json',{onEachFeature: popUp});
+    var geojsonda17 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_17.json',{onEachFeature: popUp});
+    var geojsonda18 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_18.json',{onEachFeature: popUp});
+    var geojsonda19 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_19.json',{onEachFeature: popUp});
+    var geojsonda20 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_20.json',{onEachFeature: popUp});
+    var geojsonda21 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_21.json',{onEachFeature: popUp});
+    var geojsonda22 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_22.json',{onEachFeature: popUp});
+    var geojsonda23 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_23.json',{onEachFeature: popUp});
+    var geojsonda24 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_24.json',{onEachFeature: popUp});
+    var geojsonda25 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_25.json',{onEachFeature: popUp});
+    var geojsonda26 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_26.json',{onEachFeature: popUp});
+    var geojsonda27 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_27.json',{onEachFeature: popUp});
+    var geojsonda28 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_28.json',{onEachFeature: popUp});
+    var geojsonda29 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_29.json',{onEachFeature: popUp});
+    var geojsonda30 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_30.json',{onEachFeature: popUp});
+    var geojsonda31 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_31.json',{onEachFeature: popUp});
+    var geojsonda32 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_32.json',{onEachFeature: popUp});
+    var geojsonda33 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_33.json',{onEachFeature: popUp});
+    var geojsonda34 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_34.json',{onEachFeature: popUp});
+    var geojsonda35 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_35.json',{onEachFeature: popUp});
+    var geojsonda36 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_36.json',{onEachFeature: popUp});
+    var geojsonda37 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_37.json',{onEachFeature: popUp});
+    var geojsonda38 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_38.json',{onEachFeature: popUp});
+    var geojsonda39 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_39.json',{onEachFeature: popUp});
+    var geojsonda40 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_40.json',{onEachFeature: popUp});
+    var geojsonda41 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_41.json',{onEachFeature: popUp});
+    var geojsonda42 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_42.json',{onEachFeature: popUp});
+    var geojsonda43 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_43.json',{onEachFeature: popUp});
+    var geojsonda44 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_44.json',{onEachFeature: popUp});
+    var geojsonda45 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_45.json',{onEachFeature: popUp});
+    var geojsonda46 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_46.json',{onEachFeature: popUp});
+    var geojsonda47 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_47.json',{onEachFeature: popUp});
+    var geojsonda48 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_48.json',{onEachFeature: popUp});
+    var geojsonda49 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_49.json',{onEachFeature: popUp});
+    var geojsonda50 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_50.json',{onEachFeature: popUp});
+    var geojsonda51 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_51.json',{onEachFeature: popUp});
+    var geojsonda52 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_52.json',{onEachFeature: popUp});
+    var geojsonda53 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_53.json',{onEachFeature: popUp});
+    var geojsonda54 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_54.json',{onEachFeature: popUp});
+    var geojsonda55 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_55.json',{onEachFeature: popUp});
+    var geojsonda56 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_56.json',{onEachFeature: popUp});
+    var geojsonda57 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_57.json',{onEachFeature: popUp});
+    var geojsonda58 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_58.json',{onEachFeature: popUp});
+    var geojsonda59 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_59.json',{onEachFeature: popUp});
+    var geojsonda60 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_60.json',{onEachFeature: popUp});
+    var geojsonda61 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_61.json',{onEachFeature: popUp});
+    var geojsonda62 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_62.json',{onEachFeature: popUp});
+    var geojsonda63 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_63.json',{onEachFeature: popUp});
+    var geojsonda64 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_64.json',{onEachFeature: popUp});
+    var geojsonda65 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_65.json',{onEachFeature: popUp});
+    var geojsonda66 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_66.json',{onEachFeature: popUp});
+    var geojsonda67 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_67.json',{onEachFeature: popUp});
+    var geojsonda68 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_68.json',{onEachFeature: popUp});
+    var geojsonda69 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_69.json',{onEachFeature: popUp});
+    var geojsonda70 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_70.json',{onEachFeature: popUp});
+    var geojsonda71 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_71.json',{onEachFeature: popUp});
+    var geojsonda72 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_72.json',{onEachFeature: popUp});
+    var geojsonda73 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_73.json',{onEachFeature: popUp});
+    var geojsonda74 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_74.json',{onEachFeature: popUp});
+    var geojsonda75 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_75.json',{onEachFeature: popUp});
+    var geojsonda76 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_76.json',{onEachFeature: popUp});
+    var geojsonda77 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_77.json',{onEachFeature: popUp});
+    var geojsonda78 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_78.json',{onEachFeature: popUp});
+    var geojsonda79 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_79.json',{onEachFeature: popUp});
+    var geojsonda80 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_80.json',{onEachFeature: popUp});
+    var geojsonda81 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_81.json',{onEachFeature: popUp});
+    var geojsonda82 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_82.json',{onEachFeature: popUp});
+    var geojsonda83 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_83.json',{onEachFeature: popUp});
+    var geojsonda84 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_84.json',{onEachFeature: popUp});
+    var geojsonda85 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_85.json',{onEachFeature: popUp});
+    var geojsonda86 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_86.json',{onEachFeature: popUp});
+    var geojsonda87 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_87.json',{onEachFeature: popUp});
+    var geojsonda88 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_88.json',{onEachFeature: popUp});
+    var geojsonda89 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_89.json',{onEachFeature: popUp});
+    var geojsonda90 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_90.json',{onEachFeature: popUp});
+    var geojsonda91 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_91.json',{onEachFeature: popUp});
+    var geojsonda92 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_92.json',{onEachFeature: popUp});
+    var geojsonda93 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_93.json',{onEachFeature: popUp});
+    var geojsonda94 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_94.json',{onEachFeature: popUp});
+    var geojsonda95 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_95.json',{onEachFeature: popUp});
+    var geojsonda96 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_96.json',{onEachFeature: popUp});
+    var geojsonda97 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_97.json',{onEachFeature: popUp});
+    var geojsonda98 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_98.json',{onEachFeature: popUp});
+    var geojsonda99 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_99.json',{onEachFeature: popUp});
+    var geojsonda100 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_100.json',{onEachFeature: popUp});
+    var geojsonda101 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_101.json',{onEachFeature: popUp});
+    var geojsonda102 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_102.json',{onEachFeature: popUp});
+    var geojsonda103 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_103.json',{onEachFeature: popUp});
+    var geojsonda104 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_104.json',{onEachFeature: popUp});
+    var geojsonda105 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_105.json',{onEachFeature: popUp});
+    var geojsonda106 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_106.json',{onEachFeature: popUp});
+    var geojsonda107 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_107.json',{onEachFeature: popUp});
+    var geojsonda108 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_108.json',{onEachFeature: popUp});
+    var geojsonda109 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_109.json',{onEachFeature: popUp});
+    var geojsonda110 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_110.json',{onEachFeature: popUp});
+    var geojsonda111 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_111.json',{onEachFeature: popUp});
+    var geojsonda112 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_112.json',{onEachFeature: popUp});
+    var geojsonda113 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_113.json',{onEachFeature: popUp});
+    var geojsonda114 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_114.json',{onEachFeature: popUp});
+    var geojsonda115 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_115.json',{onEachFeature: popUp});
+    var geojsonda116 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_116.json',{onEachFeature: popUp});
+    var geojsonda117 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_117.json',{onEachFeature: popUp});
+    var geojsonda118 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_118.json',{onEachFeature: popUp});
+    var geojsonda119 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_119.json',{onEachFeature: popUp});
+    var geojsonda120 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_120.json',{onEachFeature: popUp});
+    var geojsonda121 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_121.json',{onEachFeature: popUp});
+    var geojsonda122 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_122.json',{onEachFeature: popUp});
+    var geojsonda123 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_123.json',{onEachFeature: popUp});
+    var geojsonda124 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_124.json',{onEachFeature: popUp});
+    var geojsonda125 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_125.json',{onEachFeature: popUp});
+    var geojsonda126 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_126.json',{onEachFeature: popUp});
+    var geojsonda127 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_127.json',{onEachFeature: popUp});
+    var geojsonda128 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_128.json',{onEachFeature: popUp});
+    var geojsonda129 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_129.json',{onEachFeature: popUp});
+    var geojsonda130 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_130.json',{onEachFeature: popUp});
+    var geojsonda131 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_131.json',{onEachFeature: popUp});
+    var geojsonda132 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_132.json',{onEachFeature: popUp});
+    var geojsonda133 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_133.json',{onEachFeature: popUp});
+    var geojsonda134 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_134.json',{onEachFeature: popUp});
+    var geojsonda135 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_135.json',{onEachFeature: popUp});
+    var geojsonda136 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_136.json',{onEachFeature: popUp});
+    var geojsonda137 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_137.json',{onEachFeature: popUp});
+    var geojsonda138 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_138.json',{onEachFeature: popUp});
+    var geojsonda139 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_139.json',{onEachFeature: popUp});
+    var geojsonda140 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_140.json',{onEachFeature: popUp});
+    var geojsonda141 = new L.GeoJSON.AJAX('http://localhost:4000/ancienne_141.json',{onEachFeature: popUp});
+
+
+    var geojsondat1 = new L.GeoJSON.AJAX('http://localhost:4000/extension_1.json',{onEachFeature: popUp});
+    var geojsondat2 = new L.GeoJSON.AJAX('http://localhost:4000/extension_2.json',{onEachFeature: popUp});
+    var geojsondat3 = new L.GeoJSON.AJAX('http://localhost:4000/extension_3.json',{onEachFeature: popUp});
+    var geojsondat4 = new L.GeoJSON.AJAX('http://localhost:4000/extension_4.json',{onEachFeature: popUp});
+    var geojsondat5 = new L.GeoJSON.AJAX('http://localhost:4000/extension_5.json',{onEachFeature: popUp});
+    var geojsondat6 = new L.GeoJSON.AJAX('http://localhost:4000/extension_6.json',{onEachFeature: popUp});
+    var geojsondat7 = new L.GeoJSON.AJAX('http://localhost:4000/extension_7.json',{onEachFeature: popUp});
+    var geojsondat8 = new L.GeoJSON.AJAX('http://localhost:4000/extension_8.json',{onEachFeature: popUp});
+    var geojsondat9 = new L.GeoJSON.AJAX('http://localhost:4000/extension_9.json',{onEachFeature: popUp});
+    var geojsondat10 = new L.GeoJSON.AJAX('http://localhost:4000/extension_10.json',{onEachFeature: popUp});
+    var geojsondat11 = new L.GeoJSON.AJAX('http://localhost:4000/extension_11.json',{onEachFeature: popUp});
+    var geojsondat12 = new L.GeoJSON.AJAX('http://localhost:4000/extension_12.json',{onEachFeature: popUp});
+    var geojsondat13 = new L.GeoJSON.AJAX('http://localhost:4000/extension_13.json',{onEachFeature: popUp});
+    var geojsondat14 = new L.GeoJSON.AJAX('http://localhost:4000/extension_14.json',{onEachFeature: popUp});
+    var geojsondat15 = new L.GeoJSON.AJAX('http://localhost:4000/extension_15.json',{onEachFeature: popUp});
+    var geojsondat16 = new L.GeoJSON.AJAX('http://localhost:4000/extension_16.json',{onEachFeature: popUp});
+    var geojsondat17 = new L.GeoJSON.AJAX('http://localhost:4000/extension_17.json',{onEachFeature: popUp});
+    var geojsondat18 = new L.GeoJSON.AJAX('http://localhost:4000/extension_18.json',{onEachFeature: popUp});
+    var geojsondat19 = new L.GeoJSON.AJAX('http://localhost:4000/extension_19.json',{onEachFeature: popUp});
+    var geojsondat20 = new L.GeoJSON.AJAX('http://localhost:4000/extension_20.json',{onEachFeature: popUp});
+    var geojsondat21 = new L.GeoJSON.AJAX('http://localhost:4000/extension_21.json',{onEachFeature: popUp});
+    var geojsondat22 = new L.GeoJSON.AJAX('http://localhost:4000/extension_22.json',{onEachFeature: popUp});
+    var geojsondat23 = new L.GeoJSON.AJAX('http://localhost:4000/extension_23.json',{onEachFeature: popUp});
+    var geojsondat24 = new L.GeoJSON.AJAX('http://localhost:4000/extension_24.json',{onEachFeature: popUp});
+    var geojsondat25 = new L.GeoJSON.AJAX('http://localhost:4000/extension_25.json',{onEachFeature: popUp});
+    var geojsondat26 = new L.GeoJSON.AJAX('http://localhost:4000/extension_26.json',{onEachFeature: popUp});
+    var geojsondat27 = new L.GeoJSON.AJAX('http://localhost:4000/extension_27.json',{onEachFeature: popUp});
+    var geojsondat28 = new L.GeoJSON.AJAX('http://localhost:4000/extension_28.json',{onEachFeature: popUp});
+    var geojsondat29 = new L.GeoJSON.AJAX('http://localhost:4000/extension_29.json',{onEachFeature: popUp});
+    var geojsondat30 = new L.GeoJSON.AJAX('http://localhost:4000/extension_30.json',{onEachFeature: popUp});
+    var geojsondat31 = new L.GeoJSON.AJAX('http://localhost:4000/extension_31.json',{onEachFeature: popUp});
+    var geojsondat32 = new L.GeoJSON.AJAX('http://localhost:4000/extension_32.json',{onEachFeature: popUp});
+    var geojsondat33 = new L.GeoJSON.AJAX('http://localhost:4000/extension_33.json',{onEachFeature: popUp});
+    var geojsondat34 = new L.GeoJSON.AJAX('http://localhost:4000/extension_34.json',{onEachFeature: popUp});
+    var geojsondat35 = new L.GeoJSON.AJAX('http://localhost:4000/extension_35.json',{onEachFeature: popUp});
+    var geojsondat36 = new L.GeoJSON.AJAX('http://localhost:4000/extension_36.json',{onEachFeature: popUp});
+    var geojsondat37 = new L.GeoJSON.AJAX('http://localhost:4000/extension_37.json',{onEachFeature: popUp});
+    var geojsondat38 = new L.GeoJSON.AJAX('http://localhost:4000/extension_38.json',{onEachFeature: popUp});
+    var geojsondat39 = new L.GeoJSON.AJAX('http://localhost:4000/extension_39.json',{onEachFeature: popUp});
+    var geojsondat40 = new L.GeoJSON.AJAX('http://localhost:4000/extension_40.json',{onEachFeature: popUp});
+    var geojsondat41 = new L.GeoJSON.AJAX('http://localhost:4000/extension_41.json',{onEachFeature: popUp});
+    var geojsondat42 = new L.GeoJSON.AJAX('http://localhost:4000/extension_42.json',{onEachFeature: popUp});
+    var geojsondat43 = new L.GeoJSON.AJAX('http://localhost:4000/extension_43.json',{onEachFeature: popUp});
+    var geojsondat44 = new L.GeoJSON.AJAX('http://localhost:4000/extension_44.json',{onEachFeature: popUp});
+    var geojsondat45 = new L.GeoJSON.AJAX('http://localhost:4000/extension_45.json',{onEachFeature: popUp});
+    var geojsondat46 = new L.GeoJSON.AJAX('http://localhost:4000/extension_46.json',{onEachFeature: popUp});
+    var geojsondat47 = new L.GeoJSON.AJAX('http://localhost:4000/extension_47.json',{onEachFeature: popUp});
+    var geojsondat48 = new L.GeoJSON.AJAX('http://localhost:4000/extension_48.json',{onEachFeature: popUp});
+    var geojsondat49 = new L.GeoJSON.AJAX('http://localhost:4000/extension_49.json',{onEachFeature: popUp});
+    var geojsondat50 = new L.GeoJSON.AJAX('http://localhost:4000/extension_50.json',{onEachFeature: popUp});
+    var geojsondat51 = new L.GeoJSON.AJAX('http://localhost:4000/extension_51.json',{onEachFeature: popUp});
+    var geojsondat52 = new L.GeoJSON.AJAX('http://localhost:4000/extension_52.json',{onEachFeature: popUp});
+    var geojsondat53 = new L.GeoJSON.AJAX('http://localhost:4000/extension_53.json',{onEachFeature: popUp});
+    var geojsondat54 = new L.GeoJSON.AJAX('http://localhost:4000/extension_54.json',{onEachFeature: popUp});
+    var geojsondat55 = new L.GeoJSON.AJAX('http://localhost:4000/extension_55.json',{onEachFeature: popUp});
+    var geojsondat56 = new L.GeoJSON.AJAX('http://localhost:4000/extension_56.json',{onEachFeature: popUp});
+    var geojsondat57 = new L.GeoJSON.AJAX('http://localhost:4000/extension_57.json',{onEachFeature: popUp});
+    var geojsondat58 = new L.GeoJSON.AJAX('http://localhost:4000/extension_58.json',{onEachFeature: popUp});
+    var geojsondat59 = new L.GeoJSON.AJAX('http://localhost:4000/extension_59.json',{onEachFeature: popUp});
+    var geojsondat60 = new L.GeoJSON.AJAX('http://localhost:4000/extension_60.json',{onEachFeature: popUp});
+    var geojsondat61 = new L.GeoJSON.AJAX('http://localhost:4000/extension_61.json',{onEachFeature: popUp});
+    var geojsondat62 = new L.GeoJSON.AJAX('http://localhost:4000/extension_62.json',{onEachFeature: popUp});
+    var geojsondat63 = new L.GeoJSON.AJAX('http://localhost:4000/extension_63.json',{onEachFeature: popUp});
+    var geojsondat64 = new L.GeoJSON.AJAX('http://localhost:4000/extension_64.json',{onEachFeature: popUp});
+    var geojsondat65 = new L.GeoJSON.AJAX('http://localhost:4000/extension_65.json',{onEachFeature: popUp});
+    var geojsondat66 = new L.GeoJSON.AJAX('http://localhost:4000/extension_66.json',{onEachFeature: popUp});
+    var geojsondat67 = new L.GeoJSON.AJAX('http://localhost:4000/extension_67.json',{onEachFeature: popUp});
+    var geojsondat68 = new L.GeoJSON.AJAX('http://localhost:4000/extension_68.json',{onEachFeature: popUp});
+    var geojsondat69 = new L.GeoJSON.AJAX('http://localhost:4000/extension_69.json',{onEachFeature: popUp});
+    var geojsondat70 = new L.GeoJSON.AJAX('http://localhost:4000/extension_70.json',{onEachFeature: popUp});
+    var geojsondat71 = new L.GeoJSON.AJAX('http://localhost:4000/extension_71.json',{onEachFeature: popUp});
+    var geojsondat72 = new L.GeoJSON.AJAX('http://localhost:4000/extension_72.json',{onEachFeature: popUp});
+    var geojsondat73 = new L.GeoJSON.AJAX('http://localhost:4000/extension_73.json',{onEachFeature: popUp});
+    var geojsondat74 = new L.GeoJSON.AJAX('http://localhost:4000/extension_74.json',{onEachFeature: popUp});
+    var geojsondat75 = new L.GeoJSON.AJAX('http://localhost:4000/extension_75.json',{onEachFeature: popUp});
+    var geojsondat76 = new L.GeoJSON.AJAX('http://localhost:4000/extension_76.json',{onEachFeature: popUp});
+    var geojsondat77 = new L.GeoJSON.AJAX('http://localhost:4000/extension_77.json',{onEachFeature: popUp});
+    var geojsondat78 = new L.GeoJSON.AJAX('http://localhost:4000/extension_78.json',{onEachFeature: popUp});
+    var geojsondat79 = new L.GeoJSON.AJAX('http://localhost:4000/extension_79.json',{onEachFeature: popUp});
+    var geojsondat80 = new L.GeoJSON.AJAX('http://localhost:4000/extension_80.json',{onEachFeature: popUp});
+    var geojsondat81 = new L.GeoJSON.AJAX('http://localhost:4000/extension_81.json',{onEachFeature: popUp});
+    var geojsondat82 = new L.GeoJSON.AJAX('http://localhost:4000/extension_82.json',{onEachFeature: popUp});
+    var geojsondat83 = new L.GeoJSON.AJAX('http://localhost:4000/extension_83.json',{onEachFeature: popUp});
+    var geojsondat84 = new L.GeoJSON.AJAX('http://localhost:4000/extension_84.json',{onEachFeature: popUp});
+    var geojsondat85 = new L.GeoJSON.AJAX('http://localhost:4000/extension_85.json',{onEachFeature: popUp});
+    var geojsondat86 = new L.GeoJSON.AJAX('http://localhost:4000/extension_86.json',{onEachFeature: popUp});
+    var geojsondat87 = new L.GeoJSON.AJAX('http://localhost:4000/extension_87.json',{onEachFeature: popUp});
+    var geojsondat88 = new L.GeoJSON.AJAX('http://localhost:4000/extension_88.json',{onEachFeature: popUp});
+    var geojsondat89 = new L.GeoJSON.AJAX('http://localhost:4000/extension_89.json',{onEachFeature: popUp});
+    var geojsondat90 = new L.GeoJSON.AJAX('http://localhost:4000/extension_90.json',{onEachFeature: popUp});
+    var geojsondat91 = new L.GeoJSON.AJAX('http://localhost:4000/extension_91.json',{onEachFeature: popUp});
+    var geojsondat92 = new L.GeoJSON.AJAX('http://localhost:4000/extension_92.json',{onEachFeature: popUp});
+    var geojsondat93 = new L.GeoJSON.AJAX('http://localhost:4000/extension_93.json',{onEachFeature: popUp});
+    var geojsondat94 = new L.GeoJSON.AJAX('http://localhost:4000/extension_94.json',{onEachFeature: popUp});
+    var geojsondat95 = new L.GeoJSON.AJAX('http://localhost:4000/extension_95.json',{onEachFeature: popUp});
+    var geojsondat96 = new L.GeoJSON.AJAX('http://localhost:4000/extension_96.json',{onEachFeature: popUp});
+    var geojsondat97 = new L.GeoJSON.AJAX('http://localhost:4000/extension_97.json',{onEachFeature: popUp});
+    var geojsondat98 = new L.GeoJSON.AJAX('http://localhost:4000/extension_98.json',{onEachFeature: popUp});
+    var geojsondat99 = new L.GeoJSON.AJAX('http://localhost:4000/extension_99.json',{onEachFeature: popUp});
+    var geojsondat100 = new L.GeoJSON.AJAX('http://localhost:4000/extension_100.json',{onEachFeature: popUp});
+    var geojsondat101 = new L.GeoJSON.AJAX('http://localhost:4000/extension_101.json',{onEachFeature: popUp});
+    var geojsondat102 = new L.GeoJSON.AJAX('http://localhost:4000/extension_102.json',{onEachFeature: popUp});
+    var geojsondat103 = new L.GeoJSON.AJAX('http://localhost:4000/extension_103.json',{onEachFeature: popUp});
+    var geojsondat104 = new L.GeoJSON.AJAX('http://localhost:4000/extension_104.json',{onEachFeature: popUp});
+    var geojsondat105 = new L.GeoJSON.AJAX('http://localhost:4000/extension_105.json',{onEachFeature: popUp});
+    var geojsondat106 = new L.GeoJSON.AJAX('http://localhost:4000/extension_106.json',{onEachFeature: popUp});
+    var geojsondat107 = new L.GeoJSON.AJAX('http://localhost:4000/extension_107.json',{onEachFeature: popUp});
+    var geojsondat108 = new L.GeoJSON.AJAX('http://localhost:4000/extension_108.json',{onEachFeature: popUp});
+    var geojsondat109 = new L.GeoJSON.AJAX('http://localhost:4000/extension_109.json',{onEachFeature: popUp});
+    var geojsondat110 = new L.GeoJSON.AJAX('http://localhost:4000/extension_110.json',{onEachFeature: popUp});
+    var geojsondat111 = new L.GeoJSON.AJAX('http://localhost:4000/extension_111.json',{onEachFeature: popUp});
+    var geojsondat112 = new L.GeoJSON.AJAX('http://localhost:4000/extension_112.json',{onEachFeature: popUp});
+    var geojsondat113 = new L.GeoJSON.AJAX('http://localhost:4000/extension_113.json',{onEachFeature: popUp});
+    var geojsondat114 = new L.GeoJSON.AJAX('http://localhost:4000/extension_114.json',{onEachFeature: popUp});
+    var geojsondat115 = new L.GeoJSON.AJAX('http://localhost:4000/extension_115.json',{onEachFeature: popUp});
+    var geojsondat116 = new L.GeoJSON.AJAX('http://localhost:4000/extension_116.json',{onEachFeature: popUp});
+    var geojsondat117 = new L.GeoJSON.AJAX('http://localhost:4000/extension_117.json',{onEachFeature: popUp});
+    var geojsondat118 = new L.GeoJSON.AJAX('http://localhost:4000/extension_118.json',{onEachFeature: popUp});
+    var geojsondat119 = new L.GeoJSON.AJAX('http://localhost:4000/extension_119.json',{onEachFeature: popUp});
+    var geojsondat120 = new L.GeoJSON.AJAX('http://localhost:4000/extension_120.json',{onEachFeature: popUp});
+    var geojsondat121 = new L.GeoJSON.AJAX('http://localhost:4000/extension_121.json',{onEachFeature: popUp});
+    var geojsondat122 = new L.GeoJSON.AJAX('http://localhost:4000/extension_122.json',{onEachFeature: popUp});
+    var geojsondat123 = new L.GeoJSON.AJAX('http://localhost:4000/extension_123.json',{onEachFeature: popUp});
+    var geojsondat124 = new L.GeoJSON.AJAX('http://localhost:4000/extension_124.json',{onEachFeature: popUp});
+    var geojsondat125 = new L.GeoJSON.AJAX('http://localhost:4000/extension_125.json',{onEachFeature: popUp});
+    var geojsondat126 = new L.GeoJSON.AJAX('http://localhost:4000/extension_126.json',{onEachFeature: popUp});
+    var geojsondat127 = new L.GeoJSON.AJAX('http://localhost:4000/extension_127.json',{onEachFeature: popUp});
+    var geojsondat128 = new L.GeoJSON.AJAX('http://localhost:4000/extension_128.json',{onEachFeature: popUp});
+    var geojsondat129 = new L.GeoJSON.AJAX('http://localhost:4000/extension_129.json',{onEachFeature: popUp});
+    var geojsondat130 = new L.GeoJSON.AJAX('http://localhost:4000/extension_130.json',{onEachFeature: popUp});
+    var geojsondat131 = new L.GeoJSON.AJAX('http://localhost:4000/extension_131.json',{onEachFeature: popUp});
+    var geojsondat132 = new L.GeoJSON.AJAX('http://localhost:4000/extension_132.json',{onEachFeature: popUp});
+    var geojsondat133 = new L.GeoJSON.AJAX('http://localhost:4000/extension_133.json',{onEachFeature: popUp});
+    var geojsondat134 = new L.GeoJSON.AJAX('http://localhost:4000/extension_134.json',{onEachFeature: popUp});
+    var geojsondat135 = new L.GeoJSON.AJAX('http://localhost:4000/extension_135.json',{onEachFeature: popUp});
+    var geojsondat136 = new L.GeoJSON.AJAX('http://localhost:4000/extension_136.json',{onEachFeature: popUp});
+    var geojsondat137 = new L.GeoJSON.AJAX('http://localhost:4000/extension_137.json',{onEachFeature: popUp});
+    var geojsondat138 = new L.GeoJSON.AJAX('http://localhost:4000/extension_138.json',{onEachFeature: popUp});
+    var geojsondat139 = new L.GeoJSON.AJAX('http://localhost:4000/extension_139.json',{onEachFeature: popUp});
+    var geojsondat140 = new L.GeoJSON.AJAX('http://localhost:4000/extension_140.json',{onEachFeature: popUp});
+    var geojsondat141 = new L.GeoJSON.AJAX('http://localhost:4000/extension_141.json',{onEachFeature: popUp});
+    var geojsondat142 = new L.GeoJSON.AJAX('http://localhost:4000/extension_142.json',{onEachFeature: popUp});
+    var geojsondat143 = new L.GeoJSON.AJAX('http://localhost:4000/extension_143.json',{onEachFeature: popUp});
+    var geojsondat144 = new L.GeoJSON.AJAX('http://localhost:4000/extension_144.json',{onEachFeature: popUp});
+    var geojsondat145 = new L.GeoJSON.AJAX('http://localhost:4000/extension_145.json',{onEachFeature: popUp});
+    var geojsondat146 = new L.GeoJSON.AJAX('http://localhost:4000/extension_146.json',{onEachFeature: popUp});
+    var geojsondat147 = new L.GeoJSON.AJAX('http://localhost:4000/extension_147.json',{onEachFeature: popUp});
+    var geojsondat148 = new L.GeoJSON.AJAX('http://localhost:4000/extension_148.json',{onEachFeature: popUp});
+    var geojsondat149 = new L.GeoJSON.AJAX('http://localhost:4000/extension_149.json',{onEachFeature: popUp});
+    var geojsondat150 = new L.GeoJSON.AJAX('http://localhost:4000/extension_150.json',{onEachFeature: popUp});
+    var geojsondat151 = new L.GeoJSON.AJAX('http://localhost:4000/extension_151.json',{onEachFeature: popUp});
+    var geojsondat152 = new L.GeoJSON.AJAX('http://localhost:4000/extension_152.json',{onEachFeature: popUp});
+    var geojsondat153 = new L.GeoJSON.AJAX('http://localhost:4000/extension_153.json',{onEachFeature: popUp});
+    var geojsondat154 = new L.GeoJSON.AJAX('http://localhost:4000/extension_154.json',{onEachFeature: popUp});
+    var geojsondat155 = new L.GeoJSON.AJAX('http://localhost:4000/extension_155.json',{onEachFeature: popUp});
+    var geojsondat156 = new L.GeoJSON.AJAX('http://localhost:4000/extension_156.json',{onEachFeature: popUp});
+    var geojsondat157 = new L.GeoJSON.AJAX('http://localhost:4000/extension_157.json',{onEachFeature: popUp});
+    var geojsondat158 = new L.GeoJSON.AJAX('http://localhost:4000/extension_158.json',{onEachFeature: popUp});
+    var geojsondat159 = new L.GeoJSON.AJAX('http://localhost:4000/extension_159.json',{onEachFeature: popUp});
+    var geojsondat160 = new L.GeoJSON.AJAX('http://localhost:4000/extension_160.json',{onEachFeature: popUp});
+    var geojsondat161 = new L.GeoJSON.AJAX('http://localhost:4000/extension_161.json',{onEachFeature: popUp});
+    var geojsondat162 = new L.GeoJSON.AJAX('http://localhost:4000/extension_162.json',{onEachFeature: popUp});
+    var geojsondat163 = new L.GeoJSON.AJAX('http://localhost:4000/extension_163.json',{onEachFeature: popUp});
+    var geojsondat164 = new L.GeoJSON.AJAX('http://localhost:4000/extension_164.json',{onEachFeature: popUp});
+    // var tab = L.layerGroup([geojsondata]);
+
+        //tab.push(geojsondata);
+
+
+        //geojsondata.addTo(map);
 
         //geojsondata.refresh('http://localhost:4000/algeria_state_' + i + '.json',{onEachFeature: popUp});
-    }
+   // }
+   // console.log(tab.length)
+
+   var geojsondatak = new L.GeoJSON.AJAX('http://localhost:4000/zone_ind_3.json',{onEachFeature: popUp});
+   var cities = new L.GeoJSON.AJAX('http://localhost:4000/zone_ind_4.json',{onEachFeature: popUp});
+  // var geojsondak = new L.GeoJSON.AJAX('http://localhost:4000/zone_ind_5.json',{onEachFeature: popUp});
+   //var geojsonk = new L.GeoJSON.AJAX('http://localhost:4000/zone_ind_6.json',{onEachFeature: popUp});
+
+
+    var geojsonk = L.layerGroup([geojsondata1,geojsondata2,geojsondata3,geojsondata4,geojsondata5,geojsondata6,geojsondata7,geojsondata8,geojsondata9,geojsondata10,geojsondata11,geojsondata12,
+        geojsondata13,geojsondata14,geojsondata15,geojsondata16,geojsondata17,geojsondata18,geojsondata19,geojsondata20,geojsondata21,geojsondata22,geojsondata23,geojsondata24,geojsondata25
+        ,geojsondata26,geojsondata27,geojsondata28,geojsondata29,geojsondata30,geojsondata31,geojsondata32,geojsondata33,geojsondata34,geojsondata35,geojsondata36,geojsondata37,geojsondata38
+        ,geojsondata39,geojsondata40,geojsondata41,geojsondata42,geojsondata43,geojsondata44,geojsondata45,geojsondata46,geojsondata47,geojsondata48,geojsondata49,geojsondata50,geojsondata51
+        ,geojsondata52,geojsondata53,geojsondata54,geojsondata55,geojsondata56,geojsondata57,geojsondata58,geojsondata59,geojsondata60,geojsondata61,geojsondata62,geojsondata63,geojsondata64
+        ,geojsondata65,geojsondata66,geojsondata67,geojsondata68,geojsondata69,geojsondata70,geojsondata71,geojsondata72,geojsondata73,geojsondata74,geojsondata75,geojsondata76,geojsondata77
+        ,geojsondata78,geojsondata79,geojsondata80,geojsondata81,geojsondata82,geojsondata83,geojsondata84,geojsondata85,geojsondata86,geojsondata87,geojsondata88,geojsondata89,geojsondata90
+        ,geojsondata91,geojsondata92,geojsondata93,geojsondata94]);
+
+    var geojsondak = L.layerGroup([geojsonda1,geojsonda2,geojsonda3,geojsonda4,geojsonda5,geojsonda6,geojsonda7,geojsonda8,geojsonda9,geojsonda10,geojsonda11,geojsonda12,
+        geojsonda13,geojsonda14,geojsonda15,geojsonda16,geojsonda17,geojsonda18,geojsonda19,geojsonda20,geojsonda21,geojsonda22,geojsonda23,geojsonda24,geojsonda25,geojsonda26
+        ,geojsonda27,geojsonda28,geojsonda29,geojsonda30,geojsonda31,geojsonda32,geojsonda33,geojsonda34,geojsonda35,geojsonda36,geojsonda37,geojsonda38,geojsonda39
+        ,geojsonda40,geojsonda41,geojsonda42,geojsonda43,geojsonda44,geojsonda45,geojsonda46,geojsonda47,geojsonda48,geojsonda49,geojsonda50,geojsonda51,geojsonda52
+        ,geojsonda53,geojsonda54,geojsonda55,geojsonda56,geojsonda57,geojsonda58,geojsonda59,geojsonda60,geojsonda61,geojsonda62,geojsonda63,geojsonda64,geojsonda65
+        ,geojsonda66,geojsonda67,geojsonda68,geojsonda69,geojsonda70,geojsonda71,geojsonda72,geojsonda73,geojsonda74,geojsonda75,geojsonda76,geojsonda77,geojsonda78
+        ,geojsonda79,geojsonda80,geojsonda81,geojsonda82,geojsonda83,geojsonda84,geojsonda85,geojsonda86,geojsonda87,geojsonda88,geojsonda89,geojsonda90,geojsonda91
+        ,geojsonda92,geojsonda93,geojsonda94,geojsonda95,geojsonda96,geojsonda97,geojsonda98,geojsonda99,geojsonda100,geojsonda101,geojsonda102,geojsonda103,geojsonda104
+        ,geojsonda105,geojsonda106,geojsonda107,geojsonda108,geojsonda109,geojsonda110,geojsonda111,geojsonda112,geojsonda113,geojsonda114,geojsonda115,geojsonda116,geojsonda117
+        ,geojsonda118,geojsonda119,geojsonda120,geojsonda121,geojsonda122,geojsonda123,geojsonda124,geojsonda125,geojsonda126,geojsonda127,geojsonda128,geojsonda129,geojsonda130
+        ,geojsonda131,geojsonda132,geojsonda133,geojsonda134,geojsonda135,geojsonda136,geojsonda137,geojsonda138,geojsonda139,geojsonda140,geojsonda141]);
+
+    var geojsondatk = L.layerGroup([geojsondat1,geojsondat2,geojsondat3,geojsondat4,geojsondat5,geojsondat6,geojsondat7,geojsondat8,geojsondat9,geojsondat10,geojsondat11,geojsondat12,
+        geojsondat13,geojsondat14,geojsondat15,geojsondat16,geojsondat17,geojsondat18,geojsondat19,geojsondat20,geojsondat21,geojsondat22,geojsondat23,geojsondat24,geojsondat25,geojsondat26
+        ,geojsondat27,geojsondat28,geojsondat29,geojsondat30,geojsondat31,geojsondat32,geojsondat33,geojsondat34,geojsondat35,geojsondat36,geojsondat37,geojsondat38,geojsondat39
+        ,geojsondat40,geojsondat41,geojsondat42,geojsondat43,geojsondat44,geojsondat45,geojsondat46,geojsondat47,geojsondat48,geojsondat49,geojsondat50,geojsondat51,geojsondat52
+        ,geojsondat53,geojsondat54,geojsondat55,geojsondat56,geojsondat57,geojsondat58,geojsondat59,geojsondat60,geojsondat61,geojsondat62,geojsondat63,geojsondat64,geojsondat65
+        ,geojsondat66,geojsondat67,geojsondat68,geojsondat69,geojsondat70,geojsondat71,geojsondat72,geojsondat73,geojsondat74,geojsondat75,geojsondat76,geojsondat77,geojsondat78
+        ,geojsondat79,geojsondat80,geojsondat81,geojsondat82,geojsondat83,geojsondat84,geojsondat85,geojsondat86,geojsondat87,geojsondat88,geojsondat89,geojsondat90,geojsondat91
+        ,geojsondat92,geojsondat93,geojsondat94,geojsondat95,geojsondat96,geojsondat97,geojsondat98,geojsondat99,geojsondat100,geojsondat101,geojsondat102,geojsondat103,geojsondat104
+        ,geojsondat105,geojsondat106,geojsondat107,geojsondat108,geojsondat109,geojsondat110,geojsondat111,geojsondat112,geojsondat113,geojsondat114,geojsondat115,geojsondat116,geojsondat117
+        ,geojsondat118,geojsondat119,geojsondat120,geojsondat121,geojsondat122,geojsondat123,geojsondat124,geojsondat125,geojsondat126,geojsondat127,geojsondat128,geojsondat129,geojsondat130
+        ,geojsondat131,geojsondat132,geojsondat133,geojsondat134,geojsondat135,geojsondat136,geojsondat137,geojsondat138,geojsondat139,geojsondat140,geojsondat141,geojsondat142,geojsondat143
+        ,geojsondat144,geojsondat145,geojsondat146,geojsondat147,geojsondat148,geojsondat149,geojsondat150,geojsondat151,geojsondat152,geojsondat153,geojsondat154,geojsondat155,geojsondat156
+        ,geojsondat157,geojsondat158,geojsondat159,geojsondat160,geojsondat161,geojsondat162,geojsondat163,geojsondat164 ]);
+
+   var yes = {
+       "yes": cities,
+   };
+
+   var geo = {
+       "Ouled saber": geojsondatak,
+       "Extension": geojsondatk,
+       "Ancienne": geojsondak,
+       "El eulma": geojsonk
+
+   };
+
+
+   L.control.layers( yes,geo).addTo(map);
+
+   // L.Control.Measure().addTo(map);
+
+
     var arcgisOnline = L.esri.Geocoding.arcgisOnlineProvider();
 
     var searchControl = L.esri.Geocoding.geosearch({

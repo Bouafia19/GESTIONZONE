@@ -171,6 +171,8 @@ Rails.application.config.assets.precompile += %w( ZI_ANCIENNE/layers/layers.js )
 Rails.application.config.assets.precompile += %w( ZI_ANCIENNE/resources/qgis2web.js )
 Rails.application.config.assets.precompile += %w( ZI_ANCIENNE/resources/Autolinker.min.js )
 
+Rails.application.config.assets.precompile += %w( leaflet-measure.js )
+#Rails.application.config.assets.precompile += %w( leaflet-measure.scss )
 
 #web map
 #Rails.application.config.assets.precompile += %w( SETIF_INVEST/resources/css/ol.css )

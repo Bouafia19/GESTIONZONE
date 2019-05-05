@@ -8,17 +8,29 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-        <h2>S'identifier</h2>
-        <hr>
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+
+
+          <!-- Outer Row -->
+
+
+
+                  <!-- Nested Row within Card Body -->
+
+
+                        <div class="text-center">
+                          <h1 class="h4 text-gray-900 mb-4">Soyer le bienvenue</h1>
+                        </div>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "user"}) do |f| %>
           <div class="field">
             <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control form-control-user",placeholder: "Enter Email Address..." %>
           </div>
 <br>
           <div class="field">
             <%= f.label :password %><br />
-            <%= f.password_field :password, autocomplete: "current-password",class:"form-control" %>
+            <%= f.password_field :password, autocomplete: "current-password",class:"form-control form-control-user",placeholder: "Password" %>
           </div>
 <br>
           <% if devise_mapping.rememberable? -%>
@@ -29,21 +41,35 @@
           <% end -%>
 <br>
           <div class="actions">
-            <%= f.submit "Connexion",class:"btn btn-md btn-primary" %>
+            <%= f.submit "Connexion",class: "btn btn-primary btn-user btn-block" %>
           </div>
+          <hr>
+          <a href="https://mail.google.com/mail/u/0/#inbox" class="btn btn-google btn-user btn-block">
+            <i class="fab fa-google fa-fw"></i> Login with Google
+          </a>
+          <a href="https://web.facebook.com/?_rdc=1&_rdr" class="btn btn-facebook btn-user btn-block">
+            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+          </a>
         <% end %>
         <hr>
+        <div class="text-center">
+          <a class="small" href="forgot-password.html">Forgot Password?</a>
+        </div>
+        <div class="text-center">
+          <a class="small" href="register.html">Create an Account!</a>
+        </div>
         <%= render "devise/shared/links" %>
       </div>
-    </div>
 
+
+    </div>
     <!-- Modal footer -->
     <div class="modal-footer">
       <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
     </div>
-
   </div>
-</div>
+  </div>
+
 
 <!DOCTYPE html>
 <html lang="en">
