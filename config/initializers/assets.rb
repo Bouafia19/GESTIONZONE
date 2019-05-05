@@ -172,6 +172,7 @@ Rails.application.config.assets.precompile += %w( ZI_ANCIENNE/resources/qgis2web
 Rails.application.config.assets.precompile += %w( ZI_ANCIENNE/resources/Autolinker.min.js )
 
 Rails.application.config.assets.precompile += %w( leaflet-measure.js )
+
 #Rails.application.config.assets.precompile += %w( leaflet-measure.scss )
 
 #web map
@@ -190,6 +191,9 @@ Rails.application.config.assets.precompile += %w( leaflet-measure.js )
 #leaflet
 Rails.application.config.assets.precompile += %w( lib/leaflet/leaflet.css )
 Rails.application.config.assets.precompile += %w( lib/leaflet/leaflet.js )
+
+Rails.application.config.assets.precompile += %w( lib/Leaflet.draw.drag-src.js )
+Rails.application.config.assets.precompile += %w( lib/Leaflet.draw.drag.js )
 
 Rails.application.config.assets.precompile += %w( lib/leaflet.ajax.min.js )
 #Rails.application.config.assets.precompile += %w( lib/map.js )

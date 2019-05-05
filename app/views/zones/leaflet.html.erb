@@ -106,7 +106,18 @@ function popUp(features,layer) {
   </style>
 
   <%= javascript_include_tag('lib/leaflet.ajax.min.js') %>
+  <%#= javascript_include_tag('lib/Leaflet.draw.drag-src.js') %>
+  <%#= javascript_include_tag('lib/Leaflet.draw.drag.js') %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+        integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin=""/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.2/dist/leaflet.draw.css" />
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v2.0.1/leaflet-iiif.js"></script>
+  <script src="https://unpkg.com/leaflet-draw@1.0.2/dist/leaflet.draw.js"></script>
 </head>
 
 <body>
@@ -126,9 +137,7 @@ function popUp(features,layer) {
 </style>
 
 <div id="map"></div>
-<div id="info-pane" class="leaflet-bar chart-container">
-  <canvas id="chartCanvas"></canvas>
-</div>
+
 
 <div id="basemaps-wrapper" class="leaflet-bar">
   <select name="basemaps" id="basemaps" onChange="changeBasemap(basemaps)">
@@ -157,15 +166,37 @@ function popUp(features,layer) {
         center: [36.19112, 5.41373],
         zoom: 12,
         measureControl: true
+       // drawControl: true
 
     });
 
 
+    // Initialise the FeatureGroup to store editable layers
+    var drawnItems = new L.FeatureGroup();
+    map.addLayer(drawnItems);
 
+    // Initialise the draw control and pass it the FeatureGroup of editable layers
+    var drawControl = new L.Control.Draw({
+        edit: {
+            featureGroup: drawnItems
+        }
+    });
+
+    map.addControl(drawControl);
+
+    map.on(L.Draw.Event.CREATED, function (e) {
+        var type = e.layerType
+        var layer = e.layer;
+
+        // Do whatever else you need to. (save to db, add to map etc)
+
+        drawnItems.addLayer(layer);
+    });
    // L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     //    attribution: 'Map data &copy; OpenStreetMap contributors',
     //    maxZoom: 16,
     //}).addTo(map);
+
 
     function popUp(features,layer) {
         //layer.bindPopup(features => "id");
@@ -667,6 +698,15 @@ function popUp(features,layer) {
 
    // L.Control.Measure().addTo(map);
 
+    // add a marker in the given location
+
+
+    // Initialise the FeatureGroup to store editable layers
+
+
+
+
+
 
     var arcgisOnline = L.esri.Geocoding.arcgisOnlineProvider();
 
@@ -687,133 +727,8 @@ function popUp(features,layer) {
 
 
 
-    var treesFeatureLayer = L.esri.featureLayer({
-        url: 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Heritage_Trees_Portland/FeatureServer/0',
-    });
 
-    treesFeatureLayer.addTo(map);
 
-    // STEP 2: DEFINE A CHART
-    // this is a static scatterplot chart definition for now, but it will
-    // soon become dynamic by responding to map and feature layer events
-    var initialChartData = {
-        datasets: [{
-            label: 'Portland Heritage Trees',
-            // the data values are empty at this moment
-            // and will be updated dynamically below
-            data: []
-        }]
-    };
-
-    var chartOptions = {
-        scales: {
-            xAxes: [{
-                scaleLabel: {
-                    display: true,
-                    labelString: 'tree diameter'
-                },
-                ticks: {
-                    beginAtZero: true,
-                    max: 250,
-                    stepSize: 50
-                }
-            }],
-            yAxes: [{
-                scaleLabel: {
-                    display: true,
-                    labelString: 'tree height'
-                },
-                ticks: {
-                    beginAtZero: true,
-                    max: 250,
-                    stepSize: 50
-                }
-            }]
-        },
-        maintainAspectRatio: false,
-        // turn off animations during chart data updates
-        animation: {
-            duration: 0,
-        },
-        // see STEP 4 below
-        onHover: handleChartHover
-    };
-
-    var chart = new Chart('chartCanvas', {
-        type: 'scatter',
-        data: initialChartData,
-        options: chartOptions
-    });
-
-    // STEP 3: MAKE THE CHART DYNAMIC BY ESTABLISHING MAP-TO-CHART COMMUNICATION
-    // show in the scatterplot only the features in the map's current extent
-    // by handling several events from both the map and feature layer
-    map.on('zoom move', updateChart);
-    treesFeatureLayer.on('load', updateChart);
-
-    function updateChart() {
-        // reformat the features' attributes of interest into
-        // the data array format required by the Chart.js scatterplot
-        var scatterPlotDataArray = [];
-
-        treesFeatureLayer.eachActiveFeature(function(e) {
-            // loop over each active feature in the map extent and
-            // push an object into the scatterPlotDataArray in this format:
-
-            // {
-            //   x: diameter attribute value,
-            //   y: height attribute value,
-            //   featureId: unique ID for chart-to-map communication in STEP 4
-            // }
-
-            scatterPlotDataArray.push({
-                x: e.feature.properties.DIAMETER,
-                y: e.feature.properties.HEIGHT,
-                featureId: e.feature.id
-            });
-        });
-
-        // assign the new scatterPlotDataArray to the chart's data property
-        chart.data.datasets[0].data = scatterPlotDataArray;
-
-        // finally, instruct the chart to re-draw itself with the new data
-        chart.update();
-    }
-
-    // STEP 4 (OPTIONAL): ESTABLISH CHART-TO-MAP COMMUNICATION
-    // up until now the map and feature layer inform the chart what to render,
-    // but interactions with the chart can also influence the map contents
-    function handleChartHover(e) {
-        var chartHoverData = chart.getElementsAtEvent(e);
-
-        if (!chartHoverData.length) {
-            // if there were no data elements found when hovering over the chart,
-            // reset any previous styling overrides and return
-            treesFeatureLayer.eachFeature(function(e) {
-                e.setOpacity(1);
-                e.setZIndexOffset(0);
-            });
-
-            return;
-        }
-
-        // otherwise, bring attention to the features on the map
-        // that are currently being hovered over in the chart
-        var hoverFeatureIds = chartHoverData.map(function(datum) {
-            return chart.data.datasets[0].data[datum._index].featureId;
-        });
-
-        treesFeatureLayer.eachFeature(function(e, idx) {
-            if (
-                hoverFeatureIds.indexOf(e.feature.id) > -1
-            ) {
-                e.setOpacity(1);
-                e.setZIndexOffset(10000);
-            } else {
-                e.setOpacity(0.1);
-            }
-        });
-    }
     var layer = L.esri.basemapLayer('Imagery').addTo(map);
     var layerLabels;
 
