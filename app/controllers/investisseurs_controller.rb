@@ -38,7 +38,7 @@ class InvestisseursController < ApplicationController
     #params[:raison_sociale_francais] = nil
     @lots = Lot.where(['nom_zone LIKE ? AND class_activite LIKE ? AND type_lot LIKE ? AND superficie > ?', "%#{params[:nom_zone]}%", "%#{params[:class_activite]}%","%#{params[:type_lot]}%",params[:superficie]])
 
-    @investisseurs = Investisseur.where(['site LIKE ? AND secteur_activite LIKE ? AND commune LIKE ? AND montant_investissement > ?', "%#{params[:site]}%", "%#{params[:secteur_activite]}%","%#{params[:commune]}%",params[:montant_investissement]])
+    @investisseurs = Investisseur.where(['raison_sociale_francais LIKE ? AND site LIKE ? AND secteur_activite LIKE ? AND commune LIKE ? ', "%#{params[:raison_sociale_francais]}%","%#{params[:site]}%", "%#{params[:secteur_activite]}%","%#{params[:commune]}%"])
 
     respond_to do |format|
       format.html
@@ -89,6 +89,44 @@ class InvestisseursController < ApplicationController
       if @investisseur.update(investisseur_params)
 
         UserMailer.alert_email(current_user,@investisseur.raison_sociale_francais).deliver_now
+
+        require 'json'
+
+        case @investisseur.localisation_projet
+        when "ZI EL EULMA"
+          hash = JSON.parse(File.read("public/eulma_lors_#{@investisseur.idjson}.json"))
+
+          hash["properties"]["_R_socia_français"]  = @investisseur.raison_sociale_francais
+          File.open("public/eulma_lors_#{@investisseur.idjson}.json","w") do |f|
+            f.write(hash.to_json)
+          end
+        when "ZI ANCIENNE"
+          hash = JSON.parse(File.read("public/ancienne_#{@investisseur.idjson}.json"))
+
+          hash["properties"]["_R_socia_français"]  = @investisseur.raison_sociale_francais
+          File.open("public/ancienne_#{@investisseur.idjson}.json","w") do |f|
+            f.write(hash.to_json)
+          end
+        when "ZI EXTENSION"
+          hash = JSON.parse(File.read("public/extension_#{@investisseur.idjson}.json"))
+
+          hash["properties"]["_R_socia_français"]  = @investisseur.raison_sociale_francais
+          File.open("public/extension_#{@investisseur.idjson}.json","w") do |f|
+            f.write(hash.to_json)
+          end
+        when "OULED SABER"
+          hash = JSON.parse(File.read("public/saber_#{@investisseur.idjson}.json"))
+
+          hash["properties"]["_R_socia_français"]  = @investisseur.raison_sociale_francais
+          File.open("public/saber_#{@investisseur.idjson}.json","w") do |f|
+            f.write(hash.to_json)
+          end
+
+
+        end
+
+
+
         format.html { redirect_to @investisseur, notice: 'Investisseur was successfully updated.' }
         format.json { render :show, status: :ok, location: @investisseur }
       else

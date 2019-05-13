@@ -235,7 +235,43 @@
     <!-- Area Chart -->
 
       </div>
+  <div class="row" id="table_search" style="padding: 10px">
 
+    <% @investisseurs.each do |investisseur| %>
+
+      <div class="card text-center border-info shadow h-100 py-2 col-6">
+        <div class="card border-info shadow h-100 py-2">
+          <div class="card-header bg-info">
+            <strong>Investisseurs: <%= investisseur.raison_sociale_francais %></strong>
+          </div>
+
+          <div class="card-body">
+
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Num dossier: <%= investisseur.num_dossier %></li>
+              <li class="list-group-item">Date depot demande: <%= investisseur.date_depot_demande %></li>
+              <li class="list-group-item">Raison sociale arabe: <%= investisseur.raison_sociale_arabe %></li>
+              <li class="list-group-item">Nom prenom gerant arabe: <%= investisseur.nom_prenom_gerant_arabe %></li>
+              <li class="list-group-item">Raison sociale francais: <%= investisseur.raison_sociale_francais %></li>
+              <li class="list-group-item">Nom prenom gerant francais: <%= investisseur.nom_prenom_gerant_francais %></li>
+              <li class="list-group-item">Adresse: <%= investisseur.adresse %></li>
+              <li class="list-group-item">Num telephone: <%= investisseur.num_telephone %></li>
+              <li class="list-group-item">Fax: <%= investisseur.fax %></li>
+              <li class="list-group-item">Email: <%= investisseur.email %></li>
+              <li class="list-group-item">Intitule projet arabe: <%= investisseur.intitule_projet_arabe %></li>
+              <li class="list-group-item">Intitule projet francais: <%= investisseur.intitule_projet_francais %></li>
+              <li class="list-group-item">Secteur activite: <%= investisseur.secteur_activite %></li>
+
+            </ul>
+            <br>
+            <%= link_to 'Fiche Technique', investisseur ,class:"btn btn-success col-4"%>
+          </div>
+        </div>
+
+      </div>
+    <% end %>
+
+    <br></div>
 
 
     <!-- Pie Chart -->

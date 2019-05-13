@@ -61,7 +61,7 @@ namespace :gis_test_task do
      end
   end
 
-  desc "creates json for Eulma"
+  desc "creates json for Extension"
   task create_extension_json: :environment do
     require 'rgeo'
 
@@ -82,7 +82,7 @@ namespace :gis_test_task do
   end
 
 
-  desc "creates json for Eulma"
+  desc "creates json for Ancienne"
   task create_ancienne_json: :environment do
     require 'rgeo'
 
@@ -99,6 +99,26 @@ namespace :gis_test_task do
       hash = RGeo::GeoJSON.encode feature
       puts 'Writing JSON file'
       File.open("public/ancienne_#{s.id}.json", 'w') {|file| file.write hash.to_json}
+    end
+  end
+
+  desc "creates json for Saber"
+  task create_saber_json: :environment do
+    require 'rgeo'
+
+    puts 'Getting data for all Saber'
+    sabers = Saber.all
+
+    puts 'Creating RGeo factory'
+    factory = RGeo::GeoJSON::EntityFactory.instance
+
+    sabers.each do |s|
+      puts "Creating feature for #{s.id}"
+      feature = (factory.feature s.geom, s.r_socia_fr)
+      puts 'Generating hash'
+      hash = RGeo::GeoJSON.encode feature
+      puts 'Writing JSON file'
+      File.open("public/saber_#{s.id}.json", 'w') {|file| file.write hash.to_json}
     end
   end
 end

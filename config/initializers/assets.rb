@@ -171,7 +171,11 @@ Rails.application.config.assets.precompile += %w( ZI_ANCIENNE/layers/layers.js )
 Rails.application.config.assets.precompile += %w( ZI_ANCIENNE/resources/qgis2web.js )
 Rails.application.config.assets.precompile += %w( ZI_ANCIENNE/resources/Autolinker.min.js )
 
-Rails.application.config.assets.precompile += %w( leaflet-measure.js )
+Rails.application.config.assets.precompile += %w( lib/leaflet.measure.js )
+Rails.application.config.assets.precompile += %w( lib/leaflet.measure.css )
+
+#Rails.application.config.assets.precompile += %w( lib/leaflet-measure.js )
+#Rails.application.config.assets.precompile += %w( lib/leaflet-measure.css )
 
 #Rails.application.config.assets.precompile += %w( leaflet-measure.scss )
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_19_170111) do
+ActiveRecord::Schema.define(version: 2019_05_09_074054) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -293,6 +293,7 @@ ActiveRecord::Schema.define(version: 2019_04_19_170111) do
     t.string "document_content_type"
     t.bigint "document_file_size"
     t.datetime "document_updated_at"
+    t.integer "idjson"
   end
 
   create_table "lors", primary_key: "gid", id: :serial, force: :cascade do |t|
@@ -505,6 +506,15 @@ ActiveRecord::Schema.define(version: 2019_04_19_170111) do
     t.index ["geom"], name: "index_regions_on_geom", using: :gist
   end
 
+  create_table "sabers", force: :cascade do |t|
+    t.string "n_dossier"
+    t.string "r_socia_fr"
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["geom"], name: "index_sabers_on_geom", using: :gist
+  end
+
   create_table "sashes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -602,6 +612,68 @@ ActiveRecord::Schema.define(version: 2019_04_19_170111) do
     t.string "observatio", limit: 254
     t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
     t.index ["geom"], name: "zi_el_eulma_geom_idx", using: :gist
+  end
+
+  create_table "zi_ouled_saber", primary_key: "gid", id: :serial, force: :cascade do |t|
+    t.integer "objectid"
+    t.string "n°_de_lot", limit: 50
+    t.decimal "shape_leng"
+    t.decimal "shape_area"
+    t.integer "n_de_lot", limit: 2
+    t.string "n_dossier", limit: 254
+    t.date "d_dep_dema"
+    t.string "r_socia_ar", limit: 254
+    t.string "n_p_gerant", limit: 254
+    t.string "r_socia_fr", limit: 254
+    t.string "n_p_gera_1", limit: 254
+    t.string "adresse", limit: 254
+    t.string "n_tele", limit: 254
+    t.float "fax"
+    t.string "email", limit: 254
+    t.string "int_projet", limit: 254
+    t.string "int_proj_1", limit: 254
+    t.string "sect_activ", limit: 254
+    t.string "fil_indust", limit: 254
+    t.float "su_demand_"
+    t.float "mont_inves"
+    t.float "nomb_emplo"
+    t.string "d_examen_d", limit: 254
+    t.string "n_decision", limit: 254
+    t.float "n_de_lot_1"
+    t.float "su_octroye"
+    t.string "locali_pro", limit: 254
+    t.string "commune", limit: 254
+    t.string "site", limit: 254
+    t.string "p_droi_etu", limit: 254
+    t.string "n_arr_conc", limit: 254
+    t.date "d_arret_co"
+    t.string "mont_conce", limit: 254
+    t.date "dat_paiem"
+    t.string "n_act_conc", limit: 254
+    t.date "da_acte_co"
+    t.string "n_act_cess", limit: 254
+    t.date "dat_acte_c"
+    t.string "n_depot_pe", limit: 254
+    t.date "d_depot_do"
+    t.string "avis_servi", limit: 254
+    t.string "n_arrt_per", limit: 254
+    t.date "da_arrt_pe"
+    t.date "dat_depot_"
+    t.date "dat_approb"
+    t.date "dat_deci_c"
+    t.string "n_arrt_exp", limit: 254
+    t.date "dat_arrt_e"
+    t.string "n_depot_do", limit: 254
+    t.date "date_depot"
+    t.string "n_deci_and", limit: 254
+    t.float "taux_avanc"
+    t.float "taux_ava_1"
+    t.string "mise_en_se", limit: 254
+    t.float "emplois_re"
+    t.string "changem_st", limit: 254
+    t.string "observatio", limit: 254
+    t.geometry "geom", limit: {:srid=>4326, :type=>"multi_polygon"}
+    t.index ["geom"], name: "zi_ouled_saber_geom_idx", using: :gist
   end
 
   create_table "zi_setif_ancienne", primary_key: "gid", id: :serial, force: :cascade do |t|
