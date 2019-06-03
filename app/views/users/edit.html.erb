@@ -10,7 +10,7 @@
         <%= link_to 'Fiche Technique', @user,class:"btn btn-md btn-success" %> |
         <%= link_to 'Retour', users_path ,class:"btn btn-md btn-warning"%>
         <hr>
-        <%= form_for(@user) do |f| %>
+        <%= form_for(@user , html: {class: "user"}) do |f| %>
           <% if @user.errors.any? %>
             <div id="error_explanation">
               <h2><%= pluralize(user.errors.count, "error") %> prohibited this provider from being saved:</h2>
@@ -23,24 +23,24 @@
             </div>
           <% end %>
           <br>
-          <div class="col-4 field">
+          <div class="field" align="center">
             <%= f.label :name %>
-            <%= f.text_field :name, id: :user_name ,class:"form-control"%>
+            <%= f.text_field :name, id: :user_name ,class:"form-control form-control-lg col-4"%>
           </div>
           <br>
-          <div class="col-4 field">
+          <div class="field" align="center">
             <%= f.label :email %>
-            <%= f.text_field :email, id: :user_email ,class:"form-control"%>
+            <%= f.text_field :email, id: :user_email ,class:"form-control form-control-lg col-4"%>
           </div>
           <br>
-          <div class="col-4 field">
+          <div class="field" align="center">
             <%= f.label :role %><br />
-            <%= f.select :role, options_for_select([["Admin","admin"],["Utilisateur","utilisateur"],["Public","public"]]),{},class:"form-control"%>
+            <%= f.select :role, options_for_select([["Admin","admin"],["Utilisateur","utilisateur"],["Public","public"]]),{},class:"form-control form-control-lg col-4"%>
           </div>
           <br>
-          <div class="col-4 field">
+          <div class="field" align="center">
             <%= f.label :photo %>
-            <%= f.file_field :photo,class:"form-control" %>
+            <%= f.file_field :photo,class:"form-control form-control-lg col-4" %>
           </div>
           <hr>
           <div class="actions">

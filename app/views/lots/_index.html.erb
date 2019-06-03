@@ -18,7 +18,7 @@
   </thead>
 
   <tbody>
- <% paginate.each do |lot| %>
+ <% @sov.each do |lot| %>
     <%# paginate.min_by(type_zone: 'ZI') do |lot| %>
     <tr>
       <td><%= link_to 'Fiche Technique', lot ,class:"btn btn-md btn-success"%></td>

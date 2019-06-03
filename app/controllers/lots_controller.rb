@@ -24,6 +24,7 @@ class LotsController < ApplicationController
 =end
     datatable_paginate([:lot],['investisseur;type_lot'])
     @sot = Lot.where(nom_zone: "ZI ANCIENNE")
+    @sov = Lot.where(nom_zone: "ZI EXTENSION")
 
 
 

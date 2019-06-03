@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>GESTIONZONE</title>
@@ -76,12 +76,12 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Zones Industrielles:</h6>
-            <%= link_to "ZI Ancienne", zones_ancienne_path  ,class:"collapse-item"%>
-            <%= link_to "ZI Extension", zones_extension_path  ,class:"collapse-item"%>
-            <%= link_to "El Eulma", zones_el_eulma_path ,class:"collapse-item"%>
-            <%= link_to "Ouled Saber", zones_ouled_saber_path ,class:"collapse-item"%>
-            <%= link_to "Setif invest", zones_setif_inve_path ,class:"collapse-item"%>
-            <%= link_to "Leaflet", zones_leaflet_path ,class:"collapse-item"%>
+            <%#= link_to "ZI Ancienne", zones_ancienne_path  ,class:"collapse-item"%>
+            <%#= link_to "ZI Extension", zones_extension_path  ,class:"collapse-item"%>
+            <%= link_to "Carte Color", zones_el_eulma_path ,class:"collapse-item"%>
+            <%= link_to "Carte GIS", zones_ouled_saber_path ,class:"collapse-item"%>
+            <%#= link_to "Setif invest", zones_setif_inve_path ,class:"collapse-item"%>
+            <%= link_to "Carte SIG", zones_leaflet_path ,class:"collapse-item"%>
 
           </div>
         </div>
@@ -109,7 +109,7 @@
             <%= link_to 'ZONES ACTIVITES', zone_activites_path ,class:"collapse-item"%>
             <%= link_to 'PROM IMOBILIERES', promotion_immobilieres_path ,class:"collapse-item"%>
             <%= link_to 'Z ENTREPOT ACTIVITE', zone_entrepot_activites_path ,class:"collapse-item"%>
-            <%= link_to 'State', states_path ,class:"collapse-item"%>
+            <%#= link_to 'State', states_path ,class:"collapse-item"%>
             <% link_to 'UTILISATEURS', users_path ,class:"collapse-item"%>
 
 
@@ -158,16 +158,7 @@
           </button>
 
           <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-6 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <%= search_field_tag "search_champ",session[:data] ,{class:"form-control input-sm",placeholder:"Chercher investisseur",onKeyUp:"SelectSearch(id,'investisseurs','no result found')" }%>
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
-            </div>
-          </form>
+
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">

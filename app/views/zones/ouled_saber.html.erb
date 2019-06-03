@@ -1,5 +1,417 @@
 
 
+<title>My First Leaflet Map</title>
+
+<meta charset=utf-8 />
+<title>Searching feature layers</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+<!-- Load Leaflet from CDN -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""/>
+
+<!-- Load Esri Leaflet from CDN -->
+<script src="https://unpkg.com/esri-leaflet@2.2.4/dist/esri-leaflet.js"
+        integrity="sha512-tyPum7h2h36X52O2gz+Pe8z/3l+Y9S1yEUscbVs5r5aEY5dFmP1WWRY/WLLElnFHa+k1JBQZSCDGwEAnm2IxAQ=="
+        crossorigin=""></script>
+
+<!-- Load Esri Leaflet Geocoder from CDN -->
+<link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.2.14/dist/esri-leaflet-geocoder.css"
+      integrity="sha512-v5YmWLm8KqAAmg5808pETiccEohtt8rPVMGQ1jA6jqkWVydV5Cuz3nJ9fQ7ittSxvuqsvI9RSGfVoKPaAJZ/AQ=="
+      crossorigin="">
+<script src="https://unpkg.com/esri-leaflet-geocoder@2.2.14/dist/esri-leaflet-geocoder.js"
+        integrity="sha512-uK5jVwR81KVTGe8KpJa1QIN4n60TsSV8+DPbL5wWlYQvb0/nYNgSOg9dZG6ViQhwx/gaMszuWllTemL+K+IXjg=="
+        crossorigin=""></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+<style>
+  .chart-container {
+    height: 245px;
+    width: 245px;
+  }
+
+  #info-pane {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    z-index: 400;
+    padding: 1em;
+    background: white;
+  }
+</style>
+
+<style>
+  body { margin:0; padding:0; }
+  #map { position: absolute; top:0; bottom:0; right:0; left:0; }
+</style>
+
+
+<style>
+  #map { height: 800px; }
+</style>
+
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+      integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+      crossorigin=""/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.2/dist/leaflet.draw.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v2.0.1/leaflet-iiif.js"></script>
+<script src="https://unpkg.com/leaflet-draw@1.0.2/dist/leaflet.draw.js"></script>
+
+<script src="https://npmcdn.com/leaflet-geometryutil"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/gokertanrisever/leaflet-ruler/master/src/leaflet-ruler.css">
+<script src="https://cdn.rawgit.com/gokertanrisever/leaflet-ruler/master/src/leaflet-ruler.js"></script>
+
+
+<script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+
+
+
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+
+
+
+
+
+<%= javascript_include_tag('lib/leaflet.ajax.min.js') %>
+<%= javascript_include_tag('lib/leaflet.measure.js') %>
+
+<%= javascript_include_tag('lib/leaflet.browser.print.min.js') %>
+
+<%= javascript_include_tag('lib/leaflet-measure-path.js') %>
+<%= stylesheet_link_tag "lib/leaflet-measure-path.css" %>
+
+<%= stylesheet_link_tag "lib/leaflet.measure.css" %>
+
+
+
+<%= stylesheet_link_tag "lib/Control.Coordinates.css" %>
+<%= javascript_include_tag('lib/Control.Coordinates.js') %>
+<style>
+  #basemaps-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 50%;
+    z-index: 400;
+    background: white;
+    padding: 10px;
+  }
+  #basemaps {
+    margin-bottom: 5px;
+  }
+    .legend {background: white;line-height: 1.5em}
+    .legend i {width: 5em;float: left}
+</style>
+
+<div id="map"></div>
+
+<div id="basemaps-wrapper" class="leaflet-bar">
+  <select name="basemaps" id="basemaps" onChange="changeBasemap(basemaps)">
+    <option value="Topographic">Topographic</option>
+    <option value="Streets">Streets</option>
+    <option value="NationalGeographic">National Geographic</option>
+    <option value="Oceans">Oceans</option>
+    <option value="Gray">Gray</option>
+    <option value="DarkGray">Dark Gray</option>
+    <option value="Imagery">Imagery</option>
+    <option value="ImageryClarity">Imagery (Clarity)</option>
+    <option value="ImageryFirefly">Imagery (Firefly)</option>
+    <option value="ShadedRelief">Shaded Relief</option>
+    <option value="Physical">Physical</option>
+  </select>
+</div>
+
+
+
+<script>
+
+    var map = L.map('map',{
+        center: [36.19112, 5.41373],
+        zoom: 12,
+        fullscreenControl: true,
+        measureControl: true
+
+    });
+
+
+    var options = {
+        position: 'topleft',
+
+    };
+    L.control.ruler(options).addTo(map);
+
+
+    var c = new L.Control.Coordinates({
+        position: 'bottomright',
+
+    });
+
+    c.addTo(map);
+
+    map.on('click', function(e) {
+        c.setCoordinates(e);
+    });
+
+
+    // Initialise the FeatureGroup to store editable layers
+    var drawnItems = new L.FeatureGroup();
+    map.addLayer(drawnItems);
+
+    // Initialise the draw control and pass it the FeatureGroup of editable layers
+    var drawControl = new L.Control.Draw({
+        draw: {
+            polygon: {
+                shapeOptions: {
+                    showMeasurements: true,
+                    color: 'purple'
+                },
+                allowIntersection: false,
+                drawError: {
+                    color: 'orange',
+                    timeout: 1000
+                },
+                showArea: true,
+                metric: true,
+
+                repeatMode: true
+            },
+            polyline: {
+                shapeOptions: {
+                    showMeasurements: true,
+                    color: 'red'
+                },
+
+                metric: true,
+                repeatMode: true
+            },
+            rectangle: {
+                shapeOptions: {
+                    color: 'green',
+                    showMeasurements: true
+                },
+                showArea: true,
+                metric: true,
+                repeatMode: true
+            },
+            circle: {
+                shapeOptions: {
+                    showMeasurements: true,
+                    color: 'steelblue'
+                },
+                showArea: true,
+                metric: true,
+                repeatMode: true
+            },
+        },
+        edit: {
+            featureGroup: drawnItems
+        }
+    });
+
+    map.addControl(drawControl);
+
+    map.on(L.Draw.Event.CREATED, function (e) {
+        var type = e.layerType;
+        var layer = e.layer;
+
+        // Do whatever else you need to. (save to db, add to map etc)
+
+        drawnItems.addLayer(layer);
+    });
+
+
+    function popUp(features,layer) {
+
+        layer.on({
+            mouseover: highlightFeature,
+            mouseout: resetHighlight,
+            click: zoomToFeature
+        });
+
+        layer.bindPopup('Raison sociale francaie :  ' + features.properties._R_socia_français
+            +'<br>'+ 'Num Lot :  ' + features.properties.N_de_lot
+            +'<br>'+ 'Raison sociale arabe :  ' + features.properties._R_socia_arabe
+            +'<br>'+ 'Montant Investissement :  ' + features.properties._Mont_Investis_Millions_DA
+            +'<br>'+ 'Adresse :  ' + features.properties._Adresse
+            +'<br>'+ 'Intitule projet arabe :  ' + features.properties._Int_projet_arabe
+            +'<br>'+ 'Intitule projet francais :  ' + features.properties._Int_projet_français
+            +'<br>'+ 'Secteur Activite :  ' + features.properties._Sect_Activite
+            +'<br>'+ 'Filliere Industrielle :  ' + features.properties._Fil_Indust
+            +'<br>'+ '<img src="'+ features.properties.photo +'" style="width:300px;height:200px;">'
+        );
+    }
+
+    function colors(hello){
+
+        return hello == null ? '#8856a7' :
+                                    '#2c7fb8';
+
+
+    }
+
+    function style(features) {
+        return {
+            fillColor: colors(features.properties._R_socia_français),
+            weight: 2,
+            opacity: 1,
+            color: 'white',
+            dashArray: '3',
+            fillOpacity: 0.7
+        };
+    }
+
+
+    L.control.browserPrint().addTo(map);
+
+    L.Routing.control({
+        waypoints: [
+            L.latLng(36.2385, 5.2528),
+            L.latLng(36.2410, 5.5574)
+        ]
+    }).addTo(map);
+
+
+
+    var geojsonda1 = new L.GeoJSON.AJAX('../zone_ind_3.json',{onEachFeature: popUp,style: style });
+    var geojsonda2 = new L.GeoJSON.AJAX('../zone_ind_4.json',{onEachFeature: popUp,style: style });
+    var geojsonda3 = new L.GeoJSON.AJAX('../zone_ind_5.json',{onEachFeature: popUp,style: style });
+    var geojsonda4 = new L.GeoJSON.AJAX('../zone_ind_6.json',{onEachFeature: popUp,style: style });
+
+
+    var cities = new L.GeoJSON.AJAX('../zone_ind_4.json',{onEachFeature: popUp});
+
+
+    var yes = {
+        "yes": cities,
+    };
+
+    var geo = {
+        "ZI Ouled saber": geojsonda1,
+        "ZI Extension": geojsonda2,
+        "ZI Ancienne": geojsonda3,
+        "ZI El eulma": geojsonda4
+    };
+
+
+    L.control.layers(yes, geo).addTo(map);
+
+    L.control.scale().addTo(map);
+
+
+    var legend = L.control({position :'bottomright'});
+
+    legend.onAdd = function (map) {
+        var div = L.DomUtil.create('div','legend');
+        var labels = ["Lot vide","Lot occuper"];
+        var grades = [null,"EURL GOLDEN SHOP"];
+        div.innerHTML = '<div><b>Legend<b></div>';
+        for(var i = 0; i< grades.length;i++){
+            div.innerHTML += '<i style= "background:' + colors(grades[i]) + '">&nbsp;&nbsp;</i>&nbsp;&nbsp;' + labels[i] + '<br/>';
+        }
+        return div;
+    };
+
+    legend.addTo(map);
+
+
+    function highlightFeature(e) {
+        var layer = e.target;
+
+        layer.setStyle({
+            weight: 5,
+            color: '#666',
+            fillColor: 'white',
+            dashArray: '',
+            fillOpacity: 0.7
+        });
+
+        if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+            layer.bringToFront();
+        }
+    }
+
+    function resetHighlight(e) {
+        geojsonda1.resetStyle(e.target);
+    }
+
+    function zoomToFeature(e) {
+        map.fitBounds(e.target.getBounds());
+    }
+
+    var arcgisOnline = L.esri.Geocoding.arcgisOnlineProvider();
+
+    var searchControl = L.esri.Geocoding.geosearch({
+        providers: [
+            arcgisOnline,
+            L.esri.Geocoding.featureLayerProvider({
+                url: 'https://services.arcgis.com/uCXeTVveQzP4IIcx/arcgis/rest/services/gisday/FeatureServer/0/',
+                searchFields: ['Name', 'Organization'],
+                label: 'GIS Day Events',
+                bufferRadius: 5000,
+                formatSuggestion: function(feature){
+                    return feature.properties.Name + ' - ' + feature.properties.Organization;
+                }
+            })
+        ]
+    }).addTo(map);
+
+
+
+    var layer = L.esri.basemapLayer('Imagery').addTo(map);
+    var layerLabels;
+
+    function setBasemap(basemap) {
+        if (layer) {
+            map.removeLayer(layer);
+        }
+
+        layer = L.esri.basemapLayer(basemap);
+
+        map.addLayer(layer);
+
+        if (layerLabels) {
+            map.removeLayer(layerLabels);
+        }
+
+        if (basemap === 'ShadedRelief'
+            || basemap === 'Oceans'
+            || basemap === 'Gray'
+            || basemap === 'DarkGray'
+            || basemap === 'Terrain'
+        ) {
+            layerLabels = L.esri.basemapLayer(basemap + 'Labels');
+            map.addLayer(layerLabels);
+        } else if (basemap.includes('Imagery')) {
+            layerLabels = L.esri.basemapLayer('ImageryLabels');
+            map.addLayer(layerLabels);
+        }
+    }
+
+    function changeBasemap(basemaps){
+        var basemap = basemaps.value;
+        setBasemap(basemap);
+    }
+
+</script>
+
+
+
+
+
 
 
 
