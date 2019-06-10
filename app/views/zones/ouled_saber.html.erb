@@ -101,6 +101,25 @@
 
 <%= stylesheet_link_tag "lib/Control.Coordinates.css" %>
 <%= javascript_include_tag('lib/Control.Coordinates.js') %>
+
+<%= stylesheet_link_tag "lib/Control.Coordinates.css" %>
+<%= javascript_include_tag('lib/Control.Coordinates.js') %>
+
+<%= stylesheet_link_tag "lib/leaflet.label.css" %>
+<%= javascript_include_tag('lib/leaflet.label.js') %>
+
+<%= stylesheet_link_tag "lib/L.Control.SlideMenu.css" %>
+<%= javascript_include_tag('lib/L.Control.SlideMenu.js') %>
+
+
+
+<%= stylesheet_link_tag "lib/leaflet-search.css" %>
+<%= javascript_include_tag('lib/leaflet-search.js') %>
+
+
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
   #basemaps-wrapper {
     position: absolute;
@@ -113,8 +132,14 @@
   #basemaps {
     margin-bottom: 5px;
   }
-    .legend {background: white;line-height: 1.5em}
-    .legend i {width: 5em;float: left}
+    .legend {background: white;
+      line-height: 18px;
+      color: #555;}
+    .legend i {width: 18px;
+      height: 18px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.7;}
 </style>
 
 <div id="map"></div>
@@ -146,6 +171,20 @@
         measureControl: true
 
     });
+
+
+
+
+    L.control.slideMenu(
+        '<div class = "col-xs-4"><h5 style="color: #17a2b8" align="center">SITUATION DES LOTS ZI OULED SABER<h5></div>' +
+        '<div class="btn-group" >' +
+        '<button type="button" id="allbus" class="btn btn-success">All</button>' +
+        '<button type="button" id="others" class="btn btn-primary">Others</button>' +
+        '<button type="button" id="cafes" class="btn btn-danger">Vide</button>' +
+        '</div>'
+        ).addTo(map);
+
+
 
 
     var options = {
@@ -235,11 +274,14 @@
 
 
     function popUp(features,layer) {
+        layer.bindTooltip(features.properties.N_de_lot.toString()
+            +'<br>' + features.properties._R_socia_français ,
+            {permanent: false}
+            );
 
         layer.on({
             mouseover: highlightFeature,
-            mouseout: resetHighlight,
-            click: zoomToFeature
+            mouseout: resetHighlight
         });
 
         layer.bindPopup('Raison sociale francaie :  ' + features.properties._R_socia_français
@@ -285,12 +327,49 @@
     }).addTo(map);
 
 
-
     var geojsonda1 = new L.GeoJSON.AJAX('../zone_ind_3.json',{onEachFeature: popUp,style: style });
     var geojsonda2 = new L.GeoJSON.AJAX('../zone_ind_4.json',{onEachFeature: popUp,style: style });
     var geojsonda3 = new L.GeoJSON.AJAX('../zone_ind_5.json',{onEachFeature: popUp,style: style });
     var geojsonda4 = new L.GeoJSON.AJAX('../zone_ind_6.json',{onEachFeature: popUp,style: style });
 
+
+
+    var promise = $.getJSON('../zone_ind_3.json');
+
+    promise.then(function(data) {
+        var allbusinesses = L.geoJson(data);
+        var cafes = L.geoJson(data, {
+            filter: function(feature, layer) {
+                return feature.properties._R_socia_français == null;
+            },
+            style: style,
+            onEachFeature: popUp
+        });
+
+        var others = L.geoJson(data, {
+            filter: function(feature, layer) {
+                return feature.properties._R_socia_français != null;
+            },
+            style: style,
+            onEachFeature: popUp
+        });
+       // cafes.addTo(map)
+       // others.addTo(map)
+        $("#others").click(function() {
+            map.removeLayer(geojsonda1)
+            map.addLayer(others)
+            map.removeLayer(cafes)
+        });
+        $("#cafes").click(function() {
+            map.removeLayer(geojsonda1)
+            map.addLayer(cafes)
+            map.removeLayer(others)
+        });
+        $("#allbus").click(function() {
+            map.addLayer(cafes)
+            map.addLayer(others)
+        });
+    });
 
     var cities = new L.GeoJSON.AJAX('../zone_ind_4.json',{onEachFeature: popUp});
 
@@ -304,6 +383,8 @@
         "ZI Extension": geojsonda2,
         "ZI Ancienne": geojsonda3,
         "ZI El eulma": geojsonda4
+        //"Test filter": promise
+
     };
 
 
@@ -316,9 +397,9 @@
 
     legend.onAdd = function (map) {
         var div = L.DomUtil.create('div','legend');
-        var labels = ["Lot vide","Lot occuper"];
+        var labels = ["Lot vide","Lot occuper par investisseur"];
         var grades = [null,"EURL GOLDEN SHOP"];
-        div.innerHTML = '<div><b>Legend<b></div>';
+        div.innerHTML = '<div><h4>Legend<h4></div>';
         for(var i = 0; i< grades.length;i++){
             div.innerHTML += '<i style= "background:' + colors(grades[i]) + '">&nbsp;&nbsp;</i>&nbsp;&nbsp;' + labels[i] + '<br/>';
         }
@@ -336,7 +417,7 @@
             color: '#666',
             fillColor: 'white',
             dashArray: '',
-            fillOpacity: 0.7
+            fillOpacity: 0
         });
 
         if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
@@ -352,22 +433,7 @@
         map.fitBounds(e.target.getBounds());
     }
 
-    var arcgisOnline = L.esri.Geocoding.arcgisOnlineProvider();
 
-    var searchControl = L.esri.Geocoding.geosearch({
-        providers: [
-            arcgisOnline,
-            L.esri.Geocoding.featureLayerProvider({
-                url: 'https://services.arcgis.com/uCXeTVveQzP4IIcx/arcgis/rest/services/gisday/FeatureServer/0/',
-                searchFields: ['Name', 'Organization'],
-                label: 'GIS Day Events',
-                bufferRadius: 5000,
-                formatSuggestion: function(feature){
-                    return feature.properties.Name + ' - ' + feature.properties.Organization;
-                }
-            })
-        ]
-    }).addTo(map);
 
 
 
@@ -405,6 +471,36 @@
         var basemap = basemaps.value;
         setBasemap(basemap);
     }
+
+
+
+    var geojsondatak = L.layerGroup([geojsonda1,geojsonda2,geojsonda3,geojsonda4]);
+
+
+    var searchControl = new L.Control.Search({
+        layer: geojsondatak,
+        propertyName: '_R_socia_français',
+        marker: false,
+        moveToLocation: function(latlng, title, map) {
+            //map.fitBounds( latlng.layer.getBounds() );
+            var zoom = map.getBoundsZoom(latlng.layer.getBounds());
+            map.setView(latlng, 16); // access the zoom
+        }
+    });
+    searchControl.on('search:locationfound', function(e) {
+
+        //console.log('search:locationfound', );
+        //map.removeLayer(this._markerSearch)
+        e.layer.setStyle({fillColor: '#3f0', color: '#0f0'});
+        if(e.layer._popup)
+            e.layer.openPopup();
+    }).on('search:collapsed', function(e) {
+        featuresLayer.eachLayer(function(layer) {	//restore feature color
+            featuresLayer.resetStyle(layer);
+        });
+    });
+
+    map.addControl( searchControl );  //inizialize search control
 
 </script>
 

@@ -42,13 +42,18 @@ Rails.application.config.assets.precompile += %w( vendor/datatables/dataTables.b
 
 
 
+Rails.application.config.assets.precompile += %w( lib/leaflet.label.css )
+Rails.application.config.assets.precompile += %w( lib/leaflet.label.js )
+
+Rails.application.config.assets.precompile += %w( lib/L.Control.SlideMenu.css )
+
+Rails.application.config.assets.precompile += %w( lib/L.Control.SlideMenu.js )
 
 
 
+Rails.application.config.assets.precompile += %w( lib/leaflet-search.css )
 
-
-
-
+Rails.application.config.assets.precompile += %w( lib/leaflet-search.js )
 
 
 
