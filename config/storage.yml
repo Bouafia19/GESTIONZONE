@@ -6,6 +6,16 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
+
+production:
+  service: Disk
+    root: <%= Rails.root.join("storage") %>
+  #service: aws
+  #access_key_id: 123
+  #secret_access_key: 345
+# Used as the base secret for all MessageVerifiers in Rails, including the one protecting cookies.
+  #secret_key_base: b6418b18edf84ef3b9ca27e1d22e1be58df0ea50a43fa181f9ee7cf649bd6dad708b10ad919a771fca58d5ef18e4afed34c6daf4b84173790e67a2a2647ab547
+
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
 #   service: S3

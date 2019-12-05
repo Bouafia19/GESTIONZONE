@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
+
   resources :anciennes
   resources :extensions
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :lots
   resources :users
+
+
 
   get 'users/edit'
 
@@ -35,7 +38,11 @@ Rails.application.routes.draw do
 
   get 'investisseurs/search'
 
+  get 'investisseurs/bord'
+
   get 'zones/static'
+
+
 
   get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
   get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
@@ -62,7 +69,7 @@ Rails.application.routes.draw do
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'investisseurs#index'
+  root 'investisseurs#bord'
   get   'users/change_passd/:id', to: 'users#change_passd'
   get   'zone_activites/static/:id', to: 'zone_activites#static'
   get   'zone_industrielles/static/:id', to: 'zone_industrielles#static'

@@ -112,11 +112,35 @@
 <%= javascript_include_tag('lib/L.Control.SlideMenu.js') %>
 
 
+<%= stylesheet_link_tag "lib/leaflet.magnifyingglass.css" %>
+<%= stylesheet_link_tag "lib/Control.MagnifyingGlass.css" %>
+<%= javascript_include_tag('lib/leaflet.magnifyingglass.js') %>
+<%= javascript_include_tag('lib/example_button.js') %>
+
+
 
 <%= stylesheet_link_tag "lib/leaflet-search.css" %>
 <%= javascript_include_tag('lib/leaflet-search.js') %>
 
+<%= stylesheet_link_tag "lib/L.Control.Heightgraph.css" %>
+<%= javascript_include_tag('lib/L.Control.Heightgraph.js') %>
 
+<%= javascript_include_tag('lib/example_mappings.js') %>
+
+
+
+
+<%= stylesheet_link_tag "lib/leaflet.table.css" %>
+<%= javascript_include_tag('lib/leaflet.table.js') %>
+<%= stylesheet_link_tag "lib/supagrid.css" %>
+<%= javascript_include_tag('lib/supagrid.js') %>
+
+
+
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
 
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -134,7 +158,14 @@
   }
     .legend {background: white;
       line-height: 18px;
-      color: #555;}
+      color: #555;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      border-radius: 5px;
+    }
+  .legend:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
     .legend i {width: 18px;
       height: 18px;
       float: left;
@@ -149,7 +180,6 @@
     <option value="Topographic">Topographic</option>
     <option value="Streets">Streets</option>
     <option value="NationalGeographic">National Geographic</option>
-    <option value="Oceans">Oceans</option>
     <option value="Gray">Gray</option>
     <option value="DarkGray">Dark Gray</option>
     <option value="Imagery">Imagery</option>
@@ -164,25 +194,105 @@
 
 <script>
 
+
+
+
     var map = L.map('map',{
-        center: [36.19112, 5.41373],
+        center: [36.1700 , 5.5199],
         zoom: 12,
         fullscreenControl: true,
         measureControl: true
 
+
     });
 
-
-
+    var tileUrl = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
     L.control.slideMenu(
-        '<div class = "col-xs-4"><h5 style="color: #17a2b8" align="center">SITUATION DES LOTS ZI OULED SABER<h5></div>' +
+        '<div class = "col-xs-4"><h5 style="color: #17a2b8" align="center">FILTRE: ZI OULED SABER<h5></div>' +
         '<div class="btn-group" >' +
-        '<button type="button" id="allbus" class="btn btn-success">All</button>' +
-        '<button type="button" id="others" class="btn btn-primary">Others</button>' +
-        '<button type="button" id="cafes" class="btn btn-danger">Vide</button>' +
-        '</div>'
-        ).addTo(map);
+        '<button type="button" id="allbus" class="btn btn-success">Tous les lots</button>' +
+        '<button type="button" id="others" class="btn btn-primary">lot occupé</button>' +
+        '<button type="button" id="clear" class="btn btn-warning">cacher</button>' +
+        '<button type="button" id="cafes" class="btn btn-danger">lot libre</button>' +
+        '</div>' + '<br>' + '<br>' +
+        '<div class = "col-xs-4"><h6 style="color: #17a2b8">filtrer par secteur d\'activité <h6></div>' +
+        '<select id="sta_select" class="form-control col-8" onchange="myFunction(event)">' +
+        '  <option>Secteur d\'activité</option>' +
+        '  <option value="INDUSTRIE">INDUSTRIE</option>' +
+        '  <option value="SERVICES">SERVICES</option>' +
+        '  <option value="TOURISME">TOURISME</option>' +
+        '  <option value="AGRICULTURE">AGRICULTURE</option>' +
+        '</select>' + '<br>' +
+        '<div class = "col-xs-4"><h6 style="color: #17a2b8">filtrer par montant d\'investissement<h6></div>' +
+        '<form name ="subscribe" class="form-inline" id="subscribe_frm" action="#">' +
+        '<input type="number" placeholder="montant DA" class="form-control col-8" id="txt_name" />' + '<br>' +
+        '<input type="button" name="submit" value="Filtrer" class="btn btn-md btn-warning" onclick="processFormData()" />' +
+        '</form>' + '<br>' +
+        '<div class = "col-xs-4"><h6 style="color: #17a2b8">filtrer par superficie <h6></div>' +
+        '<form name ="subscribe" class="form-inline" id="subscribe_frm" action="#">' +
+        '<input type="number"  placeholder="superficie" class="form-control col-8" id="txt" />' + '<br>' +
+        '<input type="button" name="submit" value="Filtrer" class="btn btn-md btn-primary" onclick="processForm()" />' +
+        '</form>' + '<br>' +
+        '<hr style="border-width: 4px">' +
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        '<div class = "col-xs-4"><h5 style="color: #17a2b8" align="center">FILTRE: ZI ANCIENNE<h5></div>' +
+        '<div class="btn-group" >' +
+        '<button type="button" id="all" class="btn btn-success">Tous les lots</button>' +
+        '<button type="button" id="lnovide" class="btn btn-primary">lot occupé</button>' +
+        '<button type="button" id="libre" class="btn btn-warning">cacher</button>' +
+        '<button type="button" id="lvide" class="btn btn-danger">lot libre</button>' +
+        '</div>' + '<br>' + '<br>' +
+        '<div class = "col-xs-4"><h6 style="color: #17a2b8">filtrer par secteur d\'activité <h6></div>' +
+        '<select id="st_select" class="form-control col-8" onchange="monFunction(event)">' +
+        '  <option>Secteur d\'activité</option>' +
+        '  <option value="INDUSTRIE">INDUSTRIE</option>' +
+        '  <option value="SERVICES">SERVICES</option>' +
+        '  <option value="TOURISME">TOURISME</option>' +
+        '  <option value="AGRICULTURE">AGRICULTURE</option>' +
+        '</select>' + '<br>' +
+        '<div class = "col-xs-4"><h6 style="color: #17a2b8">filtrer par montant d\'investissement<h6></div>' +
+        '<form name ="subscribe" class="form-inline" id="subscribe_frm" action="#">' +
+        '<input type="number" placeholder="montant DA" class="form-control col-8" id="txt_mont" />' + '<br>' +
+        '<input type="button" name="submit" value="Filtrer" class="btn btn-md btn-warning" onclick="processData()" />' +
+        '</form>' + '<br>' +
+        '<div class = "col-xs-4"><h6 style="color: #17a2b8">filtrer par superficie  <h6></div>' +
+        '<form name ="subscribe" class="form-inline" id="subscribe_frm" action="#">' +
+        '<input type="number" placeholder="superficie" class="form-control col-8" id="txt_su" />' + '<br>' +
+        '<input type="button" name="submit" value="Filtrer" class="btn btn-md btn-primary" onclick="process()" />' +
+        '</form>' + '<br>' +
+        '<hr style="border-width: 4px">' +
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        '<div class = "col-xs-4"><h5 style="color: #17a2b8" align="center">FILTRE: ZI EL EULMA<h5></div>' +
+        '<div class="btn-group" >' +
+        '<button type="button" id="mall" class="btn btn-success">Tous les lots</button>' +
+        '<button type="button" id="mnovide" class="btn btn-primary">lot occupé</button>' +
+        '<button type="button" id="mlibre" class="btn btn-warning">cacher</button>' +
+        '<button type="button" id="mvide" class="btn btn-danger">lot libre</button>' +
+        '</div>' + '<br>' + '<br>' +
+        '<div class = "col-xs-4"><h6 style="color: #17a2b8">filtrer par secteur d\'activité <h6></div>' +
+        '<select id="st_select" class="form-control col-8" onchange="monFunctionm(event)">' +
+        '  <option>Secteur d\'activité</option>' +
+        '  <option value="INDUSTRIE">INDUSTRIE</option>' +
+        '  <option value="SERVICES">SERVICES</option>' +
+        '  <option value="TOURISME">TOURISME</option>' +
+        '  <option value="AGRICULTURE">AGRICULTURE</option>' +
+        '</select>' + '<br>' +
+        '<div class = "col-xs-4"><h6 style="color: #17a2b8">filtrer par montant d\'investissement<h6></div>' +
+        '<form name ="subscribe" class="form-inline" id="subscribe_frm" action="#">' +
+        '<input type="number" placeholder="montant DA" class="form-control col-8" id="txt_montm" />' + '<br>' +
+        '<input type="button" name="submit" value="Filtrer" class="btn btn-md btn-warning" onclick="processDatam()" />' +
+        '</form>' + '<br>' +
+        '<div class = "col-xs-4"><h6 style="color: #17a2b8">filtrer par superficie  <h6></div>' +
+        '<form name ="subscribe" class="form-inline" id="subscribe_frm" action="#">' +
+        '<input type="number" placeholder="superficie" class="form-control col-8" id="txt_sum" />' + '<br>' +
+        '<input type="button" name="submit" value="Filtrer" class="btn btn-md btn-primary" onclick="processm()" />' +
+        '</form>' + '<br>'
+
+
+    ).addTo(map);
 
 
 
@@ -274,8 +384,10 @@
 
 
     function popUp(features,layer) {
-        layer.bindTooltip(features.properties.N_de_lot.toString()
-            +'<br>' + features.properties._R_socia_français ,
+
+
+        layer.bindTooltip('Num Lot :  ' + features.properties.N_de_lot.toString()
+            +'<br>' + 'Raison sociale :  ' + features.properties._R_socia_français ,
             {permanent: false}
             );
 
@@ -284,7 +396,8 @@
             mouseout: resetHighlight
         });
 
-        layer.bindPopup('Raison sociale francaie :  ' + features.properties._R_socia_français
+        layer.bindPopup(
+            'Raison sociale francaie :  ' + features.properties._R_socia_français
             +'<br>'+ 'Num Lot :  ' + features.properties.N_de_lot
             +'<br>'+ 'Raison sociale arabe :  ' + features.properties._R_socia_arabe
             +'<br>'+ 'Montant Investissement :  ' + features.properties._Mont_Investis_Millions_DA
@@ -293,8 +406,10 @@
             +'<br>'+ 'Intitule projet francais :  ' + features.properties._Int_projet_français
             +'<br>'+ 'Secteur Activite :  ' + features.properties._Sect_Activite
             +'<br>'+ 'Filliere Industrielle :  ' + features.properties._Fil_Indust
+            +'<br>'+  'Modifier: ' + '<a href="'+ features.properties.url + '"target="_blank">lien</a>'
             +'<br>'+ '<img src="'+ features.properties.photo +'" style="width:300px;height:200px;">'
         );
+
     }
 
     function colors(hello){
@@ -321,8 +436,8 @@
 
     L.Routing.control({
         waypoints: [
-            L.latLng(36.2385, 5.2528),
-            L.latLng(36.2410, 5.5574)
+            L.latLng(36.1936 , 5.3744),
+            L.latLng(36.2410, 5.5574  )
         ]
     }).addTo(map);
 
@@ -334,6 +449,458 @@
 
 
 
+    //////////////////////////////////////////////////////////////////////
+
+    var eulma = $.getJSON('../zone_ind_6.json');
+
+    eulma.then(function(data) {
+        var mallinesses = L.geoJson(data);
+        var mvide = L.geoJson(data, {
+            filter: function(feature, layer) {
+                return feature.properties._R_socia_français == null;
+            },
+            style: style,
+            onEachFeature: popUp
+
+        });
+
+        var mnovide = L.geoJson(data, {
+            filter: function(feature, layer) {
+                return feature.properties._R_socia_français != null;
+            },
+            style: style,
+            onEachFeature: popUp
+        });
+// mvide.addTo(map)
+// mnovide.addTo(map)
+        $("#mnovide").click(function() {
+// map.removeLayer(geojsonda4)
+            mvide.setStyle({
+                fillColor: 'red',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+
+// map.removeLayer(mvide)
+            mnovide.setStyle({
+                fillColor: 'blue',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+            map.addLayer(mnovide)
+        });
+        $("#mvide").click(function() {
+// map.removeLayer(geojsonda4)
+            mnovide.setStyle({
+                fillColor: 'blue',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+
+//map.removeLayer(mnovide)
+            mvide.setStyle({
+                fillColor: 'red',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+            map.addLayer(mvide)
+        });
+        $("#mall").click(function() {
+//map.addLayer(mvide)
+//map.addLayer(mnovide)
+// map.addLayer(geojsonda4)
+            map.removeLayer(mvide)
+            map.removeLayer(mnovide)
+
+            geojsonda4.setStyle({
+                fillColor: '#3f0',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+            map.addLayer(geojsonda4)
+        });
+
+
+
+        $("#mlibre").click(function() {
+            map.removeLayer(mvide)
+            map.removeLayer(mnovide)
+            map.removeLayer(geojsonda4)
+
+        });
+
+
+
+    });
+
+
+    function processDatam() {
+        eulma.then(function(data) {
+
+            var name_element = document.getElementById('txt_montm');
+            var name = name_element.value;
+
+            var fil = L.geoJson(data, {
+                filter: function(feature, layer) {
+                    return feature.properties._Mont_Investis_Millions_DA > name;
+                },
+
+                style: style,
+                onEachFeature: popUp
+            });
+            fil.setStyle({
+                fillColor: 'green',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+            map.addLayer(fil)
+        });
+    }
+
+
+    function processm() {
+        eulma.then(function(data) {
+
+            var name_element = document.getElementById('txt_sum');
+            var name = name_element.value;
+
+            var fil = L.geoJson(data, {
+                filter: function(feature, layer) {
+                    return feature.properties._Su_octroyee > name;
+                },
+
+                style: style,
+                onEachFeature: popUp
+            });
+            fil.setStyle({
+                fillColor: 'green',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+            map.addLayer(fil)
+        });
+
+    }
+
+
+
+
+    function monFunctionm(e) {
+        eulma.then(function(data) {
+            var mallinesses = L.geoJson(data);
+            var mvide = L.geoJson(data, {
+                filter: function(feature, layer) {
+                    return feature.properties._Sect_Activite == "INDUSTRIE";
+                },
+                style: style,
+                onEachFeature: popUp
+
+            });
+            var name_element = document.getElementById('txt_montm');
+            var name = name_element.value;
+
+            var fil = L.geoJson(data, {
+                filter: function(feature, layer) {
+                    return feature.properties._Mont_Investis_Millions_DA > name;
+                },
+                style: style,
+                onEachFeature: popUp
+            });
+
+            var mnovide = L.geoJson(data, {
+                filter: function(feature, layer) {
+                    return feature.properties._Sect_Activite == "SERVICES";
+                },
+                style: style,
+                onEachFeature: popUp
+            });
+// mvide.addTo(map)
+// mnovide.addTo(map)
+            if(e.target.value == "INDUSTRIE"){
+// map.removeLayer(geojsonda4)
+                mnovide.setStyle({
+                    fillColor: 'blue',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'white',
+                    dashArray: '3',
+                    fillOpacity: 0.7});
+//map.removeLayer(mnovide)
+                mvide.setStyle({
+                    fillColor: 'red',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'white',
+                    dashArray: '3',
+                    fillOpacity: 0.7});
+                map.addLayer(mvide)
+            }else{
+                mvide.setStyle({
+                    fillColor: 'red',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'white',
+                    dashArray: '3',
+                    fillOpacity: 0.7});
+
+// map.removeLayer(mvide)
+                mnovide.setStyle({
+                    fillColor: 'blue',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'white',
+                    dashArray: '3',
+                    fillOpacity: 0.7});
+                map.addLayer(mnovide)
+            }
+        });
+
+
+    }
+
+
+
+
+///////////////////////////////////////////////////////////////
+
+    var ancienne = $.getJSON('../zone_ind_5.json');
+
+    ancienne.then(function(data) {
+        var allinesses = L.geoJson(data);
+        var lvide = L.geoJson(data, {
+            filter: function(feature, layer) {
+                return feature.properties._R_socia_français == null;
+            },
+            style: style,
+            onEachFeature: popUp
+
+        });
+
+        var lnovide = L.geoJson(data, {
+            filter: function(feature, layer) {
+                return feature.properties._R_socia_français != null;
+            },
+            style: style,
+            onEachFeature: popUp
+        });
+// lvide.addTo(map)
+// lnovide.addTo(map)
+        $("#lnovide").click(function() {
+// map.removeLayer(geojsonda3)
+            lvide.setStyle({
+                fillColor: 'red',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+
+// map.removeLayer(lvide)
+            lnovide.setStyle({
+                fillColor: 'blue',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+            map.addLayer(lnovide)
+        });
+        $("#lvide").click(function() {
+// map.removeLayer(geojsonda3)
+            lnovide.setStyle({
+                fillColor: 'blue',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+
+//map.removeLayer(lnovide)
+            lvide.setStyle({
+                fillColor: 'red',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+            map.addLayer(lvide)
+        });
+        $("#all").click(function() {
+//map.addLayer(lvide)
+//map.addLayer(lnovide)
+// map.addLayer(geojsonda3)
+            map.removeLayer(lvide)
+            map.removeLayer(lnovide)
+
+            geojsonda3.setStyle({
+                fillColor: '#3f0',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+            map.addLayer(geojsonda3)
+        });
+
+
+
+        $("#libre").click(function() {
+            map.removeLayer(lvide)
+            map.removeLayer(lnovide)
+            map.removeLayer(geojsonda3)
+
+        });
+
+
+
+    });
+
+
+    function processData() {
+        ancienne.then(function(data) {
+
+            var name_element = document.getElementById('txt_mont');
+            var name = name_element.value;
+
+            var fil = L.geoJson(data, {
+                filter: function(feature, layer) {
+                    return feature.properties._Mont_Investis_Millions_DA > name;
+                },
+
+                style: style,
+                onEachFeature: popUp
+            });
+            fil.setStyle({
+                fillColor: 'green',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+            map.addLayer(fil)
+        });
+    }
+
+
+    function process() {
+        ancienne.then(function(data) {
+
+            var name_element = document.getElementById('txt_su');
+            var name = name_element.value;
+
+            var fil = L.geoJson(data, {
+                filter: function(feature, layer) {
+                    return feature.properties._Su_octroyee > name;
+                },
+
+                style: style,
+                onEachFeature: popUp
+            });
+            fil.setStyle({
+                fillColor: 'green',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+            map.addLayer(fil)
+        });
+
+    }
+
+
+
+
+    function monFunction(e) {
+        ancienne.then(function(data) {
+            var allinesses = L.geoJson(data);
+            var lvide = L.geoJson(data, {
+                filter: function(feature, layer) {
+                    return feature.properties._Sect_Activite == "INDUSTRIE";
+                },
+                style: style,
+                onEachFeature: popUp
+
+            });
+            var name_element = document.getElementById('txt_mont');
+            var name = name_element.value;
+
+            var fil = L.geoJson(data, {
+                filter: function(feature, layer) {
+                    return feature.properties._Mont_Investis_Millions_DA > name;
+                },
+                style: style,
+                onEachFeature: popUp
+            });
+
+            var lnovide = L.geoJson(data, {
+                filter: function(feature, layer) {
+                    return feature.properties._Sect_Activite == "SERVICES";
+                },
+                style: style,
+                onEachFeature: popUp
+            });
+// lvide.addTo(map)
+// lnovide.addTo(map)
+            if(e.target.value == "INDUSTRIE"){
+// map.removeLayer(geojsonda3)
+                lnovide.setStyle({
+                    fillColor: 'blue',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'white',
+                    dashArray: '3',
+                    fillOpacity: 0.7});
+//map.removeLayer(lnovide)
+                lvide.setStyle({
+                    fillColor: 'red',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'white',
+                    dashArray: '3',
+                    fillOpacity: 0.7});
+                map.addLayer(lvide)
+            }else{
+                lvide.setStyle({
+                    fillColor: 'red',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'white',
+                    dashArray: '3',
+                    fillOpacity: 0.7});
+
+// map.removeLayer(lvide)
+                lnovide.setStyle({
+                    fillColor: 'blue',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'white',
+                    dashArray: '3',
+                    fillOpacity: 0.7});
+                map.addLayer(lnovide)
+            }
+        });
+
+
+    }
+
+
+
+////////////////////////////////////////////////////////////////////
     var promise = $.getJSON('../zone_ind_3.json');
 
     promise.then(function(data) {
@@ -344,6 +911,7 @@
             },
             style: style,
             onEachFeature: popUp
+
         });
 
         var others = L.geoJson(data, {
@@ -356,39 +924,226 @@
        // cafes.addTo(map)
        // others.addTo(map)
         $("#others").click(function() {
-            map.removeLayer(geojsonda1)
+           // map.removeLayer(geojsonda1)
+            cafes.setStyle({
+                fillColor: 'red',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+
+           // map.removeLayer(cafes)
+            others.setStyle({
+                fillColor: 'blue',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
             map.addLayer(others)
-            map.removeLayer(cafes)
         });
         $("#cafes").click(function() {
-            map.removeLayer(geojsonda1)
+           // map.removeLayer(geojsonda1)
+            others.setStyle({
+                fillColor: 'blue',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+
+            //map.removeLayer(others)
+            cafes.setStyle({
+                fillColor: 'red',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
             map.addLayer(cafes)
-            map.removeLayer(others)
         });
         $("#allbus").click(function() {
-            map.addLayer(cafes)
-            map.addLayer(others)
+            //map.addLayer(cafes)
+            //map.addLayer(others)
+           // map.addLayer(geojsonda1)
+            map.removeLayer(cafes)
+            map.removeLayer(others)
+
+            geojsonda1.setStyle({
+                fillColor: '#3f0',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+            map.addLayer(geojsonda1)
         });
+
+
+
+        $("#clear").click(function() {
+            map.removeLayer(cafes)
+            map.removeLayer(others)
+            map.removeLayer(geojsonda1)
+
+        });
+
+
+
     });
 
-    var cities = new L.GeoJSON.AJAX('../zone_ind_4.json',{onEachFeature: popUp});
+
+function processFormData() {
+    promise.then(function(data) {
+
+        var name_element = document.getElementById('txt_name');
+        var name = name_element.value;
+
+        var fil = L.geoJson(data, {
+            filter: function(feature, layer) {
+                return feature.properties._Mont_Investis_Millions_DA > name;
+            },
+
+            style: style,
+            onEachFeature: popUp
+        });
+        fil.setStyle({
+            fillColor: 'green',
+            weight: 2,
+            opacity: 1,
+            color: 'white',
+            dashArray: '3',
+            fillOpacity: 0.7});
+        map.addLayer(fil)
+    });
+}
+
+
+    function processForm() {
+        promise.then(function(data) {
+
+            var name_element = document.getElementById('txt');
+            var name = name_element.value;
+
+            var fil = L.geoJson(data, {
+                filter: function(feature, layer) {
+                    return feature.properties._Su_octroyee > name;
+                },
+
+                style: style,
+                onEachFeature: popUp
+            });
+            fil.setStyle({
+                fillColor: 'green',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7});
+            map.addLayer(fil)
+        });
+
+    }
+
+
+
+
+    function myFunction(e) {
+        promise.then(function(data) {
+            var allbusinesses = L.geoJson(data);
+            var cafes = L.geoJson(data, {
+                filter: function(feature, layer) {
+                    return feature.properties._Sect_Activite == "INDUSTRIE";
+                },
+                style: style,
+                onEachFeature: popUp
+
+            });
+            var name_element = document.getElementById('txt_name');
+            var name = name_element.value;
+
+            var fil = L.geoJson(data, {
+                filter: function(feature, layer) {
+                    return feature.properties._Mont_Investis_Millions_DA > name;
+                },
+                style: style,
+                onEachFeature: popUp
+            });
+
+            var others = L.geoJson(data, {
+                filter: function(feature, layer) {
+                    return feature.properties._Sect_Activite == "SERVICES";
+                },
+                style: style,
+                onEachFeature: popUp
+            });
+            // cafes.addTo(map)
+            // others.addTo(map)
+            if(e.target.value == "INDUSTRIE"){
+                // map.removeLayer(geojsonda1)
+                others.setStyle({
+                    fillColor: 'blue',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'white',
+                    dashArray: '3',
+                    fillOpacity: 0.7});
+                //map.removeLayer(others)
+                cafes.setStyle({
+                    fillColor: 'red',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'white',
+                    dashArray: '3',
+                    fillOpacity: 0.7});
+                map.addLayer(cafes)
+            }else{
+                cafes.setStyle({
+                    fillColor: 'red',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'white',
+                    dashArray: '3',
+                    fillOpacity: 0.7});
+
+                // map.removeLayer(cafes)
+                others.setStyle({
+                    fillColor: 'blue',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'white',
+                    dashArray: '3',
+                    fillOpacity: 0.7});
+                map.addLayer(others)
+            }
+        });
+
+
+
+    }
+
+
+    var cities  = L.layerGroup([geojsonda1,geojsonda2,geojsonda3,geojsonda4]);
 
 
     var yes = {
-        "yes": cities,
+        "ALL ZI SETIF": cities,
+
     };
 
     var geo = {
         "ZI Ouled saber": geojsonda1,
         "ZI Extension": geojsonda2,
         "ZI Ancienne": geojsonda3,
-        "ZI El eulma": geojsonda4
+        "ZI El eulma": geojsonda4,
+        "ALL ZI SETIF": cities
         //"Test filter": promise
 
     };
 
 
-    L.control.layers(yes, geo).addTo(map);
+    L.control.layers(yes, geo,{position :'topright'}).addTo(map);
 
     L.control.scale().addTo(map);
 
@@ -397,9 +1152,9 @@
 
     legend.onAdd = function (map) {
         var div = L.DomUtil.create('div','legend');
-        var labels = ["Lot vide","Lot occuper par investisseur"];
+        var labels = ["lot libre","lot occupé par un investisseur"];
         var grades = [null,"EURL GOLDEN SHOP"];
-        div.innerHTML = '<div><h4>Legend<h4></div>';
+        div.innerHTML = '<div><h4 align="center" style="color: #17a2b8">Legend<h4></div>';
         for(var i = 0; i< grades.length;i++){
             div.innerHTML += '<i style= "background:' + colors(grades[i]) + '">&nbsp;&nbsp;</i>&nbsp;&nbsp;' + labels[i] + '<br/>';
         }
@@ -414,7 +1169,7 @@
 
         layer.setStyle({
             weight: 5,
-            color: '#666',
+            color: '#FFF',
             fillColor: 'white',
             dashArray: '',
             fillOpacity: 0
@@ -432,9 +1187,6 @@
     function zoomToFeature(e) {
         map.fitBounds(e.target.getBounds());
     }
-
-
-
 
 
     var layer = L.esri.basemapLayer('Imagery').addTo(map);
@@ -471,6 +1223,22 @@
         var basemap = basemaps.value;
         setBasemap(basemap);
     }
+
+
+    var tileUr = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
+
+
+
+    var magnifyingGlass = L.magnifyingGlass({
+        zoomOffset: 3,
+        layers: [
+            L.tileLayer(tileUr)
+        ]
+    });
+
+    L.control.magnifyingglass(magnifyingGlass, {
+        forceSeparateButton: true
+    }).addTo(map);
 
 
 

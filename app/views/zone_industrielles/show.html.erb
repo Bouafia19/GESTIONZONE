@@ -7,11 +7,11 @@
       <% if can? :update, @user %>
     <%= link_to 'Mise A Jour', edit_zone_industrielle_path(@zone_industrielle) ,class:"btn btn-md btn-primary"%> |
         <%end %>
-<%= link_to 'Retour', zone_industrielles_path ,class:"btn btn-md btn-warning"%> |
+<%= link_to 'Retour', zone_industrielles_path ,class:"btn btn-md btn-warning"%>
       <% link_to 'New zone', new_zone_industrielle_path ,class:"btn btn-md btn-success"%>
-      <%= link_to 'INVESTISSEURS', investisseurs_path ,class:"btn btn-md btn-danger"%> |
-      <%= link_to 'LOTS', lots_path ,class:"btn btn-md btn-primary"%> |
-      <%= link_to 'STATISTIQUES', "static/#{@zone_industrielle.id}" ,class:"btn btn-md btn-success"%>
+      <% link_to 'INVESTISSEURS', investisseurs_path ,class:"btn btn-md btn-danger"%>
+      <% link_to 'LOTS', lots_path ,class:"btn btn-md btn-primary"%>
+      <% link_to 'STATISTIQUES', "static/#{@zone_industrielle.id}" ,class:"btn btn-md btn-success"%>
       <br>
       <hr>
 

@@ -13,9 +13,6 @@ class Lot < ApplicationRecord
 
 
 
-
-
-
 end
 
 

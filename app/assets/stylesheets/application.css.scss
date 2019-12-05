@@ -13,6 +13,8 @@
  *= require bootstrap-sortable
 *= require bootstrap-datepicker
 *= require leaflet
+ *= require jquery-ui
+
 
 
 
@@ -40,6 +42,7 @@
 @import "login.scss";
 @import "error.scss";
 @import "footer.scss";
+
 
 
 

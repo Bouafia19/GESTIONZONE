@@ -4,7 +4,7 @@
 <div class="card">
   <div class="card-body">
     <div class="card-header ">
-      <h1 align="center">Zone Entrepot Activites : <%= @total%></h1>
+      <h1 align="center" style="color: #17a2b8">Zone Entrepot Activites : <%= @total%></h1>
     </div>
 
 
@@ -12,6 +12,7 @@
     <% link_to 'New Zone Entrepot Activite', new_zone_entrepot_activite_path,class:"btn btn-success" %>
 
     <br>
+    <!--
     <div class="col-xl-12 col-md-6 mb-4">
       <div class="card border-left-primary shadow h-100 py-2">
         <div class="card-body">
@@ -34,24 +35,20 @@
 
               <%end%>
 
+-->
+    <div class="row">
 
 
-              <div class="col-sm-1 align-self-end">
-                <%= select_tag(:count,options_for_select([10,25,50], selected: session[:per_pages]),class:"form-control input-sm", onchange:"SelectSearch(id,'zone_entrepot_activites','')", id:"select" )%>
+    <div class="col-sm-1 align-self-start">
+      <strong >Afficher </strong>  <%= select_tag(:count,options_for_select([10,25,50], selected: session[:per_pages]),class:"form-control input-sm", onchange:"SelectSearch(id,'zone_entrepot_activites','')", id:"select" )%>
               </div>
 
 
               <div class="col-sm-3 align-self-end">
-                <%= search_field_tag "search_champ",session[:data] ,{class:"form-control input-sm",placeholder:"Chercher",onKeyUp:"SelectSearch(id,'zone_entrepot_activites','')" }%>
+                <strong >Chercher </strong> <%= search_field_tag "search_champ",session[:data] ,{class:"form-control input-sm",placeholder:"Chercher",onKeyUp:"SelectSearch(id,'zone_entrepot_activites','')" }%>
               </div>
               </div>
 
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
 
 
 

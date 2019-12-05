@@ -26,3 +26,7 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 sendgrid.env
+/.env
+/config/credentials.yml.enc
+/.DS_store
+/config/database.yml

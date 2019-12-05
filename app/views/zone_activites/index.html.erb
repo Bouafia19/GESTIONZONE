@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-body">
     <div class="card-header ">
-      <h1 align="center">ZONES ACTIVITES : <%= @total%></h1>
+      <h1 align="center" style="color: #17a2b8">ZONES ACTIVITES : <%= @total%></h1>
     </div>
 
 
@@ -9,50 +9,48 @@
 
 <% link_to 'New Zone Activite', new_zone_activite_path ,class:"btn btn-success"%>
     <br>
+    <!--
     <div class="col-xl-12 col-md-6 mb-4">
       <div class="card border-left-primary shadow h-100 py-2">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
 
-    <%= form_tag '/zone_activites', method: :get do %>
+    <% form_tag '/zone_activites', method: :get do %>
       <div class="row">
         <div class="col-sm-2 align-self-start"  >
-          <strong >Debut </strong><%= text_field_tag :start_date, session[:start_pub] , class: 'datepicker form-control date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
+          <strong >Debut </strong><% text_field_tag :start_date, session[:start_pub] , class: 'datepicker form-control date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
         </div>
 
         <div class="col-sm-2 align-self-center">
-          <strong>Fin</strong><%= text_field_tag :end_date, session[:end_pub] , class: 'datepicker form-control date', 'data-date-format'=>"dd/mm/yyyy", required: true %>
+          <strong>Fin</strong><% text_field_tag :end_date, session[:end_pub] , class: 'datepicker form-control date', 'data-date-format'=>"dd/mm/yyyy", required: true %>
         </div>
 
 
         <div class="col-sm-2 align-self-end">
-          <%= submit_tag 'Filter Date Arrete Creation' ,class: 'btn btn-primary '%>
+          <%submit_tag 'Filter Date Arrete Creation' ,class: 'btn btn-primary '%>
         </div>
 
     <%end%>
 
+-->
 
+    <div class="row">
 
-
-    <div class="col-sm-1 align-self-end">
-        <%= select_tag(:count,options_for_select([10,25,50], selected: session[:per_pages]),class:"form-control input-sm", onchange:"SelectSearch(id,'zone_activites','')", id:"select" )%>
+    <div class="col-sm-1 align-self-start">
+      <strong >Afficher </strong> <%= select_tag(:count,options_for_select([10,25,50], selected: session[:per_pages]),class:"form-control input-sm", onchange:"SelectSearch(id,'zone_activites','')", id:"select" )%>
     </div>
 
 
   <div class="col-sm-3 align-self-end">
-        <%= search_field_tag "search_champ",session[:data] ,{class:"form-control input-sm",placeholder:"Chercher",onKeyUp:"SelectSearch(id,'zone_activites','')" }%>
+    <strong >Chercher </strong>  <%= search_field_tag "search_champ",session[:data] ,{class:"form-control input-sm",placeholder:"Chercher",onKeyUp:"SelectSearch(id,'zone_activites','')" }%>
   </div>
 
 
-  </div>
 
 
 </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
 
         <br>
@@ -60,7 +58,7 @@
           <%= render(:partial => 'index', locals: {paginate: @paginate})%>
         </div>
       </div>
-    </div>
+      </div>
 
 <script>
     $('.datepicker').datepicker()

@@ -11,6 +11,10 @@
 
 <br>
 
+      <% link_to 'Pdf', investisseurs_path(format: :pdf) ,class:"fa fa-download fa-lg"%>
+
+      <% link_to 'Excel', investisseurs_path(format: :xlsx) ,class:"fa fa-download fa-lg"%>
+
 <div class="col-xl-12 col-md-6 mb-4 res">
   <div class="card border-success shadow h-100 py-2">
     <div class="card-body">
@@ -20,7 +24,7 @@
           <%= form_tag investisseurs_search_path, method: :get do %>
             <div class="row">
               <div class="col-sm-2 align-self-start"  >
-                <%= text_field_tag :raison_sociale_francais, params[:raison_sociale_francais] ,{placeholder:"raison sociale francais",class:"form-control"} %>
+                <%= text_field_tag :raison_sociale_francais, params[:raison_sociale_francais] ,{placeholder:"Investisseur",value:"investisseur",onfocus:"this.value='URBA.SETIF'",class:"form-control"} %>
 
 
               </div>

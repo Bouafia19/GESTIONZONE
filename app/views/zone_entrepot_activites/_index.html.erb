@@ -1,11 +1,11 @@
 
 
-<table class="table table-responsive table-bordered table-hover table sortable">
+<table class="table table-responsive table-bordered table-hover table sortable" id="table_format">
   <thead>
   <tr>
-    <th>Detail</th>
+    <th></th>
     <% if can? :update, @user %>
-      <th>Modifier</th>
+      <th></th>
     <%end %>
     <th>Code zone</th>
     <th>Type zone</th>
@@ -18,6 +18,7 @@
     <th>Superf cessible</th>
     <th>Superf vrd</th>
     <th>Nbr lots</th>
+    <th>Observation</th>
 
   </tr>
   </thead>
@@ -25,10 +26,10 @@
   <tbody>
   <% paginate.each do |zone_entrepot_activite| %>
     <tr>
-      <td><%= link_to 'Fiche Technique', zone_entrepot_activite ,class:"btn btn-success"%></td>
+      <td><%= link_to '', zone_entrepot_activite ,class:"fas fa-tv fa-2x  btn-success btn-lg"%></td>
       <% if can? :update, @user %>
 
-    <td><%= link_to 'Mise A Jour', edit_zone_entrepot_activite_path(zone_entrepot_activite),class:"btn btn-primary" %></td>
+    <td><%= link_to '', edit_zone_entrepot_activite_path(zone_entrepot_activite),class:"fas fa-edit fa-2x btn-warning btn-lg" %></td>
       <%#= link_to 'Destroy', zone_entrepot_activite, method: :delete, data: { confirm: 'Are you sure?' } %>
       <%end %>
 
@@ -43,6 +44,7 @@
       <td><%= zone_entrepot_activite.superf_cessible %></td>
       <td><%= zone_entrepot_activite.superf_vrd %></td>
       <td><%= zone_entrepot_activite.nbr_lots %></td>
+      <td><%= zone_entrepot_activite.observation %></td>
 
 
     </tr>
@@ -61,3 +63,6 @@
 </div>
 
 
+<script>
+    $('#table_format').ddTableFilter();
+</script>

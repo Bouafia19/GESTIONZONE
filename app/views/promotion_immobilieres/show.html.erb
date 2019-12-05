@@ -9,11 +9,11 @@
       <% if can? :update, @user %>
 <%= link_to 'Mise A Jour', edit_promotion_immobiliere_path(@promotion_immobiliere) ,class:"btn btn-primary"%> |
         <%end %>
-<%= link_to 'Retour', promotion_immobilieres_path,class:"btn btn-warning" %> |
+<%= link_to 'Retour', promotion_immobilieres_path,class:"btn btn-warning" %>
 <% link_to 'New Promotion immobiliere', new_promotion_immobiliere_path ,class:"btn btn-md btn-success"%>
-<%= link_to 'INVESTISSEURS', investisseurs_path ,class:"btn btn-md btn-danger"%> |
-<%= link_to 'LOTS', lots_path ,class:"btn btn-md btn-primary"%> |
-      <%= link_to 'STATISTIQUES', "static/#{@promotion_immobiliere.id}" ,class:"btn btn-md btn-success"%>
+<% link_to 'INVESTISSEURS', investisseurs_path ,class:"btn btn-md btn-danger"%>
+<% link_to 'LOTS', lots_path ,class:"btn btn-md btn-primary"%>
+      <% link_to 'STATISTIQUES', "static/#{@promotion_immobiliere.id}" ,class:"btn btn-md btn-success"%>
 
 
       <br>

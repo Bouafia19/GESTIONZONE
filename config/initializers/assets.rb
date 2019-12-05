@@ -37,6 +37,7 @@ Rails.application.config.assets.precompile += %w( chart.js/Chart.min.js )
 Rails.application.config.assets.precompile += %w( vendor/datatables/jquery.dataTables.min.js )
 Rails.application.config.assets.precompile += %w( vendor/datatables/dataTables.bootstrap4.min.js )
 
+Rails.application.config.assets.precompile += %w( vendor/js/demo/datatables-demo.js )
 
 
 
@@ -57,7 +58,10 @@ Rails.application.config.assets.precompile += %w( lib/leaflet-search.js )
 
 
 
+Rails.application.config.assets.precompile += %w( lib/L.Control.Heightgraph.css )
+Rails.application.config.assets.precompile += %w( lib/L.Control.Heightgraph.js )
 
+Rails.application.config.assets.precompile += %w( lib/example_mappings.js )
 
 
 Rails.application.config.assets.precompile += %w( lib/leaflet.measure.js )
@@ -76,6 +80,17 @@ Rails.application.config.assets.precompile += %w( lib/example_button.js )
 Rails.application.config.assets.precompile += %w( lib/Control.Coordinates.css )
 Rails.application.config.assets.precompile += %w( lib/Control.Coordinates.js )
 
+
+Rails.application.config.assets.precompile += %w( ddtf.js )
+
+
+
+
+
+Rails.application.config.assets.precompile += %w( lib/leaflet.table.css )
+Rails.application.config.assets.precompile += %w( lib/leaflet.table.js )
+Rails.application.config.assets.precompile += %w( lib/supagrid.css )
+Rails.application.config.assets.precompile += %w( lib/supagrid.js )
 #Rails.application.config.assets.precompile += %w( lib/leaflet-measure.js )
 #Rails.application.config.assets.precompile += %w( lib/leaflet-measure.css )
 

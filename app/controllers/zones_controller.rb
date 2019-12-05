@@ -39,6 +39,7 @@ class ZonesController < ApplicationController
   end
 
   def setif_inve
+    @inv = ZoneActivite.all
   end
 
   def leaflet

@@ -14,7 +14,8 @@
 //= require rails-ujs
 //= require activestorage
 //= require popper
-//= require turbolinks
+
+
 
 
 //= require jquery3
@@ -26,7 +27,7 @@
 //= require bootstrap-sortable
 //= require leaflet
 //= require openlayers-rails
-
+//= require jquery-ui
 
 
 

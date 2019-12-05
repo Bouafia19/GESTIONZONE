@@ -9,11 +9,11 @@
       <% if can? :update, @user %>
     <%= link_to 'Mise A Jour', edit_hors_zone_path(@hors_zone) ,class:"btn btn-md btn-primary"%> |
         <%end %>
-      <%= link_to 'Retour', hors_zones_path ,class:"btn btn-md btn-warning"%> |
+      <%= link_to 'Retour', hors_zones_path ,class:"btn btn-md btn-warning"%>
       <% link_to 'New hors zone', new_hors_zone_path ,class:"btn btn-md btn-success"%>
-      <%= link_to 'INVESTISSEURS', investisseurs_path ,class:"btn btn-md btn-danger"%> |
-      <%= link_to 'LOTS', lots_path ,class:"btn btn-md btn-primary"%> |
-      <%= link_to 'STATISTIQUES', "static/#{@hors_zone.id}" ,class:"btn btn-md btn-success"%>
+      <% link_to 'INVESTISSEURS', investisseurs_path ,class:"btn btn-md btn-danger"%>
+      <% link_to 'LOTS', lots_path ,class:"btn btn-md btn-primary"%>
+      <% link_to 'STATISTIQUES', "static/#{@hors_zone.id}" ,class:"btn btn-md btn-success"%>
 
       <br>
       <hr>
@@ -32,17 +32,17 @@
                 </thead>
                 <tbody>
                 <tr>
-                  <th>Code zone</th>
+                  <th>Code </th>
                   <td><%= @hors_zone.code_zone %></td>
                 </tr>
 
                 <tr>
-                  <th>Type zone</th>
+                  <th>Type </th>
                   <td><%= @hors_zone.type_zone %></td>
                 </tr>
 
                 <tr>
-                  <th>Nom zone</th>
+                  <th>Nom </th>
                   <td><%= @hors_zone.nom_zone %></td>
                 </tr>
 
@@ -56,41 +56,31 @@
                   <td><%= @hors_zone.wilaya %></td>
                 </tr>
                 <tr>
-                  <th>Num arrete creation</th>
+                  <th>Num arrete </th>
                   <td><%= @hors_zone.num_arrete_creation %></td>
                 </tr>
 
                 <tr>
-                  <th>Dat arrete creation</th>
+                  <th>Dat arrete </th>
                   <td><%= @hors_zone.dat_arrete_creation %></td>
                 </tr>
                 <tr>
                   <th>Superf total</th>
                   <td><%= @hors_zone.superf_total %></td>
                 </tr>
-                <tr>
-                  <th>Superf cessible</th>
-                  <td><%= @hors_zone.superf_cessible %></td>
-                </tr>
-                <tr>
-                  <th>Superf vrd</th>
-                  <td><%= @hors_zone.superf_vrd %></td>
-                </tr>
+
 
                 <tr>
                   <th>Nbr lots</th>
                   <td><%= @hors_zone.nbr_lots %></td>
                 </tr>
+
                 <tr>
-                  <th>Nbr lot attribues</th>
-                  <td><%= @hors_zone.nbr_lot_attribues %></td>
-                </tr>
-                <tr>
-                  <th>Nbr lot cession</th>
+                  <th>cession</th>
                   <td><%= @hors_zone.nbr_lot_cession %></td>
                 </tr>
                 <tr>
-                  <th>Nbr lot concession</th>
+                  <th>concession</th>
                   <td><%=  @hors_zone.nbr_lot_concession %></td>
                 </tr>
                 <tr>

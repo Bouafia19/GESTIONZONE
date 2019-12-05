@@ -1,11 +1,11 @@
-<div class="row">
-<table class="table table-responsive table-bordered table-hover table sortable">
+<table class="table table-responsive table-bordered table-hover table sortable" id="table_format">
   <thead>
   <tr>
 
-      <th>Detail</th>
+      <th></th>
     <% if can? :update, @user %>
-      <th>Modifier</th>
+      <th></th>
+      <th></th>
       <%end %>
     <th>Code zone</th>
     <th>Type zone</th>
@@ -17,7 +17,7 @@
     <th>Superf vrd</th>
     <th>Nbr lots</th>
     <th>Nbr lots attribues</th>
-    <th>Nbr lots cession</th>
+    <th>Observation</th>
 
   </tr>
   </thead>
@@ -26,10 +26,10 @@
   <% paginate.each do |zone_activite| %>
     <tr>
 
-      <td><%= link_to 'Fiche Technique', zone_activite ,class:"btn btn-success"%></td>
+      <td><%= link_to '', zone_activite ,class:"fas fa-tv fa-2x  btn-success btn-lg"%></td>
       <% if can? :update, @user %>
-      <td><%= link_to 'Mise A Jour', edit_zone_activite_path(zone_activite) ,class:"btn btn-primary"%></td>
-      <%#= link_to 'Supprimer', zone_activite, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %>
+      <td><%= link_to '', edit_zone_activite_path(zone_activite) ,class:"fas fa-edit fa-2x btn-warning btn-lg"%></td>
+      <td><%= link_to '', zone_activite, method: :delete, data: { confirm: 'Are you sure?' },class:"fas fa-trash fa-2x btn-danger btn-lg" %></td>
         <%end %>
         <td><%= zone_activite.code_zone %></td>
       <td><%= zone_activite.type_zone %></td>
@@ -41,7 +41,7 @@
       <td><%= zone_activite.superf_vrd %></td>
       <td><%= zone_activite.nbr_lots %></td>
       <td><%= zone_activite.nbr_lot_attribues %></td>
-      <td><%= zone_activite.nbr_lot_cession %></td>
+      <td><%= zone_activite.observation %></td>
 
     </tr>
   <% end %>
@@ -60,4 +60,6 @@
 
 
 </div>
-</div>
+<script>
+    $('#table_format').ddTableFilter();
+</script>

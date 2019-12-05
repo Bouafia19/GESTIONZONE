@@ -9,18 +9,19 @@ class InvestisseursController < ApplicationController
     #datatable_paginate([:investisseur],['raison_sociale_francais;nom_prenom_gerant_francais;intitule_projet_francais',['investisseurs',"investisseurs.date_depot_demande >='#{Date.parse(session[:start_pub])}' and investisseurs.date_depot_demande <='#{Date.parse(session[:end_pub])}'"]])
 
     datatable_paginate([:investisseur],['raison_sociale_francais;nom_prenom_gerant_francais;intitule_projet_francais'])
+@investr = Investisseur.all
 
-
-    @zoneact = ZoneActivite.all.count
-    @zoneind = ZoneIndustrielle.all.count
-    @horszone = HorsZone.all.count
-    @promotionimob = PromotionImmobiliere.all.count
     @invest = Investisseur.all.count
-    @user = User.all.count
-    @zone = Zone.all.count
-    @zea = ZoneEntrepotActivite.all.count
 
-    @investisseurs = Investisseur.all
+    respond_to do |format|
+      format.html{render(template: "investisseurs/index.html.erb", locals: {paginate: @paginate})}
+      format.pdf {render pdf: "investisseur",
+                         template: "investisseurs/index.pdf.erb",
+                         locals: {:investisseur => @investisseurs}}
+      format.xlsx {render xlsx: "investisseur",
+                          template: "investisseurs/index.xlsx.axlsx",
+                          locals: {:investisseur => @investisseurs}}
+    end
 
   end
 
@@ -29,7 +30,10 @@ class InvestisseursController < ApplicationController
   def show
   end
 
+
+
   def search
+
     #store all the projects that match the name searched
     #@lots = Lot.where("num_lot LIKE ? ", "%#{params[:num_lot]}%")
     #store all the clients that match the name searched
@@ -40,24 +44,32 @@ class InvestisseursController < ApplicationController
 
     @investisseurs = Investisseur.where(['raison_sociale_francais LIKE ? AND site LIKE ? AND secteur_activite LIKE ? AND commune LIKE ? AND montant_investissement >= ? ', "%#{params[:raison_sociale_francais]}%","%#{params[:site]}%", "%#{params[:secteur_activite]}%","%#{params[:commune]}%",params[:montant_investissement]])
 
-    respond_to do |format|
-      format.html
-      format.pdf {render pdf: "investisseur",
-                         template: "investisseurs/search.pdf.erb",
-                         locals: {:investisseur => @investisseurs}}
+    @invest = Investisseur.all
 
-    end
 
-    def self.search(search_project, search_client)
-      return scoped unless search_project.present? || search_client.present?
-      where(['project_name LIKE ? AND client LIKE ?', "%#{search_project}%", "%#{search_client}%"])
-    end
+
+
 
   end
   # GET /investisseurs/new
   def new
     @investisseur = Investisseur.new
   end
+
+
+  def bord
+    @zoneact = ZoneActivite.all.count
+    @zoneind = ZoneIndustrielle.all.count
+    @horszone = HorsZone.all.count
+    @promotionimob = PromotionImmobiliere.all.count
+    @invest = Investisseur.all.count
+    @user = User.all.count
+    @zone = Zone.all.count
+    @zea = ZoneEntrepotActivite.all.count
+
+    @investisseurs = Investisseur.all
+  end
+
 
   # GET /investisseurs/1/edit
   def edit
@@ -94,13 +106,14 @@ class InvestisseursController < ApplicationController
 
         case @investisseur.localisation_projet
         when "ZI EL EULMA"
+=begin
           hash = JSON.parse(File.read("public/eulma_lors_#{@investisseur.idjson}.json"))
           hash["properties"]["_R_socia_français"]  = @investisseur.raison_sociale_francais
           File.open("public/eulma_lors_#{@investisseur.idjson}.json","w") do |f|
             f.write(hash.to_json)
 
           end
-
+=end
           hash = JSON.parse(File.read("public/zone_ind_6.json"))
           hash["features"][@investisseur.idjson - 1]["properties"]["_R_socia_français"]  = @investisseur.raison_sociale_francais
           File.open("public/zone_ind_6.json","w") do |f|
@@ -109,6 +122,7 @@ class InvestisseursController < ApplicationController
 
           ##################################################################
         when "ZI ANCIENNE"
+=begin
           hash = JSON.parse(File.read("public/ancienne_#{@investisseur.idjson}.json"))
 
           hash["properties"]["_R_socia_français"]  = @investisseur.raison_sociale_francais
@@ -117,7 +131,7 @@ class InvestisseursController < ApplicationController
 
           end
 
-
+=end
           hash = JSON.parse(File.read("public/zone_ind_5.json"))
           hash["features"][@investisseur.idjson - 1]["properties"]["_R_socia_français"]  = @investisseur.raison_sociale_francais
           File.open("public/zone_ind_5.json","w") do |f|
@@ -127,13 +141,14 @@ class InvestisseursController < ApplicationController
 
           ##########################################################################
         when "ZI EXTENSION"
+=begin
           hash = JSON.parse(File.read("public/extension_#{@investisseur.idjson}.json"))
           hash["properties"]["_R_socia_français"]  = @investisseur.raison_sociale_francais
           File.open("public/extension_#{@investisseur.idjson}.json","w") do |f|
             f.write(hash.to_json)
 
           end
-
+=end
           hash = JSON.parse(File.read("public/zone_ind_4.json"))
           hash["features"][@investisseur.idjson - 1]["properties"]["_R_socia_français"]  = @investisseur.raison_sociale_francais
           File.open("public/zone_ind_4.json","w") do |f|
@@ -144,13 +159,14 @@ class InvestisseursController < ApplicationController
 
           #############################################################################
         when "OULED SABER"
+=begin
           hash = JSON.parse(File.read("public/saber_#{@investisseur.idjson}.json"))
           hash["properties"]["_R_socia_français"]  = @investisseur.raison_sociale_francais
           File.open("public/saber_#{@investisseur.idjson}.json","w") do |f|
             f.write(hash.to_json)
 
           end
-
+=end
           hash = JSON.parse(File.read("public/zone_ind_3.json"))
           hash["features"][@investisseur.idjson - 1]["properties"]["_R_socia_français"]  = @investisseur.raison_sociale_francais
           File.open("public/zone_ind_3.json","w") do |f|

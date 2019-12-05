@@ -1,3 +1,4 @@
+
 namespace :gis_test_task do
 
   desc "creates json for Algeria"

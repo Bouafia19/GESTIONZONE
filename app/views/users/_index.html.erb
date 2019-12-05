@@ -1,5 +1,5 @@
 
-<table class="table table-responsive table-bordered table sortable">
+<table class="table table-responsive table-bordered table-dark" id="table_format" width="100%" cellspacing="0">
   <thead>
   <tr>
     <th>Name </th>
@@ -21,9 +21,9 @@
 
       <td><%= user.created_at %></td>
       <td><%= user.updated_at %></td>
-      <td><%= link_to 'Show', user ,class:"btn btn-md btn-success"%></td>
-      <td><%= link_to 'Edit', edit_user_path(user),class:"btn btn-md btn-primary" %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-md btn-danger"%></td>
+      <td><%= link_to '', user ,class:"fas fa-tv fa-2x  btn-success btn-lg"%></td>
+      <td><%= link_to '', edit_user_path(user),class:"fas fa-edit fa-2x btn-warning btn-lg" %></td>
+        <td><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?' } ,class:"fas fa-trash fa-2x btn-danger btn-lg"%></td>
     </tr>
 
   <% end %>
@@ -41,5 +41,10 @@
 
 </div>
 
+
+
+<script>
+    $(document).on('turbolinks:page.visit', $('#table_format').ddTableFilter() );
+</script>
 
 

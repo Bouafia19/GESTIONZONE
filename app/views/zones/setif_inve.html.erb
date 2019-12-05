@@ -1,56 +1,66 @@
-<!--<!DOCTYPE html>
-App created using the Boundless Web App Builder version 0.5-20160325-725c720ef368f428cbeeea499d86ea12765ba6bf-->
-<!--WebSDK version: 9b3e2ca0fdcc48d1d41bbac8f6c457f5dec7544c
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>SETIF INVEST</title>
-  <%#= stylesheet_link_tag "SETIF_INVEST/resources/css/ol.css" %>
-  <%#= stylesheet_link_tag "SETIF_INVEST/resources/css/components.min.css" %>
-  <%#= stylesheet_link_tag "SETIF_INVEST/app.css" %>
+
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+
+              <table class="table table-bordered " id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th>Code zone</th>
+                  <th>Type zone</th>
+                  <th>Nom zone</th>
+                  <th>Commune</th>
+                  <th>Wilaya</th>
+                  <th>Superf total</th>
+                  <th>Superf cessible</th>
+                  <th>Superf vrd</th>
+                  <th>Nbr lots</th>
+                  <th>Nbr lots attribues</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% @inv.each do |zone_activite| %>
+                  <tr>
+                    <td><%= link_to '', zone_activite ,class:"fas fa-tv fa-2x  btn-success btn-lg"%></td>
+                    <td><%= link_to '', edit_zone_activite_path(zone_activite) ,class:"fas fa-edit fa-2x btn-warning btn-lg"%></td>
+                    <td><%= link_to '', zone_activite, method: :delete, data: { confirm: 'Are you sure?' },class:"fas fa-trash fa-2x btn-danger btn-lg" %></td>
+                    <td><%= zone_activite.code_zone %></td>
+                    <td><%= zone_activite.type_zone %></td>
+                    <td><%= zone_activite.nom_zone %></td>
+                    <td><%= zone_activite.commune %></td>
+                    <td><%= zone_activite.wilaya %></td>
+                    <td><%= zone_activite.superf_total %></td>
+                    <td><%= zone_activite.superf_cessible %></td>
+                    <td><%= zone_activite.superf_vrd %></td>
+                    <td><%= zone_activite.nbr_lots %></td>
+                    <td><%= zone_activite.nbr_lot_attribues %></td>
+                  </tr>
+                <% end %>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
 
 
 
-  <script src="https://cdn.polyfill.io/v1/polyfill.min.js?features=Intl.~locale.en"></script>
-  <base target='_blank'>
-
-</head>
-<body>
-<div id='main'></div>
-<%#= javascript_include_tag('SETIF_INVEST/full-debug.js') %>
-<%#= javascript_include_tag('SETIF_INVEST/app_prebuilt.js') %>
-<%#= javascript_include_tag('SETIF_INVEST/data/lyr_zi_setif_extension.js') %>
-<%#= javascript_include_tag('SETIF_INVEST/data/lyr_zi_el_eulma.js') %>
-<%#= javascript_include_tag('SETIF_INVEST/data/lyr_zi_ouled_saber.js') %>
-<%#= javascript_include_tag('SETIF_INVEST/data/lyr_zi_setif_ancienne.js') %>
 
 
-</body>
-</html>
--->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Web-Map</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimal-ui">
-  <!-- loading the stylesheet for the application -->
-  <%= stylesheet_link_tag "openlayers/style.css" %>
-  <!-- loading the style fro the OpenLayers --> <!-- versions of OpenLayers can be downloaded from the OpenLayers website --><!-- this is version 2 of OpenLayers being used  -->
-  <%= stylesheet_link_tag "openlayers/OpenLayers/theme/default/style.css" %>
-  <!-- loading the OpenLayers javaScript file -->
-  <%= javascript_include_tag('openlayers/OpenLayers.js') %>
-</head>
-<body>
-<!-- the div holding the map -->
-<div id="map">
-  <!-- loading the javaScript file containing the properties of the map -->
-  <%= javascript_include_tag('openlayers/web-map.js') %>
-</div>
-</body>
-</html>
 
+
+<script >
+        $('#dataTable').dataTable();
+</script>
 
 
 
