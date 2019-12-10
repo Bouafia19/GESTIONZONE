@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43f71642-1426-4718-9a42-6501b751986f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190406170750_create_countries.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190406170750_create_countries.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190406170933_create_states.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190406170933_create_states.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190406171031_create_regions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190406171031_create_regions.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190406171208_add_region_to_state.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190406171208_add_region_to_state.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190409171213_create_lors.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190409171213_create_lors.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190419143239_create_extensions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190419143239_create_extensions.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190419170111_create_anciennes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190419170111_create_anciennes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190509074054_create_sabers.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190509074054_create_sabers.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -25,7 +18,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/GESTIONZONE@Production__GESTIONZONE.rcov" NAME="Production: GESTIONZONE Coverage Results" MODIFIED="1546759523549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
-    <SUITE FILE_PATH="coverage/GESTIONZONE@Development__GESTIONZONE.rcov" NAME="Development: GESTIONZONE Coverage Results" MODIFIED="1575962230978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
+    <SUITE FILE_PATH="coverage/GESTIONZONE@Development__GESTIONZONE.rcov" NAME="Development: GESTIONZONE Coverage Results" MODIFIED="1575963181868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -99,7 +92,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Capfile" value="7" />
-          <entry key="Gemfile" value="43" />
+          <entry key="Gemfile" value="44" />
           <entry key="JPG" value="1" />
           <entry key="RailsDependency/Merit::RankRules" value="1" />
           <entry key="axlsx" value="4" />
@@ -148,7 +141,7 @@
           <entry key="PLAIN_TEXT" value="87" />
           <entry key="RHTML" value="1157" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="802" />
+          <entry key="Ruby" value="803" />
           <entry key="SCSS" value="61" />
           <entry key="UML" value="1" />
           <entry key="YAML" value="18" />
@@ -194,11 +187,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
-              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1035">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
             </state>
           </provider>
         </entry>
@@ -363,12 +365,6 @@
               <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
               <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
               <item name="Models" type="4bd37eb5:ModelsFolderNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Models" type="4bd37eb5:ModelsFolderNode" />
-              <item name="Migrations" type="5e88d8ef:MigrationsFolder" />
             </path>
           </expand>
           <select />
@@ -795,12 +791,12 @@
       <workItem from="1575549107666" duration="5327000" />
       <workItem from="1575820085155" duration="3731000" />
       <workItem from="1575899975806" duration="3582000" />
-      <workItem from="1575959516674" duration="2765000" />
+      <workItem from="1575959516674" duration="3409000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1795952000" />
+    <option name="totallyTimeSpent" value="1796596000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -951,13 +947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
@@ -1136,7 +1125,14 @@
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
