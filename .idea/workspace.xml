@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43f71642-1426-4718-9a42-6501b751986f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/GESTIONZONE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GESTIONZONE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/deploy/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/deploy/production.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190221101815_addname_tousers.rb" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -22,7 +20,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/GESTIONZONE@Production__GESTIONZONE.rcov" NAME="Production: GESTIONZONE Coverage Results" MODIFIED="1546759523549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
-    <SUITE FILE_PATH="coverage/GESTIONZONE@Development__GESTIONZONE.rcov" NAME="Development: GESTIONZONE Coverage Results" MODIFIED="1575904236146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
+    <SUITE FILE_PATH="coverage/GESTIONZONE@Development__GESTIONZONE.rcov" NAME="Development: GESTIONZONE Coverage Results" MODIFIED="1575961818913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -42,13 +40,13 @@
     <session id="-1745049095">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="214" />
+          <entry key="project.closed" value="215" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.12" value="4" />
           <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="6" />
-          <entry key="project.open.time.15" value="4" />
+          <entry key="project.open.time.15" value="5" />
           <entry key="project.open.time.16" value="13" />
           <entry key="project.open.time.17" value="17" />
           <entry key="project.open.time.18" value="24" />
@@ -90,7 +88,7 @@
           <entry key="project.open.time.80" value="1" />
           <entry key="project.open.time.9" value="3" />
           <entry key="project.open.time.99" value="1" />
-          <entry key="project.opened" value="236" />
+          <entry key="project.opened" value="237" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -120,7 +118,7 @@
           <entry key="png" value="2" />
           <entry key="rails" value="10" />
           <entry key="rake" value="21" />
-          <entry key="rb" value="664" />
+          <entry key="rb" value="668" />
           <entry key="rnc" value="1" />
           <entry key="ru" value="1" />
           <entry key="ruby-version" value="1" />
@@ -145,7 +143,7 @@
           <entry key="PLAIN_TEXT" value="87" />
           <entry key="RHTML" value="1157" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="775" />
+          <entry key="Ruby" value="779" />
           <entry key="SCSS" value="61" />
           <entry key="UML" value="1" />
           <entry key="YAML" value="18" />
@@ -168,7 +166,7 @@
           <entry key="json" value="865" />
           <entry key="key" value="2" />
           <entry key="rake" value="521" />
-          <entry key="rb" value="5069" />
+          <entry key="rb" value="5076" />
           <entry key="scss" value="225" />
           <entry key="yml" value="103" />
         </counts>
@@ -182,7 +180,7 @@
           <entry key="JavaScript" value="202" />
           <entry key="PLAIN_TEXT" value="37" />
           <entry key="RHTML" value="24310" />
-          <entry key="Ruby" value="5722" />
+          <entry key="Ruby" value="5729" />
           <entry key="SCSS" value="225" />
           <entry key="YAML" value="103" />
         </counts>
@@ -191,15 +189,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/schema.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/application.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -210,10 +199,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="88" selection-start-line="88" selection-end-line="88" />
+            <state relative-caret-position="734">
+              <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -263,7 +261,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/zones/el_eulma.html.erb" />
         <option value="$PROJECT_DIR$/app/views/zone_industrielles/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/promotion_immobilieres/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/zone_activites/show.html.erb" />
@@ -314,6 +311,7 @@
         <option value="$PROJECT_DIR$/config/deploy/production.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190221101815_addname_tousers.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
       </list>
     </option>
   </component>
@@ -355,6 +353,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="RailsProjectView">
         <subPane>
           <expand>
@@ -376,13 +375,25 @@
             <path>
               <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
               <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Config" type="9a8f28a7:ConfigFolderNode" />
+              <item name="Application" type="1a20d5f2:ApplicationFolderNode" />
+              <item name="ApplicationController" type="2b770dde:ControllerClassNode" />
+              <item name="ApplicationHelper" type="9c928a9:HelperNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Models" type="4bd37eb5:ModelsFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Models" type="4bd37eb5:ModelsFolderNode" />
+              <item name="Migrations" type="5e88d8ef:MigrationsFolder" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -803,12 +814,13 @@
       <workItem from="1575544454973" duration="3517000" />
       <workItem from="1575549107666" duration="5327000" />
       <workItem from="1575820085155" duration="3731000" />
-      <workItem from="1575899975806" duration="1961000" />
+      <workItem from="1575899975806" duration="3582000" />
+      <workItem from="1575959516674" duration="1505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1791566000" />
+    <option name="totallyTimeSpent" value="1794692000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -821,14 +833,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35272145" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3569904" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32712457" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733192" visible="true" weight="0.29685682" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733192" visible="true" weight="0.33760187" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1018,13 +1029,6 @@
         <state relative-caret-position="-2340" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-366">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1047,13 +1051,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/yarn">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/devise.en.yml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1123,13 +1120,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1144,20 +1134,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/wrap_parameters.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/deploy/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        <state relative-caret-position="463">
+          <caret line="539" column="35" lean-forward="true" selection-start-line="539" selection-start-column="35" selection-end-line="539" selection-end-column="35" />
         </state>
       </provider>
     </entry>
