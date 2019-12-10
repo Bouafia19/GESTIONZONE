@@ -89,7 +89,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Capfile" value="7" />
+          <entry key="Capfile" value="8" />
           <entry key="Gemfile" value="44" />
           <entry key="JPG" value="1" />
           <entry key="RailsDependency/Merit::RankRules" value="1" />
@@ -139,7 +139,7 @@
           <entry key="PLAIN_TEXT" value="87" />
           <entry key="RHTML" value="1157" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="803" />
+          <entry key="Ruby" value="804" />
           <entry key="SCSS" value="61" />
           <entry key="UML" value="1" />
           <entry key="YAML" value="18" />
@@ -147,7 +147,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Capfile" value="9" />
+          <entry key="Capfile" value="10" />
           <entry key="Gemfile" value="119" />
           <entry key="axlsx" value="9" />
           <entry key="coffee" value="68" />
@@ -176,7 +176,7 @@
           <entry key="JavaScript" value="202" />
           <entry key="PLAIN_TEXT" value="37" />
           <entry key="RHTML" value="24310" />
-          <entry key="Ruby" value="5823" />
+          <entry key="Ruby" value="5824" />
           <entry key="SCSS" value="225" />
           <entry key="YAML" value="103" />
         </counts>
@@ -194,11 +194,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
               <caret line="69" selection-start-line="69" selection-end-line="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Capfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -286,7 +295,6 @@
         <option value="$PROJECT_DIR$/app/controllers/investisseurs_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/zones/ouled_saber.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/Capfile" />
         <option value="$PROJECT_DIR$/config/deploy/production.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190221101815_addname_tousers.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
@@ -299,6 +307,7 @@
         <option value="$PROJECT_DIR$/db/migrate/20190419143239_create_extensions.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190419170111_create_anciennes.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190509074054_create_sabers.rb" />
+        <option value="$PROJECT_DIR$/Capfile" />
       </list>
     </option>
   </component>
@@ -789,12 +798,12 @@
       <workItem from="1575549107666" duration="5327000" />
       <workItem from="1575820085155" duration="3731000" />
       <workItem from="1575899975806" duration="3582000" />
-      <workItem from="1575959516674" duration="3996000" />
+      <workItem from="1575959516674" duration="4024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1797183000" />
+    <option name="totallyTimeSpent" value="1797211000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -945,13 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Capfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
@@ -1131,6 +1133,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Capfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
         </state>
       </provider>
     </entry>
