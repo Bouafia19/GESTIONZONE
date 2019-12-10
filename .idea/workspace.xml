@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43f71642-1426-4718-9a42-6501b751986f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Capfile" beforeDir="false" afterPath="$PROJECT_DIR$/Capfile" afterDir="false" />
-    </list>
+    <list default="true" id="43f71642-1426-4718-9a42-6501b751986f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -119,7 +117,7 @@
           <entry key="rb" value="691" />
           <entry key="rnc" value="1" />
           <entry key="ru" value="1" />
-          <entry key="ruby-version" value="1" />
+          <entry key="ruby-version" value="2" />
           <entry key="scss" value="61" />
           <entry key="setup" value="3" />
           <entry key="shx" value="1" />
@@ -138,7 +136,7 @@
           <entry key="Image" value="6" />
           <entry key="JSON" value="1220" />
           <entry key="JavaScript" value="54" />
-          <entry key="PLAIN_TEXT" value="87" />
+          <entry key="PLAIN_TEXT" value="88" />
           <entry key="RHTML" value="1157" />
           <entry key="RNG Compact" value="1" />
           <entry key="Ruby" value="804" />
@@ -365,6 +363,11 @@
               <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
               <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
               <item name="Models" type="4bd37eb5:ModelsFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="storage" type="26a0dba7:MinorFolderNode" />
             </path>
           </expand>
           <select />
@@ -791,12 +794,12 @@
       <workItem from="1575549107666" duration="5327000" />
       <workItem from="1575820085155" duration="3731000" />
       <workItem from="1575899975806" duration="3582000" />
-      <workItem from="1575959516674" duration="4994000" />
+      <workItem from="1575959516674" duration="5353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1798181000" />
+    <option name="totallyTimeSpent" value="1798540000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -811,12 +814,12 @@
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3569904" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3569904" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32712457" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49733192" visible="true" weight="0.33760187" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733192" visible="true" weight="0.33760187" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -893,9 +896,6 @@
           <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.ruby-version">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/log/production.log">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1126,6 +1126,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.ruby-version">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>

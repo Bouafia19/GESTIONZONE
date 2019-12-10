@@ -7,9 +7,6 @@ local:
   root: <%= Rails.root.join("storage") %>
 
 
-production:
-  service: Disk
-    root: <%= Rails.root.join("storage") %>
   #service: aws
   #access_key_id: 123
   #secret_access_key: 345
