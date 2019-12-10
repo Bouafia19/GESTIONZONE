@@ -1,5 +1,6 @@
 class CreateSabers < ActiveRecord::Migration[5.2]
   def change
+=begin
     create_table :sabers do |t|
       t.string :n_dossier
       t.string :r_socia_fr
@@ -8,5 +9,6 @@ class CreateSabers < ActiveRecord::Migration[5.2]
       t.timestamps
     end
     add_index :sabers, :geom,      using: :gist
+=end
   end
 end

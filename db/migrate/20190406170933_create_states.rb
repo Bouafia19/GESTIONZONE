@@ -1,5 +1,6 @@
 class CreateStates < ActiveRecord::Migration[5.2]
   def change
+=begin
     create_table :states do |t|
       t.references :country, foreign_key: true
       t.string :name
@@ -10,5 +11,6 @@ class CreateStates < ActiveRecord::Migration[5.2]
       t.timestamps
     end
     add_index :states, :geom,      using: :gist
+=end
   end
 end

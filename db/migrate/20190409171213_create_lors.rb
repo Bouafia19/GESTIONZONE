@@ -1,5 +1,6 @@
 class CreateLors < ActiveRecord::Migration[5.2]
   def change
+=begin
     create_table :lors do |t|
       t.integer :objectid
       t.float :shape_leng
@@ -11,5 +12,6 @@ class CreateLors < ActiveRecord::Migration[5.2]
       t.timestamps
     end
     add_index :lors, :geom,      using: :gist
+=end
   end
 end

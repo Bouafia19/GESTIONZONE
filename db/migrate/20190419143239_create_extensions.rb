@@ -1,5 +1,6 @@
 class CreateExtensions < ActiveRecord::Migration[5.2]
   def change
+=begin
     create_table :extensions do |t|
       t.string :n_de_lot
       t.string :n_dossier
@@ -10,5 +11,6 @@ class CreateExtensions < ActiveRecord::Migration[5.2]
       t.timestamps
     end
     add_index :extensions, :geom,      using: :gist
+=end
   end
 end

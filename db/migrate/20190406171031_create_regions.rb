@@ -1,5 +1,6 @@
 class CreateRegions < ActiveRecord::Migration[5.2]
   def change
+=begin
     create_table :regions do |t|
       t.string :name
       t.multi_polygon :geom, :srid => 4326
@@ -8,5 +9,6 @@ class CreateRegions < ActiveRecord::Migration[5.2]
       t.timestamps
     end
     add_index :regions, :geom,      using: :gist
+=end
   end
 end

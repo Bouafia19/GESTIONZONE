@@ -1,5 +1,6 @@
 class CreateCountries < ActiveRecord::Migration[5.2]
   def change
+=begin
     create_table :countries do |t|
       t.string :name
       t.string :iso_code
@@ -10,5 +11,6 @@ class CreateCountries < ActiveRecord::Migration[5.2]
     add_index :countries, :name,      unique:   true
     add_index :countries, :iso_code,  unique:   true
     add_index :countries, :geom,      using: :gist
+=end
   end
 end
