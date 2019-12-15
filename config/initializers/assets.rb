@@ -8,9 +8,9 @@ Rails.application.config.assets.version = '1.0'
 # Add Yarn node_modules folder to the asset load path.
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
-Rails.application.config.assets.precompile += %w( vendor/jquery/jquery.min.js )
-Rails.application.config.assets.precompile += %w( vendor/bootstrap/js/bootstrap.bundle.min.js )
-Rails.application.config.assets.precompile += %w( vendor/jquery-easing/jquery.easing.min.js )
+Rails.application.config.assets.precompile += %w( jquery.min.js )
+Rails.application.config.assets.precompile += %w( bootstrap.bundle.min.js )
+Rails.application.config.assets.precompile += %w( jquery.easing.min.js )
 
 Rails.application.config.assets.precompile += %w( agency.min.js )
 
@@ -18,6 +18,9 @@ Rails.application.config.assets.precompile += %w( jqBootstrapValidation.js )
 Rails.application.config.assets.precompile += %w( contact_me.js )
 
 Rails.application.config.assets.precompile += %w( css/agency.min.css )
+Rails.application.config.assets.precompile += %w( vendor/bootstrapa/css/bootstrap.min.css )
+Rails.application.config.assets.precompile += %w( vendor/fontawesome-free/css/all.min.css )
+
 
 Rails.application.config.assets.precompile += %w( css/sb-admin-2.min.css )
 

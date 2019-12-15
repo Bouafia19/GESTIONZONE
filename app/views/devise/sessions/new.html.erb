@@ -1,22 +1,12 @@
 
-<!-- The Modal -->
+
+
+<!-- The sign in Modal -->
 <div class="modal" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content">
 
-
-
-      <!-- Modal body -->
       <div class="modal-body">
-
-
-
-          <!-- Outer Row -->
-
-
-
-                  <!-- Nested Row within Card Body -->
-
 
                         <div class="text-center">
                           <h1 class="h4 text-gray-900 mb-4">Soyer le bienvenue</h1>
@@ -76,11 +66,16 @@
 
 <head>
 
-  <title>Investissement a setif</title>
-
+  <title>SIG App</title>
+  <%= stylesheet_link_tag "vendor/bootstrapa/css/bootstrap.min.css" %>
+  <%= stylesheet_link_tag "vendor/fontawesome-free/css/all.min.css" %>
   <!-- Bootstrap core CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-
+  <%= stylesheet_link_tag "css/agency.min.css" %>
 </head>
 
 <body id="page-top">
@@ -88,7 +83,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">Setif Invest</a>
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">SIG App</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fas fa-bars"></i>
@@ -96,7 +91,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ml-auto">
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#services">Objectifs</a>
+          <a class="nav-link js-scroll-trigger" href="#services">Services</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#portfolio">Projects</a>
@@ -105,13 +100,11 @@
           <a class="nav-link js-scroll-trigger" href="#about">Historique</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#team">Directions</a>
+          <a class="nav-link js-scroll-trigger" href="#team">Equipe</a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
         </li>
-
         <li class="nav-item">
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
             <i>Se connecter</i>
@@ -126,8 +119,8 @@
 <header class="masthead">
   <div class="container">
     <div class="intro-text">
-      <div class="intro-lead-in">Bienvenue à Setif!</div>
-      <div class="intro-heading text-uppercase">Pour un climat d'investissement meilleur </div>
+      <div class="intro-lead-in">Welcome To Our Studio!</div>
+      <div class="intro-heading text-uppercase">système d'information géographique </div>
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Savoir plus</a>
     </div>
   </div>
@@ -135,45 +128,35 @@
 
 <!-- Services -->
 <section id="services">
-  <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">Objectifs</h2>
-        <h3 class="section-subheading text-muted"></h3>
+        <h2 class="section-heading text-uppercase">Services</h2>
+        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
       </div>
     </div>
     <div class="row text-center">
       <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-
-            <%= image_tag ("gestion.jpg"), class: "img-fluid"%>
-
+          <span class="fa-stack fa-10x">
+            <%= image_tag ("effic.png"), class: "img-fluid"%>
           </span>
         <h4 class="service-heading">Gestion Fiable de l'information</h4>
-        <!-- <p class="text-muted">Toute réalisation économique qui fait appel à des investissements repose sur une base : le "foncier», support de tout bâtit. Parfois atout souvent contrainte, sa disponibilité ou sa rareté est liées à sa gestion. Une gestion rationnelle et réfléchie permet une préservation de ce patrimoine et une disponibilité économique pour l’investisseur.</p> -->
+         <p class="text-muted">Travailler avec votre propre appareil : cela peut paraître facile, mais les appareils mobiles nécessitent une protection supplémentaire.</p>
       </div>
       <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-
-
-            <%= image_tag ("deffusion.jpg"), class: "img-fluid"%>
-
+          <span class="fa-stack fa-10x">
+            <%= image_tag ("images (1).jpeg"), class: "img-fluid"%>
           </span>
         <h4 class="service-heading">Diffusion de l'information</h4>
-       <!-- <p class="text-muted">la circulation des informations se fera à travers un système de communication ouvert, plus nomades, facilement consultables sur PC ou smartphone.</p> -->
+       <p class="text-muted">La diffusion se définit par la communication de l’information et peut prendre plusieurs formes. </p>
       </div>
       <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-
-
+          <span class="fa-stack fa-10x">
             <%= image_tag ("efficase.jpg"), class: "img-fluid"%>
           </span>
         <h4 class="service-heading">Efficacité</h4>
-        <!--<p class="text-muted">Le vrai problème réside essentiellement dans l'organisation, le mode de gestion et les procédures d'attribution des assiettes foncières au profit des projets d'investissement.
-          Dans ce contexte il est impératif de lancer des opérations d'acquisition foncière pour  produire du foncier dédié à l'activité économique qui obéit aux normes et standards internationaux.</p> -->
+        <p class="text-muted">L'efficacité est la capacité, d'une personne, d'un groupe ou d'un système, à parvenir à ses fins, à ses objectifs.</p>
       </div>
     </div>
-  </div>
 </section>
 
 <!-- Portfolio Grid -->
@@ -182,7 +165,7 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">Projects</h2>
-        <h3 class="section-subheading text-muted"></h3>
+        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
       </div>
     </div>
     <div class="row">
@@ -193,11 +176,11 @@
               <i class="fas fa-plus fa-3x"></i>
             </div>
           </div>
-            <%= image_tag ("ziSetif.jpg"), class: "img-fluid"%>
+          <%= image_tag ("01-thumbnail.jpg"), class: "img-fluid"%>
         </a>
         <div class="portfolio-caption">
-          <h4>Zones Industrielles</h4>
-          <p class="text-muted"></p>
+          <h4>Threads</h4>
+          <p class="text-muted">Illustration</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 portfolio-item">
@@ -207,12 +190,11 @@
               <i class="fas fa-plus fa-3x"></i>
             </div>
           </div>
-
-          <%= image_tag ("fonciersetif.jpg"), class: "img-fluid"%>
+          <%= image_tag ("02-thumbnail.jpg"), class: "img-fluid"%>
         </a>
         <div class="portfolio-caption">
-          <h4>Zones D'activités</h4>
-          <p class="text-muted"></p>
+          <h4>Explore</h4>
+          <p class="text-muted">Graphic Design</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 portfolio-item">
@@ -222,11 +204,11 @@
               <i class="fas fa-plus fa-3x"></i>
             </div>
           </div>
-          <%= image_tag ("hors_zone.jpg"), class: "img-fluid"%>
+          <%= image_tag ("03-thumbnail.jpg"), class: "img-fluid"%>
         </a>
         <div class="portfolio-caption">
-          <h4>Projets D'investissement Hors Zones</h4>
-          <p class="text-muted"></p>
+          <h4>Finish</h4>
+          <p class="text-muted">Identity</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 portfolio-item">
@@ -236,11 +218,11 @@
               <i class="fas fa-plus fa-3x"></i>
             </div>
           </div>
-          <%= image_tag ("stade_de_setif_.jpg"), class: "img-fluid"%>
+          <%= image_tag ("04-thumbnail.jpg"), class: "img-fluid"%>
         </a>
         <div class="portfolio-caption">
-          <h4>Zone D'expansion Touristique</h4>
-          <p class="text-muted"></p>
+          <h4>Lines</h4>
+          <p class="text-muted">Branding</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 portfolio-item">
@@ -250,11 +232,11 @@
               <i class="fas fa-plus fa-3x"></i>
             </div>
           </div>
-          <%= image_tag ("pimob.jpg"), class: "img-fluid"%>
+          <%= image_tag ("05-thumbnail.jpg"), class: "img-fluid"%>
         </a>
         <div class="portfolio-caption">
-          <h4>Promotions Immobilières</h4>
-          <p class="text-muted"></p>
+          <h4>Southwest</h4>
+          <p class="text-muted">Website Design</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 portfolio-item">
@@ -264,11 +246,11 @@
               <i class="fas fa-plus fa-3x"></i>
             </div>
           </div>
-          <%= image_tag ("Image3.jpg"), class: "img-fluid"%>
+          <%= image_tag ("06-thumbnail.jpg"), class: "img-fluid"%>
         </a>
         <div class="portfolio-caption">
-          <h4>Autres</h4>
-          <p class="text-muted"></p>
+          <h4>Window</h4>
+          <p class="text-muted">Photography</p>
         </div>
       </div>
     </div>
@@ -281,7 +263,7 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">Historique</h2>
-        <h3 class="section-subheading text-muted"></h3>
+        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
       </div>
     </div>
     <div class="row">
@@ -293,11 +275,11 @@
             </div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4></h4>
-                <h4 class="subheading">La création des zones industrielles le début des années soixante-dix</h4>
+                <h4 ></h4>
+                <h4 class="subheading" style="text-align: left">1960 La première histoire des SIG</h4>
               </div>
               <div class="timeline-body">
-                <p class="text-muted"></p>
+                <p class="text-muted" style="text-align: left" >Le domaine des systèmes d’information géographique (SIG) a débuté dans les années 1960 avec l’émergence des ordinateurs et des premiers concepts de géographie quantitative et informatique. Les premiers travaux sur les SIG comprenaient d'importantes recherches menées par la communauté universitaire. Plus tard, le Centre national d’information et d’analyse géographiques, dirigé par Michael Goodchild, a officialisé la recherche sur des thèmes clés de la science de l’information géographique tels que l’analyse spatiale et la visualisation. Ces efforts ont alimenté une révolution quantitative dans le monde de la science géographique et jeté les bases du SIG.</p>
               </div>
             </div>
           </li>
@@ -307,11 +289,11 @@
             </div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4>2011-2017</h4>
-                <h4 class="subheading">La mise en place des fiches navettes pour contrôler l’investissement  dans ces zones (entre directions)</h4>
+                <h4></h4>
+                <h4 class="subheading" style="text-align: left">1963 Le premier SIG</h4>
               </div>
               <div class="timeline-body">
-                <p class="text-muted"></p>
+                <p class="text-muted" style="text-align: left">Les travaux pionniers de Roger Tomlinson pour créer, planifier et développer le système d’information géographique du Canada ont abouti au premier SIG informatisé au monde en 1963. Le gouvernement canadien avait chargé Tomlinson de créer un inventaire de ses ressources naturelles. Il a envisagé d'utiliser des ordinateurs pour fusionner des données sur les ressources naturelles de toutes les provinces. Tomlinson a créé la conception de l'informatique automatisée pour stocker et traiter de grandes quantités de données, ce qui a permis au Canada de lancer son programme national de gestion de l'utilisation des terres. Il a également donné son nom au SIG.</p>
               </div>
             </div>
           </li>
@@ -321,11 +303,11 @@
             </div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4>2017-2018</h4>
-                <h4 class="subheading">Elaboration d’un système d’information géographique(SIG) </h4>
+                <h4></h4>
+                <h4 class="subheading" style="text-align: left">1965 Le laboratoire d'Harvard </h4>
               </div>
               <div class="timeline-body">
-                <p class="text-muted"></p>
+                <p class="text-muted" style="text-align: left">Alors qu’il travaillait à la Northwestern University en 1964, Howard Fisher a créé l’un des premiers logiciels de cartographie informatique appelé SYMAP. En 1965, il a créé le laboratoire d’Harvard pour l’infographie. Les premiers logiciels informatiques de cartographie ont été créés et améliorés au laboratoire, mais ils sont également devenus un centre de recherche pour l'analyse spatiale et la visualisation. La plupart des premiers concepts de SIG et de ses applications ont été conçus au laboratoire par une talentueuse équipe de géographes, urbanistes, informaticiens et autres spécialistes de nombreux domaines.</p>
               </div>
             </div>
           </li>
@@ -335,20 +317,49 @@
             </div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4>2019</h4>
-                <h4 class="subheading">Un pas vers une gérance développée et une mise à jour localisée (webmaping)</h4>
+                <h4></h4>
+                <h4 class="subheading" style="text-align: left">1969 Esri est fondée</h4>
               </div>
               <div class="timeline-body">
-                <p class="text-muted"></p>
+                <p class="text-muted" style="text-align: left">En 1969, Jack Dangermond, membre du laboratoire d’Harvard, et son épouse Laura fondèrent Environmental Systems Research Institute, Inc. (Esri). La société de conseil a appliqué la cartographie informatique et l'analyse spatiale pour aider les planificateurs de l'utilisation des sols et les gestionnaires des ressources foncières à prendre des décisions éclairées. Les premiers travaux de la société ont démontré l’utilité des SIG pour la résolution de problèmes. Esri a ensuite développé de nombreuses méthodes de cartographie SIG et d’analyse spatiale actuellement utilisées. Ces résultats ont suscité un intérêt plus général pour les outils logiciels et les flux de travail de la société, qui sont désormais standard pour les SIG.</p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-image">
+            <div class="timeline-image">
+              <%= image_tag ("3.jpg"), class: "rounded-circle img-fluid"%>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4></h4>
+                <h4 class="subheading" style="text-align: left">1981 Le SIG devient commercial</h4>
+              </div>
+              <div class="timeline-body">
+                <p class="text-muted" style="text-align: left">À mesure que l'informatique devenait plus puissante, Esri améliora ses outils logiciels. Travailler sur des projets qui résolvent des problèmes concrets ont conduit l'entreprise à innover et à développer de solides outils et approches SIG pouvant être largement utilisés. Les travaux d’Esri ont été reconnus par la communauté universitaire comme une nouvelle façon de procéder à l’analyse et à la planification spatiales. Désireux d'analyser plus efficacement un nombre croissant de projets, Esri a mis au point ARC / INFO, le premier produit SIG commercial. La technologie a été lancée en 1981 et c’est à partir de cette date qu’a commencé l'évolution d'Esri comme société éditrice de logiciels.</p>
               </div>
             </div>
           </li>
           <li class="timeline-inverted">
             <div class="timeline-image">
-              <h4>Faire partie
-                <br>De nôtre
-                <br>projet!</h4>
+              <%= image_tag ("3.jpg"), class: "rounded-circle img-fluid"%>
             </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4></h4>
+                <h4 class="subheading" style="text-align: left">Le SIG aujourd'hui</h4>
+              </div>
+              <div class="timeline-body">
+                <p class="text-muted" style="text-align: left">Les SIG permettent aux utilisateurs de créer leurs propres couches de cartes afin de résoudre des problèmes concrets. Les SIG ont également évolué pour devenir un moyen de partage de données et de collaboration, inspirant une vision qui devient aujourd’hui une réalité - une base de données SIG qui couvre pratiquement tous les sujets. Aujourd'hui, des centaines de milliers d'organisations partagent leur travail et créent des millions de cartes chaque jour pour raconter des histoires et révéler des modèles, des tendances et des relations sur tous les sujets.</p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <h4>Be Part
+                <br>Of Our
+                <br>Story!</h4>
+            </div>
+
           </li>
         </ul>
       </div>
@@ -361,15 +372,16 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase"> Directions</h2>
-        <h3 class="section-subheading text-muted"></h3>
+        <h2 class="section-heading text-uppercase">Equipe</h2>
+        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-4">
         <div class="team-member">
-          <%= image_tag ("agence_fonciere.jpg"), class: "mx-auto rounded-circle"%>
-          <h4>Agence foncière</h4>
+          <%= image_tag ("1.jpg"), class: "mx-auto rounded-circle"%>
+          <h4>Kay Garland</h4>
+          <p class="text-muted">Lead Designer</p>
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
               <a href="#">
@@ -391,8 +403,9 @@
       </div>
       <div class="col-sm-4">
         <div class="team-member">
-          <%= image_tag ("wilaya.jpg"), class: "mx-auto rounded-circle"%>
-          <h4>Wilaya Setif</h4>
+          <%= image_tag ("2.jpg"), class: "mx-auto rounded-circle"%>
+          <h4>Larry Parker</h4>
+          <p class="text-muted">Lead Marketer</p>
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
               <a href="#">
@@ -414,8 +427,9 @@
       </div>
       <div class="col-sm-4">
         <div class="team-member">
-          <%= image_tag ("cadastre.jpg"), class: "mx-auto rounded-circle"%>
-          <h4>Cadastre</h4>
+          <%= image_tag ("1.jpg"), class: "mx-auto rounded-circle"%>
+          <h4>Diana Pertersen</h4>
+          <p class="text-muted">Lead Developer</p>
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
               <a href="#">
@@ -433,139 +447,40 @@
               </a>
             </li>
           </ul>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="team-member">
-          <%= image_tag ("download1.jpeg"), class: "mx-auto rounded-circle"%>
-          <h4>DUAC</h4>
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="team-member">
-          <%= image_tag ("download2.jpeg"), class: "mx-auto rounded-circle"%>
-          <h4>Direction de l'environnement</h4>
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="team-member">
-          <%= image_tag ("images.jpeg"), class: "mx-auto rounded-circle"%>
-          <h4>Direction de l'agriculture</h4>
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="team-member">
-          <%= image_tag ("images (1).jpeg"), class: "mx-auto rounded-circle"%>
-          <h4>ANDI</h4>
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="team-member">
-          <%= image_tag ("autres.png"), class: "mx-auto rounded-circle"%>
-
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-8 mx-auto text-center">
-        <p class="large text-muted"></p>
+        <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
       </div>
     </div>
   </div>
 </section>
-
 <!-- Clients -->
 <section class="py-5">
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-sm-6">
         <a href="#">
-          <%= image_tag ("Setif2.png"), class: "img-fluid d-block mx-auto"%>
+          <%= image_tag ("creative-market.jpg"), class: "img-fluid d-block mx-auto"%>
         </a>
       </div>
       <div class="col-md-3 col-sm-6">
         <a href="#">
 
-          <% image_tag ("download.jpeg"), class: "img-fluid d-block mx-auto"%>
+          <%= image_tag ("themeforest.jpg"), class: "img-fluid d-block mx-auto"%>
         </a>
       </div>
       <div class="col-md-3 col-sm-6">
         <a href="#">
-          <% image_tag ("themeforest.jpg"), class: "img-fluid d-block mx-auto"%>
+          <%= image_tag ("creative-market.jpg"), class: "img-fluid d-block mx-auto"%>
         </a>
       </div>
       <div class="col-md-3 col-sm-6">
         <a href="#">
 
-          <%= image_tag ("download.jpeg"), class: "img-fluid d-block mx-auto"%>
+          <%= image_tag ("themeforest.jpg"), class: "img-fluid d-block mx-auto"%>
         </a>
       </div>
     </div>
@@ -578,30 +493,34 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">Contactez nous</h2>
-        <h3 class="section-subheading text-muted"></h3>
+        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-12">
-        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+        <form
+          action="https://formspree.io/mledkarr"
+          method="POST"
+        >
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input class="form-control" id="name" type="text" placeholder="Nom et Prénom *" required="required" data-validation-required-message="S'il vous plaît entrez votre nom.">
+
+                <input class="form-control" id="name" name="full name" type="text" placeholder="Nom et Prénom *" required="required" data-validation-required-message="S'il vous plaît entrez votre nom.">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
-                <input class="form-control" id="email" type="email" placeholder="Votre Email *" required="required" data-validation-required-message="S'il vous plaît entrer votre adresse email.">
+                <input class="form-control" id="email" name="Email" type="email" placeholder="Votre Email *" required="required" data-validation-required-message="S'il vous plaît entrer votre adresse email.">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
-                <input class="form-control" id="phone" type="tel" placeholder="Votre n° Portable *" required="required" data-validation-required-message="S'il vous plait, entrez votre numéro de téléphone.">
+                <input class="form-control" id="phone" name="Numero Tel" type="tel" placeholder="Votre n° Portable *" required="required" data-validation-required-message="S'il vous plait, entrez votre numéro de téléphone.">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <textarea class="form-control" id="message" placeholder="Votre Message *" required="required" data-validation-required-message="S'il vous plaît entrer un message."></textarea>
+                <textarea class="form-control" id="message" name="message" placeholder="Votre Message *" required="required" data-validation-required-message="S'il vous plaît entrer un message."></textarea>
                 <p class="help-block text-danger"></p>
               </div>
             </div>
@@ -616,13 +535,12 @@
     </div>
   </div>
 </section>
-
 <!-- Footer -->
 <footer>
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <span class="copyright">Copyright &copy; Setif Invest 2019</span>
+        <span class="copyright">Copyright &copy; SIG App 2019</span>
       </div>
       <div class="col-md-4">
         <ul class="list-inline social-buttons">
@@ -864,19 +782,10 @@
 </div>
 
 <!-- Bootstrap core JavaScript -->
-
-<%= javascript_include_tag('vendor/jquery/jquery.min.js') %>
-<%= javascript_include_tag('vendor/bootstrap/js/bootstrap.bundle.min.js') %>
-
-
-<!-- Plugin JavaScript -->
-
-<%= javascript_include_tag('vendor/jquery-easing/jquery.easing.min.js') %>
-<!-- Contact form JavaScript -->
-
+<%= javascript_include_tag('jquery.min.js') %>
+<%= javascript_include_tag('bootstrap.bundle.min.js') %>
+<%= javascript_include_tag('jquery.easing.min.js') %>
 <%= javascript_include_tag('agency.min.js') %>
-<!-- Custom scripts for this template -->
-
 <%= javascript_include_tag('jqBootstrapValidation.js') %>
 <%= javascript_include_tag('contact_me.js') %>
 </body>
