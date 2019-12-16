@@ -1,5 +1,6 @@
 class HorsZonesController < InheritedResources::Base
   def index
+=begin
     date1 = ("01/01/2019")
     date2 = Date.today.strftime("%d/%m/%Y")
 
@@ -14,6 +15,9 @@ class HorsZonesController < InheritedResources::Base
     session[:start_pub] ||= date1
     session[:end_pub] ||= date2
     datatable_paginate([:hors_zone],['code_zone;nom_zone;commune;wilaya',['hors_zones',"hors_zones.dat_arrete_creation >='#{Date.parse(session[:start_pub])}' and hors_zones.dat_arrete_creation <='#{Date.parse(session[:end_pub])}'"]])
+
+=end
+    @hors_zonez = HorsZone.all
   end
   def static
     @hors_zone = HorsZone.all

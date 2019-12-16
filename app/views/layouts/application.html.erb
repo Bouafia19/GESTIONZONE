@@ -7,13 +7,15 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" data-turbolinks-track>
--->
+
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css"   >
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js" ></script>
-
+-->
+    <%= stylesheet_link_tag "vendor/fontawesome-free/css/all.min.css" %>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <%= stylesheet_link_tag "css/sb-admin-2.min.css" %>
-    <%= javascript_include_tag 'ddtf.js' %>
-
+    <%#= javascript_include_tag 'ddtf.js' %>
+    <%= stylesheet_link_tag "vendor/datatables/dataTables.bootstrap4.min.css" %>
   </head>
 
   <body id="page-top">
@@ -112,7 +114,7 @@
             <%= link_to 'ZONES ACTIVITES', zone_activites_path ,class:"collapse-item"%>
             <%= link_to 'PROM IMOBILIERES', promotion_immobilieres_path ,class:"collapse-item"%>
             <%= link_to 'Z ENTREPOT ACTIVITE', zone_entrepot_activites_path ,class:"collapse-item"%>
-            <%= link_to 'Z ', zones_setif_inve_path ,class:"collapse-item"%>
+            <%#= link_to 'Z ', zones_setif_inve_path ,class:"collapse-item"%>
             <%#= link_to 'State', states_path ,class:"collapse-item"%>
             <% link_to 'UTILISATEURS', users_path ,class:"collapse-item"%>
 
@@ -362,9 +364,10 @@
       <br>
     <%end%>
     <% if alert %>
+              <!--
       <div class="col-md-12 alert alert-danger">
         <p id="alert"><%= alert %></p>
-      </div>
+      </div>   -->
       <br>
     <%end%>
     <div class="col-md-12">
@@ -426,7 +429,9 @@
         <!-- Page level plugins -->
 
         <!-- Page level custom scripts -->
-
+  <%= javascript_include_tag('datatables/jquery.dataTables.min.js') %>
+  <%= javascript_include_tag('datatables/dataTables.bootstrap4.min.js') %>
+  <%= javascript_include_tag('js/demo/datatables-demo.js') %>
 
 
           </div>

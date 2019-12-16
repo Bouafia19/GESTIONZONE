@@ -15,7 +15,7 @@ def index
   session[:start_pub] ||= date1
   session[:end_pub] ||= date2
 =end
-  datatable_paginate([:zone_industrielle],['code_zone;nom_zone;commune;wilaya'])
+    @zone_industriellez = ZoneIndustrielle.all
 
   end
 def static

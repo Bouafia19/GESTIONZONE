@@ -1,5 +1,6 @@
 class ZoneActivitesController < InheritedResources::Base
 def index
+=begin
   date1 = ("01/01/2019")
 
   date2 = Date.today.strftime("%d/%m/%Y")
@@ -16,7 +17,9 @@ def index
   session[:end_pub] ||= date2
 
   datatable_paginate([:zone_activite],['code_zone;nom_zone;commune;wilaya',['zone_activites',"zone_activites.dat_arrete_creation >='#{Date.parse(session[:start_pub])}' and zone_activites.dat_arrete_creation <='#{Date.parse(session[:end_pub])}'"]])
+=end
 
+  @zone_activitez = ZoneActivite.all
 end
 
 def static

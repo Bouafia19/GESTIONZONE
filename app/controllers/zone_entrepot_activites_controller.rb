@@ -1,6 +1,6 @@
 class ZoneEntrepotActivitesController < InheritedResources::Base
 def index
-  datatable_paginate([:zone_entrepot_activite],['code_zone;nom_zone;commune;wilaya'])
+  @zone_entrepot_activitez = ZoneEntrepotActivite.all
 end
 
   private

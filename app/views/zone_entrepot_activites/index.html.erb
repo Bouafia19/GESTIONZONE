@@ -1,65 +1,62 @@
 
-
-
-<div class="card">
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Zone entrepot activite</h6>
+  </div>
   <div class="card-body">
-    <div class="card-header ">
-      <h1 align="center" style="color: #17a2b8">Zone Entrepot Activites : <%= @total%></h1>
-    </div>
+
+    <table class="table table-bordered table-responsive" id="dataTable" width="100%" cellspacing="0">
+      <thead>
+      <tr>
+        <th>Code zone</th>
+        <th>Type zone</th>
+        <th>Nom zone</th>
+        <th>Commune</th>
+        <th>Wilaya</th>
+        <th>Superf total</th>
+        <th>Superf cessible</th>
+        <th>Superf vrd</th>
+        <th>Nbr lots</th>
+        <th>Nbr lots attribues</th>
+        <th>Observation</th>
 
 
-    <hr>
-    <% link_to 'New Zone Entrepot Activite', new_zone_entrepot_activite_path,class:"btn btn-success" %>
-
-    <br>
-    <!--
-    <div class="col-xl-12 col-md-6 mb-4">
-      <div class="card border-left-primary shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2">
-              <%= form_tag '/zone_entrepot_activites', method: :get do %>
-                <div class="row">
-                  <div class="col-sm-2 align-self-start"  >
-                    <strong >Debut </strong><%= text_field_tag :start_date, session[:start_pub] , class: 'datepicker form-control date', 'data-date-format'=>"dd/mm/yyyy", required: true  %>
-                  </div>
-
-                  <div class="col-sm-2 align-self-center">
-                    <strong>Fin</strong><%= text_field_tag :end_date, session[:end_pub] , class: 'datepicker form-control date', 'data-date-format'=>"dd/mm/yyyy", required: true %>
-                  </div>
+        <th></th>
+        <th></th>
+        <th></th>
 
 
-                  <div class="col-sm-2 align-self-end">
-                    <%= submit_tag 'Filter Date Arrete Creation' ,class: 'btn btn-primary '%>
-                  </div>
+      </tr>
+      </thead>
+      <tbody>
+      <% @zone_entrepot_activitez.each do |zone_entrepot_activite| %>
+        <tr>
 
-              <%end%>
+          <td><%= zone_entrepot_activite.code_zone %></td>
+          <td><%= zone_entrepot_activite.type_zone %></td>
+          <td><%= zone_entrepot_activite.nom_zone %></td>
+          <td><%= zone_entrepot_activite.commune %></td>
+          <td><%= zone_entrepot_activite.wilaya %></td>
+          <td><%= zone_entrepot_activite.superf_total %></td>
+          <td><%= zone_entrepot_activite.superf_cessible %></td>
+          <td><%= zone_entrepot_activite.superf_vrd %></td>
+          <td><%= zone_entrepot_activite.nbr_lots %></td>
+          <td><%= zone_entrepot_activite.nbr_lot_attribues %></td>
+          <td><%= zone_entrepot_activite.observation %></td>
 
--->
-    <div class="row">
+          <td><%= link_to '', zone_entrepot_activite ,class:"fas fa-tv fa-2x  btn-success btn-lg"%></td>
+          <td><%= link_to '', edit_zone_entrepot_activite_path(zone_entrepot_activite) ,class:"fas fa-edit fa-2x btn-warning btn-lg"%></td>
+          <td><%= link_to '', zone_entrepot_activite, method: :delete, data: { confirm: 'Are you sure?' },class:"fas fa-trash fa-2x btn-danger btn-lg" %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
 
-
-    <div class="col-sm-1 align-self-start">
-      <strong >Afficher </strong>  <%= select_tag(:count,options_for_select([10,25,50], selected: session[:per_pages]),class:"form-control input-sm", onchange:"SelectSearch(id,'zone_entrepot_activites','')", id:"select" )%>
-              </div>
-
-
-              <div class="col-sm-3 align-self-end">
-                <strong >Chercher </strong> <%= search_field_tag "search_champ",session[:data] ,{class:"form-control input-sm",placeholder:"Chercher",onKeyUp:"SelectSearch(id,'zone_entrepot_activites','')" }%>
-              </div>
-              </div>
-
-
-
-
-    <br>
-    <div class="row" id="table_search" style="padding: 10px">
-      <%= render(:partial => 'index', locals: {paginate: @paginate})%>
-    </div>
   </div>
 </div>
 
 
-<script>
-    $('.datepicker').datepicker()
-</script>
+
+
+

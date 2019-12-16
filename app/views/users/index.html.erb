@@ -1,47 +1,50 @@
 
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Users</h6>
+  </div>
+  <div class="card-body">
+
+    <table class="table table-bordered table-responsive" id="dataTable" width="100%" cellspacing="0">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Created at</th>
+        <th>Updated at</th>
 
 
+        <th></th>
+        <th></th>
+        <th></th>
 
 
-  <div class="card">
-    <div class="card-body">
-      <div class="card-header">
+      </tr>
+      </thead>
+      <tbody>
+      <% @userz.each do |user| %>
+        <tr>
+
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.role %></td>
+          <td><%= user.created_at %></td>
+          <td><%= user.updated_at %></td>
+
+          <td><%= link_to '', user ,class:"fas fa-tv fa-2x  btn-success btn-lg"%></td>
+          <td><%= link_to '', edit_user_path(user) ,class:"fas fa-edit fa-2x btn-warning btn-lg"%></td>
+          <td><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?' },class:"fas fa-trash fa-2x btn-danger btn-lg" %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
 
 
-    <h1 style="color: #17a2b8" align="center"><%= User.count %> Utilisateurs    </h1>
-      </div>
-    <hr>
-
-
-
-
-         <%= link_to 'New User', new_user_path ,class:"btn btn-success"%>
-
-<hr>
-    <div class="row">
-      <div class="col-sm-9">
-        <div class="dataTables_length input-group" id="example_length">
-          <div class="col-sm-2">
-            <span>Voir</span>
-          </div>
-          <div class="col-sm-2" style="margin-left: 10px">
-            <%= select_tag(:count,options_for_select([10,25,50], selected: session[:per_pages]),class:"form-control input-sm", onchange:"SelectSearch(id,'users','')", id:"select" )%>
-          </div>
-          <span>entrées</span>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div id="example_filter" class="dataTables_filter">
-          <%= search_field_tag "search_champ",session[:data] ,{class:"form-control input-sm",placeholder:"Chercher",onKeyUp:"SelectSearch(id,'users','')" }%>
-        </div>
-      </div>
-    </div>
-    <br>
-    <div class="row" id="table_search" style="padding: 10px">
-      <%= render(:partial => 'index', locals: {paginate: @paginate})%>
-    </div>
-    </div>
-    </div>
 
 
 

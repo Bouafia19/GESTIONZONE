@@ -1,5 +1,6 @@
 class PromotionImmobilieresController < InheritedResources::Base
 def index
+=begin
   date1 = ("01/01/2019")
   date2 = Date.today.strftime("%d/%m/%Y")
 
@@ -14,6 +15,9 @@ def index
   session[:start_pub] ||= date1
   session[:end_pub] ||= date2
   datatable_paginate([:promotion_immobiliere],['code_zone;nom_zone;commune;wilaya',['promotion_immobilieres',"promotion_immobilieres.dat_arrete_creation >='#{Date.parse(session[:start_pub])}' and promotion_immobilieres.dat_arrete_creation <='#{Date.parse(session[:end_pub])}'"]])
+
+=end
+  @promotion_immobilierez = PromotionImmobiliere.all
 end
 def static
   @promotion_immobiliere = PromotionImmobiliere.all

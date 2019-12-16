@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    datatable_paginate([:user],['email'])
+    @userz = User.all
   end
 
   # GET /users/1
