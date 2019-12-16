@@ -3,77 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="43f71642-1426-4718-9a42-6501b751986f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/css/dataTables.bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/css/dataTables.bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/css/dataTables.bootstrap4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/css/dataTables.foundation.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/css/dataTables.foundation.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/css/dataTables.jqueryui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/css/dataTables.jqueryui.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/css/dataTables.semanticui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/css/dataTables.semanticui.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/css/jquery.dataTables.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/css/jquery.dataTables.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/images/sort_asc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/images/sort_asc_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/images/sort_both.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/images/sort_desc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/images/sort_desc_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/js/dataTables.bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/js/dataTables.bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/js/dataTables.bootstrap4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/js/dataTables.bootstrap4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/js/dataTables.foundation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/js/dataTables.foundation.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/js/dataTables.jqueryui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/js/dataTables.jqueryui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/js/dataTables.semanticui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/js/dataTables.semanticui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/js/jquery.dataTables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/DataTables-1.10.18/js/jquery.dataTables.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/datatables.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/datatables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/datatables.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/DataTables/datatables.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/algeria.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_cards.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_charts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_dropdowns.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_error.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_global.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_login.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_navs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_utilities.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/vendor/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/vendor/jquery/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/vendor/jquery/jquery.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/vendor/jquery/jquery.slim.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/vendor/jquery/jquery.slim.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/vendor/jquery/jquery.slim.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/hors_zones_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/hors_zones_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/promotion_immobilieres_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/promotion_immobilieres_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/zone_activites_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/zone_activites_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/zone_entrepot_activites_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/zone_entrepot_activites_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/zone_industrielles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/zone_industrielles_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/hors_zones/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/hors_zones/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/investisseurs/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/investisseurs/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/promotion_immobilieres/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/promotion_immobilieres/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zone_activites/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zone_activites/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zone_entrepot_activites/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zone_entrepot_activites/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/zone_industrielles/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/zone_industrielles/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/users/photos/000/000/021/medium/header-bg.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/users/photos/000/000/021/original/header-bg.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/users/photos/000/000/021/thumb/header-bg.jpeg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -89,7 +22,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/GESTIONZONE@Production__GESTIONZONE.rcov" NAME="Production: GESTIONZONE Coverage Results" MODIFIED="1546759523549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
-    <SUITE FILE_PATH="coverage/GESTIONZONE@Development__GESTIONZONE.rcov" NAME="Development: GESTIONZONE Coverage Results" MODIFIED="1576479750762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
+    <SUITE FILE_PATH="coverage/GESTIONZONE@Development__GESTIONZONE.rcov" NAME="Development: GESTIONZONE Coverage Results" MODIFIED="1576521355747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -172,12 +105,12 @@
           <entry key="css" value="6" />
           <entry key="enc" value="33" />
           <entry key="env" value="3" />
-          <entry key="erb" value="1199" />
+          <entry key="erb" value="1200" />
           <entry key="gitignore" value="2" />
           <entry key="html" value="13" />
           <entry key="jbuilder" value="13" />
           <entry key="jpg" value="3" />
-          <entry key="js" value="57" />
+          <entry key="js" value="58" />
           <entry key="js_path" value="2" />
           <entry key="json" value="1221" />
           <entry key="key" value="35" />
@@ -188,7 +121,7 @@
           <entry key="png" value="2" />
           <entry key="rails" value="10" />
           <entry key="rake" value="21" />
-          <entry key="rb" value="707" />
+          <entry key="rb" value="708" />
           <entry key="rnc" value="1" />
           <entry key="ru" value="1" />
           <entry key="ruby-version" value="2" />
@@ -209,12 +142,12 @@
           <entry key="HTML" value="13" />
           <entry key="Image" value="6" />
           <entry key="JSON" value="1221" />
-          <entry key="JavaScript" value="57" />
+          <entry key="JavaScript" value="58" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="89" />
-          <entry key="RHTML" value="1199" />
+          <entry key="RHTML" value="1200" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="820" />
+          <entry key="Ruby" value="821" />
           <entry key="SCSS" value="88" />
           <entry key="UML" value="1" />
           <entry key="YAML" value="19" />
@@ -229,15 +162,15 @@
           <entry key="css" value="4" />
           <entry key="enc" value="22" />
           <entry key="env" value="1" />
-          <entry key="erb" value="24961" />
+          <entry key="erb" value="24999" />
           <entry key="gitignore" value="3" />
           <entry key="html" value="1" />
           <entry key="jbuilder" value="4" />
-          <entry key="js" value="202" />
+          <entry key="js" value="231" />
           <entry key="json" value="865" />
           <entry key="key" value="2" />
           <entry key="rake" value="521" />
-          <entry key="rb" value="5319" />
+          <entry key="rb" value="5321" />
           <entry key="scss" value="253" />
           <entry key="yml" value="103" />
         </counts>
@@ -248,10 +181,10 @@
           <entry key="CoffeeScript" value="68" />
           <entry key="HTML" value="8" />
           <entry key="JSON" value="865" />
-          <entry key="JavaScript" value="202" />
+          <entry key="JavaScript" value="231" />
           <entry key="PLAIN_TEXT" value="37" />
-          <entry key="RHTML" value="24954" />
-          <entry key="Ruby" value="5974" />
+          <entry key="RHTML" value="24992" />
+          <entry key="Ruby" value="5976" />
           <entry key="SCSS" value="253" />
           <entry key="YAML" value="103" />
         </counts>
@@ -260,11 +193,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="371" column="11" lean-forward="true" selection-start-line="371" selection-start-column="11" selection-end-line="371" selection-end-column="11" />
+            <state relative-caret-position="660">
+              <caret line="335" selection-start-line="335" selection-end-line="335" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="789" column="35" selection-start-line="789" selection-start-column="35" selection-end-line="789" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -323,7 +286,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/config/credentials.yml.enc" />
         <option value="$PROJECT_DIR$/config/master.key" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
@@ -357,9 +319,7 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/views/users/_index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-        <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/investisseurs/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/zone_industrielles_controller.rb" />
@@ -373,7 +333,10 @@
         <option value="$PROJECT_DIR$/app/controllers/promotion_immobilieres_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/zone_entrepot_activites/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/zone_entrepot_activites_controller.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
       </list>
     </option>
   </component>
@@ -448,6 +411,12 @@
             <path>
               <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
               <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Assets" type="f36ffe3d:AssetsTopLevelFolderNode" />
+              <item name="Javascripts" type="8736b8df:AssetsPredefinedGroupFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
               <item name="Config" type="9a8f28a7:ConfigFolderNode" />
             </path>
             <path>
@@ -455,6 +424,24 @@
               <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
               <item name="Config" type="9a8f28a7:ConfigFolderNode" />
               <item name="initializers" type="3dfa953c:FolderSubFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Views" type="5c6743c1:UnclassifiedViewsFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Views" type="5c6743c1:UnclassifiedViewsFolderNode" />
+              <item name="devise" type="d5499faf:UnclassifiedViewsSubFolderNode" />
+            </path>
+            <path>
+              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
+              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
+              <item name="Views" type="5c6743c1:UnclassifiedViewsFolderNode" />
+              <item name="devise" type="d5499faf:UnclassifiedViewsSubFolderNode" />
+              <item name="sessions" type="d5499faf:UnclassifiedViewsSubFolderNode" />
             </path>
           </expand>
           <select />
@@ -897,12 +884,12 @@
       <workItem from="1576304311800" duration="3947000" />
       <workItem from="1576335044545" duration="8312000" />
       <workItem from="1576390216558" duration="21538000" />
-      <workItem from="1576476558281" duration="5633000" />
+      <workItem from="1576476558281" duration="9200000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1863697000" />
+    <option name="totallyTimeSpent" value="1867264000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1074,24 +1061,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/scss/_masthead.scss" />
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="474" selection-start-line="474" selection-end-line="474" />
         </state>
       </provider>
     </entry>
@@ -1113,13 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
@@ -1242,10 +1208,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="371" column="11" lean-forward="true" selection-start-line="371" selection-start-column="11" selection-end-line="371" selection-end-column="11" />
+        <state relative-caret-position="660">
+          <caret line="335" selection-start-line="335" selection-end-line="335" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="789" column="35" selection-start-line="789" selection-start-column="35" selection-end-line="789" selection-end-column="35" />
         </state>
       </provider>
     </entry>

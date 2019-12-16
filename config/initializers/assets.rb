@@ -8,9 +8,9 @@ Rails.application.config.assets.version = '1.0'
 # Add Yarn node_modules folder to the asset load path.
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
-Rails.application.config.assets.precompile += %w( jquery.min.js )
+Rails.application.config.assets.precompile += %w( jquery/jquery.min.js )
 Rails.application.config.assets.precompile += %w( bootstrap.bundle.min.js )
-Rails.application.config.assets.precompile += %w( jquery.easing.min.js )
+Rails.application.config.assets.precompile += %w( jquery-easing/jquery.easing.min.js )
 Rails.application.config.assets.precompile += %w( agency.min.js )
 Rails.application.config.assets.precompile += %w( jqBootstrapValidation.js )
 Rails.application.config.assets.precompile += %w( contact_me.js )
@@ -29,9 +29,9 @@ Rails.application.config.assets.precompile += %w( vendor/datatables/dataTables.b
 Rails.application.config.assets.precompile += %w( js/demo/datatables-demo.js )
 
 
-Rails.application.config.assets.precompile += %w( jquery/jquery.min.js )
+Rails.application.config.assets.precompile += %w( jquery.min.js )
 Rails.application.config.assets.precompile += %w( bootstrap/js/bootstrap.bundle.min.js )
-Rails.application.config.assets.precompile += %w( jquery-easing/jquery.easing.min.js )
+Rails.application.config.assets.precompile += %w( jquery.easing.min.js )
 Rails.application.config.assets.precompile += %w( sb-admin-2.min.js )
 Rails.application.config.assets.precompile += %w( chart.js/Chart.min.js )
 

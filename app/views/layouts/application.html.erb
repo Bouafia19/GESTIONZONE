@@ -313,7 +313,7 @@
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%= current_user.email %></span>
                 <img class="img-profile rounded-circle" src="<%= current_user.photo %>">
               </a>
-              <!-- Dropdown - User Information
+              <!-- Dropdown - User Information-->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -333,7 +333,7 @@
                   Logout
                 </a>
               </div>
-              -->
+
             </li>
 
           </ul>
@@ -415,10 +415,12 @@
 
         <!-- Custom scripts for all pages-->
 
-  <%= javascript_include_tag('jquery/jquery.min.js' ) %>
+  <%= javascript_include_tag('jquery.min.js' ) %>
+
   <%= javascript_include_tag('bootstrap/js/bootstrap.bundle.min.js') %>
+  <%= javascript_include_tag('jquery.easing.min.js') %>
   <!-- Core plugin JavaScript-->
-  <%= javascript_include_tag('jquery-easing/jquery.easing.min.js') %>
+
 
   <!-- Custom scripts for all pages-->
   <%= javascript_include_tag('sb-admin-2.min.js') %>

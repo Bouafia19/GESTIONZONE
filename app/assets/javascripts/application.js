@@ -12,22 +12,22 @@
 //
 
 //= require rails-ujs
-//= require activestorage
-//= require popper
+// require activestorage
+// require popper
 
 
 
 
-//= require jquery3
-//= require bootstrap-datepicker
+// require jquery3
+// require bootstrap-datepicker
 
-//= require bootstrap
+// require bootstrap
 //= require Chart.bundle
 //= require chartkick
-//= require bootstrap-sortable
+// require bootstrap-sortable
 //= require leaflet
-//= require openlayers-rails
-//= require jquery-ui
+// require openlayers-rails
+// require jquery-ui
 
 
 
@@ -37,16 +37,3 @@
 
 
 
-
-function SelectSearch(id,controller,sort)
-{    $.ajax({
-    url: controller,
-    type: 'get',
-    data: {
-        type: id,
-        query: document.getElementById(id).value,
-        search_query: document.getElementById("search_champ").value,
-        sorts: sort
-    }
-});
-}
