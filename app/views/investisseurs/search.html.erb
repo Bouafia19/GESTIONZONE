@@ -2,123 +2,145 @@
 <div class="container-fluid">
 
   <!-- Page Heading -->
-  <div class="card">
+  <h1 class="h3 mb-2 text-gray-800">Recherche Avancée</h1>
+  <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
 
-    <div class="card-body">
 
-      <h1 style="color: #17a2b8" align="center">Recherche Avancée</h1>
-      <hr>
-
-<br>
 
       <% link_to 'Pdf', investisseurs_path(format: :pdf) ,class:"fa fa-download fa-lg"%>
 
       <% link_to 'Excel', investisseurs_path(format: :xlsx) ,class:"fa fa-download fa-lg"%>
 
 <div class="col-xl-12 col-md-6 mb-4 res">
-  <div class="card border-success shadow h-100 py-2">
-    <div class="card-body">
-      <div class="row no-gutters align-items-center">
-        <div class="col mr-2">
+  <!-- Collapsable Card Example -->
+  <div class="card shadow mb-4">
+    <!-- Card Header - Accordion -->
+    <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+      <h6 class="m-0 font-weight-bold text-primary">Chercher Investisseurs</h6>
+    </a>
+    <!-- Card Content - Collapse -->
+    <div class="collapse show" id="collapseCardExample">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">
 
-          <%= form_tag investisseurs_search_path, method: :get do %>
-            <div class="row">
-              <div class="col-sm-2 align-self-start"  >
-                <%= text_field_tag :raison_sociale_francais, params[:raison_sociale_francais] ,{placeholder:"Investisseur",value:"investisseur",onfocus:"this.value='URBA.SETIF'",class:"form-control"} %>
-
-
-              </div>
-
-              <div class="col-sm-2 align-self-start"  >
-                <%= select_tag :site ,options_for_select([["Zone Industrielles","ZI"],["Hors Zones","HZ"],["Zone Activite","ZAC"],["Promotion Immobiliere","PI"],["Zone Entrepot Activites","ZEA"]] ),{prompt: "Select Type Zones",class:"form-control", required: true}%>
-                <%#= select_tag :site, options_for_select(Zone.all.map{|u| [u.type_zone ] }.uniq),{prompt: "Zones",class:"form-control", required: true} %>
-
-              </div>
-
-              <div class="col-sm-2 align-self-center">
-                <%#= text_field_tag :raison_sociale_francais, params[:raison_sociale_francais],{placeholder:"Nom Investisseur",class:"form-control"} %>
-                <%= select_tag :secteur_activite, options_for_select(Investisseur.all.map{|u| [u.secteur_activite ] }.uniq),{prompt: "Secteur Activite",class:"form-control", required: true} %>
-
-              </div>
-
-              <div class="col-sm-2 align-self-center">
-                <%#= text_field_tag :commune, params[:commune] ,{placeholder:"Commune",class:"form-control"} %>
-                <%#= select_tag :commune,options_for_select([["AIN LAHDJAR","AIN LAHDJAR"],["GUELLEL","GUELLEL"],["GUEDJEL","GUEDJEL"],["TACHOUDA","TACHOUDA"],["EL HAMMA","EL HAMMA"],["AIN LAHDJAR","AIN LAHDJAR"],["AIN ABASSA","AIN ABASSA"],["AIN ARNET","AIN ARNET"]]),{prompt: "Commune",class:"form-control", required: true} %>
-                <%= select_tag :commune, options_for_select(Investisseur.all.map{|u| [u.commune ] }.uniq),{prompt: "Commune",class:"form-control", required: true} %>
-
-              </div>
-              <div class="col-sm-2 align-self-start"  >
-                <%= select_tag :montant_investissement ,options_for_select(Investisseur.all.map{|u| [u.montant_investissement ]}.uniq),{prompt: "M investissement superieur a ",class:"form-control"}%>
-                <%#= select_tag :site, options_for_select(Zone.all.map{|u| [u.type_zone ] }.uniq),{prompt: "Zones",class:"form-control", required: true} %>
-                <%#= select_tag :montant_investissement ,options_for_select([["100 000",100000],["500 000",500000],["1 000 000",1000000],["5 000 000",5000000],["10 000 000",10000000]] ),{prompt: "montant investissement > a",class:"form-control", required: true}%>
-
-              </div>
-              <div class="col-sm-2 align-self-end">
-                <%= submit_tag "Chercher Investisseurs ",class:"btn btn-md btn-success" %>
-              </div>
-          <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<hr>
-
-  <strong style="color: #5C9917">Resultat trouve <%=  @investisseurs.count   %> , Pour Site : <%=  params[:site]%> , Secteur D'activite : <%=  params[:secteur_activite]%> , Commune : <%=  params[:commune]%> , Montant D'investissement Superieur a : <%=  params[:montant_investissement]%></strong>
-
- <hr>
-      <div class="col-xl-12 col-md-6 mb-4 res">
-        <div class="card border-info shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-
-                <%= form_tag investisseurs_search_path, method: :get do %>
-                  <div class="row">
-                    <div class="col-sm-2 align-self-start"  >
-                      <%= text_field_tag :num_lot, params[:num_lot] ,{placeholder:"Numero de lot",class:"form-control"} %>
+            <%= form_tag investisseurs_search_path, method: :get do %>
+              <div class="row">
+                <div class="col-sm-2 align-self-start"  >
+                  <%= text_field_tag :raison_sociale_francais, params[:raison_sociale_francais] ,{placeholder:"Investisseur",value:"investisseur",onfocus:"this.value='URBA.SETIF'",class:"form-control"} %>
 
 
-                    </div>
-                    <div class="col-sm-2 align-self-start"  >
-                      <%= select_tag :nom_zone ,options_for_select([["ZI Ancienne","ZI ANCIENNE"],["ZI Extension","ZI EXTENSION"],["Ouled Saber","OULED SABER"],["ZI El Eulma","ZI EL EULMA"]] ),{prompt: "Zones",class:"form-control", required: true}%>
-                      <%#= select_tag :nom_zone, options_for_select(Lot.all.map{|u| [u.nom_zone ] }.uniq),{prompt: "Zones",class:"form-control", required: true} %>
-
-                    </div>
-
-                    <div class="col-sm-2 align-self-center">
-                      <%#= text_field_tag :raison_sociale_francais, params[:raison_sociale_francais],{placeholder:"Nom Investisseur",class:"form-control"} %>
-                      <%= select_tag :class_activite, options_for_select(Lot.all.map{|u| [u.class_activite ] }.uniq),{prompt: "Class Activite",class:"form-control", required: true} %>
-
-                    </div>
-
-                    <div class="col-sm-2 align-self-center">
-                      <%#= text_field_tag :commune, params[:commune] ,{placeholder:"Commune",class:"form-control"} %>
-                      <%#= select_tag :commune,options_for_select([["AIN LAHDJAR","AIN LAHDJAR"],["GUELLEL","GUELLEL"],["GUEDJEL","GUEDJEL"],["TACHOUDA","TACHOUDA"],["EL HAMMA","EL HAMMA"],["AIN LAHDJAR","AIN LAHDJAR"],["AIN ABASSA","AIN ABASSA"],["AIN ARNET","AIN ARNET"]]),{prompt: "Commune",class:"form-control", required: true} %>
-                      <%= select_tag :type_lot, options_for_select(Lot.all.map{|u| [u.type_lot ] }.uniq),{prompt: "Type Lot",class:"form-control"} %>
-
-                    </div>
-                    <div class="col-sm-2 align-self-start"  >
-                      <%= select_tag :superficie ,options_for_select(Lot.all.map{|u| [u.superficie ]}.uniq),{prompt: "Superficie superieur a ",class:"form-control",required: true}%>
-                      <%#= select_tag :site, options_for_select(Zone.all.map{|u| [u.type_zone ] }.uniq),{prompt: "Zones",class:"form-control", required: true} %>
-                      <%#= select_tag :montant_investissement ,options_for_select([["100 000",100000],["500 000",500000],["1 000 000",1000000],["5 000 000",5000000],["10 000 000",10000000]] ),{prompt: "montant investissement > a",class:"form-control", required: true}%>
-
-                    </div>
-                    <div class="col-sm-2 align-self-end">
-                      <%= submit_tag "Chercher Lots",class:"btn btn-md btn-info" %>
-                    </div>
-                <% end %>
                 </div>
-              </div>
+
+                <div class="col-sm-2 align-self-start"  >
+                  <%= select_tag :site ,options_for_select([["Zone Industrielles","ZI"],["Hors Zones","HZ"],["Zone Activite","ZAC"],["Promotion Immobiliere","PI"],["Zone Entrepot Activites","ZEA"]] ),{prompt: "Select Type Zones",class:"form-control", required: true}%>
+                  <%#= select_tag :site, options_for_select(Zone.all.map{|u| [u.type_zone ] }.uniq),{prompt: "Zones",class:"form-control", required: true} %>
+
+                </div>
+
+                <div class="col-sm-2 align-self-center">
+                  <%#= text_field_tag :raison_sociale_francais, params[:raison_sociale_francais],{placeholder:"Nom Investisseur",class:"form-control"} %>
+                  <%= select_tag :secteur_activite, options_for_select(Investisseur.all.map{|u| [u.secteur_activite ] }.uniq),{prompt: "Secteur Activite",class:"form-control", required: true} %>
+
+                </div>
+
+                <div class="col-sm-2 align-self-center">
+                  <%#= text_field_tag :commune, params[:commune] ,{placeholder:"Commune",class:"form-control"} %>
+                  <%#= select_tag :commune,options_for_select([["AIN LAHDJAR","AIN LAHDJAR"],["GUELLEL","GUELLEL"],["GUEDJEL","GUEDJEL"],["TACHOUDA","TACHOUDA"],["EL HAMMA","EL HAMMA"],["AIN LAHDJAR","AIN LAHDJAR"],["AIN ABASSA","AIN ABASSA"],["AIN ARNET","AIN ARNET"]]),{prompt: "Commune",class:"form-control", required: true} %>
+                  <%= select_tag :commune, options_for_select(Investisseur.all.map{|u| [u.commune ] }.uniq),{prompt: "Commune",class:"form-control", required: true} %>
+
+                </div>
+                <div class="col-sm-2 align-self-start"  >
+                  <%= select_tag :montant_investissement ,options_for_select(Investisseur.all.map{|u| [u.montant_investissement ]}.uniq),{prompt: "M investissement superieur a ",class:"form-control"}%>
+                  <%#= select_tag :site, options_for_select(Zone.all.map{|u| [u.type_zone ] }.uniq),{prompt: "Zones",class:"form-control", required: true} %>
+                  <%#= select_tag :montant_investissement ,options_for_select([["100 000",100000],["500 000",500000],["1 000 000",1000000],["5 000 000",5000000],["10 000 000",10000000]] ),{prompt: "montant investissement > a",class:"form-control", required: true}%>
+
+                </div>
+                <div class="col-sm-2 align-self-end">
+                  <%= submit_tag "Chercher Investisseurs ",class:"btn btn-md btn-success" %>
+                </div>
+            <% end %>
             </div>
           </div>
         </div>
-      </div>
-      <hr>
-      <strong style="color: #17a2b8">Resultat trouve <%=  @lots.count   %> , Pour Nom Zone : <%=  params[:nom_zone]%> , Class D'activite : <%=  params[:class_activite]%> , Type Lot : <%=  params[:type_lot]%>, Superficie superieur a : <%=  params[:superficie]%> </strong>
+        <hr>
 
-      <hr>
+        <strong style="color: #5C9917">Resultat trouve <%=  @investisseurs.count   %> , Pour Site : <%=  params[:site]%> , Secteur D'activite : <%=  params[:secteur_activite]%> , Commune : <%=  params[:commune]%> , Montant D'investissement Superieur a : <%=  params[:montant_investissement]%></strong>
+
+        <hr>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Collapsable Card Example -->
+  <div class="card shadow mb-4">
+    <!-- Card Header - Accordion -->
+    <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+      <h6 class="m-0 font-weight-bold text-primary">Chercher Lots</h6>
+    </a>
+    <!-- Card Content - Collapse -->
+    <div class="collapse show" id="collapseCardExample1">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">
+
+            <%= form_tag investisseurs_search_path, method: :get do %>
+              <div class="row">
+                <div class="col-sm-2 align-self-start"  >
+                  <%= text_field_tag :num_lot, params[:num_lot] ,{placeholder:"Numero de lot",class:"form-control"} %>
+
+
+                </div>
+                <div class="col-sm-2 align-self-start"  >
+                  <%= select_tag :nom_zone ,options_for_select([["ZI Ancienne","ZI ANCIENNE"],["ZI Extension","ZI EXTENSION"],["Ouled Saber","OULED SABER"],["ZI El Eulma","ZI EL EULMA"]] ),{prompt: "Zones",class:"form-control", required: true}%>
+                  <%#= select_tag :nom_zone, options_for_select(Lot.all.map{|u| [u.nom_zone ] }.uniq),{prompt: "Zones",class:"form-control", required: true} %>
+
+                </div>
+
+                <div class="col-sm-2 align-self-center">
+                  <%#= text_field_tag :raison_sociale_francais, params[:raison_sociale_francais],{placeholder:"Nom Investisseur",class:"form-control"} %>
+                  <%= select_tag :class_activite, options_for_select(Lot.all.map{|u| [u.class_activite ] }.uniq),{prompt: "Class Activite",class:"form-control", required: true} %>
+
+                </div>
+
+                <div class="col-sm-2 align-self-center">
+                  <%#= text_field_tag :commune, params[:commune] ,{placeholder:"Commune",class:"form-control"} %>
+                  <%#= select_tag :commune,options_for_select([["AIN LAHDJAR","AIN LAHDJAR"],["GUELLEL","GUELLEL"],["GUEDJEL","GUEDJEL"],["TACHOUDA","TACHOUDA"],["EL HAMMA","EL HAMMA"],["AIN LAHDJAR","AIN LAHDJAR"],["AIN ABASSA","AIN ABASSA"],["AIN ARNET","AIN ARNET"]]),{prompt: "Commune",class:"form-control", required: true} %>
+                  <%= select_tag :type_lot, options_for_select(Lot.all.map{|u| [u.type_lot ] }.uniq),{prompt: "Type Lot",class:"form-control"} %>
+
+                </div>
+                <div class="col-sm-2 align-self-start"  >
+                  <%= select_tag :superficie ,options_for_select(Lot.all.map{|u| [u.superficie ]}.uniq),{prompt: "Superficie superieur a ",class:"form-control",required: true}%>
+                  <%#= select_tag :site, options_for_select(Zone.all.map{|u| [u.type_zone ] }.uniq),{prompt: "Zones",class:"form-control", required: true} %>
+                  <%#= select_tag :montant_investissement ,options_for_select([["100 000",100000],["500 000",500000],["1 000 000",1000000],["5 000 000",5000000],["10 000 000",10000000]] ),{prompt: "montant investissement > a",class:"form-control", required: true}%>
+
+                </div>
+                <div class="col-sm-2 align-self-end">
+                  <%= submit_tag "Chercher Lots",class:"btn btn-md btn-info" %>
+                </div>
+            <% end %>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <strong style="color: #17a2b8">Resultat trouve <%=  @lots.count   %> , Pour Nom Zone : <%=  params[:nom_zone]%> , Class D'activite : <%=  params[:class_activite]%> , Type Lot : <%=  params[:type_lot]%>, Superficie superieur a : <%=  params[:superficie]%> </strong>
+        <hr>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
 <div class="row" id="table_search" style="padding: 10px">
 
   <% @investisseurs.each do |investisseur| %>
@@ -180,6 +202,4 @@
           </div>
         <% end %>
         <br></div>
-</div>
-  </div>
 </div>
