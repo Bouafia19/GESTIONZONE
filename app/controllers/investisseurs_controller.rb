@@ -5,7 +5,7 @@ class InvestisseursController < ApplicationController
   # GET /investisseurs.json
   def index
 
-
+=begin
     #datatable_paginate([:investisseur],['raison_sociale_francais;nom_prenom_gerant_francais;intitule_projet_francais',['investisseurs',"investisseurs.date_depot_demande >='#{Date.parse(session[:start_pub])}' and investisseurs.date_depot_demande <='#{Date.parse(session[:end_pub])}'"]])
 
     datatable_paginate([:investisseur],['raison_sociale_francais;nom_prenom_gerant_francais;intitule_projet_francais'])
@@ -22,7 +22,8 @@ class InvestisseursController < ApplicationController
                           template: "investisseurs/index.xlsx.axlsx",
                           locals: {:investisseur => @investisseurs}}
     end
-
+=end
+@investr = Investisseur.all
   end
 
   # GET /investisseurs/1

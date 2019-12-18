@@ -1,7 +1,57 @@
-<!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Investisseurs</h1>
-<p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
 
+
+<!-- Page Heading -->
+<div class="row">
+
+  <div class="col-xl-4 col-lg-5">
+      <h1 class="h3 mb-2 text-gray-800">Investisseurs</h1>
+  </div>
+  <div class="col-xl-4 col-lg-5">
+    <a href="#" class="btn btn-info btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-info-circle"></i>
+                    </span>
+      <span class="text"><%= @investr.count%></span>
+    </a>
+  </div>
+  <div class="col-xl-4 col-lg-5">
+    <a href="<%= new_investisseur_path %>" class="btn btn-light btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-arrow-right"></i>
+                    </span>
+      <span class="text">Nouveau investisseur</span>
+    </a>
+  </div>
+
+</div>
+<br>
+<!-- Collapsable Card Example -->
+<div class="card shadow mb-4">
+  <!-- Card Header - Accordion -->
+  <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+    <h6 class="m-0 font-weight-bold text-primary">Statistiques</h6>
+  </a>
+
+  <!-- Card Content - Collapse -->
+  <div class="collapse show" id="collapseCardExample">
+    <div class="card-body">
+      <div class="row">
+
+        <div class="col-xl-4 col-lg-5">
+          <%= pie_chart Investisseur.group(:secteur_activite).count %>
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <%= area_chart Investisseur.group(:filieres_industrielles).count %>
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <%= pie_chart Investisseur.group(:localisation_projet).count %>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
