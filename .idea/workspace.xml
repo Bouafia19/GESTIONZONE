@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="43f71642-1426-4718-9a42-6501b751986f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/investisseurs_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/investisseurs_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/investisseurs/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/investisseurs/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds/populate_geospatial_data.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds/populate_geospatial_data.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -22,7 +21,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/GESTIONZONE@Production__GESTIONZONE.rcov" NAME="Production: GESTIONZONE Coverage Results" MODIFIED="1546759523549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
-    <SUITE FILE_PATH="coverage/GESTIONZONE@Development__GESTIONZONE.rcov" NAME="Development: GESTIONZONE Coverage Results" MODIFIED="1576651414404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
+    <SUITE FILE_PATH="coverage/GESTIONZONE@Development__GESTIONZONE.rcov" NAME="Development: GESTIONZONE Coverage Results" MODIFIED="1576998005259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -42,12 +41,12 @@
     <session id="-1745049095">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="224" />
+          <entry key="project.closed" value="226" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.12" value="6" />
-          <entry key="project.open.time.13" value="6" />
-          <entry key="project.open.time.14" value="6" />
+          <entry key="project.open.time.13" value="7" />
+          <entry key="project.open.time.14" value="7" />
           <entry key="project.open.time.15" value="5" />
           <entry key="project.open.time.16" value="13" />
           <entry key="project.open.time.17" value="18" />
@@ -90,7 +89,7 @@
           <entry key="project.open.time.80" value="1" />
           <entry key="project.open.time.9" value="3" />
           <entry key="project.open.time.99" value="1" />
-          <entry key="project.opened" value="246" />
+          <entry key="project.opened" value="248" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -121,7 +120,7 @@
           <entry key="png" value="2" />
           <entry key="rails" value="10" />
           <entry key="rake" value="22" />
-          <entry key="rb" value="714" />
+          <entry key="rb" value="720" />
           <entry key="rnc" value="1" />
           <entry key="ru" value="1" />
           <entry key="ruby-version" value="2" />
@@ -131,7 +130,7 @@
           <entry key="spring" value="3" />
           <entry key="update" value="3" />
           <entry key="yarn" value="3" />
-          <entry key="yml" value="19" />
+          <entry key="yml" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -147,10 +146,10 @@
           <entry key="PLAIN_TEXT" value="89" />
           <entry key="RHTML" value="1216" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="828" />
+          <entry key="Ruby" value="834" />
           <entry key="SCSS" value="88" />
           <entry key="UML" value="1" />
-          <entry key="YAML" value="19" />
+          <entry key="YAML" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -162,7 +161,7 @@
           <entry key="css" value="4" />
           <entry key="enc" value="22" />
           <entry key="env" value="1" />
-          <entry key="erb" value="25355" />
+          <entry key="erb" value="25392" />
           <entry key="gitignore" value="3" />
           <entry key="html" value="1" />
           <entry key="jbuilder" value="4" />
@@ -170,7 +169,7 @@
           <entry key="json" value="865" />
           <entry key="key" value="2" />
           <entry key="rake" value="521" />
-          <entry key="rb" value="5345" />
+          <entry key="rb" value="5386" />
           <entry key="scss" value="253" />
           <entry key="yml" value="103" />
         </counts>
@@ -183,8 +182,8 @@
           <entry key="JSON" value="865" />
           <entry key="JavaScript" value="231" />
           <entry key="PLAIN_TEXT" value="37" />
-          <entry key="RHTML" value="25348" />
-          <entry key="Ruby" value="6000" />
+          <entry key="RHTML" value="25385" />
+          <entry key="Ruby" value="6041" />
           <entry key="SCSS" value="253" />
           <entry key="YAML" value="103" />
         </counts>
@@ -196,8 +195,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2715">
-              <caret line="181" selection-start-line="181" selection-end-line="181" />
+            <state relative-caret-position="534">
+              <caret line="450" selection-start-line="450" selection-end-line="450" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="969">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
         </entry>
@@ -205,8 +213,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/investisseurs/bord.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="179" column="19" selection-start-line="179" selection-start-column="2" selection-end-line="179" selection-end-column="19" />
+            <state relative-caret-position="145">
+              <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
             </state>
           </provider>
         </entry>
@@ -214,17 +222,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/investisseurs/search.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
+            <state relative-caret-position="1305">
               <caret line="105" selection-start-line="105" selection-end-line="105" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/investisseurs_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+            <state relative-caret-position="216">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="654">
+              <caret line="75" column="35" lean-forward="true" selection-start-line="57" selection-start-column="2" selection-end-line="75" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="639">
+              <caret line="101" column="35" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -232,8 +258,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/investisseurs/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="33" selection-start-line="3" selection-end-line="4" selection-end-column="33" />
+            <state relative-caret-position="360">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -283,7 +309,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/views/zones/leaflet.html.erb" />
@@ -321,9 +346,6 @@
         <option value="$PROJECT_DIR$/app/controllers/zone_entrepot_activites_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
-        <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/investisseurs/bord.html.erb" />
         <option value="$PROJECT_DIR$/app/views/zone_activites/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/zone_entrepot_activites/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/zone_industrielles/index.html.erb" />
@@ -331,9 +353,13 @@
         <option value="$PROJECT_DIR$/app/views/hors_zones/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/investisseurs/search.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds/populate_geospatial_data.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/investisseurs_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/investisseurs/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/investisseurs_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/investisseurs/bord.html.erb" />
+        <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
@@ -375,6 +401,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="RailsProjectView">
         <subPane>
           <expand>
@@ -390,37 +417,18 @@
             <path>
               <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
               <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-              <item name="StatesController" type="2b770dde:ControllerClassNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-              <item name="StatesController" type="2b770dde:ControllerClassNode" />
-              <item name="index" type="ddea66bf:ControllerActionNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
               <item name="Config" type="9a8f28a7:ConfigFolderNode" />
             </path>
             <path>
               <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
               <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Lib" type="5b329ca0:LibFolderNode" />
-            </path>
-            <path>
-              <item name="GESTIONZONE" type="52f3b0f7:RailsProjectNode" />
-              <item name="GESTIONZONE" type="ca5d24b0:RailsModuleNode" />
-              <item name="Lib" type="5b329ca0:LibFolderNode" />
-              <item name="tasks" type="3dfa953c:FolderSubFolderNode" />
+              <item name="Config" type="9a8f28a7:ConfigFolderNode" />
+              <item name="environments" type="3dfa953c:FolderSubFolderNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -859,12 +867,14 @@
       <workItem from="1576390216558" duration="21538000" />
       <workItem from="1576476558281" duration="9865000" />
       <workItem from="1576580982482" duration="7217000" />
-      <workItem from="1576651046703" duration="9216000" />
+      <workItem from="1576651046703" duration="11965000" />
+      <workItem from="1576735820813" duration="2877000" />
+      <workItem from="1576995550971" duration="3580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1884362000" />
+    <option name="totallyTimeSpent" value="1893568000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -879,7 +889,7 @@
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26414087" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2705443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -935,13 +945,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/_contacta.scss" />
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/_cards.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/_buttons.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/_global.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1080,13 +1083,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="834">
@@ -1136,13 +1132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2715">
-          <caret line="181" selection-start-line="181" selection-end-line="181" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/populate_geospatial_data_origine.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -1181,38 +1170,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/investisseurs/search.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/investisseurs/bord.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="179" column="19" selection-start-line="179" selection-start-column="2" selection-end-line="179" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/investisseurs_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/investisseurs/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="33" selection-start-line="3" selection-end-line="4" selection-end-column="33" />
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        <state relative-caret-position="465">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/investisseurs/search.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/investisseurs_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="450" selection-start-line="450" selection-end-line="450" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/investisseurs/bord.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="75" column="35" lean-forward="true" selection-start-line="57" selection-start-column="2" selection-end-line="75" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="101" column="35" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="35" />
         </state>
       </provider>
     </entry>

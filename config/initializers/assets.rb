@@ -37,45 +37,35 @@ Rails.application.config.assets.precompile += %w( chart.js/Chart.min.js )
 
 
 
+Rails.application.config.assets.precompile += %w( chart.js/Chart.min.js )
+Rails.application.config.assets.precompile += %w( js/demo/chart-area-demo.js )
+Rails.application.config.assets.precompile += %w( js/demo/chart-pie-demo.js )
+Rails.application.config.assets.precompile += %w( js/demo/chart-bar-demo.js )
+
+
+
 
 
 Rails.application.config.assets.precompile += %w( lib/leaflet.label.css )
 Rails.application.config.assets.precompile += %w( lib/leaflet.label.js )
-
 Rails.application.config.assets.precompile += %w( lib/L.Control.SlideMenu.css )
-
 Rails.application.config.assets.precompile += %w( lib/L.Control.SlideMenu.js )
-
-
-
 Rails.application.config.assets.precompile += %w( lib/leaflet-search.css )
-
 Rails.application.config.assets.precompile += %w( lib/leaflet-search.js )
-
-
-
 Rails.application.config.assets.precompile += %w( lib/L.Control.Heightgraph.css )
 Rails.application.config.assets.precompile += %w( lib/L.Control.Heightgraph.js )
-
 Rails.application.config.assets.precompile += %w( lib/example_mappings.js )
-
-
 Rails.application.config.assets.precompile += %w( lib/leaflet.measure.js )
-
 Rails.application.config.assets.precompile += %w( lib/leaflet.browser.print.min.js )
 Rails.application.config.assets.precompile += %w( lib/leaflet-measure-path.js )
 Rails.application.config.assets.precompile += %w( lib/leaflet-measure-path.css )
-
 Rails.application.config.assets.precompile += %w( lib/leaflet.measure.css )
-
 Rails.application.config.assets.precompile += %w( lib/leaflet.magnifyingglass.css )
 Rails.application.config.assets.precompile += %w( lib/Control.MagnifyingGlass.css )
 Rails.application.config.assets.precompile += %w( lib/leaflet.magnifyingglass.js )
 Rails.application.config.assets.precompile += %w( lib/example_button.js )
-
 Rails.application.config.assets.precompile += %w( lib/Control.Coordinates.css )
 Rails.application.config.assets.precompile += %w( lib/Control.Coordinates.js )
-
 
 Rails.application.config.assets.precompile += %w( ddtf.js )
 
