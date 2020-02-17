@@ -16,7 +16,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/GESTIONZONE@Production__GESTIONZONE.rcov" NAME="Production: GESTIONZONE Coverage Results" MODIFIED="1546759523549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
-    <SUITE FILE_PATH="coverage/GESTIONZONE@Development__GESTIONZONE.rcov" NAME="Development: GESTIONZONE Coverage Results" MODIFIED="1581778672170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
+    <SUITE FILE_PATH="coverage/GESTIONZONE@Development__GESTIONZONE.rcov" NAME="Development: GESTIONZONE Coverage Results" MODIFIED="1581912550340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GESTIONZONE" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -90,7 +90,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Capfile" value="9" />
-          <entry key="Gemfile" value="44" />
+          <entry key="Gemfile" value="45" />
           <entry key="JPG" value="1" />
           <entry key="RailsDependency/Merit::RankRules" value="1" />
           <entry key="axlsx" value="4" />
@@ -141,7 +141,7 @@
           <entry key="PLAIN_TEXT" value="90" />
           <entry key="RHTML" value="1216" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="837" />
+          <entry key="Ruby" value="838" />
           <entry key="SCSS" value="88" />
           <entry key="UML" value="1" />
           <entry key="YAML" value="20" />
@@ -237,11 +237,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/deploy/production.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-120">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -387,7 +396,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1365" />
     <option name="y" value="-11" />
     <option name="width" value="1026" />
@@ -908,12 +917,12 @@
       <workItem from="1581778075270" duration="216000" />
       <workItem from="1581778550784" duration="716000" />
       <workItem from="1581782517430" duration="2339000" />
-      <workItem from="1581876356549" duration="1333000" />
+      <workItem from="1581876356549" duration="1363000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1901811000" />
+    <option name="totallyTimeSpent" value="1901841000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -925,15 +934,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1920" height="885" extended-state="7" />
-    <editor active="true" />
+    <frame x="0" y="25" width="1920" height="885" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30256137" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30256137" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32712457" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49733192" visible="true" weight="0.33554375" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49733192" visible="true" weight="0.33421752" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -984,7 +992,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/_servicesa.scss" />
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/vendor/bootstrap/scss/_carousel.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1080" />
@@ -1292,6 +1299,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
